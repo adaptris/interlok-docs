@@ -54,7 +54,7 @@ The Dashboard Page with annotations shows the various parts of the Dashboard Pag
 | ![Dashboard Adapter Control Force Stop](./images/ui-user-guide/dashboard-adapter-control-force-stop.png) | Under the Stop dropdown. Force Stop this Adapter (doesn't wait for services to finish) and free up any resources that it has used.
 | ![Dashboard Adapter Control Garbage Collect](./images/ui-user-guide/gc-button-icon.png) | Under the Stop dropdown. Request a Java Garbage Collection on the Adapter
 | ![Dashboard Adapter Control Thread Dump](./images/ui-user-guide/dashboard-adapter-control-thread-dump.png) | Under the Stop dropdown. Generate a thread dump on the Adapter
-| ![Dashboard Adapter Control Reload From Vcs](./images/ui-user-guide/dashboard-adapter-control-reload-from-vcs.png) | Under the Stop dropdown. Reload this Adapter configuration from Vcs and restart it. Only available for User and Admin users and if [version control](advanced-version-control.html#version-control-configuration) is configured for this Adapter. (Since 3.3)
+| ![Dashboard Adapter Control Reload From Vcs](./images/ui-user-guide/dashboard-adapter-control-reload-from-vcs.png) | Under the Stop dropdown. Reload this Adapter configuration from Vcs and restart it. Only available for User and Admin users and if [version control](/pages/advanced/advanced-version-control#version-control-configuration) is configured for this Adapter. (Since 3.3)
 | ![Dashboard Adapter Control Support Pack](./images/ui-user-guide/dashboard-adapter-control-support-pack.png) | Under the Stop dropdown. Download a support pack containing log files and information about this Adapter. (Since 3.3)
 | ![Dashboard Adapter Control Edit Adapter](./images/ui-user-guide/dashboard-adapter-control-edit-adapter.png) | Under the Stop dropdown. Edit and Adapter name or tags. (Since 3.7.3)
 | ![Dashboard Adapter Control Refresh](./images/ui-user-guide/dashboard-adapter-control-refresh.png) | Refresh the Adapter status and details
@@ -255,8 +255,8 @@ The Add Adapter form inputs explained:
 - **Tags:** The tags associated to the Adapter to make it easier to filter Adapters. (Since 3.7.3)
 - **Advanced Options** - Clicking the Advanced Options link will unveil three more properties, all of which are optional :
     - **Disable Url Validation:** This options disable the JMX URL front-end validation. It should be use with care and only if you know that the JMX URL you are using is valid but fails validation (Since 3.6.5)
-    - **Username:** The username needed to establish the JMX connection if you are using password protection for the adapter JMX connection as describe in [Password Protecting JMXMP](advanced-jmx.html#password-protecting-jmxmp-311) (Since 3.1.1)
-    - **Password:** The password needed to establish the JMX connection if you are using password protection for the adapter JMX connection as describe in [Password Protecting JMXMP](advanced-jmx.html#password-protecting-jmxmp-311) (Since 3.1.1)
+    - **Username:** The username needed to establish the JMX connection if you are using password protection for the adapter JMX connection as describe in [Password Protecting JMXMP](/pages/advanced/advanced-jmx#password-protecting-jmxmp-311) (Since 3.1.1)
+    - **Password:** The password needed to establish the JMX connection if you are using password protection for the adapter JMX connection as describe in [Password Protecting JMXMP](/pages/advanced/advanced-jmx#password-protecting-jmxmp-311) (Since 3.1.1)
     - **Environment:** Some environment properties needed for the JMX connection. These should be provided as a key value pair list (multiple pairs should be on separated lines), for example: javax.net.ssl.trustStore=/tmp/myStrustsore
 
 Adding more than one Adapter will result in having a list of Adapter components listed on the Dashboard Page.

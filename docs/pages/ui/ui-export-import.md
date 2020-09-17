@@ -9,9 +9,9 @@ summary: The export function allows you to save your configuration file with pla
 
 ## Config Export ##
 
-The export function allows you to save your configuration file with place-holders which can then be swapped out with values configured in a separate property file. This function is a ui accompaniment for the [variable substitution](advanced-configuration-pre-processors.html#variable-substitution) pre-processor.
+The export function allows you to save your configuration file with place-holders which can then be swapped out with values configured in a separate property file. This function is a ui accompaniment for the [variable substitution](/pages/advanced/advanced-configuration-pre-processors#variable-substitution) pre-processor.
 
-{% include note.html content="The export function has been removed from version 3.7.0. Please use [Config Project](ui-config-project.html) instead." %}
+{% include note.html content="The export function has been removed from version 3.7.0. Please use [Config Project](/pages/ui/ui-config-project) instead." %}
 
 ### Getting Started ###
 
@@ -95,7 +95,7 @@ The outputted configuration xml will now contain place-holders to where you defi
 ETC...
 ```
 
-Now that you have the exported files, you can use these with the  [variable substitution](advanced-configuration-pre-processors.html#variable-substitution) pre-processor or you can use the UI Import function, defined below.
+Now that you have the exported files, you can use these with the  [variable substitution](/pages/advanced/advanced-configuration-pre-processors#variable-substitution) pre-processor or you can use the UI Import function, defined below.
 
 ## Config Import ##
 
@@ -121,5 +121,5 @@ You can of course edit the variable values or manually add them without uploadin
 
 Once you press the Import button, you will be returned to the config page, with your selected configuration open, but with the placeholders being replaced by the variable values.
 
-This import function is the only way the UI will process a config file with place-holders, alternatively you can use the  [variable substitution](advanced-configuration-pre-processors.html#variable-substitution) pre-processor.
+This import function is the only way the UI will process a config file with place-holders, alternatively you can use the  [variable substitution](/pages/advanced/advanced-configuration-pre-processors#variable-substitution) pre-processor.
 

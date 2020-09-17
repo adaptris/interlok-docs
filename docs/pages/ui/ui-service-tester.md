@@ -9,11 +9,11 @@ summary: The Service Tester page help you to generate a Service Tester configura
 
 ## Prerequisite ##
 
-To be able to use the Service Tester page you need to have the required **interlok-service-tester** [optional component installed](adapter-optional-components.html) into `${adapter.home}/lib` directory.
+To be able to use the Service Tester page you need to have the required **interlok-service-tester** [optional component installed](/pages/adapter/adapter-optional-components) into `${adapter.home}/lib` directory.
 
 If you are not using this optional component you will get a warning message. ![Service Tester warning message](./images/ui-user-guide/service-tester-warning-message.png)
 
-More help on the Service Tester [here](service-tester-introduction.html).
+More help on the Service Tester [here](/pages/service-tester/service-tester-introduction).
 
 ## Getting Started ##
 
@@ -70,10 +70,10 @@ A modal will open to select an Adapter config from diverse sources.
 ![The service tester open interlok config container modal](./images/ui-user-guide/service-tester-open-interlok-config-container-modal.png)
 
 - **Active Adapter:** Retrieve a configuration from a running Adapter configured in the application.
-- **File System:** Open an Adapter configuration file from your file system. It can be an adapter.xml file or a zip file. Click on the **I also have variables** link to [Import an Adapter Configuration](ui-export-import.html#config-import) with variable properties.
-- **Saved Config:** Open an Adapter configuration from the list of previously [saved configurations](ui-saved-configs.html).
+- **File System:** Open an Adapter configuration file from your file system. It can be an adapter.xml file or a zip file. Click on the **I also have variables** link to [Import an Adapter Configuration](/pages/ui/ui-export-import#config-import) with variable properties.
+- **Saved Config:** Open an Adapter configuration from the list of previously [saved configurations](/pages/ui/ui-saved-configs).
 - **Auto Saved:** Open an Adapter configuration from the last auto saved configuration.
-- **Version Control:** Retrieve a configuration from a Version Control System (Subversion or Git). For this option to be enabled [VCS](advanced-version-control.html) needs to be configured and you need at least one VCS Profile.
+- **Version Control:** Retrieve a configuration from a Version Control System (Subversion or Git). For this option to be enabled [VCS](/pages/advanced/advanced-version-control) needs to be configured and you need at least one VCS Profile.
 
 You can also use the **Generate Services From Adapter Config** menu item to automatically generate one test per service.
 You will also be prompted to chose an Adapter config.
@@ -85,7 +85,7 @@ Then you will have to select the Test Source type (File or Inline) and select th
 
 A Test contains a service to test and a list of test cases to run against the service.
 
-Additionally some preprocessors can be applied on the service xml before running the tests. More help on pre-processors [here](advanced-configuration-pre-processors.html).
+Additionally some preprocessors can be applied on the service xml before running the tests. More help on pre-processors [here](/pages/advanced/advanced-configuration-pre-processors).
 
 You can add a test by clicking on the Add Test button. This will open a modal where you can fill the test details.
  

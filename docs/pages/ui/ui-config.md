@@ -11,11 +11,11 @@ summary: The config page allows you to configure your Interlok container in an e
 
 Before working with the config page, it’s important to understand that there is a divorce between the config page (and projects) and the running adapters config.
 
-When you are using the config page, you are not editing live adapter config on the running adapter. You are editing a stored configuration xml file, which is either stored in the [default ui store](ui-saved-config-projects.html) or saved on your [local file system](ui-saved-config-projects.html#save-a-config-project) or saved on a remote [version control system](ui-version-control.html).
+When you are using the config page, you are not editing live adapter config on the running adapter. You are editing a stored configuration xml file, which is either stored in the [default ui store](/pages/ui/ui-saved-config-projects) or saved on your [local file system](/pages/ui/ui-saved-config-projects#save-a-config-project) or saved on a remote [version control system](/pages/ui/ui-version-control).
 
-The config changes are *not* ‘made live’ until you [apply](ui-config.html#applying-a-configuration) them to a given running adapter. 
+The config changes are *not* ‘made live’ until you [apply](/pages/ui/ui-config#applying-a-configuration) them to a given running adapter. 
 
-When you navigate to the config page, it’s important to understand that it will always attempt to [load the active](ui-user-preferences.html#configuration-page-preferences) adapters config (if only one adapter is registered with the ui) if you have this user preference set to true. If this is set to false, then the page will attempt to reopen the [project](ui-config-project.html) you were working on (within the browser session). This is very important to understand, otherwise you may be editing config loaded from the running adapter rather than the project you are working on. 
+When you navigate to the config page, it’s important to understand that it will always attempt to [load the active](/pages/ui/ui-user-preferences#configuration-page-preferences) adapters config (if only one adapter is registered with the ui) if you have this user preference set to true. If this is set to false, then the page will attempt to reopen the [project](/pages/ui/ui-config-project) you were working on (within the browser session). This is very important to understand, otherwise you may be editing config loaded from the running adapter rather than the project you are working on. 
 
 It’s recommended that if you indeed to use ui projects, that you turn the auto load user preference to false.
 
@@ -41,14 +41,14 @@ Just click on the Open Config button and that will open a modal displaying sever
 
 - **Active Adapter:** Retrieve a configuration from a running Adapter configured in the application.
 - **New:** Create a brand new Adapter configuration.
-- **File System:** Open an Adapter configuration file from your file system. It can be an adapter.xml file or a zip file (since 3.6.5). Click on the **I also have variables** link to [Import an Adapter Configuration](ui-export-import.html#config-import) with variable properties. (since 3.7.0)
-- **Saved Project:** Open an Adapter configuration project from the list of previously [saved configuration projects](ui-saved-config-projects.html). If the UI is run and accessed on localhost you will also see the link `Saved on local file system` which allows you to open an Interlok config project from your file system. The UI will prompt you to enter the local path of the project.
+- **File System:** Open an Adapter configuration file from your file system. It can be an adapter.xml file or a zip file (since 3.6.5). Click on the **I also have variables** link to [Import an Adapter Configuration](/pages/ui/ui-export-import#config-import) with variable properties. (since 3.7.0)
+- **Saved Project:** Open an Adapter configuration project from the list of previously [saved configuration projects](/pages/ui/ui-saved-config-projects). If the UI is run and accessed on localhost you will also see the link `Saved on local file system` which allows you to open an Interlok config project from your file system. The UI will prompt you to enter the local path of the project.
 - **Auto Saved:** Open an Adapter configuration from the last auto saved configuration.
 - **Use Template:** Create a new Adapter configuration from a template.
 - **Swagger:** Open an Adapter configuration using a Swagger file from your file system. Simple rest service swagger configuration (yaml or json) get converted to an adapter config with http jetty consumers. (Since 3.5.0)
-- **Version Control:** Retrieve a configuration from a Version Control System (Subversion or Git). For this option to be enabled [VCS](advanced-version-control.html) needs to be configured and you need at least one VCS Profile.
+- **Version Control:** Retrieve a configuration from a Version Control System (Subversion or Git). For this option to be enabled [VCS](/pages/advanced/advanced-version-control) needs to be configured and you need at least one VCS Profile.
 
-{% include note.html content="When using **File System:** with a zip file, the zip file need to be built with the [Config Project Format](ui-config-project.html#config-project-format) with a config-project.json file. Or alternatively with an adapter.xml in the zip root and optionally a variables substitution file called _variables.properties_ can be added." %}
+{% include note.html content="When using **File System:** with a zip file, the zip file need to be built with the [Config Project Format](/pages/ui/ui-config-project#config-project-format) with a config-project.json file. Or alternatively with an adapter.xml in the zip root and optionally a variables substitution file called _variables.properties_ can be added." %}
 
 ## Navigating the config page ##
 
@@ -155,7 +155,7 @@ To actually add the component, all you have to do is click on the required compo
 
 {% include tip.html content="When adding a service if you double click on the plus button the service will be added at the beginning of the service list." %}
 
-{% include note.html content="From 3.6.6 you can also add new component using the [Config page sidebar component](ui-config-sidebar.html#clipboard-sidebar)." %}
+{% include note.html content="From 3.6.6 you can also add new component using the [Config page sidebar component](/pages/ui/ui-config-sidebar#clipboard-sidebar)." %}
 
 ## Applying a configuration ##
 

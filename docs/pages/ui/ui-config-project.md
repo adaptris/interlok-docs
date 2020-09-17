@@ -13,7 +13,7 @@ summary: The Config Project allows you to manage your adapter configuration.
 ## Introduction ##
 
 Since 3.7.0 the configuration page provide a way to save adapter configurations in a project.
-A project helps managing the configuration XML files, using [X-Include](https://www.w3.org/TR/xinclude/) or not, and the [Variables Substitutions Files](advanced-configuration-pre-processors.html#variable-substitution) together.
+A project helps managing the configuration XML files, using [X-Include](https://www.w3.org/TR/xinclude/) or not, and the [Variables Substitutions Files](/pages/advanced/advanced-configuration-pre-processors#variable-substitution) together.
 
 ## Getting Started ##
 
@@ -29,9 +29,9 @@ The modal is divided in three tabs:
 
 - **General:** Where you can configure the basic details of the project, name, description, add config file and the config file name.
 - **X-Includes:** Where you can specify which part of the XML config file should be split into multiple files.
-- **Variables:** Where you can add key/variable pairs to use for the XML config [Variables Substitutions](advanced-configuration-pre-processors.html#variable-substitution).
+- **Variables:** Where you can add key/variable pairs to use for the XML config [Variables Substitutions](/pages/advanced/advanced-configuration-pre-processors#variable-substitution).
 - **Variable XPaths:** Where you can specify which value of the XML config file should use Variables Substitutions using some XPaths. You should not need to add Xpaths/key pairs manually as that can be done in the [Component settings modal](#component-settings-modal).
-- **Tests:** Where you can specify the test config file name. This is the file used in the [Service Tester Page](ui-service-tester.html).
+- **Tests:** Where you can specify the test config file name. This is the file used in the [Service Tester Page](/pages/ui/ui-service-tester).
 - **Additional Files:** Where you can specify the additional files to be added in the config dir.
 - **Optional Components:** Where you can see the list of optional components used in the cofig xml.
 
@@ -44,7 +44,7 @@ In the General tab you can configure:
 - **Name:** The name of the project. This is optional and will use the Adapter unique id if left empty.
 - **Description:** The description of the project. This is optional.
 - **Config Unique Id:** This will be populated from the uploaded configuration XML. The **Upload Config File** button allows you to update the configuration file of the project.
-- **Config XML File Name:** The name of the Adapter config XML file. This is used when the project is saved or published to a [version control system](ui-version-control.html). This is optional and `adapter.xml` is used by default.
+- **Config XML File Name:** The name of the Adapter config XML file. This is used when the project is saved or published to a [version control system](/pages/ui/ui-version-control). This is optional and `adapter.xml` is used by default.
 
 ### X-Includes Tab ###
 
@@ -104,7 +104,7 @@ Generic XPaths (e.g. `//payload-hashing-service/metadata-key` instead of `/adapt
 
 In the Tests tab you can configure:
 
-- **Test XML File Name:** The name of the Service Tester config XML file. This is used when the project is saved or published to a [version control system](ui-version-control.html). This is optional and `service-test.xml` is used by default.
+- **Test XML File Name:** The name of the Service Tester config XML file. This is used when the project is saved or published to a [version control system](/pages/ui/ui-version-control). This is optional and `service-test.xml` is used by default.
 
 ### Additional Files Tab ###
 
@@ -155,7 +155,7 @@ The config project modal allows to configure the config project but doesn't pers
 
 You will be prompted for the config project name. By default the Adapter unique id will be used.
 
-To open a saved project or to download it you will beed to open the [Saved Config Projects Modal](ui-saved-config-projects.html)
+To open a saved project or to download it you will beed to open the [Saved Config Projects Modal](/pages/ui/ui-saved-config-projects)
 
 ### Config Project format ###
 

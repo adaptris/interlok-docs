@@ -11,7 +11,7 @@ summary: Since 3.0.3 the gui config page allows you to store adapter configurati
 
 The adapter gui will detect which version control system (Subversion, Git) are available upon start-up. If none available the option will be disabled in the configuration page.
 You can enable the Subversion and git VCS by adding the required libraries into the adapter lib folder.
-Check [version control with subversion](advanced-vcs-svn.html#installation) or [version control with git](advanced-vcs-git.html#installation) for more details on how to do it.
+Check [version control with subversion](/pages/advanced/advanced-vcs-svn.html#installation) or [version control with git](advanced-vcs-git#installation) for more details on how to do it.
 
 __Note:__ This is highly recommended to use SSL/TLS (https) when using VCS in the Interlok UI web application.
 
@@ -36,7 +36,7 @@ Add one or more profile using the add button and filling the details to connect 
 - **Remote Repo URL:** The URL for the remote repository.
 - **Revision:** (Since 3.6.5) The revision the remote repository. A revision can be a branch name, a revision number or a commit checksum depending on which VCS provider you are using. If left empty, the last checked out revision or the default revision will be used.
 - **Config File Name:** The name of the adapter xml configuration file. If not filled the default adapter.xml will be used. (Only used with config vcs profile and only when a config-project.json file does not exist)
-- **Properties File Name:** The name of the adapter variable substitutions properties file. If not filled no variable substitutions will be done when loading a config. (Only used with config vcs profile and only when a config-project.json file does not exist). Check [pre processors variable substitution](advanced-configuration-pre-processors.html#variable-substitution) for more details about variable substitutions.
+- **Properties File Name:** The name of the adapter variable substitutions properties file. If not filled no variable substitutions will be done when loading a config. (Only used with config vcs profile and only when a config-project.json file does not exist). Check [pre processors variable substitution](/pages/advanced/advanced-configuration-pre-processors#variable-substitution) for more details about variable substitutions.
 
 ## Opening config from VCS ##
 

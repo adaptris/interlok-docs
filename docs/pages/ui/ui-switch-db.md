@@ -119,7 +119,7 @@ If the user and password are provided in the jdbc url they will override any oth
 
 ## Password Encryption  ##
 
-Since version 3.9.3 the database passwords can be encrypted using the standard [Interlok password encryption](advanced-password-handling.html).
+Since version 3.9.3 the database passwords can be encrypted using the standard [Interlok password encryption](/pages/advanced/advanced-password-handling).
 
 Either in the properties file like:
 

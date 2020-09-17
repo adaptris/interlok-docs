@@ -17,7 +17,7 @@ The header navigation bar:
 The widgets page action:
 ![The navigation widgets button](./images/ui-user-guide/widgets-header-navigation-widgets-action.png)
 
-The widgets page is made up of 2 parts, [the widgets action bar](ui-widgets.html#the-widgets-action-bar) and [the configured widgets](ui-widgets.html#the-configured-widgets).
+The widgets page is made up of 2 parts, [the widgets action bar](/pages/ui/ui-widgets#the-widgets-action-bar) and [the configured widgets](/pages/ui/ui-widgets#the-configured-widgets).
 
 ### The widgets action bar ###
 
@@ -141,13 +141,13 @@ This chart shows:
 
 You can toggle which workflow you want to see on the graph by clicking on the workflow's labels. The the workflow's labels which are greyed out will not appear on the graph.
 
-In order to use the stats and metrics widgets you need the correct config. You need a [message-metrics-interceptor](advanced-interceptors.html#message-metrics-interceptor) configured, which will gather the data that's being shown on this widget.
+In order to use the stats and metrics widgets you need the correct config. You need a [message-metrics-interceptor](/pages/advanced/advanced-interceptors#message-metrics-interceptor) configured, which will gather the data that's being shown on this widget.
 
 {% include tip.html content="You need a `message-metrics-interceptors` configured at a workflow level which will gather the data that can be shown on this widget." %}
 
 ### Daily Message Counts Chart ###
 
-This widget is similar to [Message Counts Chart](ui-widgets.html#message-counts-chart) but keeps data for 24 hours. (Since 3.5.1)
+This widget is similar to [Message Counts Chart](/pages/ui/ui-widgets#message-counts-chart) but keeps data for 24 hours. (Since 3.5.1)
 
 ### Message Counts Pie Chart ###
 
@@ -155,13 +155,13 @@ This widget shows a chart that shows the amount of messages that the workflows w
 
 ![Runtime Widget - Message Counts Pie Chart](./images/ui-user-guide/widgets-message-counts-pie-widget.png)
 
-In order to use the stats and metrics widgets you need the correct config. You need a [message-metrics-interceptor](advanced-interceptors.html#message-metrics-interceptor) configured, which will gather the data that's being shown on this widget.
+In order to use the stats and metrics widgets you need the correct config. You need a [message-metrics-interceptor](/pages/advanced/advanced-interceptors#message-metrics-interceptor) configured, which will gather the data that's being shown on this widget.
 
 {% include tip.html content="You need a `message-metrics-interceptors` configured at a workflow level which will gather the data that can be shown on this widget." %}
 
 ### Daily Message Counts Pie Chart ###
 
-This widget is similar to [Message Counts Pie Chart](ui-widgets.html#message-counts-pie-chart) but keeps data for 24 hours. (Since 3.9.2)
+This widget is similar to [Message Counts Pie Chart](/pages/ui/ui-widgets#message-counts-pie-chart) but keeps data for 24 hours. (Since 3.9.2)
 
 ### Control Panel ###
 
@@ -390,25 +390,25 @@ Once done you will be able to select the widget and add it to the page.
 
 ### Channel Details ###
 
-This widget is exactly like the widget described in [Container Details Widget](ui-widgets.html#details-widget), but the data is concerned with the selected channel.
+This widget is exactly like the widget described in [Container Details Widget](/pages/ui/ui-widgets#details-widget), but the data is concerned with the selected channel.
 
 ### Channel Message Counts ###
 
-This widget is exactly like the widget described in [Container Message Counts Chart Widget](ui-widgets.html#message-counts-chart), but the data is concerned with the selected channel. Note that this widget derives its information from any configured workflow [message-metrics-interceptors](advanced-interceptors.html#message-metrics-interceptor). If you have none configured then this widget will display no data.
+This widget is exactly like the widget described in [Container Message Counts Chart Widget](/pages/ui/ui-widgets#message-counts-chart), but the data is concerned with the selected channel. Note that this widget derives its information from any configured workflow [message-metrics-interceptors](/pages/advanced/advanced-interceptors#message-metrics-interceptor). If you have none configured then this widget will display no data.
 
 {% include note.html content="This widget derives its information from any configured workflow `message-metrics-interceptors`. If you have none configured then this widget will display no data." %}
 
 ### Channel Daily Message Counts ###
 
-This widget is similar to [Channel Message Counts](ui-widgets.html#channel-message-counts) but keeps data for 24 hours. (Since 3.5.1)
+This widget is similar to [Channel Message Counts](/pages/ui/ui-widgets#channel-message-counts) but keeps data for 24 hours. (Since 3.5.1)
 
 ### Channel Control Panel ###
 
-This widget is exactly like the widget described in [Container Control Panel Widget](ui-widgets.html#control-panel), but will control a channel instead of an adapter. (Since 3.4)
+This widget is exactly like the widget described in [Container Control Panel Widget](/pages/ui/ui-widgets#control-panel), but will control a channel instead of an adapter. (Since 3.4)
 
 ### Channel Consumer Messages Remaining ###
 
-This widget is exactly like the widget described in [Container Consumer Messages Remaining](ui-widgets.html#container-consumer-messages-remaining), but the data is concerned with the selected channel. (Since 3.8)
+This widget is exactly like the widget described in [Container Consumer Messages Remaining](/pages/ui/ui-widgets#container-consumer-messages-remaining), but the data is concerned with the selected channel. (Since 3.8)
 
 ![Runtime Widget - Channel Consumer Messages Remaining](./images/ui-user-guide/widgets-channel-consumer-messages-remaining.png)
 
@@ -416,7 +416,7 @@ This widget is exactly like the widget described in [Container Consumer Messages
 
 ### Workflow Details ###
 
-This widget is exactly like the widget described in [Container Details Widget](ui-widgets.html#details-widget), but the data is concerned with the selected workflow.
+This widget is exactly like the widget described in [Container Details Widget](/pages/ui/ui-widgets#details-widget), but the data is concerned with the selected workflow.
 
 ### Workflow Message Counts ###
 
@@ -432,11 +432,11 @@ This chart shows:
 
 ### Workflow Daily Message Counts ###
 
-This widget is similar to [Channel Message Counts](ui-widgets.html#workflow-message-counts) but keeps data for 24 hours. (Since 3.5.1)
+This widget is similar to [Channel Message Counts](/pages/ui/ui-widgets#workflow-message-counts) but keeps data for 24 hours. (Since 3.5.1)
 
 ### Workflow Control Panel ###
 
-This widget is exactly like the widget described in [Container Control Panel Widget](ui-widgets.html#control-panel), but will control a workflow instead of an adapter. (Since 3.4)
+This widget is exactly like the widget described in [Container Control Panel Widget](/pages/ui/ui-widgets#control-panel), but will control a workflow instead of an adapter. (Since 3.4)
 
 ### Workflow Message Sizes ###
 
@@ -499,7 +499,7 @@ This widget will be enabled if a Metadata Count or Metadata Totals Interceptor h
 
 ### Workflow Consumer Messages Remaining ###
 
-This widget is exactly like the widget described in [Container Consumer Messages Remaining](ui-widgets.html#container-consumer-messages-remaining), but the data is concerned with the selected workflow. (Since 3.8)
+This widget is exactly like the widget described in [Container Consumer Messages Remaining](/pages/ui/ui-widgets#container-consumer-messages-remaining), but the data is concerned with the selected workflow. (Since 3.8)
 
 ![Runtime Widget - Workflow Consumer Messages Remaining](./images/ui-user-guide/widgets-workflow-consumer-messages-remaining.png)
 

@@ -9,7 +9,7 @@ summary: The Salesforce Config page help you to generate some config xml to inte
 
 ## Prerequisite ##
 
-To be able to generate salesforce xml templates or copy the xml config to the Config page clipboard you need to have the required **interlok-apache-http** and **interlok-oauth-salesforce** [optional component installed](adapter-optional-components.html) into `${adapter.home}/lib` directory.
+To be able to generate salesforce xml templates or copy the xml config to the Config page clipboard you need to have the required **interlok-apache-http** and **interlok-oauth-salesforce** [optional component installed](/pages/adapter/adapter-optional-components) into `${adapter.home}/lib` directory.
 If you are not using those two optional components you will still be able to use the page but you will get a warning message. ![Salesforce warning message](./images/ui-user-guide/salesforce-warning-message.png)
 
 You also need to create a **Connected App** in your Salesforce account. More help on Salesforce developers site [here](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_defining_remote_access_applications.htm) and [here](https://developer.salesforce.com/page/Connected_Apps) and [here](https://developer.salesforce.com/page/Digging_Deeper_into_OAuth_2.0_on_Force.com).
@@ -81,7 +81,7 @@ All the **Build Config XML** modal (authentication, resource listing, fetching, 
 
 ![Salesforce SObjects list](./images/ui-user-guide/salesforce-build-config-xml.png)
 
-The **Copy to Clipboard** button will copy the displayed xml into a service component in the UI Clipboard and be can used by dragging it from the [Sidebar Clipboard in the Config page](ui-config-sidebar.html#clipboard-sidebar) (Since 3.6.6).
+The **Copy to Clipboard** button will copy the displayed xml into a service component in the UI Clipboard and be can used by dragging it from the [Sidebar Clipboard in the Config page](/pages/ui/ui-config-sidebar#clipboard-sidebar) (Since 3.6.6).
 
 The **Save as Template** button will save the displayed xml into a service template usable in the Config page.
 {% include note.html content="If the config contains some password they will be encoded in the template." %}

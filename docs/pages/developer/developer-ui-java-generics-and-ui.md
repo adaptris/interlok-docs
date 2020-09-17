@@ -40,7 +40,7 @@ However when trying to find implementations of *mySecondInterfaceMember* the UI 
 
 The UI has a workaround for this which is to use the reload button of the dropdown to remove generic support.
 
-![java generics and ui reload button](./images/developer/developer-ui-java-generics-and-ui-reload-button.png)
+![java generics and ui reload button](../../images/developer/developer-ui-java-generics-and-ui-reload-button.png)
 
 The drawback of this is that all implementations of the given interface will be displayed disregarding any generics, meaning that we will get back more results than necessary.
 

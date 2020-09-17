@@ -72,7 +72,7 @@ $ ant build-car
 
 Once the CAR builder has completed you will find a new CAR file in the 'target' directory of the CAR builder installation.
 
-![CAR Builder on the command line](./images/sonic-container/sonicmq-container-Figure1.png)
+![CAR Builder on the command line](../../images/sonic-container/sonicmq-container-Figure1.png)
 
 ----
 
@@ -90,7 +90,7 @@ Finally, we must also enable custom components within SonicMQ.  This feature ess
 
 An example of a windows version of the modified "startmc" script will look like the following (not including the –Xmx switch, add this if needed);
 
-![startmc script](./images/sonic-container/sonicmq-container-Figure3.png)
+![startmc script](../../images/sonic-container/sonicmq-container-Figure3.png)
 
 ----
 
@@ -98,7 +98,7 @@ An example of a windows version of the modified "startmc" script will look like 
 
 Login to your SonicMQ environment using the Sonic Management Console. On the "Configure" tab select the "Configured Objects" -> "Archives" -> "MF" -> "8.5" (this last directory will be named according to your version of SonicMQ), then simply right click on the right pane that already lists several Sonic CAR files and select "Import".  From the directory explorer window, select your Interlok CAR file.  This window should now look like this (example taken from SonicMQ v8.5);
 
-![car file directory](./images/sonic-container/sonicmq-container-Figure2.png)
+![car file directory](../../images/sonic-container/sonicmq-container-Figure2.png)
 
 ### Interlok configuration ###
 
@@ -110,13 +110,13 @@ For Interlok to function, you will need to upload both the Interlok configuratio
 
 Having enabled the generic components within the Sonic environment, you should now be able to add a new generic component;
 
-![generic component](./images/sonic-container/sonicmq-container-Figure4.png)
+![generic component](../../images/sonic-container/sonicmq-container-Figure4.png)
 
 The following configuration should be used for the container configuration page;
 
-![component properties 1](./images/sonic-container/sonicmq-container-Figure5.png)
+![component properties 1](../../images/sonic-container/sonicmq-container-Figure5.png)
 
-![component properties 2](./images/sonic-container/sonicmq-container-Figure6.png)
+![component properties 2](../../images/sonic-container/sonicmq-container-Figure6.png)
 
 You will be able to add your newly created generic component to any standard Sonic container. The recommendation is that you create a new container for this component. There are a number of deployment parameters that can be used to control the runtime behaviour of Interlok running inside a container shown below:
 
@@ -138,7 +138,7 @@ The main reason for using the bootstrap.properties.url deployment parameter abov
 
 Next, you need to make sure the SonicMQ container starts Interlok with the correct version of java. By default all container components will be executed with the version installed with SonicMQ.  You may need to specify a later version of Java. To do this, you can edit your custom container and make sure the path to your java 1.8+ installation is specified as shown here;
 
-![Java version](./images/sonic-container/sonicmq-container-Figure8.png)
+![Java version](../../images/sonic-container/sonicmq-container-Figure8.png)
 
 Finally, to configure the logging you may need to add the following switch (modify the path to your log4j configuration as needed) to the Java VM options in the container properties to force log4j configuration from a specific location.
 
@@ -146,7 +146,7 @@ Finally, to configure the logging you may need to add the following switch (modi
 -Dlog4j.configurationFile=sonicfs:///System/Interlok/log4j2.xml
 ```
 
-![JVM Options](./images/sonic-container/sonicmq-container-Figure9.png)
+![JVM Options](../../images/sonic-container/sonicmq-container-Figure9.png)
 
 ## Container integrated logging ##
 

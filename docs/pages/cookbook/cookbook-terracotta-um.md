@@ -26,7 +26,7 @@ With universal messaging you don't necessarily need to create your queues before
 
 You will however have to configure the access rights on each of your endpoints to allow consumers to pop and producers to push messages.
 
-![QueuePrivs.png](./images/tum/QueuePrivs.png)
+![QueuePrivs.png](../../images/tum/QueuePrivs.png)
 
 We will be configuring Interlok to use JNDI for each of it's connections therefore ConnectionFactories must be created on the server side.
 
@@ -34,7 +34,7 @@ You will either need to create a QueueConnectionFactory/TopicConnectionFactory o
 
 Each configured Interlok connection will simply re-use the same connection factory, therefore we only need to create that single connection factory on the server side, simply named "ConnectionFactory".
 
-![ConnectionFactoryCreate.png](./images/tum/ConnectionFactoryCreate.png)
+![ConnectionFactoryCreate.png](../../images/tum/ConnectionFactoryCreate.png)
 
 This concludes all required Universal Messaging configuration.
 
@@ -50,11 +50,11 @@ For this quick start guide we're going to create 3 channels;
 
 3) Reply channel which consumes from SampleQ2 and dumps the messages back to the file system.
 
-![Channel1.png](./images/tum/Channel1.png)
+![Channel1.png](../../images/tum/Channel1.png)
 
-![Channel2.png](./images/tum/Channel2.png)
+![Channel2.png](../../images/tum/Channel2.png)
 
-![Channel3.png](./images/tum/Channel3.png)
+![Channel3.png](../../images/tum/Channel3.png)
 
 Assuming a stock install of Universal Messaging, means that our JNDI configuration for our connections are very simple, we only need two properties;
 
@@ -62,11 +62,11 @@ Assuming a stock install of Universal Messaging, means that our JNDI configurati
 
 - java.naming.provider.url = nsp://127.0.0.1:9000/
 
-![JNDIConfig.png](./images/tum/JNDIConfig.png)
+![JNDIConfig.png](../../images/tum/JNDIConfig.png)
 
 Your provider URL will match the url seen in the Universal Messaging manager under the JNDI tab;
 
-![UM_Manager.png](./images/tum/UM_Manager.png)
+![UM_Manager.png](../../images/tum/UM_Manager.png)
 
 Finally, in the Bridge channel (channel 2), we have not configured any connection error handlers, therefore default connection error handlers will be assigned.
 
@@ -76,7 +76,7 @@ Both connections for the second channel will be assigned a default connection er
 
 Therefore we need to set the produce connection error handler to a NullConnectionErrorHandler;
 
-![CEH.png](./images/tum/CEH.png)
+![CEH.png](../../images/tum/CEH.png)
 
 This concludes all required Interlok configuration.
 
@@ -88,7 +88,7 @@ Finally, once the text file has been consumed and sent to SampleQ1 and then pick
 
 Sample TRACE logging from this simple quick start test is shown below.
 
-![SampleLogging.png](./images/tum/SampleLogging.png)
+![SampleLogging.png](../../images/tum/SampleLogging.png)
 
 The full Interlok XML configuration;
 

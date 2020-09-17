@@ -11,8 +11,8 @@ summary: The UI has its own Database.
 
 Here is a basic diagram of what the UI Database looks like:
 
-![basic diagram of UI Database - part1](./images/ui-user-guide/db-diagram-part1.png)
-![basic diagram of UI Database - part2](./images/ui-user-guide/db-diagram-part2.png)
+![basic diagram of UI Database - part1](../../images/ui-user-guide/db-diagram-part1.png)
+![basic diagram of UI Database - part2](../../images/ui-user-guide/db-diagram-part2.png)
 
 
 ## Interlok UI Database Schema ##

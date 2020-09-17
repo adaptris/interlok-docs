@@ -10,10 +10,10 @@ toc: false
 Once logged in, a user will be redirected to the Dashboard page. The Navigation bar is available at the top of the page, and is part of the page header. Users can use the options on this bar to navigation to the various parts of the UI.
 
 Navigation bar (with the Dashboard Page as the active page) :
-![Navigation bar (with the Dashboard Page as the active page)](./images/ui-user-guide/navigation-bar.png)
+![Navigation bar (with the Dashboard Page as the active page)](../../images/ui-user-guide/navigation-bar.png)
 
 Navigation Bar with the user options open (and with the Runtime Widgets Page as the active page):
-![Navigation Bar with the user options open (and with the Runtime Widgets Page as the active page)](./images/ui-user-guide/navigation-bar-options-open.png)
+![Navigation Bar with the user options open (and with the Runtime Widgets Page as the active page)](../../images/ui-user-guide/navigation-bar-options-open.png)
 
 {% include tip.html content="Shown in images above is the text 'Default Admin', this is actually the logged in users first name and last name. This example is using the default admin account." %}
 

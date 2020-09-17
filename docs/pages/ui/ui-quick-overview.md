@@ -11,7 +11,7 @@ Throughout the documentation there will be references to the Interlok Container,
 
 ## Interlok Quick UI Overview ##
 
-![Quick Container Overview](./images/ui-user-guide/quick-overview.png)
+![Quick Container Overview](../../images/ui-user-guide/quick-overview.png)
 
 Quick Container Overview :
 
@@ -25,7 +25,7 @@ Quick Container Overview :
 
 ## Web Application Quick Overview ##
 
-![Basic UI Sitemap](./images/ui-user-guide/quick-sitemap.png)
+![Basic UI Sitemap](../../images/ui-user-guide/quick-sitemap.png)
 
 The UI web application is basically divided in four sections:
 

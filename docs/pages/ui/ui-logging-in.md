@@ -11,7 +11,7 @@ toc: false
 
 The UI is a secured web application and only allows authorised users to log in.
 
-![Login Page](./images/ui-user-guide/login-page.png)
+![Login Page](../../images/ui-user-guide/login-page.png)
 
 {% include note.html content="After installing the Interlok container, users are able to use the default admin account:<br/>Username: `admin`<br/>Password: `admin`" %}
 

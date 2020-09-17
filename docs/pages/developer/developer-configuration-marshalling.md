@@ -27,26 +27,26 @@ At present there is only one config manager: [XStreamConfigManager][], but poten
 
 ## Managers ##
 
-![Managers](./images/configuration-marshalling/managers.png)
+![Managers](../../images/configuration-marshalling/managers.png)
 
 The diagram shows the hierarchy of the XStreamConfigManager. This class takes in the bootstrap properties and creates the marshallerFactory and from that creates the marshaller that performs the work of marshalling an object to a file.
 The created marshaller is stored in a singleton for easy access across the system (see sequence diagram below).
 
 ## Factory Classes ##
 
-![Factories](./images/configuration-marshalling/Factories.png)
+![Factories](../../images/configuration-marshalling/Factories.png)
 
 There is a lot of configuration required to get the marshalling just the way we would like it, this is all taken care of within the factory class: [AdapterXStreanMarshallerFactory](https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/AdapterXStreamMarshallerFactory.html "AdapterXStreamMarshallerFactory"). The private methods give a hint to the various configuration files read in.
 
 ## Marshallers ##
 
-![Marshallers](./images/configuration-marshalling/marshallers.png)
+![Marshallers](../../images/configuration-marshalling/marshallers.png)
 
 This diagram details the two marshaller implementations we have: XML & JSON and how they create and reference the XStream instance.
 
 ## Sequence Diagram ##
 
-![Sequence](./images/configuration-marshalling/sequence.png)
+![Sequence](../../images/configuration-marshalling/sequence.png)
 
 This diagram puts all the classes together in time instantiation order.
 

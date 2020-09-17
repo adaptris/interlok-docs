@@ -13,7 +13,7 @@ To access the Interlok Component Search page, you use the component search butto
 
 The header navigation bar:
 
- ![Navigation bar with search shown](./images/ui-user-guide/component-search-nav.png)
+ ![Navigation bar with search shown](../../images/ui-user-guide/component-search-nav.png)
 
 ## Component Search Page ##
 
@@ -23,15 +23,15 @@ Upon opening the component search page, you are presented with a search input th
 
 The search page upon opening:
 
- ![Component Search Page](./images/ui-user-guide/component-search-blank.png)
+ ![Component Search Page](../../images/ui-user-guide/component-search-blank.png)
 
 Having typed search criteria and pressed enter or clicked search you will be shown the search results:
 
- ![Component Search Page](./images/ui-user-guide/component-search.png)
+ ![Component Search Page](../../images/ui-user-guide/component-search.png)
  
 Each result will contain the following information:
 
-![Component Search Page](./images/ui-user-guide/component-search-anotated.png)
+![Component Search Page](../../images/ui-user-guide/component-search-anotated.png)
  
 
 ## Search Criteria ##

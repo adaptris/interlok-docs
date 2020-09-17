@@ -1269,27 +1269,27 @@ Below are some screenshots that indicate how [Thunderbird] was configured.
 
 POP3 account settings:
 
-![pop3_account_settings.png](./images/cookbook/email/pop3_account_settings.png)
+![pop3_account_settings.png](../../images/cookbook/email/pop3_account_settings.png)
 
 POP3 server settings (note that emails are left on the server, which is the default, but that they also won't be automatically deleted after some time):
 
-![pop3_server_settings.png](./images/cookbook/email/pop3_server_settings.png)
+![pop3_server_settings.png](../../images/cookbook/email/pop3_server_settings.png)
 
 IMAP account settings:
 
-![imap_account_settings.png](./images/cookbook/email/imap_account_settings.png)
+![imap_account_settings.png](../../images/cookbook/email/imap_account_settings.png)
 
 IMAP server settings:
 
-![imap_server_settings.png](./images/cookbook/email/imap_server_settings.png)
+![imap_server_settings.png](../../images/cookbook/email/imap_server_settings.png)
 
 Outgoing server settings:
 
-![outgoing_server_settings.png](./images/cookbook/email/outgoing_server_settings.png)
+![outgoing_server_settings.png](../../images/cookbook/email/outgoing_server_settings.png)
 
 SMTP server:
 
-![smtp_server.png](./images/cookbook/email/smtp_server.png)
+![smtp_server.png](../../images/cookbook/email/smtp_server.png)
 
 #### Java (only POP3/IMAP)
 

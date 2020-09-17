@@ -50,7 +50,7 @@ Although there are no external components used for this sample, there are some s
 
 After running Interlok for 30 minutes we can see the heap usage climbs and then stables out between 750Mb to 900Mb.
 
-![MemoryFigure1](./images/memory-usage/Memory-Figure1.png)
+![MemoryFigure1](../../images/memory-usage/Memory-Figure1.png)
 
 ### Very Basic Configuration ###
 
@@ -116,7 +116,7 @@ For this example there are no external components used.
 
 After running Interlok for 30 minutes we can see the heap usage climbs and then stables out between 40Mb to 85Mb.
 
-![MemoryFigure2](./images/memory-usage/Memory-Figure2.png)
+![MemoryFigure2](../../images/memory-usage/Memory-Figure2.png)
 
 ### Basic Two Channel JMS ###
 
@@ -258,7 +258,7 @@ For this example there are no external components used.
 
 After running Interlok for 30 minutes we can see the heap usage climbs and then stables out between 35Mb to 85Mb.
 
-![MemoryFigure3](./images/memory-usage/Memory-Figure3.png)
+![MemoryFigure3](../../images/memory-usage/Memory-Figure3.png)
 
 ### Basic Two Channel JMS with EhCache Services ###
 
@@ -450,7 +450,7 @@ For this example we have used the external component 'ehcache', which can be fou
 
 After running Interlok for 30 minutes we can see the heap usage climbs and will never stable out.  The memory usage will continue to rise until eventually we will run out of memory.
 
-![MemoryFigure4](./images/memory-usage/Memory-Figure4.png)
+![MemoryFigure4](../../images/memory-usage/Memory-Figure4.png)
 
 ## Conclusion and Recommendations ##
 

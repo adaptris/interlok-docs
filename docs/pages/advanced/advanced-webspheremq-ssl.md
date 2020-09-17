@@ -32,19 +32,19 @@ This entry has two parts:
  
 Note the location and key name for use in a later step.
 
-![QueueManagerSSLFigure1](./images/webspheremq-ssl/QueueManProps.png)
+![QueueManagerSSLFigure1](../../images/webspheremq-ssl/QueueManProps.png)
 
 In the WebSphere MQ Explorer, right-click IBM WebSphere MQ and click Manage SSL Certificates to open IBM Key Management (the ikeyman utility).
 
 In IBM Key Management, click Key Database File > New to create a key store. In the Key database type field, select CMS. Click Browse and select the file name (for example, key.kdb) and location (for example, MQ_home\Qmgrs\qmgr_name\ssl) that you provided in step 3.a. When prompted, enter a password to secure the key store. Select Stash the password to a file, and click OK.
 
-![KeyRepoFigure2](./images/webspheremq-ssl/NewCMS-2.png)
+![KeyRepoFigure2](../../images/webspheremq-ssl/NewCMS-2.png)
 
 ### Creating the Queue Manager Certificate ###
 
 Still using the IBM Key Management tool, with your new server side key repository loaded, switch to Personal Certificates and click New Self-Signed. When prompted, enter ibmwebspheremq(your_qmgr_name") (for example ibmwebspheremqmqmqgr). It is important to follow this naming rule for the key label. For the other fields, enter anything you like. Click OK. You have created a personal certificate for your queue manager.
 
-![SelfSignedCertFigure3](./images/webspheremq-ssl/NewSelfSign-3.png)
+![SelfSignedCertFigure3](../../images/webspheremq-ssl/NewSelfSign-3.png)
 
 Click Extract Certificate. At the prompt, select "DER" as the type and enter a name for this certificate, saving it to any location. Click OK.
 
@@ -58,7 +58,7 @@ In the prompt choose server-connection-channel and give it a name.
 
 Then switch to the SSL tab and select a cipher spec to use.  Do note down the chosen cipher spec, because we will need the name of it when we come to configuring the client later.
 
-![ServerChannelFigure4](./images/webspheremq-ssl/ServerConnChan-4.png)
+![ServerChannelFigure4](../../images/webspheremq-ssl/ServerConnChan-4.png)
 
 It is important to note, that some of the cipher specs are not supported any longer; if you choose one of these the MQ explorer will give you an error.
 
@@ -107,7 +107,7 @@ Click OK. You will be prompted for a label, which should be in the form ibmwebsp
 
 Click OK to add the certificate.
 
-![AddCertFigure5](./images/webspheremq-ssl/AddtoTrust-5.png)
+![AddCertFigure5](../../images/webspheremq-ssl/AddtoTrust-5.png)
 
 ### Creating the client certificate ###
 

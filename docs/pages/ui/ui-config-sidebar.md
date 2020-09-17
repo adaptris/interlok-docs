@@ -16,13 +16,13 @@ To open the config pages sidebar, you use the sidebar button which is next to th
 
 The Config page sidebar toggle button:
 
-![Config page sidebar toggle button](./images/ui-user-guide/config-sidebar.png)
+![Config page sidebar toggle button](../../images/ui-user-guide/config-sidebar.png)
 
 ## Introduction sidebar ##
 
 The introduction panel lists and explains the component types used in the UI Config page has links to Interlok doc and javadoc sites.
 
-![Config page sidebar intro](./images/ui-user-guide/config-sidebar-intro.png)
+![Config page sidebar intro](../../images/ui-user-guide/config-sidebar-intro.png)
 
 ## Components sidebar##
 
@@ -42,24 +42,24 @@ The components are organised into three different categories:
   A search bar is available when the list has more than ten components.
 
 
-![Config page sidebar components](./images/ui-user-guide/config-sidebar-components.png)
+![Config page sidebar components](../../images/ui-user-guide/config-sidebar-components.png)
 
 ## Clipboard sidebar##
 
 The clipboard panel allows to add Interlok copied component in the Config page by dragging them and dropping them into the relevant area (Since 3.6.6).
 
-The component are copied into the Clipboard by clicking on the **Copy** ![Config copy button](./images/ui-user-guide/config-copy-button.png) button on each of them or by using the **Copy to Clipboard** button the Salesforce config page.
+The component are copied into the Clipboard by clicking on the **Copy** ![Config copy button](../../images/ui-user-guide/config-copy-button.png) button on each of them or by using the **Copy to Clipboard** button the Salesforce config page.
 
 The clipboard is a FIFO list (First in first out) and contains up to four components of each type and up to six service components.
 
 {% include note.html content="Data from the Clipboard is stored in the browser session storage and will be cleared on log out or when the browser tab or window is closed." %}
 
-![Config page sidebar clipboard](./images/ui-user-guide/config-sidebar-clipboard.png)
+![Config page sidebar clipboard](../../images/ui-user-guide/config-sidebar-clipboard.png)
 
 ## Shortcuts sidebar ##
 
 The shortcuts panel list few keyboard shortcuts that can be used in the Config page.
 
-![Config page sidebar shortcuts](./images/ui-user-guide/config-sidebar-shortcuts.png)
+![Config page sidebar shortcuts](../../images/ui-user-guide/config-sidebar-shortcuts.png)
 
 

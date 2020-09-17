@@ -21,7 +21,7 @@ As of 3.9.2 the page is still a **beta feature** and therefore the connected use
 To access the Profiler Monitor page, you use the monitor button on the header navigation bar.
 
 The header navigation bar:
- ![Navigation bar with profiler monitor selected](./images/ui-user-guide/profiler-monitor-header-navigation.png)
+ ![Navigation bar with profiler monitor selected](../../images/ui-user-guide/profiler-monitor-header-navigation.png)
 
 
 ## Monitoring ##
@@ -29,14 +29,14 @@ The header navigation bar:
 Once you've selected an adapter and a channel to monitor a flow diagram will be displayed showing the worklows in the selected channel.
 Each workflows displays its services with some near real time message processing information.
 
-![Profiler monitor page](./images/ui-user-guide/profiler-monitor-page.png)
+![Profiler monitor page](../../images/ui-user-guide/profiler-monitor-page.png)
 
 You can navigate into service lists just by clicking on them. To go back you need to use the breadcrumb above the diagram.
 
 The Show Grap toggler above the diagram allows to show / hide a chart that will display the messages average taken per workflow in the selected metrics.
 The plot will be added in the chart only if the UI receive data from the profiler (if there is activities in the workflow).
 
-![Profiler monitor page with chart](./images/ui-user-guide/profiler-monitor-page-with-chart.png)
+![Profiler monitor page with chart](../../images/ui-user-guide/profiler-monitor-page-with-chart.png)
 
 You can add up to five monitors using the "Add a Profiler Monitor" button. Each profiler can use different adapters and/or channels.
 

@@ -13,13 +13,13 @@ summary: The saved config projects list allows you to easily save and re-open ad
 To navigate to the saved config projects modal, you use the Saved project button from the top navigation bar.
 
 The config action bar:
-![Config page with Saved Projects button showing](./images/ui-user-guide/config-saved-projects-button.png)
+![Config page with Saved Projects button showing](../../images/ui-user-guide/config-saved-projects-button.png)
 
 ## Saved Config Projects Modal ##
 
 You can manage a previously saved config project in the modal:
 
-![Config page saved config projects modal](./images/ui-user-guide/config-saved-config-projects.png)
+![Config page saved config projects modal](../../images/ui-user-guide/config-saved-config-projects.png)
 
 For each config you can do the following actions:
 
@@ -37,7 +37,7 @@ You can save the currently loaded config project using the 'Save Project' button
 Clicking on the 'Save Project' button will prompt you for either the project name or the project location for local file system projects.
 For new project the Adapter unique id will be used by default for the name.
 
-![Config page save config project modal](./images/ui-user-guide/config-save-config-project.png)
+![Config page save config project modal](../../images/ui-user-guide/config-save-config-project.png)
 
 
 

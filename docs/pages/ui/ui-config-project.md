@@ -19,13 +19,13 @@ A project helps managing the configuration XML files, using [X-Include](https://
 
 To open the config project modal you will have to click on the Project button on the top left corner of the config page.
 
-![Edit Config Project](./images/ui-user-guide/config-project-edit-button.png)
+![Edit Config Project](../../images/ui-user-guide/config-project-edit-button.png)
 
 ## Config Project Modal ##
 
 The modal is divided in three tabs:
 
-![Config Project Tabs](./images/ui-user-guide/config-project-tabs.png)
+![Config Project Tabs](../../images/ui-user-guide/config-project-tabs.png)
 
 - **General:** Where you can configure the basic details of the project, name, description, add config file and the config file name.
 - **X-Includes:** Where you can specify which part of the XML config file should be split into multiple files.
@@ -37,7 +37,7 @@ The modal is divided in three tabs:
 
 ### General Tab ###
 
-![Config Project General Tab](./images/ui-user-guide/config-project-general-tab.png)
+![Config Project General Tab](../../images/ui-user-guide/config-project-general-tab.png)
 
 In the General tab you can configure:
 
@@ -48,7 +48,7 @@ In the General tab you can configure:
 
 ### X-Includes Tab ###
 
-![Config Project X-Includes Tab](./images/ui-user-guide/config-project-xincludes-tab.png)
+![Config Project X-Includes Tab](../../images/ui-user-guide/config-project-xincludes-tab.png)
 
 [X-Include](https://www.w3.org/TR/xinclude/) is a mechanism for merging/splitting XML documents, by writing inclusion tags in the main XML document to automatically include other documents.
 
@@ -63,7 +63,7 @@ Since 3.9.3 If "Use unique id instead of index" is enabled, this option will app
 
 ### Variables Tab ###
 
-![Config Project Variables Tab](./images/ui-user-guide/config-project-variables-tab.png)
+![Config Project Variables Tab](../../images/ui-user-guide/config-project-variables-tab.png)
 
 In the Variables tab you set the name of the variables properties file. This is optional and if left empty, `variables#[-varsetname].properties` will be used by default.
 
@@ -79,15 +79,15 @@ The other buttons are used to manage the properties set:
 
 | Button | Meaning
 | ------------ | -------------
-| ![Config Project Variables Set Active Button](./images/ui-user-guide/config-project-variables-tab-active-button.png) | This button make the selected variables set as active. By default the `default` set is the active one. The default set is used in the [Component settings modal](#component-settings-modal) to associate config values with variable substitution keys.
-| ![Config Project Variables Set Edit Button](./images/ui-user-guide/config-project-variables-tab-edit-button.png) | This button allows you to change the selected variable set name.
-| ![Config Project Variables Set Delete Button](./images/ui-user-guide/config-project-variables-tab-delete-button.png) | This button allows you to delete the selected variable set.
-| ![Config Project Variables Set Add Button](./images/ui-user-guide/config-project-variables-tab-add-button.png) | This button allows you to add a new empty variable set. You just need to give the variable set name.
-| ![Config Project Variables Set Add And Copy Button](./images/ui-user-guide/config-project-variables-tab-add-and-copy-button.png) | This button allows you to add a new variable set filled with properties copied from the selected variable set.
+| ![Config Project Variables Set Active Button](../../images/ui-user-guide/config-project-variables-tab-active-button.png) | This button make the selected variables set as active. By default the `default` set is the active one. The default set is used in the [Component settings modal](#component-settings-modal) to associate config values with variable substitution keys.
+| ![Config Project Variables Set Edit Button](../../images/ui-user-guide/config-project-variables-tab-edit-button.png) | This button allows you to change the selected variable set name.
+| ![Config Project Variables Set Delete Button](../../images/ui-user-guide/config-project-variables-tab-delete-button.png) | This button allows you to delete the selected variable set.
+| ![Config Project Variables Set Add Button](../../images/ui-user-guide/config-project-variables-tab-add-button.png) | This button allows you to add a new empty variable set. You just need to give the variable set name.
+| ![Config Project Variables Set Add And Copy Button](../../images/ui-user-guide/config-project-variables-tab-add-and-copy-button.png) | This button allows you to add a new variable set filled with properties copied from the selected variable set.
 
 ### Variables XPaths Tab ###
 
-![Config Project Variables XPaths Tab](./images/ui-user-guide/config-project-variables-xpaths-tab.png)
+![Config Project Variables XPaths Tab](../../images/ui-user-guide/config-project-variables-xpaths-tab.png)
 
 The Variables XPaths tab list all the associations between the config XML node values and the variable substitution keys. Interlok uses XPaths to associate a node value in the config XML to variable key.
 
@@ -100,7 +100,7 @@ Generic XPaths (e.g. `//payload-hashing-service/metadata-key` instead of `/adapt
 
 ### Tests Tab ###
 
-![Config Project Tests Tab](./images/ui-user-guide/config-project-tests-tab.png)
+![Config Project Tests Tab](../../images/ui-user-guide/config-project-tests-tab.png)
 
 In the Tests tab you can configure:
 
@@ -108,7 +108,7 @@ In the Tests tab you can configure:
 
 ### Additional Files Tab ###
 
-![Config Project Additional Files Tab](./images/ui-user-guide/config-project-additional-files-tab.png)
+![Config Project Additional Files Tab](../../images/ui-user-guide/config-project-additional-files-tab.png)
 
 In the Additional Files tab you can add additional config files to be saved with your config when saving a project. (Since 3.10.1)
 
@@ -120,7 +120,7 @@ If the files are unselected they will be removed from the project on the next pr
 
 ### Optional Components Tab ###
 
-![Config Project Optional Components Tab](./images/ui-user-guide/config-project-optional-components-tab.png)
+![Config Project Optional Components Tab](../../images/ui-user-guide/config-project-optional-components-tab.png)
 
 In the Optional Components tab you can see the list of optional components used in the project config xml. (Since 3.10.2)
 
@@ -128,20 +128,20 @@ The list is generated when the project is saved and can be utilised to add the o
 
 To make it easier to copy the optional components dependencies into a build.gradle file you can select the Gradle tab and copy the Gradle snippet.
 
-![Config Project Optional Components Gradle Tab](./images/ui-user-guide/config-project-optional-components-gradle-tab.png)
+![Config Project Optional Components Gradle Tab](../../images/ui-user-guide/config-project-optional-components-gradle-tab.png)
 
 Note: The UI will be only be able to manage optional components which are in its classpath.
 
 ## Component Settings Modal ##
 
-![Config Project Component Settings Modal](./images/ui-user-guide/config-project-component-settings-modal.png)
+![Config Project Component Settings Modal](../../images/ui-user-guide/config-project-component-settings-modal.png)
 
 If you have at least one variable in the config project, a variable picker will be show next to each Component settings.
-![Config Project Component Settings Variable Picker Toggler](./images/ui-user-guide/config-project-component-settings-modal-variable-picker-toggler.png) ![Config Project Component Settings Variable Picker Toggler Selected](./images/ui-user-guide/config-project-component-settings-modal-variable-picker-toggler-selected.png)
+![Config Project Component Settings Variable Picker Toggler](../../images/ui-user-guide/config-project-component-settings-modal-variable-picker-toggler.png) ![Config Project Component Settings Variable Picker Toggler Selected](../../images/ui-user-guide/config-project-component-settings-modal-variable-picker-toggler-selected.png)
 
 If you click on it that will open a token text field where you can add/select some variable keys and/or some free text.
 
-![Config Project Component Settings Variable Picker Toggler](./images/ui-user-guide/config-project-component-settings-modal-variable-picker.png)
+![Config Project Component Settings Variable Picker Toggler](../../images/ui-user-guide/config-project-component-settings-modal-variable-picker.png)
 
 A variable key is surrounded by `${` and `}`. If the variable you want to use does not exist you can add a new one by typing `${varKey}` and `Enter` if you want an empty variable and provide the value later or `${varKey}=var Value` and `Enter` if you want to provide the value.
 
@@ -151,7 +151,7 @@ Note: When typing a token (variable key or free text) you will have to press `En
 
 The config project modal allows to configure the config project but doesn't persist it anywhere. To save a project you will need to click on the **Save Project** button in the config action bar.
 
-![Config page action bar](./images/ui-user-guide/config-action-bar.png)
+![Config page action bar](../../images/ui-user-guide/config-action-bar.png)
 
 You will be prompted for the config project name. By default the Adapter unique id will be used.
 

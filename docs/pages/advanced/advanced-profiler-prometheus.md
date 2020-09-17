@@ -168,7 +168,7 @@ Now you can log into Grafana with your browser on [http://localhost:3000](http:/
 The default username and password is usually __admin__ for both.  You should then be prompted to create a new data source.  For this we'll need the Prometheus engines container IP address/host name.  Using the same two commands as shown in the previous section; __docker ps__ and __docker network inspect bridge__, find the IP address of the Prometheus engine, not the pushgateway.
 Choose Prometheus as the data source type and enter the host with your IP address as shown below;
 
-![PrometheusDataSource](./images/prometheus/datasource.PNG)
+![PrometheusDataSource](../../images/prometheus/datasource.PNG)
 
 ### Interlok
 
@@ -262,7 +262,7 @@ For example, if you have a producer named __my_Jms_Producer__ in the workflow na
 
 If you're using the same configuration as this guide then use your HTTP posting tool to inject messages into Interlok.  Here we're use Apache JMeter, the basic configuration looks like the following.
 
-![JMeter](./images/prometheus/jmeter.PNG)
+![JMeter](../../images/prometheus/jmeter.PNG)
 
 Continually fire messages into Interlok for a few seconds or so and then move onto the next section to see the results of those metrics.
 
@@ -278,11 +278,11 @@ Using the query;
 ```
 In the following configuration window;
 
-![Config](./images/prometheus/grafanaConfig.PNG)
+![Config](../../images/prometheus/grafanaConfig.PNG)
 
 We end up with the following messages processed by workflow chart;
 
-![Workflows](./images/prometheus/workflows.PNG)
+![Workflows](../../images/prometheus/workflows.PNG)
 
 We can also see the time in nanoseconds that each service in the workflow named __standardWorkflow__ takes to process each message with the following query;
 
@@ -290,7 +290,7 @@ We can also see the time in nanoseconds that each service in the workflow named 
 {__name__=~"serviceAvgNanos_standardWorkflow.*"}
 ```
 
-![Services](./images/prometheus/servicenanos.PNG)
+![Services](../../images/prometheus/servicenanos.PNG)
 
 ## Sample Configuration
 

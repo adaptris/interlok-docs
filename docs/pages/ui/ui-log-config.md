@@ -12,13 +12,13 @@ summary: The Log Config page allows you to modify an adapter log configuration. 
 To access the Log Config page, you use the log config button on the header navigation bar. The page is only accessible by admin users.
 
 The header navigation bar:
- ![Navigation bar with log config selected](./images/ui-user-guide/log-config-header-navigation.png)
+ ![Navigation bar with log config selected](../../images/ui-user-guide/log-config-header-navigation.png)
 
 ## Log Config ##
 
 ### Select a Log Config ###
 
-![Log config page](./images/ui-user-guide/log-config-page.png)
+![Log config page](../../images/ui-user-guide/log-config-page.png)
 
 Select an Adapter via the dropdown and the log config will be displayed in the editor if available.
 

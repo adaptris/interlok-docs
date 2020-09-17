@@ -23,7 +23,7 @@ The JRE needs to be the 32bit version of the JRE, as the native bridge between J
 MSMQ is part of the standard Microsoft Windows software stack. It is not, however, installed by default; so this feature needs to be turned on if it is available on your specific version of Windows. You can do this through the windows control panel;
 - Control Panel -> Programs and Features -> Turn Windows features on or off
 
-![msmq-windows-features.png](./images/msmq/msmq-windows-features.png)
+![msmq-windows-features.png](../../images/msmq/msmq-windows-features.png)
 
 
 {% include note.html content="Interlok must be installed on a Windows XP (or higher) platform." %}
@@ -36,7 +36,7 @@ Interlok must be installed on a Windows XP (or higher) platform as it makes use 
 
 Initially, there is little or no configuration required for MSMQ other than to start the service (if not already automatically started), and to create a queue. You will need to be a domain administrator if you wish to create public queues that are published in Active Directory. For a simple loopback test on the local machine, a private queue is sufficient.
 
-![msmq-queue-manager.png](./images/msmq/msmq-queue-manager.png)
+![msmq-queue-manager.png](../../images/msmq/msmq-queue-manager.png)
 
 In order to enable security in transit between queue managers, all queues have to be published in Active Directory. This can cause issues where there are issues with active directory as the domain controller needs to be queried each time. To enable message encryption on a queue, it should be created with a privacy level of either optional or body. If created with a privacy level of body, then messages that are not encrypted will be discarded.
 

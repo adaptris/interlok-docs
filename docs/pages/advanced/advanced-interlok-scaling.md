@@ -98,7 +98,7 @@ This will create you a new dedicated network adapter just for minikube!
 
 It will also name your new network adapter "minikube".  If you choose a different name, make a note of it for later.
 
-![NetworkAdapterFigure](./images/scaling/image4.png)
+![NetworkAdapterFigure](../../images/scaling/image4.png)
 
 ### Install minikube and kubectl ###
 Minikube allows us to run a Kubernetes cluster locally.  Kubectl is the command line tool we use to interact with kubernetes (minikube in this instance).
@@ -298,7 +298,7 @@ Now you can point your browser at "http://localhost:9090".
 
 You'll be presented with the Prometheus dashboard, type "MessageMetrics" into the query field and hit "Execute".  Note, that it can take a couple of minutes for your metrics to appear.
 
-![PrometheusDashboardFigure](./images/scaling/image13.png)
+![PrometheusDashboardFigure](../../images/scaling/image13.png)
 
 ### Install the custom metrics  adapter  ###
 So far, we have installed Interlok which is generating metrics and through the use of the Prometheus pushgateway is populating Prometheus with our metrics.
@@ -516,14 +516,14 @@ Using JMeter fire 150 messages into Interlok
 Then wait a moment and "describe" the HPA again (command above).
 You'll see something like this;
 
-![AutoscalerFigure](./images/scaling/image11.png)
+![AutoscalerFigure](../../images/scaling/image11.png)
 
 From the output we can see the "Deployment pods" says we currently have 1, but we desire 2.
 This is because our 150 messages have broken through the 100 messages boundary.  We can also see in the final line, that Kubernetes has decided we need two(!) instances of Interlok due to the maximum message boundary being broken.
 
 Now if we do a quick look at the number of pods running in the default namespace we should see two instances of Interlok;
 
-![AutoscalerFigure](./images/scaling/image12.png)
+![AutoscalerFigure](../../images/scaling/image12.png)
 
 We have just been autoscaled.
 
@@ -562,7 +562,7 @@ kubectl port-forward -n monitoring graphanaPodName 3000
 Navigate to "http://localhost:3000".
 Type "admin" as your username and the base64 decoded password from above.
 
-![GraphanaFigure1](./images/scaling/image14.png)
+![GraphanaFigure1](../../images/scaling/image14.png)
 
 #### Configure the data source ####
 Hit the "Add Data Source" button and choose "Prometheus" from the list of available providers.
@@ -577,7 +577,7 @@ Create a new dashboard.
 
 Hit the "Add Query" button and copy the below configuration;
 
-![GraphanaFigure2](./images/scaling/image15.png)
+![GraphanaFigure2](../../images/scaling/image15.png)
 
 This graph shows the value of the Interlok "MessageMetrics" metric in the last 5 minutes.  Feel free to shove more messages into Interlok through JMeter and keep an eye on the graph.
 
@@ -677,7 +677,7 @@ The resources are the important part.  You must combine a metric with a given Ku
 
 In fact if you query Prometheus for "MessageMetrics" you'll get something like this back;
 
- ![PromMetric](./images/scaling/image16.png)
+ ![PromMetric](../../images/scaling/image16.png)
  
 Notice how we have the metric name, followed by key-value pairs.
 

@@ -54,7 +54,7 @@ Given the following configuration, and the scenario that the values associated w
 </metadata-totals-interceptor>
 ```
 
-![metadata-totals.png](./images/interceptor/metadata-totals.png)
+![metadata-totals.png](../../images/interceptor/metadata-totals.png)
 
 
 ----
@@ -77,7 +77,7 @@ Given the following configuration, and the scenario that the value associated wi
 </metadata-count-interceptor>
 ```
 
-![metadata-count.png](./images/interceptor/metadata-count.png)
+![metadata-count.png](../../images/interceptor/metadata-count.png)
 
 
 ----
@@ -99,9 +99,9 @@ Since 3.0.3 a [message-metrics-interceptor][] is automatically added to all work
 </message-metrics-interceptor>
 ```
 
-![metrics-count.png](./images/interceptor/metrics-count.png)
+![metrics-count.png](../../images/interceptor/metrics-count.png)
 
-![metrics-size.png](./images/interceptor/metrics-size.png)
+![metrics-size.png](../../images/interceptor/metrics-size.png)
 
 ----
 
@@ -125,9 +125,9 @@ Given the following configuration, and the scenario that the value associated wi
  </metadata-element>
 </message-metrics-interceptor-by-metadata>
 ```
-![metrics-metadata-count.png](./images/interceptor/metrics-metadata-count.png)
+![metrics-metadata-count.png](../../images/interceptor/metrics-metadata-count.png)
 
-![metrics-metadata-size.png](./images/interceptor/metrics-metadata-size.png)
+![metrics-metadata-size.png](../../images/interceptor/metrics-metadata-size.png)
 
 ## Slow Message Notification ##
 

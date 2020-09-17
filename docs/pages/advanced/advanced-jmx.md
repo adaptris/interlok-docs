@@ -39,7 +39,7 @@ If you are securing JMX as mentioned above, then you must also provide those cre
 
 When adding an Interlok instance to your UI dashboard simply select the **Advanced Options** and enter your chosen username and password as shown here;
 
-![Credentials via the UI](./images/jmx/add-adapter-credentials.png)
+![Credentials via the UI](../../images/jmx/add-adapter-credentials.png)
 
 ## Connecting with JVisualVM ##
 
@@ -47,7 +47,7 @@ When adding an Interlok instance to your UI dashboard simply select the **Advanc
 
 For an adapter running locally, for example on a developer workstation, just select the adapter from the left panel of the JVisualVM interface. The name of the adapter main class is `com.zerog.lax.LAX`.
 
-![JVisualVM Local Connection](./images/jmx/jvisualvm-local-connection.png)
+![JVisualVM Local Connection](../../images/jmx/jvisualvm-local-connection.png)
 
 ### Remote ###
 
@@ -60,7 +60,7 @@ $ jvisualvm --cp:a lib/jmxremote-optional.jar
 ```
 
 When JVisualVM starts, use the following settings to connect to the adapter JVM:
-![JVisualVM Remote Connection](./images/jmx/jvisualvm-remote-connection.png)
+![JVisualVM Remote Connection](../../images/jmx/jvisualvm-remote-connection.png)
 
 The required connection information can be found in `config/bootstrap.properties`. The property `jmxserviceurl` indicates the protocol and port number to use. The default value is `service:jmx:jmxmp://localhost:5555`, which means the protocol is jmxmp and the port is 5555. Copy this url into JVisualVM and update the hostname to match the server the adapter runs on.
 

@@ -15,13 +15,13 @@ summary: The saved configs list allows you to easily save and re-open adapter co
 To navigate to the saved config modal, you use the Saved Config button from the top navigation bar.
 
 The config action bar:
-![Config page with Saved Configs button showing](./images/ui-user-guide/config-saved-configs-button.png)
+![Config page with Saved Configs button showing](../../images/ui-user-guide/config-saved-configs-button.png)
 
 ## Saved Configs Modal ##
 
 You can manage a previously saved config in the modal:
 
-![Config page saved configs modal](./images/ui-user-guide/config-saved-configs.png)
+![Config page saved configs modal](../../images/ui-user-guide/config-saved-configs.png)
 
 For each config you can do the following actions:
 
@@ -38,10 +38,10 @@ You can also upload a config file in the webapp using the upload button at the b
 You can save the current config in the page using the 'Save Config' button in the config page action bar.
 Clicking on the 'Save Config' button will prompt you for a small description to store with the config so you can remember what it is about.
 
-![Config page save config modal](./images/ui-user-guide/config-save-config.png)
+![Config page save config modal](../../images/ui-user-guide/config-save-config.png)
 
 From 3.6.1 you can chose whether or not you want to split the config using X-Includes by clicking on the 'Split config files using X-Includes…' link and selecting which sub component you want to split.
 
-![Config page save config modal](./images/ui-user-guide/config-save-config-x-includes.png)
+![Config page save config modal](../../images/ui-user-guide/config-save-config-x-includes.png)
 
 

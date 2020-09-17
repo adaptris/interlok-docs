@@ -162,29 +162,29 @@ You can also use the Adapetr UI to do it. Simply open a component (Adapter, Chan
 
 A wizard modal will open and prompt you to select all the component settings you want to appear in the template wizard. You don't need to select anything if you want the component to be used as it is.
 
-![Save as Template Wizard Select Fields Screen](./images/ui-user-guide/save-template-wizard-select-fields.png)
+![Save as Template Wizard Select Fields Screen](../../images/ui-user-guide/save-template-wizard-select-fields.png)
 
 Then you will have to configure how many step you will want, by default one step will be used.
 
-![Save as Template Wizard Configure Steps Screen](./images/ui-user-guide/save-template-wizard-configure-steps.png)
+![Save as Template Wizard Configure Steps Screen](../../images/ui-user-guide/save-template-wizard-configure-steps.png)
 
 Steps allows you to group settings together. The next step will allow you to select which settings you want in which steps.
 
-![Save as Template Wizard Fields Into Steps Screen](./images/ui-user-guide/save-template-wizard-fields-into-steps.png)
+![Save as Template Wizard Fields Into Steps Screen](../../images/ui-user-guide/save-template-wizard-fields-into-steps.png)
 
 In the last part of teh wizard you will be able to set a wizard template and some description. It makes it easier for user to select templates.
 
-![Save as Template Wizard Additional Details Screen](./images/ui-user-guide/save-template-wizard-additional-details.png)
+![Save as Template Wizard Additional Details Screen](../../images/ui-user-guide/save-template-wizard-additional-details.png)
 
 ### Open Template ###
 
 Save the template into the `templates/adapter` folder and from the config screen navigate to `Open Config -> Use Template -> Templates ->  Simple Active MQ`; once selected you will see the wizard screens, which you can step through and fill in the appropriate information. Once you have completed all the steps; then a new adapter is created.
 
-![Connection Screen](./images/ui-user-guide/template-connection.png)
+![Connection Screen](../../images/ui-user-guide/template-connection.png)
 
-![Consume Screen](./images/ui-user-guide/template-consume.png)
+![Consume Screen](../../images/ui-user-guide/template-consume.png)
 
-![Produce Screen](./images/ui-user-guide/template-produce.png)
+![Produce Screen](../../images/ui-user-guide/template-produce.png)
 
 The full XML that is created will look similar to the below
 
@@ -290,13 +290,13 @@ In order to use this you will have to enable Version Control in the adapter. Ple
 
 Once enabled users will be able to create a new template [vcs profile](/pages/ui/ui-version-control) with the community repository details. A new folder will be visible in the add component modal when adding a new component (adapter, channel, workflow...).
 
-![Save as Template Wizard Select Fields Screen](./images/ui-user-guide/community-templates.png)
+![Save as Template Wizard Select Fields Screen](../../images/ui-user-guide/community-templates.png)
 
 Users can open the folder and select a community template for the chosen component.
 
 A user will also be able to push templates to a community repository when saving a template by checking the "Push To Community Repository" checkbox and providing his community password if needed.
 
-![Save as Template Wizard Additional Details Screen](./images/ui-user-guide/save-template-push-to-community.png)
+![Save as Template Wizard Additional Details Screen](../../images/ui-user-guide/save-template-push-to-community.png)
 
 There is a community template remote repository located at <https://subversion.assembla.com/svn/interlok-templates/trunk/>. You will need an account to push templates to it.
 

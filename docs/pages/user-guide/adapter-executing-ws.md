@@ -73,7 +73,7 @@ You must have apache-ant version 1.6 or later installed to be able to execute th
 
 You can check that Ant is installed and configured on your system path by opening a command prompt and typing the command "ant -version".  On windows you should see something like the following;
 
-![Soap Request](./images/external-webservices/figure1.png)
+![Soap Request](../../images/external-webservices/figure1.png)
 
 After the generator has run, you will have a new java archive (jar) file.  This new file should then be dropped into the "/lib/" directory of your Adapter installation.
 
@@ -119,7 +119,7 @@ ant clean generate
 ```
 You should then see something like the following;
 
-![Soap Request](./images/external-webservices/figure2.png)
+![Soap Request](../../images/external-webservices/figure2.png)
 
 Notice that we are using Apache Ant to execute the tool.  We provide the ant script two commands to execute; clean and generate.
 

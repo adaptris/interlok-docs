@@ -14,11 +14,11 @@ The default version control system is for Subversion via the [SVN Client Adapter
 
 When Interlok first initialises upon start-up it will search it's classpath looking for version control system libraries. If no libraries are found the log file will show the following INFO:
 
-![No VCS Found](./images/vcs/NoVCSFound.png)
+![No VCS Found](../../images/vcs/NoVCSFound.png)
 
 If a [VersionControlSystem][] is available then Interlok will attempt to use it and checkout/update files from VCS:
 
-![VCS Found](./images/vcs/VCSFound.png)
+![VCS Found](../../images/vcs/VCSFound.png)
 
 Since 3.5.1 The property `vcs.implementation` can be used within `bootstrap.properties` to specify which implementation to use, this allows mutliple [VersionControlSystem][] implementations to be on the classpath.
 

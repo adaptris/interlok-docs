@@ -14,7 +14,7 @@ where a new payload will be added (to a multi-payload message), where
 the new payload ID will be the metadata value associated with
 metadata-key.
 
-![Expression Resolver Example](./images/expression-resolver.png)
+![Expression Resolver Example](../../images/advanced/expression-resolver.png)
 
 ## Standard Messages
 
@@ -255,15 +255,15 @@ Once your adapter is started what you should get is the following on the config 
 
 #### The Adapter
 
-![Adapter](./images/advanced/weather-forecast-xpath-example/weatherForecastAdapter.png)
+![Adapter](../../images/advanced/weather-forecast-xpath-example/weatherForecastAdapter.png)
 
 #### The polling consumer: *Set at 2 hour intervals*
 
-![Consumer](./images/advanced/weather-forecast-xpath-example/pollingConsumer.png)
+![Consumer](../../images/advanced/weather-forecast-xpath-example/pollingConsumer.png)
 
 #### The simple HTTP Get request: Pointing to the correct address *(dont forget to update the API Key to your own)*
 
-![HTTP-Request](./images/advanced/weather-forecast-xpath-example/httpRequestService.png)
+![HTTP-Request](../../images/advanced/weather-forecast-xpath-example/httpRequestService.png)
 
 ```
 http://api.openweathermap.org/data/2.5/weather?q=London,uk&_APPID{INSERT API KEY HERE}_&mode=xml
@@ -271,7 +271,7 @@ http://api.openweathermap.org/data/2.5/weather?q=London,uk&_APPID{INSERT API KEY
 
 #### The 'Add Payload Service': *The Xpath expressions inputting the information we want extracted from the API*
 
-![Add-Payload-Service](./images/advanced/weather-forecast-xpath-example/addPayloadService.png)
+![Add-Payload-Service](../../images/advanced/weather-forecast-xpath-example/addPayloadService.png)
 
 ##### The xpath queries: 
 
@@ -290,9 +290,9 @@ Raining: %payload{xpath:current/precipitation/@mode}
 
 #### The Producer: *creating the directory you will the weather forecast report in and also the report itself*
 
-![Producer-File-System-Settings](./images/advanced/weather-forecast-xpath-example/filesystemProducerSettings.png)
+![Producer-File-System-Settings](../../images/advanced/weather-forecast-xpath-example/filesystemProducerSettings.png)
 
-![Producer-File-System-Filename-Creator](./images/advanced/weather-forecast-xpath-example/filesystemProducerFilenameCreator.png)
+![Producer-File-System-Filename-Creator](../../images/advanced/weather-forecast-xpath-example/filesystemProducerFilenameCreator.png)
 
 All this should culminate in a text file being created every 2 hours in the `weatherForecastOutput` directory with the file name containing the message ID, date, time and title and looking similar to this: `Date-2020-09-08-weatherForecast-Hour-09-Minute-34_MsgID-00000000-0000-0000-0000-000000000000` and containing this:
 

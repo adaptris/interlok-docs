@@ -9,7 +9,7 @@ toc: false
 
 The GUI web application allows to configure some properties to change the ui resources file system path (Since 3.0.5) and new component Id generator:
 
-![System Preferences](./images/ui-user-guide/system-preferences.png)
+![System Preferences](../../images/ui-user-guide/system-preferences.png)
 
 You can access the System Preferences page by clicking on the down arrow next to your user name and on the System Preferences item.
 

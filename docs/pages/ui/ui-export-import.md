@@ -18,7 +18,7 @@ The export function allows you to save your configuration file with place-holder
 To navigate to the export wizard, you use the export button from the config navigation bar.
 
 The config navigation bar:
-![Config page with export button showing](./images/ui-user-guide/config-export-button.png)
+![Config page with export button showing](../../images/ui-user-guide/config-export-button.png)
 
 
 ### Export Step One - Variables ###
@@ -26,35 +26,35 @@ The config navigation bar:
 The first step in the export wizard is to define the variables that you want to use as place-holders in the to-be exported configuration.
 
 The select varables step:
-![Config page export wizard step one](./images/ui-user-guide/config-export-step-one.png)
+![Config page export wizard step one](../../images/ui-user-guide/config-export-step-one.png)
 
 You can press the upload button and specify an exisiting property file to define your variables.
 
 Once you defined the variables and the default values for the place-holders, the page would look something like:
-![Config page export wizard step one with values defined](./images/ui-user-guide/config-export-step-one-with-values.png)
+![Config page export wizard step one with values defined](../../images/ui-user-guide/config-export-step-one-with-values.png)
 
 ### Export Step Two - Fields ###
 
 The second step in the export wizard is to define the fields that you wish to have the place-holders for.
 
-![Config page export wizard step two](./images/ui-user-guide/config-export-step-two.png)
+![Config page export wizard step two](../../images/ui-user-guide/config-export-step-two.png)
 
 You should check the tick box against each field that you want to have replaced by a placeholder:
-![Config page export wizard step two with fields checked](./images/ui-user-guide/config-export-step-two-checked.png)
+![Config page export wizard step two with fields checked](../../images/ui-user-guide/config-export-step-two-checked.png)
 
 ### Export Step Three - Map Variables To Fields ###
 
 The third step in the export wizard is to map which variables should be used as place-holders for your selected fields.
 
 You should use the drop down selected to define which variables are to be used for the given fields, like so:
-![Config page export wizard step three](./images/ui-user-guide/config-export-three.png)
+![Config page export wizard step three](../../images/ui-user-guide/config-export-three.png)
 
 ### Export Step Four - Filenames ###
 
 The forth and last step in the export wizard is to define the filename for the exported files (the configuration xml file and the properties file).
 
 You can define what filenames to save your to-be exported config to:
-![Config page export wizard step four](./images/ui-user-guide/config-export-step-four.png)
+![Config page export wizard step four](../../images/ui-user-guide/config-export-step-four.png)
 
 ### Export Output ###
 
@@ -105,21 +105,20 @@ To navigate to the import wizard, you use the import button from the open config
 
 The config import launcher:
 
-![Config page with import button showing](./images/ui-user-guide/config-import-open.png)
+![Config page with import button showing](../../images/ui-user-guide/config-import-open.png)
 
 Once you click on the **I also have variables** link of the File System card you will be asked to supply 2 files, the config file and the properties file with the place-holders.
 
 The config import modal window:
 
-![Config page with import open](./images/ui-user-guide/config-import.png)
+![Config page with import open](../../images/ui-user-guide/config-import.png)
 
 Once you specify the two files the import modal would look something like this:
 
-![Config page with import open and values selected](./images/ui-user-guide/config-import-selected.png)
+![Config page with import open and values selected](../../images/ui-user-guide/config-import-selected.png)
 
 You can of course edit the variable values or manually add them without uploading a properties file.
 
 Once you press the Import button, you will be returned to the config page, with your selected configuration open, but with the placeholders being replaced by the variable values.
 
 This import function is the only way the UI will process a config file with place-holders, alternatively you can use the  [variable substitution](/pages/advanced/advanced-configuration-pre-processors#variable-substitution) pre-processor.
-

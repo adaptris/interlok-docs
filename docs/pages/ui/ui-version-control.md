@@ -18,7 +18,7 @@ __Note:__ This is highly recommended to use SSL/TLS (https) when using VCS in th
 ## Creating a VCS profile ##
 
 In order to use version control in the adapter web gui you will have to create one or more VCS profiles. To do so you will have to go to the VCS Profile page from the top navigation menu, clicking on the down arrow next to your user name and on the Vcs Profiles item.
-![Navigation Bar with the user options open (and with the Vcs Profile Page as the active page)](./images/ui-user-guide/navigation-bar-options-open-vcs-profile.png)
+![Navigation Bar with the user options open (and with the Vcs Profile Page as the active page)](../../images/ui-user-guide/navigation-bar-options-open-vcs-profile.png)
 
 Add one or more profile using the add button and filling the details to connect to the remote repository.
 
@@ -44,7 +44,7 @@ You can open a configuration from a remote version control system using the open
 The option "Version Control" will be enabled if at least Subversion or Git libraries have been added to the adapter classpath.
 You will then be asked to select a profile to load an adapter config. You will also have to provide the password if you didn't save it before.
 
-![Open Config - Version Control](./images/ui-user-guide/vcs-open-config.png)
+![Open Config - Version Control](../../images/ui-user-guide/vcs-open-config.png)
 
 ## Publish config to VCS ##
 
@@ -52,7 +52,7 @@ To publish a config to a version control system repository you will have to clic
 A modal will open where you can select the profile you want to publish your config to.
 You will also have to add a commit message and provide your password if not saved before.
 
-![Publish - Version Control](./images/ui-user-guide/vcs-publish.png)
+![Publish - Version Control](../../images/ui-user-guide/vcs-publish.png)
 
 ## Git User Information ##
 

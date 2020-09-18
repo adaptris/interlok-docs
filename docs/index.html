@@ -26,30 +26,39 @@
         align-items: center;
         justify-content: space-between;
 	}
+    .sidebar-nav li.active>a, .sidebar-nav li.collapse>a {
+        background-color: var(--sidebar-toggle-background);
+    }
+    .markdown-section h1 {
+        color: var(--sidebar-name-color);
+    }
+    .markdown-section h2 {
+        color: #C51162;
+    }
   </style>
 </head>
 <body>
   <div id="app"></div>
   <footer>
-	<section class="content">
-	  <div class="info">
-		<hr />
-	    <div>
+    <section class="content">
+      <div class="info">
+        <hr />
+        <div>
           <span>&copy;2020 Adaptris. All rights reserved.</span><br/>
           <div>
-		    <a href="https://www.adaptris.com" target="_blank"><img src="./images/company_logo.png" alt="Company logo" width="140px"/></a>
-		  </div>
-		</div>
-	    <div class="rbi-relx">
+            <a href="https://www.adaptris.com" target="_blank"><img src="./images/company_logo.png" alt="Company logo" width="140px"/></a>
+          </div>
+        </div>
+        <div class="rbi-relx">
           <div>
             <a href="https://www.reedbusiness.com" target="_blank"><img id="relx-logo" src="./images/rbi-logo.png" alt="RBI logo" width="140px"></a>
-		  </div>
+          </div>
           <div>
             <a href="https://www.relx.com" target="_blank"><img id="relx-logo" src="./images/relx-logo.png" alt="RELX logo" width="140px"></a>
-		  </div>
-		</div>
-	  </div>
-	</section>
+          </div>
+        </div>
+      </div>
+    </section>
   </footer>
   <script>
     window.$docsify = {
@@ -58,25 +67,27 @@
       loadSidebar: true,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md',
-		'/': '/pages/README.md',
+        '/': '/pages/README.md',
       },
-	  loadNavbar: true,
+      loadNavbar: true,
       autoHeader: true,
       relativePath: true,
-	  subMaxLevel: 2,
-	  auto2top: true,
+      subMaxLevel: 2,
+      auto2top: true,
       search: {
         paths: 'auto',
         // Headline depth, 1 - 6
         depth: 5
       },
-	  // logo: '/images/company_logo.png',
-	  noEmoji: true, // Emojis Cause some rendering issues when we have something like :string: which happens a lot e.g. service:jmx:jmxmp:
+      // logo: '/images/company_logo.png',
+      // name: '<img src="/images/logo-white.png" />Interlok Docs',
+      name: '<b>Interlok Docs</b>',
+      noEmoji: true, // Emojis Cause some rendering issues when we have something like :string: which happens a lot e.g. service:jmx:jmxmp:
       themeColor: '#182B51',
       coverpage: false,
-	  formatUpdated: '{MM}/{DD} {HH}:{mm}',
-	  plugins: [
-	    function(hook, vm) {
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      plugins: [
+        function(hook, vm) {
           hook.beforeEach(function(content) {
             return (
               content +
@@ -86,6 +97,7 @@
           });
         },
         function(hook, vm) {
+          // Convert things like {% include important%} to a markdown equivalent
           hook.beforeEach(function(content) {
             content = content.replace(/\{\% include (.*)\.html content\=\"(.*)\" \%\}/g, function(m, p1, p2) {
               var type;
@@ -96,14 +108,6 @@
               }
               return type + " " + (p1 ? "**" + p1.toUpperCase() + "** " : "") + p2;
             });
-            return (content);
-          });
-        },
-        function(hook, vm) {
-          hook.beforeEach(function(content) {
-			window.allText = content;
-            content = content.replace(/^---[\s\S]title: (.*)[\s\S]*summary: (.*)[\s\S]---$/gm, "# $1\r\n\r\n> **Summary:** $2\r\n");
-			console.log(content);
             return (content);
           });
         }

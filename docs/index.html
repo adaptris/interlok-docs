@@ -98,6 +98,14 @@
             });
             return (content);
           });
+        },
+        function(hook, vm) {
+          hook.beforeEach(function(content) {
+			window.allText = content;
+            content = content.replace(/^---[\s\S]title: (.*)[\s\S]*summary: (.*)[\s\S]---$/gm, "# $1\r\n\r\n> **Summary:** $2\r\n");
+			console.log(content);
+            return (content);
+          });
         }
       ]
     }

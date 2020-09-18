@@ -57,7 +57,8 @@ The simplest [Adapter][] will contain a single channel with a single workflow.
 
 That's it in a nutshell and if we wanted a pretty picture :
 
-{% include image.html file="user-guide/adapter-overview.png" caption="Adapter with 2 channels"%}
+ ![Adapter with 2 channels](../../images/user-guide/adapter-overview.png)
+
 
 {% include tip.html content="You are not restricted to having only 2 connections in a channel; any [Service][] could contain a connection; but this is simpler to visualise when starting off. Complex workflows can be composed by having services that interact with other systems to enrich the content" %}
 

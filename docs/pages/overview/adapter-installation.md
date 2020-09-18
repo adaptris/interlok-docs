@@ -26,13 +26,13 @@ Installation is pretty easy. Download the installer, and execute it; due to a ch
 
 Because on Windows you can install the adapter as a service; then the installer will ask for elevated rights; in the instance that you cannot provide elevated rights then you can force the installer to run as the invoker. This means, of course, that you will not be able to install the adapter as a service. You need to set the `__COMPAT_LAYER` environment variable to be `RUNASINVOKER` before starting the installer.
 
-{% include image.html file="user-guide/run-as-invoker.png" alt="RunAsInvoker" %}
+ ![RunAsInvoker](../../images/user-guide/run-as-invoker.png)
 
 ### Windows DLL failed to load ###
 
 On some Windows platforms (consistently Windows 10 x64); the installer may never start and always fails with a `This Application unexpectedly quit` exception. This is a problem with the installer and later versions of Java 8. Java 1.8.0_51 is known to work, but later versions may not (the exact circumstances are unclear); it generally always works on Windows 7. It only affects the installer and not the application runtime.
 
-{% include image.html file="user-guide/installation-failed.png" alt="UnexpectedlyQuit" %}
+ ![UnexpectedlyQuit](../../images/user-guide/installation-failed.png)
 
 ```
 Flexeraawm$aaa: Windows DLL failed to load

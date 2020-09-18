@@ -43,7 +43,7 @@ You can obtain these jars either by;
 
 Assuming you have the correct jar files and configuration in place as detailed above, you will see the following at debug level in the Interlok log files upon startup;
 
-{% include image.html file="restful/RestStartLogging.png" alt="Restful Start" %}
+ ![Restful Start](../../images/restful/RestStartLogging.png)
 
 The final line above shows the restful services component has completed it's initialization, you're now ready to fire your requests.
 
@@ -97,7 +97,7 @@ By pointing an OpenApi 3.0.1 tool to the definition url you can visualize the fu
 
 Shown below is an example of using Swagger as the OpenApi tool;
 
-{% include image.html file="restful/Swagger.png" alt="Swagger UI" %}
+ ![Swagger UI](../../images/restful/Swagger.png)
 
 Swagger, interprets the API definition and provides instant access to each workflow, via a http POST.
 
@@ -113,7 +113,7 @@ Any http headers will be converted into Interlok message metadata.
 
 Again using Swagger, we can test POST'ing a simple message directly into one of our workflows;
 
-{% include image.html file="restful/SwaggerPost.png" alt="Swagger Post" %}
+ ![Swagger Post](../../images/restful/SwaggerPost.png)
 
 If your message was successfully submitted to the workflow then you will get a http status 200 code response with the updated content as the body of the response.
 

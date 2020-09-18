@@ -1,12 +1,4 @@
----
-title: Config Project
-keywords: interlok
-tags: [ui, project]
-sidebar: home_sidebar
-permalink: ui-config-project.html
-toc: false
-summary: The Config Project allows you to manage your adapter configuration.
----
+> **Summary:** The Config Project allows you to manage your adapter configuration.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PrQQKOccbx8" frameborder="0" allowfullscreen></iframe>
 

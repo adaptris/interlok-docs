@@ -1,11 +1,4 @@
----
-title: Version Control in the UI
-keywords: interlok
-tags: [ui, version_control]
-sidebar: home_sidebar
-permalink: ui-version-control.html
-summary: Since 3.0.3 the gui config page allows you to store adapter configuration into a remote version control system. Subversion and Git are supported.
----
+> **Summary:** Since 3.0.3 the gui config page allows you to store adapter configuration into a remote version control system. Subversion and Git are supported.
 
 ## Prerequisite ##
 

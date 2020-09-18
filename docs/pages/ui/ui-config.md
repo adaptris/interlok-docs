@@ -1,11 +1,6 @@
----
-title: Configuration Screens
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-config.html
-summary: The config page allows you to configure your Interlok container in an easy to use graphically way. Basically, it's a UI way of editing the adapter.xml that controls how the Interlok container behaves. Using this page, you can apply changes to your running container; you can add, edit and delete components such as consumers, producers, services, etc. The UI application will also validate your changes, show you inline help during your editing and allows you to insert components from pre-defined templates.
----
+# Configuration Screens
+
+> **Summary:** The config page allows you to configure your Interlok container in an easy to use graphically way. Basically, it's a UI way of editing the adapter.xml that controls how the Interlok container behaves. Using this page, you can apply changes to your running container; you can add, edit and delete components such as consumers, producers, services, etc. The UI application will also validate your changes, show you inline help during your editing and allows you to insert components from pre-defined templates.
 
 ## Important to Understand ##
 

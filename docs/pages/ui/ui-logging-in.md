@@ -1,12 +1,3 @@
----
-title: Logging In
-keywords: interlok
-tags: [getting_started, ui]
-sidebar: home_sidebar
-permalink: ui-logging-in.html
-toc: false
----
-
 ## Interlok Login Page ##
 
 The UI is a secured web application and only allows authorised users to log in.

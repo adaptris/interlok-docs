@@ -1,10 +1,5 @@
----
-title: Service Tester - Configuration
-keywords: interlok
-tags: [service-tester]
-sidebar: home_sidebar
-permalink: service-tester-configuration.html
----
+# Service Tester - Configuration
+
 ## Configuration ##
 
 Those familiar with Interlok config should have no problem traversing they're way through `service-test` configuration, as if it uses the same approach (and code) to go from configuration to execution.

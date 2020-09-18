@@ -1,11 +1,4 @@
----
-title: Optional Component Discovery
-keywords: interlok
-tags: [optional_components, ui]
-sidebar: home_sidebar
-permalink: ui-optional-component-discovery.html
-summary: The Optional Component Discovery page allows you to browse components that can be added to Interlok. (Since 3.5.1)
----
+> **Summary:** The Optional Component Discovery page allows you to browse components that can be added to Interlok. (Since 3.5.1)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dLzBihUtYeE" frameborder="0" allowfullscreen></iframe>
 

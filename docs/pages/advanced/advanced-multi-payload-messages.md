@@ -1,11 +1,4 @@
----
-title:     "Multi-Payload Messages"
-keywords:  "interlok, multi-payload, messages"
-tags:      [advanced]
-sidebar:   home_sidebar
-permalink: advanced-multi-payload-messages.html
-summary:   This page describes how to use the Multi-Payload Adaptris Message
----
+> **Summary:**   This page describes how to use the Multi-Payload Adaptris Message
 
 ## New Message Type and Factory
 

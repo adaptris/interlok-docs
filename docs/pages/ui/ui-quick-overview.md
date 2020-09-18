@@ -1,11 +1,4 @@
----
-title: Overview of the UI
-keywords: interlok
-tags: [getting_started, ui]
-sidebar: home_sidebar
-permalink: ui-quick-overview.html
-summary: The Interlok GUI is an easy-to-use and comprehensive tool intended to facilitate Adapter management, monitoring and configuration.
----
+> **Summary:** The Interlok GUI is an easy-to-use and comprehensive tool intended to facilitate Adapter management, monitoring and configuration.
 
 Throughout the documentation there will be references to the Interlok Container, the Adapter and the UI Web application and it's important to have an understanding of how these components fit together.
 

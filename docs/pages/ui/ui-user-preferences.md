@@ -1,11 +1,3 @@
----
-title: User Preferences
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-user-preferences.html
----
-
 The GUI web application allows to configure some user properties to change the way a user interact with the ui:
 
 ![User Preferences](../../images/ui-user-guide/user-preferences-global-tab.png)

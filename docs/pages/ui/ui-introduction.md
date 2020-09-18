@@ -1,10 +1,3 @@
----
-title: Introduction to the UI
-keywords: interlok
-tags: [getting_started, ui]
-sidebar: home_sidebar
-permalink: ui-introduction.html
----
 ## Management Overview ##
 
 The UI Dashboard page facilitates Interlok management. Listing all the registered Interlok containers Adapters (auto-discovered and manually added), it gives real-time updates about their status. The dashboard page also allows you to control (start/stop) the Interlok containers Adapters, Channels and Workflows. Other useful features include the failed message retry feature, the ability to quickly view the containers config, a java garbage collector request feature and much more.

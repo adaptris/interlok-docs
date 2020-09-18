@@ -1,11 +1,6 @@
----
-title: Automagically adding mapped diagnostic context data for logging
-keywords: interlok,profiler,logging
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-profiler-logging-context.html
-summary: Automatically added message-id to logging context.
----
+# Automagically adding mapped diagnostic context data for logging
+
+> **Summary:** Automatically added message-id to logging context.
 
 **Since 3.10** the [interlok-profiler](https://github.com/adaptris/interlok-profiler) has an additional aspect available to it (you should be able to use it with previous versions of Interlok since this is a pure aspect with few dependencies) which adds the _messageId_ and the _parentMessageId_ to your logging context (the _parentMessageId_ might be useful if you are using a splitter).
 Since logging contexts are thread-based, depending on where in your processing chain you are and what service combinations your workflow contains, you can lose the logging context or gain an unwanted logging context. With this in mind, you can view the profiling logging context as a way of guaranteeing that you have the correct logging context via the use of an AspectJ aspect rather than being frustrated because your workflow design isn't suitable for [add-logging-context-service][] or [logging-context-workflow-interceptor][]

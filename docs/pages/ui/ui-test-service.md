@@ -1,12 +1,3 @@
----
-title: Dashboard
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-test-service.html
-summary: The config page allows simple testing of services and service collections against a registered adapter.
----
-
 ## Testing service ##
 
 To test any services in the config page you have to click on ![The test service button](../../images/ui-user-guide/config-test-service-button.png).

@@ -1,11 +1,4 @@
----
-title: Memory Requirements
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-memory-requirements.html
-summary: This document will describe Interlok's memory requirements and how various components can have an effect on those requirements. Finally, we will show some sample memory usage statistics using a few different Interlok configurations.
----
+> **Summary:** This document will describe Interlok's memory requirements and how various components can have an effect on those requirements. Finally, we will show some sample memory usage statistics using a few different Interlok configurations.
 
 Because Interlok is a component based framework additional components can be added to a base Interlok installation. Many additional components can be found in the _optional_ directory, found in the root of your Interlok install. Depending on the components you need to solve your integration requirements, each can drastically affect the required system memory to effectively run your Interlok installation(s). As well as the chosen components, their individual configuration may also have a great effect on the memory requirements.  Imagine a caching mechanism that holds cached items in memory.  You will most likely be able to specify the size of the memory cache which will require available memory to hold those cached items.
 

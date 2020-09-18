@@ -1,14 +1,4 @@
----
-title: Configuration Pre Processing
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-configuration-pre-processors.html
-summary: Pre-processors allow us to perform actions on the Interlok configuration before it is unmarshalled and the Interlok instance starts up.
----
-
-
-Pre-processors allow us to perform actions on the Interlok configuration before it is unmarshalled and the Interlok instance starts up. The original configuration will not be modified by this process and the following general rules will apply:
+> **Summary:** Pre-processors allow us to perform actions on the Interlok configuration before it is unmarshalled and the Interlok instance starts up.
 
 - Multiple pre-processors may be configured, which will be executed in the order they are configured.
 - Each pre-processor configured will have access to the referenced configuration file and may change that content.

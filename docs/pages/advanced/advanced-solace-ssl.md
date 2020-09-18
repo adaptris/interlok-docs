@@ -1,11 +1,6 @@
----
-title: Interlok SSL with Solace
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-solace-ssl.html
-summary: This page describes how to configure Interlok to use SSL with Solace.
----
+# Interlok SSL with Solace
+
+> **Summary:** This page describes how to configure Interlok to use SSL with Solace.
 
 ## Pre-requisites ##
 

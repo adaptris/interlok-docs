@@ -1,10 +1,5 @@
----
-title: Service Tester - Introduction
-keywords: interlok
-tags: [service-tester]
-sidebar: home_sidebar
-permalink: service-tester-introduction.html
----
+# Service Tester - Introduction
+
 ## Overview ##
 
 Interlok service tester is testing framework that allows you to unit test Interlok configuration.

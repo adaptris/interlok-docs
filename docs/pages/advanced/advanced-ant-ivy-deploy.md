@@ -1,11 +1,5 @@
----
-title: Deploy using dependency management.
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-ant-ivy-deploy.html
-summary: Using a dependency management system to deploy your Interlok instance can make deployments a little bit easier as you can collect and download the required libraries automatically without having to do any post-installation steps
----
+
+> **Summary:** Using a dependency management system to deploy your Interlok instance can make deployments a little bit easier as you can collect and download the required libraries automatically without having to do any post-installation steps
 
 All the cool kids are using [gradle][] or [kobalt][] (probably [gradle][] right...), so describing dependency management using ant+ivy is a bit of an anachronism. Since ant provides very little magic or opinion around _how you do things_, it's a good learning tool.
 

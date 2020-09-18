@@ -1,12 +1,4 @@
----
-title: Interlok Installation
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-installation.html
----
-
-# Installation #
+# Interlok Installation #
 
 {% include note.html content="3.8.0 and later will require at least Java 8" %}
 

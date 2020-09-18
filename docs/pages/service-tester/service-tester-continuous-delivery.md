@@ -1,10 +1,5 @@
----
-title: Service Tester - Continuous Delivery
-keywords: interlok
-tags: [service-tester]
-sidebar: home_sidebar
-permalink: service-tester-continuous-delivery.html
----
+# Service Tester - Continuous Delivery
+
 ## Overview
 
 Where the Interlok service tester can be used as a part of your continuos delivery pipeline, below is a few examples of how to configure:

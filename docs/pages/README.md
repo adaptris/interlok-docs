@@ -1,11 +1,6 @@
----
-title: Getting started with Interlok
-keywords: homepage
-sidebar: home_sidebar
-permalink: index.html
-toc: false
-summary: This is the Interlok Documentation website.  Choose a document and start reading.
----
+# Getting Started With Interlok
+
+> **Summary:** This is the Interlok Documentation website.  Choose a document and start reading.
 
 Of course there must be an obligatory [xkcd](http://xkcd.com) reference.
 

@@ -1,11 +1,4 @@
----
-title: Compiling against Interlok
-keywords: interlok
-sidebar: home_sidebar
-permalink: developer-compiling.html
-tags: [developer]
-summary: This is here to help you get started writing your own services and what not.
----
+> **Summary:** This is here to help you get started writing your own services and what not.
 
 The simplest scenario is to have a local adapter installation and make sure all the jars in the `lib` directory are present in your classpath when you come to compile your classes (either by having a script that sets up the classpath, or making sure `${adapter}/lib/*.jar` is included into your classpath when you invoke the `javac` task.
 

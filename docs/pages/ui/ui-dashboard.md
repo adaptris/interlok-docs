@@ -1,11 +1,4 @@
----
-title: Dashboard
-keywords: interlok
-tags: [getting_started, ui]
-sidebar: home_sidebar
-permalink: ui-dashboard.html
-summary: The Dashboard Page is the first page a user is directed to after a successful login action. You can also navigate to this page using the Dashboard menu item in the navigation bar.
----
+> **Summary:** The Dashboard Page is the first page a user is directed to after a successful login action. You can also navigate to this page using the Dashboard menu item in the navigation bar.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HBrhSDzs0u0" frameborder="0" allowfullscreen></iframe>
 

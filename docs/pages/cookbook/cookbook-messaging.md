@@ -1,4 +1,3 @@
-# Messaging
 
  - [MSMQ](cookbook-msmq.md)
  - [Native WebsphereMQ](cookbook-native-wmq.md)

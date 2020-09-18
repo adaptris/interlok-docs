@@ -1,11 +1,4 @@
----
-title: Interlok UI API
-keywords: interlok
-tags: [developer]
-sidebar: home_sidebar
-permalink: developer-ui-api.html
-summary: The UI has its own API. This can be used to do some simple operations, if you want to create your own simple dashboard, instead of using our awesome spectacular UI.
----
+> **Summary:** The UI has its own API. This can be used to do some simple operations, if you want to create your own simple dashboard, instead of using our awesome spectacular UI.
 
 ## Interlok UI API Swagger Documentation ##
 

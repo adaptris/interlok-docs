@@ -1,11 +1,5 @@
----
-title: Interlok Prometheus profiling
-keywords: interlok,prometheus,profiler
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-profiler-prometheus.html
-summary: Using Prometheus and Grafana to view Interlok metrics.
----
+> **Summary:** Using Prometheus and Grafana to view Interlok metrics.
+
 **Since 3.10+**
 
 This document will walk you through the setup and configuration to have Interlok post profiling data directly into Prometheus.  You'll then be shown some of the basics of Prometheus and Grafana to view your Interlok metrics.

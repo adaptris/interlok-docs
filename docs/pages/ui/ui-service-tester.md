@@ -1,11 +1,4 @@
----
-title: Service Tester
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-service-tester.html
-summary: The Service Tester page help you to generate a Service Tester configuration xml and to test some Interlok services. (Since 3.7.2)
----
+> **Summary:** The Service Tester page help you to generate a Service Tester configuration xml and to test some Interlok services. (Since 3.7.2)
 
 ## Prerequisite ##
 

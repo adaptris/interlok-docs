@@ -1,11 +1,6 @@
----
-title: "When to use a TriggeredChannel"
-keywords: interlok, integration, triggered
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-triggered-channel.html
-summary: A TriggeredChannel is one that requires an external trigger; this can be useful in certain situations
----
+# When to use a TriggeredChannel
+
+> **Summary:** A TriggeredChannel is one that requires an external trigger; this can be useful in certain situations
 
 The [TriggeredChannel][] is available as part of the [optional packages](/pages/user-guide/adapter-optional-components) packages and is something that has a very specific use case. It is a channel where the workflows are only started when an external event occurs; hence the name. Once the trigger is received, workflows are started, the channel waits for the workflows to do their thing, and then stops them afterwards and is then ready for the next trigger. It is designed to be wholly asynchronous, so no information is returned back to the trigger.
 

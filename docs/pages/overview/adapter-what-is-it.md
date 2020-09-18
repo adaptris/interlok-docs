@@ -1,16 +1,6 @@
----
-title: What is Interlok
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-what-is-it.html
-toc: false
----
-
 <a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.interlok}}">Adaptris Interlok</a> is an event-based framework designed to enable architects to rapidly connect different applications, communications standards and data standards to deliver an integrated solution.
 
 The key design philosophy of the Interlok framework is the ability to apply the right amount of integration technology in the appropriate place. It offers complete flexibility to embed custom application connections and services within the framework. You can either compose services into your integration solution; or you can write custom code. Sometimes custom code is better, sometimes it isn't.
-
 
 ## The main components ##
 

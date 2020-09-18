@@ -1,11 +1,4 @@
----
-title: Videos about the UI
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-videos.html
-toc: false
----
+# Videos About the UI
 
 These are the various videos we currently have available. For all these videos; click on the link and you'll be taken to the videos youtube.com page.
 

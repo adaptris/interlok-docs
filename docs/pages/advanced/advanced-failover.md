@@ -1,11 +1,4 @@
----
-title: Interlok Failover
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-failover.html
-summary: This page describes how to configure multiple Interlok instances to start up in failover mode (since 3.3)
----
+> **Summary:** This page describes how to configure multiple Interlok instances to start up in failover mode (since 3.3)
 
 ## Failover Mode ##
 

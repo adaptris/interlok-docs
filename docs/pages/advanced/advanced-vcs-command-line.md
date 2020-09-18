@@ -1,11 +1,6 @@
----
-title: Version Control with command line executable
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-vcs-command-line.html
-summary: Configure Interlok to automatically check out config from VCS when starting.
----
+# Version Control with command line executable
+
+> **Summary:** Configure Interlok to automatically check out config from VCS when starting.
 
 ## Configuration ##
 

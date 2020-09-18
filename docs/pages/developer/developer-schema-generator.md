@@ -1,11 +1,3 @@
----
-title: Schema Generator
-keywords: interlok
-sidebar: home_sidebar
-tags: [developer]
-permalink: developer-schema-generator.html
----
-
 The adapter config file is an XML file that is a marshalled representation of the Adapter configuration class hierarchy. At this time the data binder that reads and generates the file is XStream. The adapter config file is often edited by hand and so is prone to errors.
 
 A schema for the adapter config file has been developed, it is written in Relax NG, and can be used to validate the config file. Validation alerts the user to structure and content issues within the file other than checking that the XML file is well-formed or not.

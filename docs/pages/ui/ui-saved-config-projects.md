@@ -1,12 +1,4 @@
----
-title: Saved Config Projects
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-saved-config-projects.html
-toc: false
-summary: The saved config projects list allows you to easily save and re-open adapter configuration projects.
----
+> **Summary:** The saved config projects list allows you to easily save and re-open adapter configuration projects.
 
 ## Getting Started ##
 

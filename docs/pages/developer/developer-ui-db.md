@@ -1,11 +1,4 @@
----
-title: Interlok UI Database
-keywords: interlok
-tags: [developer]
-sidebar: home_sidebar
-permalink: developer-ui-db.html
-summary: The UI has its own Database. 
----
+> **Summary:** The UI has its own Database. 
 
 ## Interlok UI Database Overview ##
 

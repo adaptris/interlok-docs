@@ -1,11 +1,6 @@
----
-title: Interlok SSL with WebsphereMQ
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-webspheremq-ssl.html
-summary: This page describes how to configure Interlok and Websphere MQ for SSL communication.
----
+# Interlok SSL with WebsphereMQ
+
+> **Summary:** This page describes how to configure Interlok and Websphere MQ for SSL communication.
 
 ## WebsphereMQ Server Side Configuration ##
 

@@ -1,12 +1,4 @@
----
-title: Optional Components
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-optional-components.html
-toc: false
-summary: This describes all the optional components that are currently available.
----
+> **Summary:** This describes all the optional components that are currently available.
 
 As additional features are developed and released our public facing repository is updated; so you can always browse the [repository directly](https://nexus.adaptris.net/nexus/content/groups/interlok/com/adaptris/) to keep up to date.
 

@@ -1,11 +1,4 @@
----
-title: JSON Data transformations
-keywords: interlok
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-json-transform.html
-summary: Using the JSON packge to perform JSON/XML and JSON to JSON transformations
----
+> **Summary:** Using the JSON packge to perform JSON/XML and JSON to JSON transformations
 
 {% include important.html content="in 3.8.0; adp-json and adp-simple-csv were renamed to interlok-json and interlok-csv respectively" %}
 

@@ -1,11 +1,3 @@
----
-title: Security
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-security.html
----
-
 The GUI web application allows multiple users to log-in using one of the existing roles:
 
 Role | Privileges | Meaning

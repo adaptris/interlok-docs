@@ -1,10 +1,5 @@
----
-title: Service Tester - Output
-keywords: interlok
-tags: [service-tester]
-sidebar: home_sidebar
-permalink: service-tester-output.html
----
+# Service Tester - Output
+
 ## Output ##
 
 The Interlok service tester produces Ant JUnit XML although it isn't officially supported by JUnit them selves. Many tools support it out of the box (jenkins, etc.).

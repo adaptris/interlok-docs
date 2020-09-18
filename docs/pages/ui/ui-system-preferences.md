@@ -1,12 +1,3 @@
----
-title: System Preferences
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-system-preferences.html
-toc: false
----
-
 The GUI web application allows to configure some properties to change the ui resources file system path (Since 3.0.5) and new component Id generator:
 
 ![System Preferences](../../images/ui-user-guide/system-preferences.png)

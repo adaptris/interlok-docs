@@ -1,11 +1,6 @@
----
-title: Enabling a Custom Class Loader for Jetty
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-custom-classloader.html
-summary: This page describes how to configure a custom class loader for use with Jetty (since 3.5.1).
----
+# Enabling a Custom Class Loader for Jetty
+
+> **Summary:** This page describes how to configure a custom class loader for use with Jetty (since 3.5.1).
 
 ## Default Behaviour##
 

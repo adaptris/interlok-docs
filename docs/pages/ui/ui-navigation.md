@@ -1,12 +1,3 @@
----
-title: Navigation
-keywords: interlok
-tags: [getting_started, ui]
-sidebar: home_sidebar
-permalink: ui-navigation.html
-toc: false
----
-
 Once logged in, a user will be redirected to the Dashboard page. The Navigation bar is available at the top of the page, and is part of the page header. Users can use the options on this bar to navigation to the various parts of the UI.
 
 Navigation bar (with the Dashboard Page as the active page) :

@@ -1,4 +1,3 @@
-# Profiling
 
  - [Profiling with New Relic](advanced-new-relic-profiling.md)
  - [Profiling with Prometheus](advanced-profiler-prometheus.md)

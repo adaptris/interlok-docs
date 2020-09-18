@@ -1,11 +1,4 @@
----
-title: Profiler Monitor in the UI
-keywords: interlok
-tags: [ui, profiler]
-sidebar: home_sidebar
-permalink: ui-profiler-monitor.html
-summary: Since 3.9.2 the gui has a page that allows you to monitor running adapters using the Interlok Profiler.
----
+> **Summary:** Since 3.9.2 the gui has a page that allows you to monitor running adapters using the Interlok Profiler.
 
 ## Prerequisite ##
 

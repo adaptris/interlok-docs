@@ -1,17 +1,7 @@
----
-title: Interlok configuration with logic blocks
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-conditional.html
-summary: This page describes how to configure logic blocks inside your Interlok configuration (since 3.9.0)
----
+> **Summary:** This page describes how to configure logic blocks inside your Interlok configuration (since 3.9.0)
 
-# Adding logic to your configuration
-
-As of Interlok __3.9.0__ you can insert logic statements into your configuration.  Logic statements and blocks allow you to repeat services until a condition is met or execute services if certain conditions are met.
+As of Interlok __3.9.0__ you can insert logic statements into your configuration. Logic statements and blocks allow you to repeat services until a condition is met or execute services if certain conditions are met.
 The following guide will walk you through the available logic statements and show you how use them in configuration.
-
 
 ## Logic statements/blocks
 

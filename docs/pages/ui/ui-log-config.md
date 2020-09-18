@@ -1,11 +1,4 @@
----
-title: Log Config
-keywords: interlok
-tags: [getting_started, ui]
-sidebar: home_sidebar
-permalink: ui-log-config.html
-summary: The Log Config page allows you to modify an adapter log configuration. (Since 3.6.0)
----
+> **Summary:** The Log Config page allows you to modify an adapter log configuration. (Since 3.6.0)
 
 ## Getting Started ##
 

@@ -1,11 +1,4 @@
----
-title: Interlok Component Search
-keywords: interlok
-tags: [components, ui]
-sidebar: home_sidebar
-permalink: ui-interlok-component-search.html
-summary: The Interlok Component Search page allows you to search an interlok component database. (Since 3.8.2)
----
+> **Summary:** The Interlok Component Search page allows you to search an interlok component database. (Since 3.8.2)
 
 ## Getting Started ##
 

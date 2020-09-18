@@ -1,11 +1,3 @@
----
-title: Version Control Configuration
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-version-control.html
----
-
 Since 3.0.2 Interlok will support configuration that is controlled by a version control systems automagically. Configuration files can be stored in VCS, checked out/updated prior to any management components / adapter instances starting up. The properties mentioned here are in addition to any properties that are normally defined in `bootstrap.properties`; so you will still need an `adapterConfigUrl=` in order to source the configuration file.
 
 The default version control system is for Subversion via the [SVN Client Adapter from subclipse](http://subclipse.tigris.org) and JavaHL which wraps the core Subversion C API. Check the [version control with subversion](/pages/advanced/advanced-vcs-svn) document.
@@ -26,8 +18,7 @@ If a version control system is place, then the following behaviour is injected b
 
 - If the local working directory does not exist, then create the directory and then perform a clean checkout from your remote repository.
 - If the local working directory exists, perform an update from the remote repository.
-    - Only one checkout/update will be performed.  Therefore all configuration files you wish to version should be contained in one remote directory or sub-directory.
-
+- Only one checkout/update will be performed.  Therefore all configuration files you wish to version should be contained in one remote directory or sub-directory.
 
 ## What can be stored in version control ##
 

@@ -1,12 +1,4 @@
----
-title: Additional Resources
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-additional.html
-summary: This page describes additional resources that might make for interesting reading.
-
----
+> **Summary:** This page describes additional resources that might make for interesting reading.
 
 The development and consultancy team blog about various interesting things that they've done with Interlok on [https://interlok.adaptris.net](https://interlok.adaptris.net).
 

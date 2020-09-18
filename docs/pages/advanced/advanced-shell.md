@@ -1,11 +1,3 @@
----
-title: Management using a remote shell
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-shell.html
----
-
 Interlok supports an integrated Java shell called [CRaSH][]. You can use [CRaSH][] to `ssh` into your running interlok instance.
 
 {% include important.html content="This is deprecated notice because Interlok Shell will not work with Java 11, and the underlying libraries are well out of date" %}

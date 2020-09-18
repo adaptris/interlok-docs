@@ -1,11 +1,4 @@
----
-title: Configuration Templates
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-templates.html
-summary: Templated configuration is a powerful way to standardise your configuration; it is designed for so that you can build up familiar patterns and use-cases for your business, and easily insert them into new adapter configs. A template can be made from any standard component within Interlok. Each template can be presented via a wizard screen directing you through configuration for the specific environment.
----
+> **Summary:** Templated configuration is a powerful way to standardise your configuration; it is designed for so that you can build up familiar patterns and use-cases for your business, and easily insert them into new adapter configs. A template can be made from any standard component within Interlok. Each template can be presented via a wizard screen directing you through configuration for the specific environment.
 
 ## Format of a template ##
 

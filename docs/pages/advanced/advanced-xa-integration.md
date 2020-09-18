@@ -1,12 +1,4 @@
----
-title: XA transaction management
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-xa-integration.html
-summary: This page describes how to configure XA transaction management for JMS bridging.
-
----
+> **Summary:** This page describes how to configure XA transaction management for JMS bridging.
 
 ## XA Transaction Management ##
 

@@ -1,11 +1,4 @@
----
-title: Clustered Workflows / Services
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-vertx.html
-summary: This page describes how to configure Interlok workflow/service clustering (since 3.5.0)
----
+> **Summary:** This page describes how to configure Interlok workflow/service clustering (since 3.5.0)
 
 ## Clustering Implementation ##
 

@@ -1,12 +1,4 @@
----
-title: Saved Configs
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-saved-configs.html
-toc: false
-summary: The saved configs list allows you to easily save and re-open adapter configurations.
----
+> **Summary:** The saved configs list allows you to easily save and re-open adapter configurations.
 
 {% include note.html content="The save config function has been limited from version 3.7.0 and removed from 3.8.0. You cannot save to it anymore. Please use [Save Config Project](/pages/ui/ui-saved-config-projects) instead." %}
 

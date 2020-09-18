@@ -1,12 +1,4 @@
----
-title: Switch Database Provider
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-switch-db.html
-toc: false
-summary: Since 3.6.3 the gui can be used with other database providers.
----
+> **Summary:** Since 3.6.3 the gui can be used with other database providers.
 
 ## MySQL Configuration ##
 

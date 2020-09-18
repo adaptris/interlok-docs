@@ -1,12 +1,4 @@
----
-title: EDI Data transformations
-keywords: interlok
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-edi-transform.html
-summary: Using the edistream package to transform edi messages to xml and back
----
-
+> **Summary:** Using the edistream package to transform edi messages to xml and back
 
 The [interlok-edistream][] optional package allows you to handle the processing of EDI messages. EDI is a compact and cryptic message format that has been around for many years, long before xml.
 

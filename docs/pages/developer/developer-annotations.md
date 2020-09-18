@@ -1,10 +1,4 @@
----
-title: Annotating your Components
-keywords: interlok
-sidebar: home_sidebar
-permalink: developer-annotations.html
-summary: This document is aimed at system developers who wish to create new or custom Interlok components and for those components to be fully integrated into the Interlok framework.
----
+> **Summary:** This document is aimed at system developers who wish to create new or custom Interlok components and for those components to be fully integrated into the Interlok framework.
 
 {% include important.html content="in 3.8.0; adp-core-apt and adp-core were renamed to interlok-core-apt and interlok-core respectively" %}
 

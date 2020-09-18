@@ -1,11 +1,4 @@
----
-title: Salesforce Config
-keywords: interlok
-tags: [ui, salesforce]
-sidebar: home_sidebar
-permalink: ui-salesforce.html
-summary: The Salesforce Config page help you to generate some config xml to interact with Salesforce api. (Since 3.6.5)
----
+> **Summary:** The Salesforce Config page help you to generate some config xml to interact with Salesforce api. (Since 3.6.5)
 
 ## Prerequisite ##
 

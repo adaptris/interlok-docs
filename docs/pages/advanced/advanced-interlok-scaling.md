@@ -1,11 +1,5 @@
----
-title: Interlok Kubernetes Scaling
-keywords: interlok,kubernetes, scaling
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-interlok-scaling.html
-summary: Interlok scaling for Kubernetes in 15 minutes
----
+> **Summary:** Interlok scaling for Kubernetes in 15 minutes
+
 **Since 3.9.1**
 
 This guide will walk you from zero knowledge of Interlok and Kubernetes all the way through to deploying an instance of Interlok into a Kubernetes scaling pod in around 15 minutes.

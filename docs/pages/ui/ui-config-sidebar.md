@@ -1,12 +1,6 @@
----
-title: Config Page sidebar
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-config-sidebar.html
-toc: false
-summary: The Config Page sidebar allows you to drag and drop components into your adapter configuration.
----
+# Config Page Sidebar
+
+> **Summary:** The Config Page sidebar allows you to drag and drop components into your adapter configuration.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OB_6QdVpi2s" frameborder="0" allowfullscreen></iframe>
 

@@ -1,11 +1,6 @@
----
-title: Integrating with Terracotta Universal Messaging
-keywords: interlok terracotta messaging
-tags: [cookbook, messaging]
-sidebar: home_sidebar
-permalink: cookbook-terracotta-um.html
-summary: This document gives a quick start guide to bridging messages to and from Terracotta Universal Messaging system.
----
+# Integrating with Terracotta Universal Messaging
+
+> **Summary:** This document gives a quick start guide to bridging messages to and from Terracotta Universal Messaging system.
 
 ## Getting Started ##
 

@@ -1,11 +1,4 @@
----
-title: Running Interlok
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-commandline.html
----
-# Using the bundled executable #
+# Running Interlok Using the Bundled Executable
 
 The adapter executable adapter.command (Mac OSX based systems), adapter (Unix based systems), or adapter.exe (Windows) is controlled by a properties file which has the same name as the executable but with a `.lax` extension. The properties in the lax file control the initial environment and behaviour of the executable. You can make multiple copies of these files, you just need to make sure that there is an associated `.lax` file for each executable you create.
 

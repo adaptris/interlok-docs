@@ -1,12 +1,6 @@
----
-title: Config Page Navigation Tree
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-config-navigation-tree.html
-toc: false
-summary: The Config Page Navigation Tree allows you to quickly navigation around components into your adapter configuration.
----
+# Config Page Navigation Tree
+
+> **Summary:** The Config Page Navigation Tree allows you to quickly navigation around components into your adapter configuration.
 
 ## Getting Started ##
 

@@ -1,13 +1,4 @@
----
-title: Interlok Clustering
-keywords: interlok,cluster
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-cluster.html
-summary: This page explains Interlok instance clustering.
----
-
-# Clustering Interlok
+> **Summary:** This page explains Interlok instance clustering.
 
 As of Interlok __3.10.0__ you can monitor a cluster of Interlok instances.
 

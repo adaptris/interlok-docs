@@ -1,11 +1,6 @@
----
-title: Exporting Configuration
-keywords: interlok
-tags: [ui]
-sidebar: home_sidebar
-permalink: ui-export-import.html
-summary: The export function allows you to save your configuration file with place-holders which can then be swapped out with values configured in a separate property file
----
+# Exporting / Import Configuration
+
+> **Summary:** The export function allows you to save your configuration file with place-holders which can then be swapped out with values configured in a separate property file
 
 ## Config Export ##
 

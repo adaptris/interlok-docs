@@ -1,11 +1,3 @@
----
-title: JMX over JMS
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-jmx-jms.html
----
-
 In a factory fresh installation of Interlok; the _JMXServiceURL_ property in _bootstrap.properties_ is set to be the reference implementation `jmxmp`. This implementation is fine if the adapter is running in the local network and there are no issues with making connections to the Interlok instance from your browser. However, depending on how the adapter will be deployed, it may be that it will be behind a firewall, and will only allow limited connections; and certainly not unencrypted socket connections. In these types of deployment scenarios; where you may have to traverse firewalls to get to the adapter; it may be useful to proxy all JMX requests over a JMS Queue or Topic.
 Depending on your preferred JMS provider there will be a provider implementation that matches; check the optional component page for the correct artefact.
 

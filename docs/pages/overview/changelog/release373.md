@@ -1,0 +1,76 @@
+## Version 3.7.3 ##
+
+Release Date : 2018-06-29
+
+### Key Highlights
+
+- There is now a new 'table view' feature on the UI Dashboard. This is helpful when you are monitoring many Adapters.
+- The service tester ui is now ‘config aware’ and will allow you to generate test cases based upon a selected configuration.
+- The DynamicServiceLocator component helper has been improved to allow you to upload the dynamic service data so you can re-edit the data.
+- A new jetty-no-backlog-interceptor that will return a 503 status automatically when all workers in a workflow are busy.
+- Apache jclouds blob-store implementation to support backblaze / azureblob / aws-s3
+- More natural conditional services rather than branching-service-collection.
+- Interceptor to facilitate handling HTTP requests across multiple workflows
+
+### Bugs
+
+ - `INTERLOK-1070` - Y-Axis on metrics charts incorrect for small ranges
+ - `INTERLOK-1552` - UI Config - the Settings Sidebar Help Panel 'Show Instructions' feature is untidy
+ - `INTERLOK-2191` - Config Page - DB Sidebar should always check/use the shared connections and also the service connections
+ - `INTERLOK-2193` - The settings sidebar draggable text cannot be drop into codemirror text editor
+ - `INTERLOK-2201` - com.google.guava:guava:19.0 has a deserialization vulnerability
+ - `INTERLOK-2203` - Upgrade jackson-databind to at least 2.8.11.1
+ - `INTERLOK-2204` - Upgrade to org.hibernate:hibernate-validator:4.3.2.Final.
+ - `INTERLOK-2206` - UI Config - Templates on config components sidebar need to be shown by the user entered Title and not by name
+ - `INTERLOK-2226` - interlok-hpcc: Invalid dfuplus response means never detecting job completion
+ - `INTERLOK-2238` - utf8-bom-remover is v.slow when processing a large file.
+ - `INTERLOK-2246` - Sortable placeholder looks weird in table view
+ - `INTERLOK-2248` - Jetty StandardResponseProducer causes issues when used twice in a workflow
+ - `INTERLOK-2255` - XpathMetadataService requires use of namespaces even if namespace-aware is explicitly false
+ - `INTERLOK-2258` - UI cannot configure an empty value for FindAndReplaceService
+ - `INTERLOK-2263` - Possible zip slip directory traversal vulnerability in the UI ZipUtils class
+ - `INTERLOK-2264` - UI Config - Pasting a service in the middle of a serivce list paste it at the end
+ - `INTERLOK-2265` - jdbc-statement-parameter xpath not working
+ - `INTERLOK-2284` - UI Optional Component - data not being read from the nexus pom files
+ - `INTERLOK-2287` - SplitByMetadata does not support large FileBackedMessages
+
+### Improvements
+
+ - `INTERLOK-1111` - Azure blob implementation similar to AWS S3
+ - `INTERLOK-102` - More natural conditional services rather than branching-service-collection.
+ - `INTERLOK-923` - UI : Core Widget MBeans - Reset()/DeleteAll()
+ - `INTERLOK-1747` - Apache jclouds blob-store implementation to support backblaze / azureblob / aws-s3
+ - `INTERLOK-1940` - Lucene-Search - write the indexer that will create the json model that'll be used by the search api
+ - `INTERLOK-1957` - UI Service Tester - add a generate tests from config feature
+ - `INTERLOK-1972` - create project for the ElasticSearch indexer that will allow index to be executed
+ - `INTERLOK-2059` - UI Config - On Apply ensure that the page expands to where the user was pre-apply
+ - `INTERLOK-2085` - New ExceptionReportGenerator for e.getMessage()
+ - `INTERLOK-2117` - UI Config - DynamicServiceLocator helper v3.2 - load xml from zip
+ - `INTERLOK-2132` - Downloader API - deploy the webapp somewhere that the ui can access.
+ - `INTERLOK-2152` - UI Config - improve input, so its allowed to accept expressions but can be validated as an int
+ - `INTERLOK-2186` - Improve the optional component page to detect which dependencies are installed on an adapter
+ - `INTERLOK-2187` - UI Dashboard - Impl new dashboard for when monitoring > 4 adapters
+ - `INTERLOK-2188` - jetty-no-backlog-interceptor; return a 503 automatically when all workers in a workflow are busy.
+ - `INTERLOK-2194` - Should interceptors live outside a workflows normal processing chain
+ - `INTERLOK-2200` - Interceptor to facility handling HTTP requests across multiple workflows
+ - `INTERLOK-2211` - Service-Tester - New assertion - Check metadata key exists
+ - `INTERLOK-2212` - Service-Tester - New assertion - Assert Metadata Contains (using a regex pattern)
+ - `INTERLOK-2213` - Service-Tester - New Preprocessor - component unique-id (xpath) Preprocessor
+ - `INTERLOK-2217` - UI-Service-Tester - auto-gen xpath when using file source with xpath preprocessor
+ - `INTERLOK-2229` - interlok-aws-sqs: Monitor MBean for message count monitoring
+ - `INTERLOK-2233` - interlok-aws-s3: New operation to add Tags to objects
+ - `INTERLOK-2234` - interlok-aws-s3: Ability to set ContentEncoding on file
+ - `INTERLOK-2235` - interlok-aws-sqs: Expose WithAwsOwnerId on SQS producer
+ - `INTERLOK-2236` - Add a stax-splitter that doesn't use XPath for large messages.
+ - `INTERLOK-2254` - Add a "use-correlation-id-as-unique-id" implementation for CorrelationIdSource
+ - `INTERLOK-2256` - JettyServerManager should allow overriding of jetty-webdefault-failsafe.xml for CORS
+ - `INTERLOK-2190` - Add auto-reconnect for failed ssh tunnels
+ - `INTERLOK-2196` - UI Config - DB Preview sidebar - improve the labeling of the connection groups,
+ - `INTERLOK-2222` - payload-hashing-service should allow you to configure a translator
+ - `INTERLOK-2242` - UI API - ensure the adapter.tags is working in the external api
+ - `INTERLOK-2249` - UI - Grid View Button should be replaced with Table View
+ - `INTERLOK-2267` - UI - Update the service tester page doc.
+ - `INTERLOK-2269` - UI Optional Components - icons for new opt comps
+ - `INTERLOK-2270` - UI Index Page - Add service tester UI to the index page
+ - `INTERLOK-2271` - UI - Create a welcome splash billboard for 'service tester ui'
+ - `INTERLOK-2280` - Add section to docs for new validation annotations

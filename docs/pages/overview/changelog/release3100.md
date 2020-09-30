@@ -1,0 +1,115 @@
+## Version 3.10.0 ##
+
+Release Date : 2020-03-12
+
+### Key Highlights
+
+- The [UI Optional Component Page](ui-optional-component-discovery.html) has had many improvements, including:
+    - a reworked details modal that has had lots of new help text added to make things clearer
+    - integration of project readme documents into the details window
+    - more filtering options added, for better filtering of deprecated and licensed components
+- The [UI Service Tester Page](ui-service-tester.html) has had many improvements, including:
+    - A run option has been added to the test item that will run all its test cases.
+    - When adding a new Test the Default Config File Source is now selected by default.
+    - Improved the naming of tests when importing from existing config
+- The [UI User Preference](ui-user-preferences.html) 'Always attempt to load the active adapter' has now been set to false by default as we continue to promote the use of project based configuration.
+- Interlok Runtime improvements include:
+    - Added support for the Interlok to use the [Prometheus pushgateway](https://github.com/adaptris/interlok-profiler-prometheus)
+    - By default, the standard [docker](https://hub.docker.com/r/adaptris/interlok/tags) images will run Interlok as an unprivileged user (You’ve always been able to run interlok as a unprivileged user, It just wasn’t done by default).
+    - [interlok-jmx-jms](https://github.com/adaptris/interlok-jmx-jms) has been separated into individual provider projects
+    - Initial support for Asynchronous messaging
+    - The Default [JSON](https://github.com/adaptris/interlok-json) transformation driver is now "simple-json"
+    - [apache-geode](https://github.com/adaptris/interlok-cache/tree/develop/interlok-apache-geode) is now supported as a caching provider
+    - Prototype support for [multi-payload messages](https://interlok.adaptris.net/interlok-docs/advanced-multi-payload-messages.html)
+    - The default Saxon [transformation engine](cookbook-xml-transform.html) has been upgraded from 9.8 to 9.9.x
+
+### Bugs
+
+- `INTERLOK-2737` - UI - Apache Shiro Web Vulnerability
+- `INTERLOK-3072` - Service-Tester saving a new project "overwrites" an existing config-project.json
+- `INTERLOK-3078` - Apply consistently fails the first time under vivaldi + shared connections (aws-sqs)
+- `INTERLOK-3094` - UI Config - variable substitution for 'blank' settings can result in type errors
+- `INTERLOK-3114` - Operator IsEmpty ignore-whitespace isn't configurable in the UI
+- `INTERLOK-3132` - ClassCastException with profiler when using custom services
+- `INTERLOK-3135` - Profiler - Adding consumer events to map is wrong.
+- `INTERLOK-3138` - UI - Warning and stacktrace for jxpaths class not found on startup
+- `INTERLOK-3144` - Service Tester - Running a ServiceTest with a workingDirectory with space in its name results in failed tests
+- `INTERLOK-3145` - interlok-custom-component-example Does not include the anno-processor
+- `INTERLOK-3155` - StaxSplitter removes empty/whitespace elements when it probably shouldn't.
+- `INTERLOK-3166` - FtpConsumers do not work with FileBackedMessages
+- `INTERLOK-3167` - interlok-pgp doesn't support FileDataInputParameter
+- `INTERLOK-3171` - JSONToFixedCVS doesn't support JSON_LINES
+- `INTERLOK-3172` - JdbcDataQueryService CDATA columns are not bounded by a CDATA section
+- `INTERLOK-3175` - CircleCI builds broken due to java.security rewrite
+- `INTERLOK-3180` - UI doesn't start on 3.10-SNAPSHOT (CentOS 6)
+- `INTERLOK-3186` - UI: Variables in KeyValuePairSets don't work.
+- `INTERLOK-3201` - JettyManagementComponent broken with spaces in path.
+- `INTERLOK-3205` - Add null protection to JsonPathService
+
+### Improvements
+
+- `INTERLOK-1564` - Make ClusteredEventBus more configurable
+- `INTERLOK-2232` - UI Version Upgrade - update both d3js and c3js to latest version
+- `INTERLOK-2441` - UI User Pref 'Always attempt to load the active adapter' should be false by default
+- `INTERLOK-2549` - UI Version Upgrade - update lodash js to latest version
+- `INTERLOK-2552` - UI Version Upgrade - update xml2json js to latest version
+- `INTERLOK-2562` - UI Config - allow the service-collection panels to have larger labels
+- `INTERLOK-2688` - interlok-jmx-jms should be separated into individual provider projects
+- `INTERLOK-2706` - Add support for apache-geode via Cache
+- `INTERLOK-2760` - Add a "monitoring.war" file that only tells you the status of channels and workflows
+- `INTERLOK-2761` - Add %payload{} as a resolveable item; that's structurally aware
+- `INTERLOK-2820` - UI - Optional Component Docs
+- `INTERLOK-2823` - Remove support for interlok/snapshot-alpine docker image
+- `INTERLOK-2858` - Core - Update commons collections to 4.3
+- `INTERLOK-2867` - Remove GenerateBeanInfo annotation
+- `INTERLOK-2938` - Switch to running as a "non-root" user in docker containers
+- `INTERLOK-2962` - Upgrade WMQ jars for vanilla and XA projects
+- `INTERLOK-2967` - Switch to 8-jre variants for docker images
+- `INTERLOK-2984` - Migrate away from Junit3 to Junit5 (or at the minimum junit 4)
+- `INTERLOK-3010` - Un-synchronised Workflow
+- `INTERLOK-3011` - Profiler adapter for Prometheus
+- `INTERLOK-3018` - UI Optional Component - Improve the layout of the page itself (make better use of space)
+- `INTERLOK-3020` - UI Optional Component - add a feature to hide deprecated components
+- `INTERLOK-3056` - Add callback support to AdaptrisMessageListener
+- `INTERLOK-3061` - System Properties not supported by the UI.
+- `INTERLOK-3063` - Service-Tester "selecting a file source should pre-fill the file"
+- `INTERLOK-3067` - UI Service Test - Add a run option on the test
+- `INTERLOK-3069` - interlok-service-tester: Assertion unique-id should either be configurable in the UI or deprecated.
+- `INTERLOK-3075` - ServiceTester : there be a JSON-Path assertion
+- `INTERLOK-3077` - Remove volume definitions from docker images
+- `INTERLOK-3083` - UI - Improve the 'User Preferences' modal (it's getting too long)
+- `INTERLOK-3084` - WMQ Native Producer does not log errors.
+- `INTERLOK-3086` - Multipart messages - Splitting
+- `INTERLOK-3087` - Multipart messages - conditional for-each
+- `INTERLOK-3088` - Multipart messages - Join
+- `INTERLOK-3099` - Merge interlok-api project into interlok
+- `INTERLOK-3100` - ServiceTester should be restructured to be multi-module
+- `INTERLOK-3101` - Upgrade Saxon to 9.9.x from 9.8
+- `INTERLOK-3111` - SyntaxIdentifier interface should support the new Conditionals
+- `INTERLOK-3116` - UI Log Monitor - Should the view only user be able to create / delete log monitor?
+- `INTERLOK-3129` - Document the new multi-payload services
+- `INTERLOK-3130` - Look into random test failures.
+- `INTERLOK-3140` - Profiler - Test the profiler running in docker
+- `INTERLOK-3141` - Add DataInput + DataOutputParameters that are multi-payload aware
+- `INTERLOK-3143` - LogMessageService with a log payload only logger.
+- `INTERLOK-3153` - Add a CSV Aggregator
+- `INTERLOK-3159` - UI Service Test - Use the service-unique-preprocessor instead of xpath preprocessor when generating service tests
+- `INTERLOK-3162` - Change default JSON transformation driver to "simple-json"
+- `INTERLOK-3163` - CloneMessageServiceList requires 2 steps to preserve metadata
+- `INTERLOK-3168` - UI Config - promote the 'navigation tree' from 'Technical preview' to be part of release
+- `INTERLOK-3169` - UI - Upgrade libs from interlok-ui-deps
+- `INTERLOK-3170` - JSONToFixedCVS should allow you to configure the CSV style
+- `INTERLOK-3174` - Remove getUniqueId use in the UI for ServiceTester
+- `INTERLOK-3176` - Add support for dead letter queues in SQS
+- `INTERLOK-3073` - Service-Tester when importing tests from config; name the test the same as the project
+- `INTERLOK-3076` - UI - Upgrade Hibernate to 5.4.x and mockito to 3.1.0
+- `INTERLOK-3079` - Make AWS SQS Consumer use URLS in addition to "queuename"
+- `INTERLOK-3122` - UI - Update Copyrights year to 2020
+- `INTERLOK-3131` - Service Tester - AssertionResult has a uniqueId member which is never used
+- `INTERLOK-3136` - interlok-cxf 'use-fallback-transformer' should default to true since Saxon 9.9 doesn't play nice
+- `INTERLOK-3151` - UI - Upgrade to the latest moment.js
+- `INTERLOK-3173` - UI - Upgrade jacoco to 0.8.5
+- `INTERLOK-3179` - Base64 w/o newlines
+- `INTERLOK-3182` - Bump kafka version from 1.1.1 to 2.4.0
+- `INTERLOK-3183` - metadata-tokens bug in payload-from-metadata-service
+- `INTERLOK-3190` - Add a logging context aspect to the profiler

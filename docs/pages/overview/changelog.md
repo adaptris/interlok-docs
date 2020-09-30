@@ -1,89 +1,81 @@
----
-title: Change log
-keywords: interlok
-tags: []
-sidebar: home_sidebar
-permalink: changelog.html
-summary: This is the change log summarizing the key changes in Interlok for each release.
-toc: false
----
+> **Summary:** This is the change log summarizing the key changes in Interlok for each release.
 
-{% include custom/release3110.html %}
+[filename](changelog/release3110.md ':include')
 
-{% include custom/release3102.html %}
+[filename](changelog/release3102.md ':include')
 
-{% include custom/release3101.html %}
+[filename](changelog/release3101.md ':include')
 
-{% include custom/release3100.html %}
+[filename](changelog/release3100.md ':include')
 
-{% include custom/release393.html %}
+[filename](changelog/release393.md ':include')
 
-{% include custom/release392.html %}
+[filename](changelog/release392.md ':include')
 
-{% include custom/release391.html %}
+[filename](changelog/release391.md ':include')
 
-{% include custom/release390.html %}
+[filename](changelog/release390.md ':include')
 
-{% include custom/release384.html %}
+[filename](changelog/release384.md ':include')
 
-{% include custom/release383.html %}
+[filename](changelog/release383.md ':include')
 
-{% include custom/release382.html %}
+[filename](changelog/release382.md ':include')
 
-{% include custom/release381.html %}
+[filename](changelog/release381.md ':include')
 
-{% include custom/release380.html %}
+[filename](changelog/release380.md ':include')
 
-{% include custom/release373.html %}
+[filename](changelog/release373.md ':include')
 
-{% include custom/release372.html %}
+[filename](changelog/release372.md ':include')
 
-{% include custom/release371.html %}
+[filename](changelog/release371.md ':include')
 
-{% include custom/release370.html %}
+[filename](changelog/release370.md ':include')
 
-{% include custom/release366.html %}
+[filename](changelog/release366.md ':include')
 
-{% include custom/release365.html %}
+[filename](changelog/release365.md ':include')
 
-{% include custom/release364.html %}
+[filename](changelog/release364.md ':include')
 
-{% include custom/release363.html %}
+[filename](changelog/release363.md ':include')
 
-{% include custom/release362.html %}
+[filename](changelog/release362.md ':include')
 
-{% include custom/release361.html %}
+[filename](changelog/release361.md ':include')
 
-{% include custom/release360.html %}
+[filename](changelog/release360.md ':include')
 
-{% include custom/release351.html %}
+[filename](changelog/release351.md ':include')
 
-{% include custom/release350.html %}
+[filename](changelog/release350.md ':include')
 
-{% include custom/release341.html %}
+[filename](changelog/release341.md ':include')
 
-{% include custom/release340.html %}
+[filename](changelog/release340.md ':include')
 
-{% include custom/release330.html %}
+[filename](changelog/release330.md ':include')
 
-{% include custom/release321.html %}
+[filename](changelog/release321.md ':include')
 
-{% include custom/release320.html %}
+[filename](changelog/release320.md ':include')
 
-{% include custom/release311.html %}
+[filename](changelog/release311.md ':include')
 
-{% include custom/release310.html %}
+[filename](changelog/release310.md ':include')
 
-{% include custom/release306.html %}
+[filename](changelog/release306.md ':include')
 
-{% include custom/release305.html %}
+[filename](changelog/release305.md ':include')
 
-{% include custom/release304.html %}
+[filename](changelog/release304.md ':include')
 
-{% include custom/release303.html %}
+[filename](changelog/release303.md ':include')
 
-{% include custom/release302.html %}
+[filename](changelog/release302.md ':include')
 
-{% include custom/release301.html %}
+[filename](changelog/release301.md ':include')
 
-{% include custom/release300.html %}
+[filename](changelog/release300.md ':include')

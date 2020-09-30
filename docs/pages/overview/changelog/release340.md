@@ -1,0 +1,67 @@
+## Version 3.4.0 ##
+
+Release Date : 2016-08-22
+
+### Key Highlights
+
+- The Runtime Widgets now live in an improved grid framework
+- The runtime widgets can now be grouped into many pages
+- Added capability to import & export runtime widget settings
+- Data persistence for platform widgets
+- XA support (with configurable batches) for JMS
+- SOCKS4/SOCKS5/HTTP proxy support for SFTP Connections
+- Failover which does not rely on additional profiling components.
+
+### Bugs
+- `INTERLOK-1006` - PropertyResolver throws a NPE
+- `INTERLOK-1012` - AWS does not expose Proxy configuration
+- `INTERLOK-1019` - JdbcDataCaptureService doesn't support NamedParameterApplicator
+- `INTERLOK-1021` - Simple failover doesn't work with non-default locations for config
+- `INTERLOK-1032` - In the log monitor page switching between 2 tabs with different appender keep the previous tab data
+- `INTERLOK-1050` - Test Service (BranchingServiceCollection) doesn't branch!
+- `INTERLOK-1052` - VCS (git) integration does not hard-reset
+- `INTERLOK-1061` - Message Size Chart doesn't allow you to "clear" from the widget
+- `INTERLOK-1062` - When applying a message with no metadata to MetadataValueBranchingService the out message will have a blank nextServiceId
+- `INTERLOK-1066` - Metrics Chart needs to "show" the date.
+- `INTERLOK-1071` - Sometimes getting an IllegalArgumentException with file-sorting + large number of files.
+- `INTERLOK-1091` - UI Config - The search box in the add component modal is too small
+- `INTERLOK-1096` - When using a filtered-start for shared-components JNDI entries are not removed
+- `INTERLOK-1101` - XA : NullPointerException on adapter shutdown
+- `INTERLOK-1103` - Unable to stop adapter after XA channel restart
+
+### Improvements
+
+- `INTERLOK-860` - UI Runtime - Change the colors of the adapter, channel and workflow bar when adding a new widget to refect the color of the coonfig page
+- `INTERLOK-899` - UI Widgets - Add capability to save/load widget settings
+- `INTERLOK-925` - UI Widgets - Widget data should persist
+- `INTERLOK-934` - UI - Trap JMX connection exceptions
+- `INTERLOK-943` - UI Widgets - Have mulitple pages of widgets
+- `INTERLOK-946` - UI Config - Use the default annotation to create help titles/popovers on default boolean labels etc.
+- `INTERLOK-963` - Simple Failover
+- `INTERLOK-972` - UI Widgets - convert current charts to use c3
+- `INTERLOK-973` - UI Widgets - convert page to use a better grid framework
+- `INTERLOK-975` - Upgrade jacoco to the latest stable version 0.7.7.x
+- `INTERLOK-977` - UI Config - Improve settings editor select impl dropdown
+- `INTERLOK-981` - UI Widgets - create new widgets that cover dashboard features
+- `INTERLOK-997` - Add support for jsch ConfigRepository into a SftpConnection
+- `INTERLOK-1000` - UI - Successful config apply should auto-close popup
+- `INTERLOK-1011` - Migrate interlok-optional to git + individual projects.
+- `INTERLOK-1013` - AWS does not report a version number
+- `INTERLOK-1017` - CsvResultSetTranslator needs to support both include+exclude filters.
+- `INTERLOK-1020` - JDBC - DataCapture and Query Service common code
+- `INTERLOK-1022` - Add explicit support for proxy servers into Apache HTTP
+- `INTERLOK-1025` - UI - Message count chart - Zero out server data
+- `INTERLOK-1028` - Update the maven js/css ompressor plugin
+- `INTERLOK-1034` - JsonJavadocsController should serve the local javadoc instead of the remote one.
+- `INTERLOK-1036` - Refactor FixedIntevalPoller for extensibility
+- `INTERLOK-1041` - Add the ability to set a maximum for SimpleSequenceNumberService
+- `INTERLOK-1055` - Move interlok-guassian-poller to interlok/adapter
+- `INTERLOK-1056` - Disable "remove component" user pref should also act on widgets
+- `INTERLOK-1060` - GaussianIntervalPoller shouldn't be allowed to set standard deviation of 0
+- `INTERLOK-1064` - Add proxy support to SFTP
+- `INTERLOK-1069` - Upgrade to bootsrap 3.3.7
+- `INTERLOK-1076` - Add tests for VcsController
+- `INTERLOK-1080` - Update the runtime page doc
+- `INTERLOK-1083` - Create Encoding and Decoding service
+- `INTERLOK-1084` - Add option to suppress file deletion in AggregatingFsConsumer
+

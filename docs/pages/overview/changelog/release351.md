@@ -1,0 +1,76 @@
+## Version 3.5.1 ##
+
+Release Date : 2017-01-20
+
+### Key Highlights
+
+- Optional Component Discovery
+- Config pages have been given an overhaul to improve their usage on smaller screens
+- Widgets track data for longer
+- MQTT Support
+- New package to support Elasticsearch v5.
+- "command line" Version Control System
+
+### Bugs
+
+- `INTERLOK-1153` - UI API : Downtime still present even if channel started.
+- `INTERLOK-1194` - JMSConnectionErrorHandler - not sure it's entirely threadsafe.
+- `INTERLOK-1206` - JmsProducer - logging an object reference
+- `INTERLOK-1214` - NullPointerException in WebsphereMQ consumer
+- `INTERLOK-1254` - JsonArraySplitter doesn't cope with arrays of strings
+- `INTERLOK-1255` - JsonPathSplitter does not support arrays of strings
+- `INTERLOK-1259` - JSON XMLSerializer logs as a garbage name.
+- `INTERLOK-1314` - Some errors can cause XAJmsConsumer to break and not recover
+- `INTERLOK-1330` - NPE in XaJmsConsumer
+- `INTERLOK-1332` - Message loss when using XA connections
+- `INTERLOK-1341` - NPE in FileDataInputParameter for non-existent file
+- `INTERLOK-1342` - JMSConnectionErrorHandler failure causes JMS EventHandler NPE
+- `INTERLOK-1344` - Release components have SNAPSHOT dependencies in pom
+- `INTERLOK-1345` - AdvancedJdbcPooledConnection getter and setter for connectionProperties have different name
+- `INTERLOK-1346` - No Examples for extended JDBC Connections
+
+
+
+### Improvements
+
+- `INTERLOK-1027` - UI Config - Sidebar that allows WSDL to settings params
+- `INTERLOK-1137` - Core build - Generate sources jar.
+- `INTERLOK-1139` - UI Dashboard - improve Failed message modal so user can select multiple messages for retry function
+- `INTERLOK-1178` - Message Metrics charts should store for ~1day worth of data.
+- `INTERLOK-1180` - UI Config - Improve Metadata settings sidebar
+- `INTERLOK-1181` - Create a UI Widget that supports FsConsumerMonitor
+- `INTERLOK-1190` - Add support for MQTT
+- `INTERLOK-1199` - UI - Problems with browser resource caching errors after updates
+- `INTERLOK-1221` - Add support for SOCKS5/SOCKS4 Proxy to vcs-git+ssh
+- `INTERLOK-1224` - AS400 - Update project to v3
+- `INTERLOK-1226` - FileTransferConnection.UserInfo protection.
+- `INTERLOK-1231` - Interlok Service Test - Increase Test Coverage
+- `INTERLOK-1239` - UI Config - Compress the Adapter and Channel area when user working on workflows and services etc
+- `INTERLOK-1241` - UI Config - Add a tag cloud search to the Add Component modal
+- `INTERLOK-1242` - UI - Update welcome splash to include 'new features' section
+- `INTERLOK-1245` - UI - Build Framework for optional component discovery
+- `INTERLOK-1246` - UI - Config - Use the random scientist name generator by default for the component Ids
+- `INTERLOK-1249` - Upgrade elasticsearch to elasticsearch 5.0.0
+- `INTERLOK-1251` - AddMetadataService should have a "ovewrite flag"
+- `INTERLOK-1253` - XmlBasicValidator should contain a DocumentFactoryBuilder
+- `INTERLOK-1261` - Interlok Service Test - Xpath Equals Assertion
+- `INTERLOK-1269` - Added the service-unique-id (if available) to ObjectMetadata upon Exception
+- `INTERLOK-1271` - Solace - AdvancedImpl defaults direct transport.
+- `INTERLOK-1305` - Bind org.slf4j.Logger as a variable to ScriptingServiceImp
+- `INTERLOK-1306` - Create a MessageAggregator that creates a Zip of split payload
+- `INTERLOK-1307` - FileBackMessageFactory should have the option to create the "tmpdir"
+- `INTERLOK-1309` - JettyConsumer should handle Expect: 102-Processing (RFC2518)
+- `INTERLOK-1313` - AS400 - Update the IBM library to the latest.
+- `INTERLOK-1321` - UI Config - Change the collapsed component tabs to look more hierarchically organised
+- `INTERLOK-1324` - UI Config - Improve the use of space on the config page
+- `INTERLOK-1325` - Create "command line" Version Control System
+- `INTERLOK-1326` - UI Config - ensure when adding components that the id/name is unique to that level
+- `INTERLOK-1327` - UI Optional - hide certain jars in the dependency list
+- `INTERLOK-1328` - UI Optional - alter the license warning
+- `INTERLOK-1329` - Remove 'optional dependencies' from the  optional components POM + IVY.xml
+- `INTERLOK-1336` - UI Optional - alter the links on the details page
+- `INTERLOK-1337` - UI Optional - add javadoc links
+- `INTERLOK-1338` - Update VCS loading to use implementation name first
+- `INTERLOK-1339` - UI Optional - add component details to the optional components
+- `INTERLOK-1348` - IronMQ Migrate to MQv3 from MQv2 API
+- `INTERLOK-1359` - Update documentation for dashboard failed message modal

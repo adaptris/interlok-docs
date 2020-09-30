@@ -1,10 +1,3 @@
----
-title: Events in Interlok
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-events.html
----
 Event handling in Interlok consists of a single component [default-event-handler][] which is responsible for publishing [AdapterLifecycleEvents][] and [MessageLifecycleEvents][] events when appropriate. [default-event-handler][] wraps other standard components to fulfil its specialised role within Interlok, so where the event eventually goes is up your configuration.
 
 When a standard lifecycle happens (e.g. `init()`, `start()`, `stop()`, `close()`) then an associated [AdapterLifecycleEvent][] is generated and published. These events are generated regardless of how the lifecycle is invoked, so JVM startup and JMX operations (e.g. via the UI) will cause the lifecycle event to be published.

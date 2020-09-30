@@ -1,11 +1,6 @@
----
-title: Accessing External Webservices
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-executing-ws.html
-summary: This document is aimed at developers and system administrators who wish to make use to make calls to web-services outside of the domain of Interlok. Depending on how you want to execute the webservice; it will depend on either adp-webservice-cxf or adp-webservice-external.
----
+# Accessing External Webservices
+
+> **Summary:** This document is aimed at developers and system administrators who wish to make use to make calls to web-services outside of the domain of Interlok. Depending on how you want to execute the webservice; it will depend on either adp-webservice-cxf or adp-webservice-external.
 
 {% include important.html content="since 3.8.0; adp-webservice-cxf and adp-webservice-external have been renamed to interlok-webservice-cxf and interlok-webservice-external respectively" %}
 

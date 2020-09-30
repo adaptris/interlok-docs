@@ -1,10 +1,3 @@
----
-title: Applying a License
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-license.html
----
 The main Interlok runtime no longer needs a license; however some of the optional components may require a license which can be applied using the following method.
 
 ## Applying a license ##

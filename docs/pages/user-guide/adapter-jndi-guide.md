@@ -1,11 +1,4 @@
----
-title: Shared Components / JNDI
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-jndi-guide.html
-summary: This document will describe how Interlok utilizes the Java Naming and Directory Interface so that workflows may reference pre-configured connection objects rather than having to duplicate connection configuration in each workflow that requires that connection.
----
+> **Summary:** This document will describe how Interlok utilizes the Java Naming and Directory Interface so that workflows may reference pre-configured connection objects rather than having to duplicate connection configuration in each workflow that requires that connection.
 
 ## Shared Components ##
 

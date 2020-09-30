@@ -1,11 +1,3 @@
----
-title: Interlok as a Webservices Host
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-hosting-ws.html
----
-
 {% include important.html content="since 3.11.0; This has been removed, and is only included as an historical archive" %}
 {% include note.html content="This is only useful if you want to inject messages into an arbitrary workflow. Use a normal jetty based workflow if that is the intended endpoint" %}
 

@@ -1,10 +1,3 @@
----
-title: Startup in Detail
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-bootstrap.html
----
 When Interlok is started without any commandline parameters, it expects to find a file `bootstrap.properties` on the classpath (generally in the _config_ directory). If a file is specified on the commandline then this is expected to be a file present on the classpath or a fully qualified filename. This properties file contains the initial behaviour of Interlok and has a number of settings that can be modified to suit your environment. The keys themselves tend to be treated in a case insenstive fashion (not always guaranteed) so you should try and be consistent in your naming.
 
 ## Standard properties

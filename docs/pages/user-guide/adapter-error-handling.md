@@ -1,11 +1,5 @@
----
-title: Error Handling
-keywords: interlok
-tags: [getting_started]
-sidebar: home_sidebar
-permalink: adapter-error-handling.html
-summary: This document describes the error handling that can be configured within Interlok
----
+> **Summary:** This document describes the error handling that can be configured within Interlok
+
 Error handling in Interlok consists of 2 components that are related to each other: [FailedMessageRetrier][] and [ProcessingExceptionHandler][]. The [ProcessingExceptionHandler][] component is used to handle messages which encounter problems as they are being processed. The [FailedMessageRetrier][] is responsible for retrying messages that have failed (as the name suggests).
 
 ## Handling Exceptions ##

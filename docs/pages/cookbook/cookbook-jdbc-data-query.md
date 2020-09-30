@@ -1,13 +1,6 @@
----
-title: Data Query using JDBC
-keywords: interlok
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-jdbc-data-query.html
----
+# Data Query using JDBC
 
 [jdbc-data-query-service][] is often used to extract data from a database to enrich the message. Here we will work through a few examples using the different translators and statements parameters.
-
 
 ## Sample Data ##
 
@@ -429,6 +422,3 @@ which results in
 [SimpleDateFormat]: http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 [Metadata ResultSetTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/MetadataResultSetTranslatorImpl.html
 [ResultSetTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/ResultSetTranslator.html
-
-
-{% include links.html %}

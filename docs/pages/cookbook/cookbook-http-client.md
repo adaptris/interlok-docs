@@ -1,11 +1,4 @@
----
-title: Making HTTP Requests
-keywords: interlok http
-tags: [cookbook, http, messaging]
-sidebar: home_sidebar
-permalink: cookbook-http-client.html
-summary: Interlok comes bundled with an HTTP client (based on the standard JRE HttpURLConnection) which can be used to interact with API interfaces or external systems.
----
+> **Summary:**  Interlok comes bundled with an HTTP client (based on the standard JRE HttpURLConnection) which can be used to interact with API interfaces or external systems.
 
 One of the more common things that needs to happen is for Interlok to connect to various HTTP servers and get data to enrich the payload currently being processed or to produce the payload to a final HTTP(s) endpoint. This is achievable in two main ways, either as a producer at the end of a workflow, or as a service as part of your processing chain. Producers can always be wrapped within a `StandaloneProducer` or `StandaloneRequestor` instance so they can act as part of a service list. The behaviour of [standard-http-producer][] is fairly self-evident and shouldn't really need much in the way of documentation.
 

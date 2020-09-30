@@ -47,9 +47,6 @@ In this instance we'll make the trigger a message on a JMS Topic; any message re
 </channel>
 ```
 
-{% include links.html %}
-
-
 [TriggeredChannel]: https://development.adaptris.net/nexus/content/groups/public/com/adaptris/interlok-triggered/
 [AdaptrisPollingConsumer]: https://development.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.8-SNAPSHOT/com/adaptris/core/AdaptrisPollingConsumer.html
 [JmsPollingConsumer]: https://development.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.8-SNAPSHOT/com/adaptris/core/jms/JmsPollingConsumer.html

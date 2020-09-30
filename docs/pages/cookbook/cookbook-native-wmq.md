@@ -1,16 +1,10 @@
----
-title: Integrating with Native WebsphereMQ
-keywords: interlok wmq WebsphereMQ
-tags: [cookbook, messaging]
-sidebar: home_sidebar
-permalink: cookbook-native-wmq.html
-summary: This document summarises configurations for consuming and producing messages using the native IBM WebsphereMQ API.
----
+# Integrating with Native WebsphereMQ
+
+> **Summary:** This document summarises configurations for consuming and producing messages using the native IBM WebsphereMQ API.
 
 {% include important.html content="in 3.8.0; adp-webspheremq was renamed to interlok-webspheremq" %}
 
 This document summarises configurations for consuming and producing messages using the native IBM WebsphereMQ API. If you are attaching to WebsphereMQ via JMS, then the [JMS Guide][] contains specifics for that. It assumed that you have a passing knowledge of Interlok and its configuration. This guide has been built with MQSeries version 7.5 in mind.  However if you happen to be using another version, the only changes should be to the java archive files you will need to copy from your MQSeries installation to your Interlok installation, mentioned later in this guide.
-
 
 ----
 

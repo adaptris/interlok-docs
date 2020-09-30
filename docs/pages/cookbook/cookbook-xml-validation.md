@@ -1,11 +1,3 @@
----
-title: XML Validation
-keywords: interlok
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-xml-validation.html
----
-
 We can use [xml-validation-service] to validate a number of things about an XML document by using a list of [MessageValidator] implementations. Multiple validation steps can be done in a single [xml-validation-service] instance; so you could
 
 - Check that a message matches a given schema

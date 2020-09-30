@@ -1,10 +1,4 @@
----
-title: Marshalling Configuration and Architecture
-keywords: interlok
-sidebar: home_sidebar
-tags: [developer]
-permalink: developer-configuration-marshalling.html
----
+# Marshalling Configuration and Architecture
 
 Marshalling refers to the process by which Interlok will read the main XML configuration file and create a running instance of Interlok from that configuration file.
 

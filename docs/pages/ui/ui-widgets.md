@@ -1,11 +1,4 @@
----
-title: Widgets
-keywords: interlok
-tags: [getting_started, ui]
-sidebar: home_sidebar
-permalink: ui-widgets.html
-summary: The Runtime Widgets page allows you to view real-time runtime information driven by various parts of your configured containers.
----
+> **Summary:** The Runtime Widgets page allows you to view real-time runtime information driven by various parts of your configured containers.
 
 ## Getting Started ##
 

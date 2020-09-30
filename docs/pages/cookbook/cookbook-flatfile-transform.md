@@ -1,11 +1,4 @@
----
-title: Flat file Transformations
-keywords: interlok
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-flatfile-transform.html
-summary: Use flat-file-transform-service to transform flat documents into XML.
----
+> **Summary:** Use flat-file-transform-service to transform flat documents into XML.
 
 We can use [flat-file-transform-service] to transform a flat file into a simplified XML structure so we can use standard XSLT to transform the data further. The [flat-file-transform-service] relies on a definition file that describes the file. It uses this file to parse and then render the contents as XML.
 If required, you can specify the definition file using a metadata key rather than statically within the interlok configuration file.

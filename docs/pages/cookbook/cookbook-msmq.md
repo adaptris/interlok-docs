@@ -1,11 +1,6 @@
----
-title: Integrating with MSMQ
-keywords: interlok msmq
-tags: [cookbook, messaging]
-sidebar: home_sidebar
-permalink: cookbook-msmq.html
-summary: This document summarises configurations for consuming and producing messages using MSMQ. We will also describe some best practices related to the MSMQ infrastructure. It assumed that you have a passing knowledge of Interlok and its configuration with a basic understanding of MSMQ.
----
+# Integrating with MSMQ
+
+> **Summary:** This document summarises configurations for consuming and producing messages using MSMQ. We will also describe some best practices related to the MSMQ infrastructure. It assumed that you have a passing knowledge of Interlok and its configuration with a basic understanding of MSMQ.
 
 {% include important.html content="in 3.8.0; adp-msmq was renamed to interlok-msmq" %}
 

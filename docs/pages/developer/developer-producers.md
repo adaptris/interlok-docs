@@ -1,11 +1,4 @@
----
-title: Writing your own Producer
-keywords: interlok
-sidebar: home_sidebar
-tags: [developer]
-permalink: developer-producers.html
----
-
+# Writing your own Producer
 
 Within the Interlok framework, an [AdaptrisMessageProducer][] is responsible for sending the message to the target system. If the target system supports request-reply then extend [RequestReplyProducerImp][] otherwise extend [ProduceOnlyProducerImp][]
 

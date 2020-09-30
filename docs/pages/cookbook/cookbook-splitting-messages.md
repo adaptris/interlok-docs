@@ -1,11 +1,4 @@
----
-title: Splitting Messages
-keywords: interlok
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-splitting-messages.html
-summary: Many messages passing through Interlok will consist of multiple elements. Often you will get a batch of messages (popular if you're a heavy EDI user); but each message needs to be handled individually.
----
+> **Summary:** Many messages passing through Interlok will consist of multiple elements. Often you will get a batch of messages (popular if you're a heavy EDI user); but each message needs to be handled individually.
 
 Many messages passing through Interlok will consist of multiple elements. Often you will get a batch of messages (popular if you're a heavy EDI user); but each message needs to be handled individually. This is where the [basic-message-splitter-service] and [advanced-message-splitter-service][] are useful.
 

@@ -1,11 +1,4 @@
----
-title: CSV Data transformations
-keywords: interlok
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-csv-transform.html
-summary: Using the CSV packge to perform CSV to XML transformations
----
+> **Summary:** Using the CSV packge to perform CSV to XML transformations
 
 {% include important.html content="in 3.8.0; adp-simple-csv was renamed to interlok-csv" %}
 

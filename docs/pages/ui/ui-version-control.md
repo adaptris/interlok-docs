@@ -66,6 +66,3 @@ You can remove or edit this user information if you wish. You can read more abou
 The adapter gui doesn't support version control conflicts and merging. If some conflicts are found, an error message will be display and will ask you to download a zip file containing the working copy repository.
 You will be able to do the merging ourself using a third party tool such as [TortoiseSVN](http://tortoisesvn.net) or [TortoiseGit](http://tortoisegit.org).
 Once you've downloaded the working copy zip file you should reset the working directory to be able to work on it again.
-
-
-{% include links.html %}

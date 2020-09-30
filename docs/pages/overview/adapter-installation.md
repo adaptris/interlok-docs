@@ -74,5 +74,3 @@ JAVA_EXECUTABLE=/opt/java/jdk1.7/bin/java
 
 [unix installer]: https://development.adaptris.net/installers/Interlok/latest-stable/#unix
 [windows installer]: https://development.adaptris.net/installers/Interlok/latest-stable/#windows
-
-{% include links.html %}

@@ -1,11 +1,4 @@
----
-title:     "Resolvable Expressions"
-keywords:  "interlok, expressions, messages, metadata"
-tags:      [advanced]
-sidebar:   home_sidebar
-permalink: advanced-expressions.html
-summary:   This page describes how to use the expressions available for metadata lookup
----
+> **Summary:** This page describes how to use the expressions available for metadata lookup
 
 The expression resolver allows for metadata values, as well as a limited
 amount of other message information to be inserted into configuration

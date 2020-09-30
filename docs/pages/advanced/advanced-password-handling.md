@@ -1,11 +1,4 @@
----
-title: Storing Passwords in XML
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-password-handling.html
-toc: false
----
+# Storing Passwords in XML
 
 It has been a requirement for some organisations that passwords should never be stored in plain text in the configuration file; for these scenarios, it is now possible to encrypt the passwords. Because we have to recover the plain text password to pass to various subsystems reversible encryption has to be used. Additionally, no password is required in order to decrypt the password; if this were not the case then either
 

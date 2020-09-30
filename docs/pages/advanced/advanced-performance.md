@@ -1,10 +1,4 @@
----
-title: Performance Metrics
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-performance.html
----
+# Performance Metrics
 
 One of the things that we're always asked is to provide some performance metrics for the adapter. The answer here, is that __it depends__. Raw performance numbers are almost always meaningless in the real world; it depends on too many things, the complexity of your environment, the quality of the network, what type of processing that you're actually doing.
 

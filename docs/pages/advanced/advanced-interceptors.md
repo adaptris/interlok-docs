@@ -1,11 +1,3 @@
----
-title: Workflow Interceptors
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-interceptors.html
----
-
 Multiple [WorkflowInterceptor][] instances may be applied to any workflow type. Every message that is processed by a workflow will have each [WorkflowInterceptor][] applied to it, at the start and at the end of the workflow, in order of configuration. The [WorkflowInterceptor][] interface itself is very simple and is easily extensible for your own custom implementations. Example configuration for an interceptor may be found in `docs/example-xml/Interlok-Base/workflows`
 
 The current interceptors available as part of a standard installation are [throttling-interceptor][], [metadata-totals-interceptor][], [metadata-count-interceptor][], [message-metrics-interceptor][] and [message-metrics-interceptor-by-metadata][]; Apart from the [throttling-interceptor][] they provide some coarse grained statistics about the throughput of a given workflow. These statistics are made available over JMX, and [widgets](/pages/ui/ui-widgets) displayed in the web UI based on the `unique-id` associated with each interceptor. If finer details are required, then it is suggested that you use the optional profiler implementation to capture those statistics.

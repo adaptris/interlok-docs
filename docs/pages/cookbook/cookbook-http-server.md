@@ -1,11 +1,4 @@
----
-title: Servicing HTTP requests.
-keywords: interlok http
-tags: [cookbook, http, messaging]
-sidebar: home_sidebar
-permalink: cookbook-http-server.html
-summary: Interlok comes bundled with an HTTP server (based on jetty) which can be used to as an entrypoint into a workflow.
----
+> **Summary:**  Interlok comes bundled with an HTTP server (based on jetty) which can be used to as an entrypoint into a workflow.
 
 One of the more common integration scenarios that we encounter is to use Interlok as an API gateway; whether it is to overlay caching or authentication on an existing API, or to handle API calls itself. Interlok comes bundled with Jetty which is used to serve the UI and can used as entrypoint into a workflow. The connection for any HTTP based workflow should be one of [jetty-embedded-connection][], [jetty-http-connection][], or [jetty-https-connection][].
 As the name would suggest [jetty-embedded-connection][] makes use of the [jetty management component](/pages/user-guide/adapter-bootstrap#management-components) if you have enabled it. If you aren't using the this management component then you should use one of the other connection types which will allow you to configure specific embedded jetty instances on a per-connection basis. Enabling the _jetty management component_ and using [jetty-embedded-connection][] will allow you the greatest flexibility in terms of configuration as you have full access to the `jetty.xml` configuration file.

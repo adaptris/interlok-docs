@@ -1,14 +1,6 @@
----
-title: JMS Integration
-keywords: interlok
-tags: [cookbook, messaging]
-sidebar: home_sidebar
-permalink: cookbook-jms.html
-summary: This document summarises various configurations and concepts for handling various types of JMS messaging platforms using Interlok. Interlok can be configured for the more popular flavours of JMS Provider. In most cases you will be required to add the vendor specific Interlok component to your Interlok installation.
----
+> **Summary:** This document summarises various configurations and concepts for handling various types of JMS messaging platforms using Interlok. Interlok can be configured for the more popular flavours of JMS Provider. In most cases you will be required to add the vendor specific Interlok component to your Interlok installation.
 
 {% include important.html content="in 3.8.0; adp-jms-sonicmq, adp-jms-oracleaq, adp-webspheremq were renamed to interlok-jms-sonicmq, interlok-jms-oracleaq, interlok-webspheremq respectively" %}
-
 
 Each of the sub components are vendor specific and are known to work in most standard configuration instances. Installation of a sub component is very straight forward, simply drop the java archive files into your Interlok "lib" directory. However, it is recommended that you replace any vendor specific java archive files in your Interlok installation with those shipped with your JMS specific vendor.  This ensures that you get the best performance and reliability with Interlok.
 
@@ -399,5 +391,3 @@ A feature of using Topics is that you can restrict the delivery of the message t
 [jms-producer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/JmsConsumer.html
 [jms-consumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/JmsProducer.html
 [jms-poller]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/JmsPollingConsumer.html
-
-{% include links.html %}

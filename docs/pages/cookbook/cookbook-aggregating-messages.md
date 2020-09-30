@@ -1,11 +1,4 @@
----
-title: Message Aggregation
-keywords: interlok
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-aggregating-messages.html
-summary: From time to time you may need to aggregate messages based on a trigger message that indicates some processing as been completed.
----
+> **Summary:** From time to time you may need to aggregate messages based on a trigger message that indicates some processing as been completed.
 
 {% include tip.html content="You might want to use [split-join-service](/pages/cookbook/cookbook-split-join) to perform an inline split + aggregate." %}
 

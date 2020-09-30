@@ -1,11 +1,4 @@
----
-title: Split and Aggregate
-keywords: interlok
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-split-join.html
-summary: Many messages passing through Interlok will consist of multiple elements. Often you will get a batch of messages (popular if you're a heavy EDI user); but each message needs to be handled individually. However your use-case means that you still need to aggregate the results of the processing in some fashion.
----
+> **Summary:** Many messages passing through Interlok will consist of multiple elements. Often you will get a batch of messages (popular if you're a heavy EDI user); but each message needs to be handled individually. However your use-case means that you still need to aggregate the results of the processing in some fashion.
 
 [split-join-service][] is similar to the [advanced-message-splitter-service][] in that you specify an arbitrary set of services to apply to each split message; however, rather than processing them sequentially, the split messages are processed concurrently, and then the results of the processing captured and merged using your specified [MessageAggregator][] implementation.
 

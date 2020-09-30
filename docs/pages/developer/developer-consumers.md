@@ -1,10 +1,4 @@
----
-title: Writing your own Consumer
-keywords: interlok
-sidebar: home_sidebar
-tags: [developer]
-permalink: developer-consumers.html
----
+# Writing your own Consumer
 
 Within the Interlok framework, an [AdaptrisMessageConsumer][] is responsible for receiving messages from the target system. You need to decide on how the consumer will be triggered. If the consumer should be timer based (e.g. poll a directory every x seconds), then you can extend [AdaptrisPollingConsumer][] which allows for a pluggable timer mechanism. Other types of consumer should directly extend [AdaptrisMessageConsumerImp][].
 

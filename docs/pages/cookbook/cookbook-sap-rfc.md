@@ -1,11 +1,4 @@
----
-title: SAP BAPI/RFC Integration
-keywords: interlok sap
-tags: [cookbook,]
-sidebar: home_sidebar
-permalink: cookbook-sap-rfc.html
-summary: This is a brief checklist and documentation of how Interlok can interact with SAP using RFC and BAPI calls. You will be already familiar with Interlok and its underlying concepts. No SAP knowledge is assumed. Interlok uses SAP JCo Standalone in order to achieve the desired integration (3.x).
----
+> **Summary:** This is a brief checklist and documentation of how Interlok can interact with SAP using RFC and BAPI calls. You will be already familiar with Interlok and its underlying concepts. No SAP knowledge is assumed. Interlok uses SAP JCo Standalone in order to achieve the desired integration (3.x).
 
 {% include note.html content="This depends on the artifact com.adaptris:interlok-sap. This will require a license." %}
 

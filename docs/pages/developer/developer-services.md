@@ -1,10 +1,4 @@
----
-title: Writing your own Service
-keywords: interlok
-tags: [developer]
-sidebar: home_sidebar
-permalink: developer-services.html
----
+# Writing your own Service
 
 The [Service][] interface allows arbitrary functionality to be applied to [AdaptrisMessage][] objects in a [Workflow][]. It inherits some methods from other interfaces, namely [AdaptrisComponent][] and [StateManagedComponent][], but there are default implementations provided for those. There is only one key method in addition to [AdaptrisComponent]: this is the [doService()][] method which applies the appropriate action on the [AdaptrisMessage][] object.
 

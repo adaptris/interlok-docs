@@ -1,11 +1,4 @@
----
-title: Email (POP3/IMAP/SMTP)
-keywords: interlok
-tags: [cookbook, messaging]
-sidebar: home_sidebar
-permalink: cookbook-email.html
-summary: Interlok can both receive emails via POP3 and IMAP and send emails via SMTP as part of its standard feature set. This guide will show you how to use Interlok to interact with a mail server using these protocols.
----
+> **Summary:** Interlok can both receive emails via POP3 and IMAP and send emails via SMTP as part of its standard feature set. This guide will show you how to use Interlok to interact with a mail server using these protocols.
 
 On a high level:
 
@@ -1422,6 +1415,3 @@ I am the body of an email without attachments.
 [xml-attachment-handler]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-mail/3.11-SNAPSHOT/com/adaptris/core/mail/attachment/XmlAttachmentHandler.html
 [xml-body-handler]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-mail/3.11-SNAPSHOT/com/adaptris/core/mail/attachment/XmlBodyHandler.html
 [xml-mail-creator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-mail/3.11-SNAPSHOT/com/adaptris/core/mail/attachment/XmlMailCreator.html
-
-
-{% include links.html %}

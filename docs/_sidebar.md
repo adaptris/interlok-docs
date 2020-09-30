@@ -4,7 +4,6 @@
  - [Installation](/pages/overview/adapter-installation.md)
  - [Starting Interlok](/pages/overview/adapter-commandline.md)
  - [Additional Resources](/pages/overview/adapter-additional.md)
- - [Browse](/pages/overview/adapter-topics.html)
  - [Change log](/pages/overview/changelog.md)
  - [Changes from 2.x](/pages/overview/adapter-changes-since-2.x.md)
 - [User guide](/pages/user-guide/)

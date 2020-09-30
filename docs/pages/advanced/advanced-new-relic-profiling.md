@@ -1,11 +1,4 @@
----
-title: Profiling with New Relic
-keywords: interlok
-tags: [advanced]
-sidebar: home_sidebar
-permalink: advanced-new-relic-profiling.html
-summary: This page describes how to profile Interlok and inject statistics into New Relic
----
+> **Summary:** This page describes how to profile Interlok and inject statistics into New Relic
 
 {% include note.html content="If you don't know what [New Relic][] is then you can blithely ignore  this document." %}
 

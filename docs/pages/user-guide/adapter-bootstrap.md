@@ -277,8 +277,6 @@ sysprop.javax.net.ssl.keyStore=/path/to/my/keystore
 
 Pre-Processors are components that allow you to inject some additional processing of Interlok configuration files before attempting to unmarshal them. It is discussed in more detail in the [pre-processors](/pages/advanced/advanced-configuration-pre-processors) document.
 
-{% include links.html %}
-
 [XStreamConfigManager]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/management/config/XStreamConfigManager.html
 [ManagementComponent]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/management/ManagementComponent.html
 [Authenticator]: http://docs.oracle.com/javase/7/docs/api/java/net/Authenticator.html

@@ -1,10 +1,4 @@
----
-title: Data Capture using JDBC
-keywords: interlok
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-jdbc-data-capture.html
----
+# Data Capture using JDBC
 
 Sometimes; you'll want to capture data from an in-flight [message][AdaptrisMessage] and write it out to a JDBC compliant database. There are 3 standard ways you can do this : [jdbc-data-capture-service][], [jdbc-raw-data-capture-service][] and [jdbc-stored-procedure-producer][]. The first 2 are [Service][] implementations which can write to any database table; the last is only used when executing a stored procedure.
 
@@ -93,5 +87,3 @@ Taking the example document above, we want to insert the entire document as a ne
 [jdbc-data-query-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/JdbcDataQueryService.html
 [jdbc-statement-parameter]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/StatementParameter.html
 [jdbc-batching-data-capture-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/JdbcBatchingDataCaptureService.html
-
-{% include links.html %}

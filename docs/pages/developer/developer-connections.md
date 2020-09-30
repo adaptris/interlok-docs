@@ -1,10 +1,4 @@
----
-title: Writing your own Connection
-keywords: interlok
-sidebar: home_sidebar
-tags: [developer]
-permalink: developer-connections.html
----
+# Writing your own Connection
 
 Within the Interlok framework, an [AdaptrisConnection][] object tends to wrap any behaviour that is required to setup a persistent connection to an application; such as making a connection over a socket. There are other reasons that might cause you to think about writing an [AdaptrisConnection][]; you may want to retro-fit a resource-intensive component so that you can avoid each [AdaptrisMessageProducer][] or [AdaptrisMessageConsumer][] instance from maintaining its own instance.
 

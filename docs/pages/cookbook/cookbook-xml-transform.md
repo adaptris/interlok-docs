@@ -1,11 +1,4 @@
----
-title: XML Transformations
-keywords: interlok
-tags: [cookbook]
-sidebar: home_sidebar
-permalink: cookbook-xml-transform.html
-summary: Use xml-transform-service to transform XML documents
----
+> **Summary:** Use xml-transform-service to transform XML documents
 
 We can use [xml-transform-service] to execute a XSLT in order to transform XML documents from one format to another. XSLT needs no further introduction.
 

@@ -140,5 +140,3 @@ They are discussed more fully in the [list of optional components](/pages/user-g
 [standard-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/StandardWorkflow.html
 [pooling-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/PoolingWorkflow.html
 [jms-transacted-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/JmsTransactedWorkflow.html
-
-{% include links.html %}

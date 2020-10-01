@@ -13,6 +13,11 @@
   <style>
 	:root {
 		--content-max-width: 85em;
+		--theme-color-secondary: #C51162;
+
+		--sidebar-nav-pagelink-background-image--active:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+		--sidebar-nav-pagelink-background-image--collapse:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='11.2' viewBox='0 0 7 11.2'%3E%3Cpath d='M1.5 1.5l4 4.1 -4 4.1' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+		--sidebar-nav-pagelink-background-image--loaded:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
 	}
 	footer .content {
 		margin-left: var(--sidebar-width);
@@ -38,13 +43,26 @@
         color: var(--sidebar-name-color);
     }
     .markdown-section h2 {
-        color: #C51162;
+        color: var(--theme-color-secondary);
     }
+	.markdown-section a {
+		color: var(--theme-color);
+	}
 	.quick-links {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
         justify-content: space-between;
+	}
+	
+	.interlok-docs-title {
+	    background-image: url(../svg/adaptris-logo.svg);
+		background-repeat: no-repeat;
+		background-position: 0 50%;
+		padding-left: 24px;
+		padding-bottom: 2px;
+		background-size: 20px;
+		font-weight: bold;
 	}
 	
 
@@ -75,7 +93,8 @@
   </footer>
   <script>
     window.$docsify = {
-      name: 'Interlok Docs',
+      name: '<span class="interlok-docs-title" />Interlok Docs</span>',
+      // logo: '/images/company_logo.png',
       repo: '',
       loadSidebar: true,
       alias: {
@@ -92,9 +111,6 @@
         // Headline depth, 1 - 6
         depth: 5
       },
-      // logo: '/images/company_logo.png',
-      // name: '<img src="/images/logo-white.png" />Interlok Docs',
-      name: '<b>Interlok Docs</b>',
       noEmoji: true, // Emojis Cause some rendering issues when we have something like :string: which happens a lot e.g. service:jmx:jmxmp:
       themeColor: '#182B51',
       coverpage: false,

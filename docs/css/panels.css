@@ -67,8 +67,8 @@
 
 .btn-primary {
 	color: #ffffff !important;
-	background-color: #182B51 !important;
-	border-color: #182B51 !important;
+	background-color: var(--theme-color) !important;
+	border-color: var(--theme-color) !important;
 }
 
 .btn:hover, .btn:focus {
@@ -77,9 +77,10 @@
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-	background-color: #293C62 !important;
-	border-color: #182B51 !important;
+	background-color: var(--theme-color) !important;
+	border-color: var(--theme-color) !important;
 	color: #fff !important;
+	opacity: 0.9;
 }
 
 .svg-stack {

@@ -1,4 +1,4 @@
-- [News](/news/)
+- [Blog](https://interlok.adaptris.net/#blog)
 - Resources
   - [github](https://github.com/adaptris/interlok)
   - [Installers](https://development.adaptris.net/installers)

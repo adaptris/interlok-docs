@@ -96,6 +96,7 @@
     - [Profiling with New Relic](/pages/advanced/advanced-new-relic-profiling.md)
     - [Profiling with Prometheus](/pages/advanced/advanced-profiler-prometheus.md)
     - [Automagically adding logging context](/pages/advanced/advanced-profiler-logging-context.md)
+    - [JMS Performance](/pages/advanced/advanced-jms-performance.md)
  - [Resolvable Expressions](/pages/advanced/advanced-expressions.md)
  - [Running in Docker](/pages/advanced/advanced-docker.md)
  - [Running in a Sonic Container](/pages/advanced/advanced-sonic-container.md)

@@ -19,7 +19,7 @@ Five separate container instances have been used to host each of the following;
  - ActiveMQ
  - Prometheus / Grafana
 
-![AWS-Environment](./images/jms-performance/aws-setup.png)
+![AWS-Environment](../../images/jms-performance/aws-setup.png)
 
 #### Interlok
 
@@ -58,19 +58,19 @@ Using the standard JMS 1.1 API to move 75,000.
 
 #### WebsphereMQ to Solace
 
-![AWS-Environment](./images/jms-performance/wmq-solace-jms-jms.png)
+![AWS-Environment](../../images/jms-performance/wmq-solace-jms-jms.png)
 
 #### Solace to WebsphereMQ
 
-![AWS-Environment](./images/jms-performance/solace-wmq-jms-jms.png)
+![AWS-Environment](../../images/jms-performance/solace-wmq-jms-jms.png)
 
 #### Solace to ActiveMQ
 
-![AWS-Environment](./images/jms-performance/solace-activemq.png)
+![AWS-Environment](../../images/jms-performance/solace-activemq.png)
 
 #### ActiveMQ to Solace
 
-![AWS-Environment](./images/jms-performance/activemq-solace.png)
+![AWS-Environment](../../images/jms-performance/activemq-solace.png)
 
 ### JMS / JCSMP
 
@@ -78,17 +78,17 @@ These tests use a combination of both JMS and the Solace native JCSMP API.
 
 #### WebsphereMQ to Solace (JCSMP)
 
-![AWS-Environment](./images/jms-performance/wmq-solace-jms-jcsmp.png)
+![AWS-Environment](../../images/jms-performance/wmq-solace-jms-jcsmp.png)
 
 #### Solace to Solace (JCSMP)
 
-![AWS-Environment](./images/jms-performance/solace-solace-jcsmp.png)
+![AWS-Environment](../../images/jms-performance/solace-solace-jcsmp.png)
 
 ### JMS 2.0 Asynchronous Producer
 
 Consuming from Solace using JMS and producing to WebsphereMQ using a JMS 2.0 asynchronous producer.
 
-![AWS-Environment](./images/jms-performance/solace-wmq-jms-async.png)
+![AWS-Environment](../../images/jms-performance/solace-wmq-jms-async.png)
 
 ### JMS + XA
 
@@ -98,19 +98,18 @@ These tests all use the standard JMS 1.1 API but also include XA transaction han
 
 This test has an "ack window" of 250.  The left side shows Solace to WebsphereMQ, the right side is the reverse.
 
-![AWS-Environment](./images/jms-performance/xa-solace-wmq-reverse.png)
+![AWS-Environment](../../images/jms-performance/xa-solace-wmq-reverse.png)
 
 #### Solace to WebsphereMQ
 
 This test has a smaller "ack window" of 10.
 
-![AWS-Environment](./images/jms-performance/xa-solace-wmq-reverse-10-ack.png)
+![AWS-Environment](../../images/jms-performance/xa-solace-wmq-reverse-10-ack.png)
 
 #### WebsphereMQ to Solace
 
 This test has a smaller "ack window" of 10.
 
-![AWS-Environment](./images/jms-performance/xa-wmq-solace-10-ack.png)
-
+![AWS-Environment](../../images/jms-performance/xa-wmq-solace-10-ack.png)
 
 

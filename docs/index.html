@@ -144,8 +144,12 @@
             if (content.indexOf("class=\"swagger-iframe\"") > -1) {
               window.resizeSwaggerIframe = function resizeSwaggerIframe(iframe) {
                 setTimeout(function() {
+				  // This is hacky but we want the iframe to be resized quickly but also making sure it is resized if there is a slowdown
                   iframe.height = iframe.contentWindow.document.documentElement.scrollHeight + "px";
-                }, 400);
+					setTimeout(function() {
+					  iframe.height = iframe.contentWindow.document.documentElement.scrollHeight + "px";
+					}, 300);
+                }, 200);
               }
               window.monitorSwaggerIframeContentHeight = function monitorSwaggerIframeContentHeight(iframe) {
                 resizeSwaggerIframe(iframe);

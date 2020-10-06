@@ -29,8 +29,8 @@ If you access this url directly you will see the json Swagger definition for the
 {
   "openapi" : "3.0.1",
   "info" : {
-    "title" : "Interlok Artifact Downloader Api Documentation",
-    "description" : "Interlok Artifact Downloader Api web service documentation.",
+    "title" : "Interlok UI Api Documentation",
+    "description" : "Interlok UI Api web service documentation.",
     "version" : "3.10-SNAPSHOT"
   },
   "servers" : [ {

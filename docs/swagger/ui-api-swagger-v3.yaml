@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
-  title: Interlok Artifact Downloader Api Documentation
-  description: Interlok Artifact Downloader Api web service documentation.
+  title: Interlok UI Api Documentation
+  description: Interlok UI Api web service documentation.
   version: 3.10.2-RELEASE
 servers:
 - url: /interlok/api

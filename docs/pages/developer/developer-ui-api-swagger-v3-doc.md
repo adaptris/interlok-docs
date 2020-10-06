@@ -1,9 +1,2 @@
----
-layout: swagger-v3
-title: Interlok UI API Swagger Documentation
-keywords: interlok
-tags: [developer]
-sidebar: home_sidebar
-permalink: developer-ui-api-swagger-v3-doc.html
-data: ui-api-swagger-v3
----
+
+<iframe class="swagger-iframe" onload="monitorSwaggerIframeContentHeight(this)" src="../../swagger/swagger-ui/ui-api-swagger-v3.html" width="100%" height="500" frameBorder="0" />

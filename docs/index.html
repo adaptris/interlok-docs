@@ -64,8 +64,6 @@
 		background-size: 20px;
 		font-weight: bold;
 	}
-	
-
   </style>
 </head>
 <body>
@@ -137,7 +135,29 @@
               }
               return type + " " + (p1 ? "**" + p1.toUpperCase() + "** " : "") + p2;
             });
-            return (content);
+            return content;
+          });
+        },
+        function(hook, vm) {
+          // Add swagger iframe resize function when an iframe with the class swagger-iframe is detected
+          hook.beforeEach(function(content) {
+            if (content.indexOf("class=\"swagger-iframe\"") > -1) {
+              window.resizeSwaggerIframe = function resizeSwaggerIframe(iframe) {
+                setTimeout(function() {
+                  iframe.height = iframe.contentWindow.document.documentElement.scrollHeight + "px";
+                }, 400);
+              }
+              window.monitorSwaggerIframeContentHeight = function monitorSwaggerIframeContentHeight(iframe) {
+                resizeSwaggerIframe(iframe);
+                iframe.contentWindow.addEventListener("click", event => {
+                  resizeSwaggerIframe(iframe);
+                });
+              }
+            } else {
+              window.resizeSwaggerIframe = undefined;
+              window.monitorSwaggerIframeContentHeight = undefined;
+            }
+            return content;
           });
         }
       ]

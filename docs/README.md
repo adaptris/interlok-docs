@@ -84,6 +84,7 @@ Of course there must be an obligatory [xkcd](http://xkcd.com) reference.
 You probably came here from [http://interlok.adaptris.net](http://interlok.adaptris.net), [https://development.adaptris.net](https://development.adaptris.net) or perhaps even [http://www.adaptris.com](http://www.adaptris.com). 
 
 * Comic reproduced because of the generous [xkcd license](http://xkcd.com/license.html)
-* [Jekyll](http://jekyllrb.com) Theme by [Tom Johnson](http://idratherbewriting.com/)
+* Now built with [docsify](https://docsify.js.org/#/)
+* Previous version available [here](https://interlok.adaptris.net/interlok-docs-legacy); and its [github project](https://github.com/adaptris/interlok-docs-legacy)
 
 {% include links.html %}

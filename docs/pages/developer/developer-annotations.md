@@ -128,6 +128,25 @@ public class ComponentToBeRemoved ... {
 | `message` | A message to inform the user about the component removal |
 
 
+### @ConfigDeprecated ###
+
+Since 3.11.1 you can use this annotation to deprecate a configuration class and get a warning when running the config checker. This annotation should be preferred over @Removal and should normally be used with the @Deprecated annotation.
+
+?> **Don't forget** to use (*groups = Deprecated.class*) if you want the warning to appear in the config checker.
+
+```java
+@ConfigDeprecated(removalVersion = "4.2", message = "Use XXX instead", groups = Deprecated.class)
+public class ComponentToBeRemoved ... {
+  ...
+}
+```
+
+| Annotation Parameter | Description |
+|----|----|
+| `removalVersion` | The version the component will be removed |
+| `message` | A message to inform the user about the component deprecation |
+
+
 ## Member Level Annotations ##
 
 ### @XStreamImplicit ###
@@ -295,6 +314,23 @@ private Boolean memberToBeRemoved;
 |----|----|
 | `version` | The version the member will be removed |
 | `message` | A message to inform the user about the member removal |
+
+
+### @ConfigDeprecated ###
+
+Since 3.11.1 you can use this annotation to deprecate a configuration member and get a warning when running the config checker. This annotation should be preferred over @Removal and should normally be used with the @Deprecated annotation.
+
+?> **Don't forget** to use (*groups = Deprecated.class*) if you want the warning to appear in the config checker.
+
+```java
+@ConfigDeprecated(removalVersion = "4.2", message = "Use XXX instead", groups = Deprecated.class)
+private Boolean memberToBeRemoved;
+```
+
+| Annotation Parameter | Description |
+|----|----|
+| `removalVersion` | The version the member will be removed |
+| `message` | A message to inform the user about the member deprecation |
 
 
 ### @NumberExpression, @BooleanExpression, @UrlExpression ###

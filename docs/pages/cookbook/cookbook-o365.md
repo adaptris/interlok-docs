@@ -1,9 +1,9 @@
-> **Summary:** Interlok-Mail now provides a way to use Outlook with Office365
+> **Summary:** interlok-azure-mail now provides a way to use Interlok with Office365 email
 
-# Outlook for Office365
+# Introduction
 
 Both the Office365 consumer and producer are new additions to
-Interlok-Mail, that allow for the receiving and sending of email using
+interlok-azure-mail, that allow for the receiving and sending of email using
 Microsoft Outlook accounts via Azure and their Graph API. One major
 benefit of this is the increased security and use of [OAuth2 tokens][1].
 It also removes the need to understand the IMAP/SMTP protocols. That

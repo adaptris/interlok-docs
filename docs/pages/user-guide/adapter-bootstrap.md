@@ -28,6 +28,7 @@ The list of keys and a brief description of each key is described below :
 You can override a select number of properties using standard system properties
 
 | System Property | Bootstrap key | Notes |
+|----|----|----|
 | interlok.config.url | adapterConfigUrl | _since 3.6.2_ `-Dinterlok.config.url=/path/to/my/adapter.xml` will cause _/path/to/may/adapter.xml_ to be the config url overriding the existing key |
 | interlok.logging.url | loggingConfigUrl | _since 3.6.2_ `-Dinterlok.logging.url=/path/to/my/log4j2.xml` to specify the logging configuration |
 | interlok.jmxserviceurl | jmxserviceurl | _since 3.6.2_ `-Dinterlok.jmxserviceurl=service:jmx:jmxmp://localhost:5555` will override the existing `jmxserviceurl` if the jmx management component is enabled|

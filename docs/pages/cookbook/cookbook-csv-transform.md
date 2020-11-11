@@ -1,6 +1,6 @@
 > **Summary:** Using the CSV packge to perform CSV to XML transformations
 
-{% include important.html content="in 3.8.0; adp-simple-csv was renamed to interlok-csv" %}
+!> **IMPORTANT** in 3.8.0; adp-simple-csv was renamed to interlok-csv
 
 
 The [interlok-csv][] optional package allows you to render CSV documents as XML. It also contains a [jdbc-csv-output][] so that you can output a CSV document directly from [jdbc-data-query-service][]. We're going to describe the transformation functionality here only. Under the covers, it uses a mixture of [commons-csv][] and [super-csv][].

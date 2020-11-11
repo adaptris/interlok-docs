@@ -10,7 +10,7 @@ You'll still need to build your own docker images, but what you want to do is cu
 
 The [docker-interlok-template](https://github.com/adaptris-labs/docker-interlok-template) project contains 4 branches; each of those branches should have a sufficient README that you can ignore the rest of this document. However, we will briefly describe each of the branches.
 
-{% include important.html content="Internally we use gradle to manage our configurations so the `gradle-docker-build` is the preferred branch and the one that gets the most love" %}
+!> **IMPORTANT** Internally we use gradle to manage our configurations so the `gradle-docker-build` is the preferred branch and the one that gets the most love
 
 * The default branch is `gradle-docker-build` which uses gradle to build the docker image; basically `./gradlew docker`. This matches our UI project build system, so is the one that we'll be updating.
 * `ant-ivy-build` uses [ant+ivy](/pages/advanced/advanced-ant-ivy-deploy) to resolve dependencies and then a command exec to create the docker image

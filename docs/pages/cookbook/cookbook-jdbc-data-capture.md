@@ -50,7 +50,7 @@ Then our [jdbc-data-capture-service][] to insert all the sample pangrams into a 
 - We get the nodelist returned by `/document/sample` and for each node in the list we resolve the the xpath `./data` to find the parameter to pass into the insert statement.
    - This results in 4 INSERT statements being executed.
 
-{% include tip.html content="There is a variant of this service called [jdbc-batching-data-capture-service][] which allows you to set a batch window for performance purposes; a [jdbc-data-capture-service][] is simply a [jdbc-batching-data-capture-service][] with a batch window set to 1." %}
+?> **TIP** There is a variant of this service called [jdbc-batching-data-capture-service][] which allows you to set a batch window for performance purposes; a [jdbc-data-capture-service][] is simply a [jdbc-batching-data-capture-service][] with a batch window set to 1.
 
 ## JDBC Raw Data Capture Service ##
 
@@ -76,7 +76,7 @@ Taking the example document above, we want to insert the entire document as a ne
 
 - This results in a single new row in the database table `PANGRAMS` containing the message id and the entire document as two columns.
 
-{% include note.html content="For a full discussion about [jdbc-statement-parameters][jdbc-statement-parameter] then you can look at the [Statement Parameters section of Data Extract using JDBC](/pages/cookbook/cookbook-jdbc-data-query#statement-parameters)" %}
+?> **NOTE** For a full discussion about [jdbc-statement-parameters][jdbc-statement-parameter] then you can look at the [Statement Parameters section of Data Extract using JDBC](/pages/cookbook/cookbook-jdbc-data-query#statement-parameters)
 
 [jdbc-data-capture-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/JdbcDataCaptureService.html
 [jdbc-raw-data-capture-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/raw/JdbcRawDataCaptureService.html

@@ -3,11 +3,11 @@
 One of the more common integration scenarios that we encounter is to use Interlok as an API gateway; whether it is to overlay caching or authentication on an existing API, or to handle API calls itself. Interlok comes bundled with Jetty which is used to serve the UI and can used as entrypoint into a workflow. The connection for any HTTP based workflow should be one of [jetty-embedded-connection][], [jetty-http-connection][], or [jetty-https-connection][].
 As the name would suggest [jetty-embedded-connection][] makes use of the [jetty management component](/pages/user-guide/adapter-bootstrap#management-components) if you have enabled it. If you aren't using the this management component then you should use one of the other connection types which will allow you to configure specific embedded jetty instances on a per-connection basis. Enabling the _jetty management component_ and using [jetty-embedded-connection][] will allow you the greatest flexibility in terms of configuration as you have full access to the `jetty.xml` configuration file.
 
-{% include note.html content="Sometimes, for whatever reason, you don't want to use Jetty (if you _really can't_, then you're running Interlok using Java 7 and need to ask yourself _WHY?_). In this case you have access to  [interlok-legacyhttp][]. It depends on the built in JRE/Sun HTTP Server implementation but won't be as configurable as the jetty instance (and might be removed in later Java versions)." %}
+?> **NOTE** Sometimes, for whatever reason, you don't want to use Jetty (if you _really can't_, then you're running Interlok using Java 7 and need to ask yourself _WHY?_). In this case you have access to  [interlok-legacyhttp][]. It depends on the built in JRE/Sun HTTP Server implementation but won't be as configurable as the jetty instance (and might be removed in later Java versions).
 
 There is currently only a single message consumer type: [jetty-message-consumer][]. The destination for the consumer should match the URI endpoint that you wish to listen on (e.g. /path/to/my/api); wildcards are supported and will be dependent on the servlet implementation of the underlying jetty instance. Parameters from the URI can be stored as metadata (or object metadata) with an optional prefix, as can any HTTP transport headers. If no [jetty-standard-response-producer][] or [jetty-response-service][] is configured as part of the workflow, then a standard HTTP OK response is sent back to the caller with no content.
 
-{% include tip.html content="You can use [http-request-parameter-converter-service][] to convert _html form post_ payloads into metadata, if required." %}
+?> **TIP** You can use [http-request-parameter-converter-service][] to convert _html form post_ payloads into metadata, if required.
 
 There are a number of supporting components that make will help you configure a workflow that provides the behaviour you need.
 
@@ -15,7 +15,7 @@ There are a number of supporting components that make will help you configure a 
 
 If you use a [standard-workflow][] then requests are processed sequentially in order that they are received (i.e. single-threaded); switch to using [pooling-workflow][] as required. Because [pooling-workflow][] uses an internal thread pool to process requests you will need to either explicitly configure a [jetty-pooling-workflow-interceptor][] on the workflow instance or uniquely identify both the channel and workflow (via their respective unique-ids); this means that the HTTP response is not written prematurely before the response is available.
 
-{% include tip.html content="If you use a [pooling-workflow][] then you should name both the containing channel + workflow, or explicitly configure a [jetty-pooling-workflow-interceptor][] on the worklow." %}
+?> **TIP** If you use a [pooling-workflow][] then you should name both the containing channel + workflow, or explicitly configure a [jetty-pooling-workflow-interceptor][] on the worklow.
 
 ## Using multiple workflows
 
@@ -76,7 +76,7 @@ If you intend on spreading the work across multiple workflows then since 3.7.3 y
 
 If the workflow is doing something that exceeds some arbitrary length (generally 30 seconds or a minute seem to be _magic_) then you may find that the HTTP connection is terminated before a response can be sent back to client. The adapter has support for the 102 response code defined by _RFC2518_; the client can send `Expect: 102-Processing` as a header which will cause a _102_ response code to be sent intermittently to the client (the time defaults to every 20 seconds, but this is configurable via `send-processing-interval`).
 
-{% include note.html content="If the time to execute a workflow extends past `timeout-action` (since 3.6.6) or `max-wait-time`; then this will cause jetty to send a response back to the client; in versions prior to 3.6.6, then this is always _200_ but is now defaulted to _202_ in `timeout-action`" %}
+?> **NOTE** If the time to execute a workflow extends past `timeout-action` (since 3.6.6) or `max-wait-time`; then this will cause jetty to send a response back to the client; in versions prior to 3.6.6, then this is always _200_ but is now defaulted to _202_ in `timeout-action`
 
 This is supported quite nicely by curl; so if you added the header, then you can expect this kind of logging :
 
@@ -116,11 +116,11 @@ If you need support for W3C's Access Control for Cross-Site Requests specificati
 
 If you have a ROOT.war in your installation, and intend on having that in production, then just edit the existing `webdefault.xml` that is referenced by your jetty configuration files (usually _config/webdefault.xml_) and add the filter (as per the jetty [cross origin filter documentation][]). You can add any filter you wish
 
-{% include tip.html content="Other filters like the DoS filter / QoS filter can be added in the same way" %}
+?> **TIP** Other filters like the DoS filter / QoS filter can be added in the same way
 
 If you will not have ROOT.war in your production environment; then you need to create a `jetty-webdefault.xml` that is available on the classpath (assuming a standard installation, putting it into the _config_ directory should be enough) and add the filter as per the jetty documentation.
 
-{% include note.html content="pre 3.7.3; you will need a `com/adaptris/core/management/webserver/jetty-webdefault-failsafe.xml` file on the classpath rather than jetty-webdefault.xml" %}
+?> **NOTE** pre 3.7.3; you will need a `com/adaptris/core/management/webserver/jetty-webdefault-failsafe.xml` file on the classpath rather than jetty-webdefault.xml
 
 ## Access Control
 

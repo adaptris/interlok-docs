@@ -36,7 +36,7 @@ The first thing you will need to do in the Salesforce Config page is to authenti
  ![salesforce oauth password grant](../../images/ui-user-guide/salesforce-oauth-password-grant.png)
 
 You can remember the Salesforce credentials for the current session by keeping the checkbox ticked (Since 3.6.6).
-{% include note.html content="The credentials are stored in the browser session storage and will be cleared on log out or when the browser tab or window is closed." %}
+?> **NOTE** The credentials are stored in the browser session storage and will be cleared on log out or when the browser tab or window is closed.
 
 The Salesforce Account panel also provide a **Build Config XML** button to generate an adapter service xml to use in the UI Config page.
 
@@ -77,5 +77,5 @@ All the **Build Config XML** modal (authentication, resource listing, fetching, 
 The **Copy to Clipboard** button will copy the displayed xml into a service component in the UI Clipboard and be can used by dragging it from the [Sidebar Clipboard in the Config page](/pages/ui/ui-config-sidebar#clipboard-sidebar) (Since 3.6.6).
 
 The **Save as Template** button will save the displayed xml into a service template usable in the Config page.
-{% include note.html content="If the config contains some password they will be encoded in the template." %}
+?> **NOTE** If the config contains some password they will be encoded in the template.
 

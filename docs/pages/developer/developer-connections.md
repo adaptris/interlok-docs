@@ -7,7 +7,7 @@ Generally speaking, any [AdaptrisConnection][] implementation will simply be a w
 - Unless you intend for the class to be a proxy for all the methods on the underlying connection, then make the underlying connection class available for use by associated [AdaptrisMessageProducer][], [AdaptrisMessageConsumer][] and [Service][] implementations.
 - If the connection is configured at the channel level or as a shared component; then multiple producers (or consumers) will use the same object instance. It is important to have a strategy to handle this if the underlying connection is not thread-safe.
 
-{% include tip.html content="An example quickstart project for services is available on github : [https://github.com/adaptris/interlok-custom-component-example](https://github.com/adaptris/interlok-custom-component-example)" %}
+?> **TIP** An example quickstart project for services is available on github : [https://github.com/adaptris/interlok-custom-component-example](https://github.com/adaptris/interlok-custom-component-example)
 
 
 ## Example ##
@@ -90,7 +90,7 @@ So, the summary of what we did is as follows :
 
 - We extended [com.adaptris.core.AdaptrisConnectionImp][AdaptrisConnectionImp] and implemented the required lifecycle methods, rather than implementing [AdaptrisConnection][] directly.
 
-{% include note.html content="We could extend [AllowRetriesConnection][] if the `ClientFactory` allowed reconnection attempts." %}
+?> **NOTE** We could extend [AllowRetriesConnection][] if the `ClientFactory` allowed reconnection attempts.
 
 - The `init()` method instantiates the factory that provides our connection. This assumes that the class in question is fairly heavyweight and should not be re-created each time we want a connection.
 - When catching and re-throwing Exceptions we use [ExceptionHelper][] to wrap the exception if it needs it; throwing the exception will cause error handling to be triggered
@@ -99,7 +99,7 @@ So, the summary of what we did is as follows :
 - The start and stop methods are required but empty implementations.
 - Public getter and setter methods are provided for the fields that are to be marshalled
 
-{% include tip.html content="The public getters/setters are not required by the marshaller, but will be required by the UI." %}
+?> **TIP** The public getters/setters are not required by the marshaller, but will be required by the UI.
 
 - The `ClientFactory` member variable is marked as __transient__ so that XStream does not attempt to marshal it.
 - We use [com.adaptris.security.password.Password][Password] to decode the password; discussed in [Password Handling](/pages/advanced/advanced-password-handling)

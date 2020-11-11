@@ -43,7 +43,7 @@ Just click on the Open Config button and that will open a modal displaying sever
 - **Swagger:** Open an Adapter configuration using a Swagger file from your file system. Simple rest service swagger configuration (yaml or json) get converted to an adapter config with http jetty consumers. (Since 3.5.0)
 - **Version Control:** Retrieve a configuration from a Version Control System (Subversion or Git). For this option to be enabled [VCS](/pages/advanced/advanced-version-control) needs to be configured and you need at least one VCS Profile.
 
-{% include note.html content="When using **File System:** with a zip file, the zip file need to be built with the [Config Project Format](/pages/ui/ui-config-project#config-project-format) with a config-project.json file. Or alternatively with an adapter.xml in the zip root and optionally a variables substitution file called _variables.properties_ can be added." %}
+?> **NOTE** When using **File System:** with a zip file, the zip file need to be built with the [Config Project Format](/pages/ui/ui-config-project#config-project-format) with a config-project.json file. Or alternatively with an adapter.xml in the zip root and optionally a variables substitution file called _variables.properties_ can be added.
 
 ## Navigating the config page ##
 
@@ -144,13 +144,13 @@ Example of a typical add component modal window with results filtered using the 
 
 ![Typical add component modal window showing filtering contents](../../images/ui-user-guide/config-add-component-filtering.png)
 
-{% include tip.html content="Searching from the root folder with show you results from both the raw components folder and the templates folder." %}
+?> **TIP** Searching from the root folder with show you results from both the raw components folder and the templates folder.
 
 To actually add the component, all you have to do is click on the required compoent and it will add it to the list you selected and show you the settings editor for that new component.
 
-{% include tip.html content="When adding a service if you double click on the plus button the service will be added at the beginning of the service list." %}
+?> **TIP** When adding a service if you double click on the plus button the service will be added at the beginning of the service list.
 
-{% include note.html content="From 3.6.6 you can also add new component using the [Config page sidebar component](/pages/ui/ui-config-sidebar#clipboard-sidebar)." %}
+?> **NOTE** From 3.6.6 you can also add new component using the [Config page sidebar component](/pages/ui/ui-config-sidebar#clipboard-sidebar).
 
 ## Applying a configuration ##
 
@@ -268,6 +268,6 @@ Services, service collections and connections are the only components in the con
 - Drag and drop a connection from a **channel connection area** to the **shared connection collection** will create a new **shared connection** in the **shared components** and use this new **shared connection** in the original **channel connection area**.
 - Drag and drop a connection from the **shared connection collection** to any **channel connection area** will add the **shared connection** to the ***channel connection area**.
 
-{% include note.html content="When a service collection is open, like in the image below, it cannot be drag and dropped to prevent moving it in itself or in its descendants. The service collection will become drag and droppable again when closed." %}
+?> **NOTE** When a service collection is open, like in the image below, it cannot be drag and dropped to prevent moving it in itself or in its descendants. The service collection will become drag and droppable again when closed.
 
 ![service collection canoot dnd](../../images/ui-user-guide/config-service-list-cannot-dnd.png)

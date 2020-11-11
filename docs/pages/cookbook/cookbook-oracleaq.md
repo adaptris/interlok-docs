@@ -2,7 +2,7 @@
 
 > **Summary:** This document summarises configurations for consuming and producing JMS messages using OracleAQ.
 
-{% include important.html content="in 3.8.0; adp-jms-oraclemq was renamed to interlok-jms-oracleaq" %}
+!> **IMPORTANT** in 3.8.0; adp-jms-oraclemq was renamed to interlok-jms-oracleaq
 
 This document summarises configurations for consuming and producing JMS messages using OracleAQ.  It is assumed that you have a passing knowledge of Interlok and its configuration. No Oracle knowledge is assumed, though you should have some passing familiarity with SQL. You will be expected to be able to manipulate and compile java classes exported from Oracle. This guide has been built with Oracle 10g in mind.  However if you happen to be using later Oracle versions, the only changes should be to the java archive files you will need to copy from your Oracle installation to your Interlok installation, mentioned later in this guide
 

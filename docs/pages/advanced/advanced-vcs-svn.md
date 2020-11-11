@@ -7,7 +7,7 @@ permalink: advanced-vcs-svn.html
 summary: Configure Interlok to automatically check out config from SVN when starting.
 ---
 
-{% include note.html content="This depends on the artifact com.adaptris:interlok-vcs-subversion. In 3.8.0; adp-vcs-subversion was renamed to interlok-vcs-subversion" %}
+?> **NOTE** This depends on the artifact com.adaptris:interlok-vcs-subversion. In 3.8.0; adp-vcs-subversion was renamed to interlok-vcs-subversion
 
 
 ## Installation ##
@@ -30,7 +30,7 @@ Since 3.0.3, on Windows, Interlok will attempt to find the jar containing `libsv
 - Pass in an additional system property `-Djava.library.path=C:/Adaptris/Interlok/svn-dll` when starting Interlok.
     - Alternatively put all the DLL files on the path.
 
-{% include tip.html content="Using the automatic feature on your production instances is discouraged, it is generally better to manually specify the `java.library.path` explicitly; disable it with `-Dadp.vcs.svn.disable.autoload=true` on the commandline." %}
+?> **TIP** Using the automatic feature on your production instances is discouraged, it is generally better to manually specify the `java.library.path` explicitly; disable it with `-Dadp.vcs.svn.disable.autoload=true` on the commandline.
 
 ```bash
 java -Djava.library.path=.\svn-dll -jar lib\adp-core.jar

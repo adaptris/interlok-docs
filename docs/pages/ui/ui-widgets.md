@@ -136,7 +136,7 @@ You can toggle which workflow you want to see on the graph by clicking on the wo
 
 In order to use the stats and metrics widgets you need the correct config. You need a [message-metrics-interceptor](/pages/advanced/advanced-interceptors#message-metrics-interceptor) configured, which will gather the data that's being shown on this widget.
 
-{% include tip.html content="You need a `message-metrics-interceptors` configured at a workflow level which will gather the data that can be shown on this widget." %}
+?> **TIP** You need a `message-metrics-interceptors` configured at a workflow level which will gather the data that can be shown on this widget.
 
 ### Daily Message Counts Chart ###
 
@@ -150,7 +150,7 @@ This widget shows a chart that shows the amount of messages that the workflows w
 
 In order to use the stats and metrics widgets you need the correct config. You need a [message-metrics-interceptor](/pages/advanced/advanced-interceptors#message-metrics-interceptor) configured, which will gather the data that's being shown on this widget.
 
-{% include tip.html content="You need a `message-metrics-interceptors` configured at a workflow level which will gather the data that can be shown on this widget." %}
+?> **TIP** You need a `message-metrics-interceptors` configured at a workflow level which will gather the data that can be shown on this widget.
 
 ### Daily Message Counts Pie Chart ###
 
@@ -389,7 +389,7 @@ This widget is exactly like the widget described in [Container Details Widget](/
 
 This widget is exactly like the widget described in [Container Message Counts Chart Widget](/pages/ui/ui-widgets#message-counts-chart), but the data is concerned with the selected channel. Note that this widget derives its information from any configured workflow [message-metrics-interceptors](/pages/advanced/advanced-interceptors#message-metrics-interceptor). If you have none configured then this widget will display no data.
 
-{% include note.html content="This widget derives its information from any configured workflow `message-metrics-interceptors`. If you have none configured then this widget will display no data." %}
+?> **NOTE** This widget derives its information from any configured workflow `message-metrics-interceptors`. If you have none configured then this widget will display no data.
 
 ### Channel Daily Message Counts ###
 
@@ -672,9 +672,9 @@ Or
 
 The JSON payload can be validated using the JSON schema: [custom-widget-table-and-chart-schema](./files/json-schema/custom-widget-table-and-chart-schema-01.json)
 
-{% include note.html content="The full content of the widgets will be refreshed every time so the endpoints need to return the all the data that need to be displayed." %}
+?> **NOTE** The full content of the widgets will be refreshed every time so the endpoints need to return the all the data that need to be displayed.
 
-{% include tip.html content="You can use <a href=\"https://www.jsonschemavalidator.net\" target=\"_blank\">https://www.jsonschemavalidator.net</a> to validate the JSON payload with the JSON schemas." %}
+?> **TIP** You can use <a href=\"https://www.jsonschemavalidator.net\" target=\"_blank\">https://www.jsonschemavalidator.net</a> to validate the JSON payload with the JSON schemas.
 
 ## Widget Group ##
 

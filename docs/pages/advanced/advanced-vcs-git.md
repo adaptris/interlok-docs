@@ -7,7 +7,7 @@ permalink: advanced-vcs-git.html
 summary: Configure Interlok to automatically check out config from GIT when starting.
 ---
 
-{% include note.html content="This depends on the artifact com.adaptris:interlok-vcs-git. In 3.8.0; adp-vcs-git was renamed to interlok-vcs-git" %}
+?> **NOTE** This depends on the artifact com.adaptris:interlok-vcs-git. In 3.8.0; adp-vcs-git was renamed to interlok-vcs-git
 
 ## Configuration ##
 

@@ -55,7 +55,7 @@ The Dashboard Page with annotations shows the various parts of the Dashboard Pag
 
 - L. This area is for 'top level' functions, i.e. Add another Adapter to the UI, Refresh all the details on the Dashboard Page for all the Registered Adapters or Switch between the Widget and Table mode.
 
-{% include note.html content="All the data shown on the Dashboard Page is automatically refreshed, so there is no need to manually refresh the page, or use the refresh buttons" %}
+?> **NOTE** All the data shown on the Dashboard Page is automatically refreshed, so there is no need to manually refresh the page, or use the refresh buttons
 
 ## The Channel Area ##
 
@@ -148,7 +148,7 @@ Dashboard Page shown on a smaller screen:
 
 ![Dashboard Page shown on a smaller screen](../../images/ui-user-guide/dashboard-page-smaller.png)
 
-{% include note.html content="Although pages will look different on smaller screens, most (if not all) of the pages features are still present, but they may be grouped into button drop down selects, or they may be missing their text labels. One feature that's noticeably absent from smaller screens is the Configuration Page, as it's features would be too difficult to use on a phone sized screen." %}
+?> **NOTE** Although pages will look different on smaller screens, most (if not all) of the pages features are still present, but they may be grouped into button drop down selects, or they may be missing their text labels. One feature that's noticeably absent from smaller screens is the Configuration Page, as it's features would be too difficult to use on a phone sized screen.
 
 ## The Dashboard Show Config Feature ##
 
@@ -180,7 +180,7 @@ On the visual representation of the Adapter configuration, the following options
 - The mouse wheel can also be used to zoom in and out of the diagram
 - The mouse left button can be clicked and held to allow users to navigate around the zoomed in diagram.
 
-{% include note.html content="This generated diagram represents a simplified Adapter config in a waterfall type manner. The top left corner box represents the Adapter, its children boxes represent the channels and their children represent the workflows. The workflows have been extended using a dashed area to show the consumers, services and producers. <br/>Not every component is shown in this simplified diagram, notable absentees include Workflow Interceptors and Service Collections within a Workflows Service List." %}
+?> **NOTE** This generated diagram represents a simplified Adapter config in a waterfall type manner. The top left corner box represents the Adapter, its children boxes represent the channels and their children represent the workflows. The workflows have been extended using a dashed area to show the consumers, services and producers. <br/>Not every component is shown in this simplified diagram, notable absentees include Workflow Interceptors and Service Collections within a Workflows Service List.
 
 ## The Dashboard Failed Message List ##
 
@@ -190,7 +190,7 @@ Dashboard Page showing failed messages:
 
 ![Dashboard Page showing failed messages](../../images/ui-user-guide/dashboard-page-with-failed-messages.png)
 
-{% include note.html content="The badge icon on the Failed Messages section of the Adapter area will give a real time count of the amount of failed messages.<br/><br/>In order to get the number of failed message working a 'Standard Message Error Digester' will need to be added to the adapter configuration." %}
+?> **NOTE** The badge icon on the Failed Messages section of the Adapter area will give a real time count of the amount of failed messages.<br/><br/>In order to get the number of failed message working a 'Standard Message Error Digester' will need to be added to the adapter configuration.
 
 Clicking on the Failed Messages details block will open the Failed Messages modal window containing the last hundred failed messages.
 

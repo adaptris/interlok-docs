@@ -1,6 +1,6 @@
 > **Summary:** This is a brief checklist and documentation of how Interlok can interact with SAP using RFC and BAPI calls. You will be already familiar with Interlok and its underlying concepts. No SAP knowledge is assumed. Interlok uses SAP JCo Standalone in order to achieve the desired integration (3.x).
 
-{% include note.html content="This depends on the artifact com.adaptris:interlok-sap. This will require a license." %}
+?> **NOTE** This depends on the artifact com.adaptris:interlok-sap. This will require a license.
 
 ## Software Pre-requisites ##
 
@@ -20,7 +20,7 @@ Follow the instructions for installing the packages for the platform in question
 
 The connection instance that you need is a [sapjco3-configured-rfc-connection][] or [sapjco3-dynamic-rfc-connection][]. The former allows you to configure a static [destination-provider-info][] which defines the connection, and can be used as a produce connection as part of a channel. [sapjco3-dynamic-rfc-connection][] instead derives the appropriate [destination-provider-info][] from metadata in the message, which makes it suitable for use as part of a [standalone-producer][] or [sapjco3-rfc-service-list][] but unsuitable for use as part of a channel.
 
-{% include note.html content="The metadata keys used by [sapjco3-dynamic-rfc-connection][] to generate the connection info are not validated, and passed as-is to the underlying JCO layer." %}
+?> **NOTE** The metadata keys used by [sapjco3-dynamic-rfc-connection][] to generate the connection info are not validated, and passed as-is to the underlying JCO layer.
 
 ```xml
  <connection class="sapjco3-configured-rfc-connection">
@@ -79,7 +79,7 @@ Each producer defines a list of [ImportParameter][] instances and [ExportParamet
 |[sapjco3-xpath-to-table][]|This [ImportParameter][] implementation evaluates the configured XPath expression and uses the evaluated nodelist as the basis of an RFC table. Each entry in the nodelist adds a new table entry. It is assumed that each child node is a field within the table; the element name being the name of the field, and the associated element value the actual field value.|
 |[sapjco3-xpath-string][]|This ImportParameter implementation evaluates the configured XPath expression and uses that value as an import parameter. It may not be used as an export parameter.|
 
-{% include note.html content="In order to create parameters that are tables/structures, there must be metadata available in the SAP system describing the table/structure. This is queried to build up the internal object." %}
+?> **NOTE** In order to create parameters that are tables/structures, there must be metadata available in the SAP system describing the table/structure. This is queried to build up the internal object.
 
 
 ### Parsing the RETURN parameter ###

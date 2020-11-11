@@ -1,6 +1,6 @@
 > **Summary:** This is a brief checklist and documentation of what you have to do to configure Interlok to send and receive IDocs with SAP over ALE. The bulk of the SAP configuration should already be done by the in-house SAP team so they will tell you what you need to know. You will be already familiar with Interlok and its underlying concepts. No SAP knowledge is assumed. Interlok uses SAP JCo Standalone in order to achieve the desired integration (3.x).
 
-{% include note.html content="This depends on the artifact com.adaptris:interlok-sap. This will require a license." %}
+?> **NOTE** This depends on the artifact com.adaptris:interlok-sap. This will require a license.
 
 ## Software Pre-requisites ##
 

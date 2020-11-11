@@ -6,7 +6,7 @@ Navigation bar (with the Dashboard Page as the active page) :
 Navigation Bar with the user options open (and with the Runtime Widgets Page as the active page):
 ![Navigation Bar with the user options open (and with the Runtime Widgets Page as the active page)](../../images/ui-user-guide/navigation-bar-options-open.png)
 
-{% include tip.html content="Shown in images above is the text 'Default Admin', this is actually the logged in users first name and last name. This example is using the default admin account." %}
+?> **TIP** Shown in images above is the text 'Default Admin', this is actually the logged in users first name and last name. This example is using the default admin account.
 
 Navigation features:
 

@@ -4,9 +4,9 @@
 
 As of 3.9.2 the page is still a **beta feature** and therefore the connected user needs to have the user preference **Enable technical preview features** set to true in order to see the Monitor menu item.
 
-{% include note.html content="Interlok will also need some specific jar files to get the profiler monitor page to work. Follow the information [here](/pages/developer/developer-profiler#setting-up) to set up [Interlok Profiler](/pages/developer/developer-profiler).<br>" %}
+?> **NOTE** Interlok will also need some specific jar files to get the profiler monitor page to work. Follow the information [here](/pages/developer/developer-profiler#setting-up) to set up [Interlok Profiler](/pages/developer/developer-profiler).<br>
 
-{% include note.html content="The difference with the guide will be that the <b>interlok-profiler.properties</b> file will need to have the following properties:<br><i>com.adaptris.monitor.agent.EventPropagator=JMX</i> instead of <i>com.adaptris.monitor.agent.EventPropagator=MULTICAST</i>" %}
+?> **NOTE** The difference with the guide will be that the <b>interlok-profiler.properties</b> file will need to have the following properties:<br><i>com.adaptris.monitor.agent.EventPropagator=JMX</i> instead of <i>com.adaptris.monitor.agent.EventPropagator=MULTICAST</i>
 
 
 ## Getting Started ##
@@ -34,4 +34,4 @@ The plot will be added in the chart only if the UI receive data from the profile
 You can add up to five monitors using the "Add a Profiler Monitor" button. Each profiler can use different adapters and/or channels.
 
 
-{% include note.html content="The profiler monitor page is a prototype and may change substantially in the next releases. It also has several known issues." %}
+?> **NOTE** The profiler monitor page is a prototype and may change substantially in the next releases. It also has several known issues.

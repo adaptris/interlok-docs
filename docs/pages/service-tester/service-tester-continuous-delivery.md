@@ -4,7 +4,7 @@
 
 Where the Interlok service tester can be used as a part of your continuos delivery pipeline, below is a few examples of how to configure:
 
-{% include important.html content="If you are using service-tester along with JSON assertions then you should exclude `com.vaadin.external.google:android-json` from the dependency tree. This can cause conflicts with normal Interlok JSON processing." %}
+!> **IMPORTANT** If you are using service-tester along with JSON assertions then you should exclude `com.vaadin.external.google:android-json` from the dependency tree. This can cause conflicts with normal Interlok JSON processing.
 
 ## Examples
 

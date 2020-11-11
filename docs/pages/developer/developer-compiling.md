@@ -4,7 +4,7 @@ The simplest scenario is to have a local adapter installation and make sure all 
 
 However, that doesn't need to be the case; all our public artefacts are available in our [maven compatible repository](https://nexus.adaptris.net/nexus/content/repositories/releases/). This means that, you can use your preferred build tool to manage dependencies be it gradle, maven or otherwise.
 
-{% include tip.html content="An example quickstart project on github : [https://github.com/adaptris/interlok-custom-component-example](https://github.com/adaptris/interlok-custom-component-example)" %}
+?> **TIP** An example quickstart project on github : [https://github.com/adaptris/interlok-custom-component-example](https://github.com/adaptris/interlok-custom-component-example)
 
 Unless you're in an environment where you must use an alternative build toolchain; we recommend that you use gradle since this gives you good flexibility along with standardised conventions. If you just want to get started hacking code then go straight to our github example project : [https://github.com/adaptris/interlok-custom-component-example](https://github.com/adaptris/interlok-custom-component-example).
 

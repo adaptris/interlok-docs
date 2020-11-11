@@ -1,6 +1,6 @@
 > **Summary:** Using the JSON packge to perform JSON/XML and JSON to JSON transformations
 
-{% include important.html content="in 3.8.0; adp-json and adp-simple-csv were renamed to interlok-json and interlok-csv respectively" %}
+!> **IMPORTANT** in 3.8.0; adp-json and adp-simple-csv were renamed to interlok-json and interlok-csv respectively
 
 The [interlok-json][] optional package handles JSON documents within the framework. It supports the majority of operations that are available for XML within the base packages. It is included as an optional package because it introduces a significant number of additional dependencies.  The key features are described here; some JSON specific implementations are also available to support other services such as [jdbc-json-first-resultset-output][] for [jdbc-data-query-service][]; [routing-json-path-syntax-identifier][] for [syntax-routing-service][]; [json-array-splitter][], [json-path-splitter][] as a [MessageSplitter][] implementation.
 
@@ -87,7 +87,7 @@ We also provide [com.adaptris.core.transform.json.jolt.EmptyStringToNull][] and 
 
 You can convert to and from XML via [json-xml-transform-service][] by specifying the direction and driver; there are a number of available drivers, and they are discussed more fully here. It's fully expected that when rendering XML as JSON you will need to execute a transform to get the document into the right format for the driver implementation chosen.
 
-{% include note.html content="Choosing a JSON->XML driver implementation may impact downstream stylesheets as the output can be different." %}
+?> **NOTE** Choosing a JSON->XML driver implementation may impact downstream stylesheets as the output can be different.
 
 
 ### Driver implementations ###
@@ -101,9 +101,9 @@ You can convert to and from XML via [json-xml-transform-service][] by specifying
 |[json-object-transformation-driver][]| Same behaviour as [default-transformation-driver][] but only allows json objects|
 |[json-safe-transformation-driver][]| _Since 3.6.4_ Same behaviour as [default-transformation-driver][] but strips any formatting prior to rendering XML as JSON as [default-transformation-driver][] can be sensitive to whitespace. Since you are very likely to be executing a stylesheet to get your data into the right format anyway, you should use `<xsl:strip-space elements="*" />` appropriately in your stylesheet.|
 
-{% include tip.html content="The general rule of thumb is if the JSON in question is simple, then use [simple-transformation-driver][], otherwise use a variation of [jsonlib-transformation-driver][] as appropriate." %}
+?> **TIP** The general rule of thumb is if the JSON in question is simple, then use [simple-transformation-driver][], otherwise use a variation of [jsonlib-transformation-driver][] as appropriate.
 
-{% include warning.html content="In some processing situations [jsonlib-transformation-driver][] can be very CPU bound due to the way it handles XML; you may need to do some profiling to see if degrades performance excessively." %}
+!> **WARNING** In some processing situations [jsonlib-transformation-driver][] can be very CPU bound due to the way it handles XML; you may need to do some profiling to see if degrades performance excessively.
 
 ### JSON to XML via StAX events ###
 

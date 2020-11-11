@@ -27,7 +27,7 @@ Generally speaking; you can handle the OAUTH bearer token using standard service
 
 ## Apache HTTP
 
-{% include important.html content="in 3.8.0; adp-apache-http was renamed to interlok-apache-http" %}
+!> **IMPORTANT** in 3.8.0; adp-apache-http was renamed to interlok-apache-http
 
 Because the standard `HttpURLConnection` doesn't support the `PATCH` method (and may never) there is also the [interlok-apache-http][] optional package. This is based on the [Apache HTTP Components][] project which does support the `PATCH` method. It also offers you the capability of configuring a proxy server on a per-producer basis which can be useful in mixed environments. Configuration mirrors that of the standard http components as far as possible but with a different alias for Apache HTTP specific copmonents.
 

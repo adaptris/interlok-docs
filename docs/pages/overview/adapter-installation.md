@@ -1,6 +1,6 @@
 # Interlok Installation #
 
-{% include note.html content="3.8.0 and later will require at least Java 8" %}
+?> **NOTE** 3.8.0 and later will require at least Java 8
 
 Installation is pretty easy. Download the installer, and execute it; due to a change in Java licensing as of 2019 you need to provide your own 64bit JVM.
 

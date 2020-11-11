@@ -6,14 +6,14 @@ The [Service][] interface allows arbitrary functionality to be applied to [Adapt
 
 [StateManagedComponent][] defines additional methods for enforcing transitions within the state. Rather than calling the `init()` method within code, you should make use of the various [LifecycleHelper][] methods which will enforce transitions correctly.
 
-{% include tip.html content="An example quickstart project for services is available on github : [https://github.com/adaptris/interlok-custom-component-example](https://github.com/adaptris/interlok-custom-component-example)" %}
+?> **TIP** An example quickstart project for services is available on github : [https://github.com/adaptris/interlok-custom-component-example](https://github.com/adaptris/interlok-custom-component-example)
 
 
 ## Minimum number of methods ##
 
 If you simply extend [com.adaptris.core.ServiceImp][ServiceImp] then there are 4 methods that you must implement. They are [init()][], [close()][] and [doService(AdaptrisMessage)][doService()]. The only one that is of real interest is [doService(AdaptrisMessage)][doService()]. The others are inherited from [AdaptrisComponent][] and are related to managing the internal state of your service.
 
-{% include important.html content="If you make use of other [AdaptrisComponent] instances, then you should override all lifecycle methods [init()][], [start()][], [stop()][], [close()][] and make sure those instances are transitioned correctly." %}
+!> **IMPORTANT** If you make use of other [AdaptrisComponent] instances, then you should override all lifecycle methods [init()][], [start()][], [stop()][], [close()][] and make sure those instances are transitioned correctly.
 
 ## Full Example ##
 
@@ -90,7 +90,7 @@ So, the summary of what we did is as follows :
 - When catching and re-throwing Exceptions we use [ExceptionHelper][] to wrap the exception if it needs it; throwing the exception will cause error handling to be triggered.
 - Public getter and setter methods are provided for the fields that are to be marshalled.
 
-{% include tip.html content="The public getters/setters are not required by the marshaller, but will be required by the UI." %}
+?> **TIP** The public getters/setters are not required by the marshaller, but will be required by the UI.
 
 
 - The `DoSomething` member variable is marked as __transient__ so that XStream does not attempt to marshal it.

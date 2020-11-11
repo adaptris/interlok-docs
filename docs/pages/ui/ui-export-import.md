@@ -6,7 +6,7 @@
 
 The export function allows you to save your configuration file with place-holders which can then be swapped out with values configured in a separate property file. This function is a ui accompaniment for the [variable substitution](/pages/advanced/advanced-configuration-pre-processors#variable-substitution) pre-processor.
 
-{% include note.html content="The export function has been removed from version 3.7.0. Please use [Config Project](/pages/ui/ui-config-project) instead." %}
+?> **NOTE** The export function has been removed from version 3.7.0. Please use [Config Project](/pages/ui/ui-config-project) instead.
 
 ### Getting Started ###
 

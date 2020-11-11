@@ -5,7 +5,7 @@ All the cool kids are using [gradle][] or [kobalt][] (probably [gradle][] right.
 
 The concepts are the same across all the build tools, build up your dependency tree, download them, copy them somewhere. Internally we still use ant for a lot of things because it allows us to have a generic build script and then control behaviour with different ivy descriptor files. Conversely, when your dependencies are tightly coupled with the project build file, you don't get that luxury without having to jump through some hoops.
 
-{% include note.html content="[Interlok install builder][] is in github if you want to get straight to the meat and bones; choose a branch that fits your tool" %}
+?> **NOTE** [Interlok install builder][] is in github if you want to get straight to the meat and bones; choose a branch that fits your tool
 
 ## Initial Setup ##
 
@@ -78,9 +78,9 @@ If you wanted to enable certain optional components, then all you need to do is 
 
 Subsequently, whenever `ant deploy` is invoked; then the `interlok-csv` and `interlok-json` components will be automatically downloaded, and put directly into the lib directory ready for use.
 
-{% include important.html content="If you are using service-tester along with JSON assertions then you should exclude `com.vaadin.external.google:android-json` from the dependency tree. This can cause conflicts with normal Interlok JSON processing." %}
+!> **IMPORTANT** If you are using service-tester along with JSON assertions then you should exclude `com.vaadin.external.google:android-json` from the dependency tree. This can cause conflicts with normal Interlok JSON processing.
 
-{% include note.html content="Some components (such as SAP) may have dependencies that are not publicly available; you should exclude them explicitly in the ivy file, or build your own repository to host them." %}
+?> **NOTE** Some components (such as SAP) may have dependencies that are not publicly available; you should exclude them explicitly in the ivy file, or build your own repository to host them.
 
 ## Excluding dependencies ##
 

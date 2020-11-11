@@ -1,6 +1,6 @@
 > **Summary:** This document is aimed at system developers who wish to create new or custom Interlok components and for those components to be fully integrated into the Interlok framework.
 
-{% include important.html content="in 3.8.0; adp-core-apt and adp-core were renamed to interlok-core-apt and interlok-core respectively" %}
+!> **IMPORTANT** in 3.8.0; adp-core-apt and adp-core were renamed to interlok-core-apt and interlok-core respectively
 
 The Interlok code base uses annotations for a few reasons and all developers are encouraged to follow those recommendations detailed in this document; To fully incorporate your new components, you will need to make sure that the marshalling engine knows how to translate the configuration of your component into the running Interlok instance.
 
@@ -39,7 +39,7 @@ Or even;
 </add-metadata-service>
 ```
 
-{% include warning.html content="Your XStreamAlias may render as an XML Element; it needs to be well formed (e.g. don't start with a number; or special characters etc.)." %}
+!> **WARNING** Your XStreamAlias may render as an XML Element; it needs to be well formed (e.g. don't start with a number; or special characters etc.).
 
 
 ### @GenerateBeanInfo ###
@@ -58,7 +58,7 @@ public class Channel ... {
 
 When this class is un-marshalled, regardless of the non-transient class members only those with public getters and setters will be un-marshalled. This class is deprecated with no replacement as of __3.4.1__. You are encouraged to change your class so that getters and setters have no behaviour.
 
-{% include important.html content="This class is deprecated with no replacement as of __3.4.1__." %}
+!> **IMPORTANT** This class is deprecated with no replacement as of __3.4.1__.
 
 ### @AdapterComponent ###
 
@@ -247,9 +247,9 @@ This annotation provides a _hint_ to the UI when presenting the information on s
 | com.package.MyEnum | (Since __3.8.0__) Allows the UI to provide an autocomplete text field of the all the values of the enum. |
 | com.package.MyClass#returnStringArrayMethod | (Since __3.8.0__) Allows the UI to provide an autocomplete text field of the all the string in the array. |
 
-{% include important.html content="If the style is __PASSWORD__ then remember to use _com.adaptris.security.password.Password#decode(String)_ to decode the password at the appropriate time." %}
+!> **IMPORTANT** If the style is __PASSWORD__ then remember to use _com.adaptris.security.password.Password#decode(String)_ to decode the password at the appropriate time.
 
-{% include important.html content="If you are using __external=true__ then remember to use _com.adaptris.interlok.resolver.ExternalResolver#resolve(String)_ to resolve your configuration item when you actually come to use it." %}
+!> **IMPORTANT** If you are using __external=true__ then remember to use _com.adaptris.interlok.resolver.ExternalResolver#resolve(String)_ to resolve your configuration item when you actually come to use it.
 
 
 ```java
@@ -358,7 +358,7 @@ There are currently 2 custom taglets supported at the class level javadoc; the t
 </javadoc>
 ```
 
-{% include note.html content="You need to include `com.adaptris:interlok-core-apt` as a dependency if you are using dependency management." %}
+?> **NOTE** You need to include `com.adaptris:interlok-core-apt` as a dependency if you are using dependency management.
 
 ### @license ###
 

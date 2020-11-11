@@ -1,8 +1,8 @@
 > **Summary:** This page describes how to profile Interlok and inject statistics into New Relic
 
-{% include note.html content="If you don't know what [New Relic][] is then you can blithely ignore  this document." %}
+?> **NOTE** If you don't know what [New Relic][] is then you can blithely ignore  this document.
 
-{% include important.html content="in 3.8.0; adp-profiler and adp-new-relic were renamed to interlok-profiler and interlok-new-relic respectively" %}
+!> **IMPORTANT** in 3.8.0; adp-profiler and adp-new-relic were renamed to interlok-profiler and interlok-new-relic respectively
 
 
 ## Installation ##
@@ -14,7 +14,7 @@ The `com.adaptris:interlok-profiler` and `com.adaptris:interlok-new-relic` artef
 
 `com.adaptris:interlok-profiler` uses AOP to fire events when the appropriate methods of [Workflow][], [AdaptrisMessageProducer][] or [Service][] are triggered. It requires `aspjectjweaver` as a java agent when starting the JVM. The recommendation is to not use the bundled wrapper executables, and to roll your own scripts which can provide the correct startup parameters to the JVM. The aspects themselves are stored in `META-INF/profiler-aop.xml` which means that you need to set the appropriate aspectj system property to enable the aspects. To get meaningful information you need a concrete implementation of `com.adaptris.profiler.client.PluginFactory` which is where `com.adaptris:interlok-new-relic` comes in.
 
-{% include important.html content="Currently, it is only possible to profile classes that live in a `com.adaptris..*` package, to avoid additional overhead in the Aspects." %}
+!> **IMPORTANT** Currently, it is only possible to profile classes that live in a `com.adaptris..*` package, to avoid additional overhead in the Aspects.
 
 You will need to have an `interlok-profiler.properties` in your classpath which contains a single property `com.adaptris.profiler.plugin.factory=[your choice of plugin]`. The profiler
 plugins available for [New Relic][] are:
@@ -30,7 +30,7 @@ In this example we only want to profile [Workflow][] activity so we would use `c
 
 You may want to install the [New Relic Java Agent][]. In addition to providing metrics for standard components like JMS / JDBC; this also allows you to have a custom instrumentation extension file providing additional metrics about specific methods.
 
-{% include tip.html content="If you are using the [New Relic Java Agent][] (and why wouldn't you) then it should be the first `javaagent` specified on the commandline." %}
+?> **TIP** If you are using the [New Relic Java Agent][] (and why wouldn't you) then it should be the first `javaagent` specified on the commandline.
 
 ### Custom New Relic extensions ###
 

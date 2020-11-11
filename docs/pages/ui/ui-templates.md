@@ -110,7 +110,7 @@ The template is divided into various processing steps.
 
 The example above defines 3 wizard steps to be presented as 3 separate screens: connnection, consume and produce which will be presented in that order. Elements in the XML can now refer to an individual wizard step, which causes it to be presented on that particular screen only. The name of each wizard step is derived from `wizard-(.*)-order`; so for `wizard-connection-order`, the wizard-step is _connection_.
 
-{% include note.html content="We can define a wizard-(step)-label attribute which will formally name the step. In this case we haven't so the wizard step name is inferred from the other attributes." %}
+?> **NOTE** We can define a wizard-(step)-label attribute which will formally name the step. In this case we haven't so the wizard step name is inferred from the other attributes.
 
 ### Wizard Steps ###
 
@@ -140,7 +140,7 @@ From the example above:
 
 The other steps for `consume` and `produce` are defined similarly.
 
-{% include note.html content="You can see from the example that the `add-metadata-service` re-uses a key `consumeQ` that has already been defined. The value associated with that key will be inserted into the service." %}
+?> **NOTE** You can see from the example that the `add-metadata-service` re-uses a key `consumeQ` that has already been defined. The value associated with that key will be inserted into the service.
 
 ### Save Template ###
 

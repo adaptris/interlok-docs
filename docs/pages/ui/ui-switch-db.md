@@ -33,7 +33,7 @@ dataSource.password=int3rL0cku1DB
 ```
  - Start the adapter
 
-{% include note.html content="The given sql queries are just example an may need to be adjusted to your needs." %}
+?> **NOTE** The given sql queries are just example an may need to be adjusted to your needs.
 
 ## PostgreSQL Configuration ##
 
@@ -60,7 +60,7 @@ dataSource.password=int3rL0cku1DB
 ```
  - Start the adapter
 
-{% include note.html content="The given sql queries are just example an may need to be adjusted to your needs." %}
+?> **NOTE** The given sql queries are just example an may need to be adjusted to your needs.
 
 ## MS SQLServer Configuration ##
 

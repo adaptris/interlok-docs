@@ -26,7 +26,7 @@ The key difference [basic-message-splitter-service][] and  [advanced-message-spl
 - Uses a [line-count-splitter][] to create a new message every 10 lines.
 - Each split message is published to the JMS topic `split.message`
 
-{% include tip.html content="You could have another Interlok workflow listening on `split.message` to handle the integration required for each split message." %}
+?> **TIP** You could have another Interlok workflow listening on `split.message` to handle the integration required for each split message.
 
 ## Advanced Message Splitting ##
 
@@ -59,7 +59,7 @@ To replicate the same behaviour as [basic-message-splitter-service][] using [adv
 - Uses a [line-count-splitter][] to create a new message every 10 lines.
 - Each split message is published to the JMS topic `split.message`
 
-{% include tip.html content="Because the nested `service` is a [service-list][] we can insert additional behaviour into the service list before publishing the message on `split.message`." %}
+?> **TIP** Because the nested `service` is a [service-list][] we can insert additional behaviour into the service list before publishing the message on `split.message`.
 
 
 ## Splitter Implementations ##
@@ -222,7 +222,7 @@ Our configuration is:
 - [simple-regexp-message-splitter][] creates 3 messages, grouped by the 3rd field of the CSV message `GroupX`.
 
 
-{% include tip.html content="If you wanted to split on each line, then you could remove everything other than `split-pattern`." %}
+?> **TIP** If you wanted to split on each line, then you could remove everything other than `split-pattern`.
 
 [basic-message-splitter-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/splitter/BasicMessageSplitterService.html
 [advanced-message-splitter-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/splitter/AdvancedMessageSplitterService.html

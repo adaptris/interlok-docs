@@ -69,7 +69,7 @@ Management components are Interlok components that exist outside of the normal a
 
 #### JMX Component ####
 
-{% include warning.html content="By default the JMXMP connector is run without authentication enabled.  For production environments it is highly recommended you enable JMXMP authentication as documented [here](/pages/https://interlok.adaptris.net/interlok/https://interlok.adaptris.net/interlok-docs/advanced-jmx).  Further information on the vulnerabilities of un-protected JMX can be found in [this blog post](https://www.acunetix.com/blog/web-security-zone/old-java-libraries/) by Aleksei Tiurin" %}
+!> **WARNING** By default the JMXMP connector is run without authentication enabled.  For production environments it is highly recommended you enable JMXMP authentication as documented [here](/pages/https://interlok.adaptris.net/interlok/https://interlok.adaptris.net/interlok-docs/advanced-jmx).  Further information on the vulnerabilities of un-protected JMX can be found in [this blog post](https://www.acunetix.com/blog/web-security-zone/old-java-libraries/) by Aleksei Tiurin
 
 If the JMX management component is specified via `managementComponents=jmx` then additional keys in bootstrap.properties determine the behaviour of the component.
 
@@ -207,7 +207,7 @@ managementComponents=jetty:jmx
 webServerConfigUrl=./config/jetty.xml
 ```
 
-{% include tip.html content="since 3.6.0 then system properties prefixed with `jetty.` will added as config properties to the embedded jetty. Properties defined in _bootstrap.properties_ will always take precedence." %}
+?> **TIP** since 3.6.0 then system properties prefixed with `jetty.` will added as config properties to the embedded jetty. Properties defined in _bootstrap.properties_ will always take precedence.
 
 #### SSH Tunnel ####
 
@@ -265,7 +265,7 @@ sysprop.javax.net.ssl.keyStorePassword={password}PW:AA...N
 sysprop.javax.net.ssl.keyStore=/path/to/my/keystore
 ```
 
-{% include important.html content="Although system properties specified `bootstrap.properties` are set before any other initialisation occurs; it may be too late for some system properties. The behaviour is not guaranteed." %}
+!> **IMPORTANT** Although system properties specified `bootstrap.properties` are set before any other initialisation occurs; it may be too late for some system properties. The behaviour is not guaranteed.
 
 ### Pre Processors ###
 

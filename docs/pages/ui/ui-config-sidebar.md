@@ -46,7 +46,7 @@ The component are copied into the Clipboard by clicking on the **Copy** ![Config
 
 The clipboard is a FIFO list (First in first out) and contains up to four components of each type and up to six service components.
 
-{% include note.html content="Data from the Clipboard is stored in the browser session storage and will be cleared on log out or when the browser tab or window is closed." %}
+?> **NOTE** Data from the Clipboard is stored in the browser session storage and will be cleared on log out or when the browser tab or window is closed.
 
 ![Config page sidebar clipboard](../../images/ui-user-guide/config-sidebar-clipboard.png)
 

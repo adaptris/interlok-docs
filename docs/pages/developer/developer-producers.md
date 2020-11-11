@@ -5,7 +5,7 @@ Within the Interlok framework, an [AdaptrisMessageProducer][] is responsible for
 - You can get access to the configured [AdaptrisConnection][] instance by using the `retrieveConnection` method.
 - Call `this.encode(AdaptrisMessage)` to encode the message with any configured [AdaptrisMessageEncoder][] implementation (optional).
 
-{% include tip.html content="An example quickstart project for services is available on github : [https://github.com/adaptris/interlok-custom-component-example](https://github.com/adaptris/interlok-custom-component-example)" %}
+?> **TIP** An example quickstart project for services is available on github : [https://github.com/adaptris/interlok-custom-component-example](https://github.com/adaptris/interlok-custom-component-example)
 
 
 ## Example ##
@@ -64,7 +64,7 @@ So, the summary of what we did is as follows :
 
 - We extended [com.adaptris.core.ProduceOnlyProducerImp][ProduceOnlyProducerImp] and implemented the required methods.
 
-{% include tip.html content="The target system only supports asynchronous messaging so we have not extended [RequestReplyProducerImp][]" %}
+?> **TIP** The target system only supports asynchronous messaging so we have not extended [RequestReplyProducerImp][]
 
 - The lifecycle methods do nothing; this pre-supposes that `ClientConnection` is pretty lightweight and can be disposed of via garbage collection.
 - We can figure out where we are sending messages to from the [ProduceDestination][] implementation.

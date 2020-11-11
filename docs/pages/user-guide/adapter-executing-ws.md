@@ -2,7 +2,7 @@
 
 > **Summary:** This document is aimed at developers and system administrators who wish to make use to make calls to web-services outside of the domain of Interlok. Depending on how you want to execute the webservice; it will depend on either adp-webservice-cxf or adp-webservice-external.
 
-{% include important.html content="since 3.8.0; adp-webservice-cxf and adp-webservice-external have been renamed to interlok-webservice-cxf and interlok-webservice-external respectively" %}
+!> **IMPORTANT** since 3.8.0; adp-webservice-cxf and adp-webservice-external have been renamed to interlok-webservice-cxf and interlok-webservice-external respectively
 
 There are two ways of accessing external webservices from Interlok; through a generic [apache-cxf-soap-service][] which calls the webservice with the payload of the current message as the operation argument (the service will look after any required SOAP headers); or by generating a custom service which has its own specific standardised input file.
 
@@ -11,7 +11,7 @@ There are two ways of accessing external webservices from Interlok; through a ge
 
 [apache-cxf-soap-service][] is the simplest way of executing a webservice; you just need to know the structure of the webservice document (which can be easily discovered by using SoapUI against the WSDL); map to it, and configure the service appropriately. In the majority of cases, this is the only service you will need. This service relies on the optional `optional/webservice-cxf` package.
 
-{% include important.html content="You should exclude `org.codehaus.woodstox:woodstox-core` and/or `org.fasterxml.woodstox:woodstox-core` from the dependency tree. This will cause problems with configuration unmarshalling and CDATA elements" %}
+!> **IMPORTANT** You should exclude `org.codehaus.woodstox:woodstox-core` and/or `org.fasterxml.woodstox:woodstox-core` from the dependency tree. This will cause problems with configuration unmarshalling and CDATA elements
 
 ### Example ###
 
@@ -50,7 +50,7 @@ If we wanted to call the a currency converter webservice; then we can do that qu
 
 ## Service Generation ##
 
-{% include important.html content="since 3.11.0; This has been removed, and is only included as an historical archive and will be removed without warning" %}
+!> **IMPORTANT** since 3.11.0; This has been removed, and is only included as an historical archive and will be removed without warning
 
 This is a more fully featured way of handling a webservice; and is included for completeness. In the majority of cases [apache-cxf-soap-service][] will handle everything you need.  Part of the installation now ships with a tool that will generate Interlok services based on a provided WSDL. These generated services can be seamlessly configured into your Adapter configuration.
 

@@ -4,84 +4,70 @@
   <meta charset="UTF-8">
   <title>Interlok Documentation</title>
   <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="./css/panels.css">
   <style>
-    body {
-      background-color: #2F3242;
-    }      
-    .message-box {
-      height: 200px;
-      width: 380px;
+    :root {
+      --theme-color: #182B51;
+      --theme-color-secondary: #C51162;
+	  background-color: var(--theme-color) !important;
+    }
+    .e404-box {
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-top: -100px;
-      margin-left: 50px;
-      color: #FFF;
-      font-family: Roboto;
+      margin-top: -250px;
+      margin-left: -400px;
       font-weight: 300;
+      display: flex;
+      flex-direction: row;
+    }
+    .message-box {
+      height: 400px;
+      min-width: 380px;
+	  max-width: 380px;
+	  margin-left: 40px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+	  color: #ffffff;
     }
     .message-box h1 {
       font-size: 60px;
       line-height: 46px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
-    .buttons-con .action-link-wrap {
-      margin-top: 40px;
-    }
-    .buttons-con .action-link-wrap a {
-      background: #68c950;
+    .buttons-con a {
+	  margin-top: 20px;
       padding: 8px 25px;
-      border-radius: 4px;
-      color: #FFF;
       font-weight: bold;
-      font-size: 14px;
-      transition: all 0.3s linear;
-      cursor: pointer;
-      text-decoration: none;
       margin-right: 10px
     }
-    .buttons-con .action-link-wrap a:hover {
-      background: #5A5C6C;
-      color: #fff;
-    }  
-    @media (max-width: 450px) {
-      .message-box {
-        top: 50%;
-        left: 50%;
-        margin-top: -100px;
-        margin-left: -190px;
-        text-align: center;
-      }
-    }  
     .logo-box {
-      position: absolute;
-      top: 50%;        
-      left: 50%;
-      margin-top: -250px;
-      margin-left: -400px;
-      background-image: url(./svg/adaptris-logo.svg);
+      position: relative;
+      background-image: url(./svg/adaptris-logo-white.svg);
       background-repeat: no-repeat;
       background-position: 50% 50%;
-      width: 400px;
+      min-width: 400px;
+	  max-width: 400px;
       height: 400px;
-      color: white;
-      background-size: cover;      
+      background-size: cover;  
     }
   </style>
 </head>
 <body>
+  <div class="e404-box">
     <div class="logo-box">
     </div>
     <div class="message-box">
       <h1>404</h1>
-        <p>The page you're looking for might have been removed, had its name changed or is temporarily unavailable</p>
-
-        <div class="buttons-con">
-            <div class="action-link-wrap">
-              <a href="https://interlok.adaptris.net/interlok-docs" class="link-button">Docs Home Page</a>
-              <a href="https://interlok.adaptris.net/interlok-docs/#/pages/overview/changelog" class="link-button">Change Log</a>
-            </div>
-        </div>
+      <p>The page you're looking for might have been removed, had its name changed or is temporarily unavailable</p>
+      <div class="buttons-con">
+        <a href="https://interlok.adaptris.net/interlok-docs" class="btn btn-secondary">Docs Home Page</a>
+        <a href="https://interlok.adaptris.net/interlok-docs/#/pages/overview/changelog" class="btn btn-secondary">Change Log</a>
+       </div>
+    </div>
   </div>
 </body>
 </html>

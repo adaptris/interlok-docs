@@ -210,7 +210,7 @@ This editor is a typical example and shows:
 - **Inner Components:** There would typically be a 'tab' per inner component. This example shows that outside the root settings, we have connections, and a vender implentation.
 - **Setting Name & Setting Input:** Each of the components settings (and inner components settings) will have a list of configurable fields, made up of the setting label and the setting value.
 - **Javadoc popover trigger:** Hovering over this icon with your mouse will show that fields javadoc part.
-- **Encode password:** This is a password only feature, but ticking this would encode that feilds value in the XML.
+- **Encode password:** This is a password only feature, but ticking this would encode that fields value using the using the [Portable Password style](/pages/advanced/advanced-password-handling) (PW: using AES to encrypt the password) in the XML. When the padlock is locked the password is encoded, when the padlock is unlocked the password is decoded.
 - **Expand input:** Each text input will have the option to expand the input from a single line to a text area (for multiple line input).
 - **Change connection type:** This button allows you to switch the component type, for example if you had a FTP Connection, you could switch types to a JMS Connection (or any other connection). This feature will change the base type of the component and attempt to copy any matching field values.
 - **Expand window:** Clicking this will toggle the settings editor window size.

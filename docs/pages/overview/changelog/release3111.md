@@ -1,6 +1,6 @@
 ## Version 3.11.1 ##
 
-Release Date : 2020-11-10
+Release Date : 2020-11
 
 ### Key Highlights
 

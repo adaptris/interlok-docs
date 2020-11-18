@@ -148,6 +148,8 @@ Then any environment variables present within configuration (such as `${COMPUTER
 
 ## Schema validation ##
 
+!> **WARNING** The schema pre-processor is deprecated, since the UI will not generate invalid configuration and will be removed.
+
 This pre-processor allows you to validate your configuration with an Interlok RelaxNG schema.  Optionally the schema file itself may also be generated before validation. If your configuration file is validated successfully the log file will contain the location of the schema file used and the success of the validation. Should the configuration file not be validated, then Interlok will not start-up and the log file will detail the validation errors.
 
 ### Further Configuration ###
@@ -155,7 +157,7 @@ This pre-processor allows you to validate your configuration with an Interlok Re
 The following properties can be specified in the bootstrap.properties to control the behaviour of the schema validation;
 
 | Property | Default | Mandatory | Versions | Description |
-|----|----|----|----|
+|----|----|----|----|----|
 | schema.file.url | | Yes | all | The url to the Interlok RelaxNG schema file.  Note, the schema file itself does not have to exist, if you specify the regeneration (below). |
 | schema.regenerate | false | No | all | Set to 'true' if you want to re-create the RelaxNG schema before we validate your configuration. |
 | schema.classpath.screen.patterns | `.*adp-core.*\\.jar` | No | Up to 3.6.6 only |A comma separated list of regular expressions used to match all the jars that should be searched for valid components.|

@@ -99,7 +99,7 @@ As additional features are developed and released our public facing repository i
 |com.adaptris | [interlok-shell][] | Commandline runtime UI based on [CRaSH](http://www.crashub.org) | 3.4.1+, deprecated since 3.11.0 |available on [github](https://github.com/adaptris/interlok-shell)
 |com.adaptris | [interlok-socket][] | Vanilla Socket support; migrated from [interlok-core][] into its own component  | 3.7.0+ | available on [github](https://github.com/adaptris/interlok-socket)
 |com.adaptris | [interlok-solace][] | Integration with Solace Systems as a JMS provider; requires additional jars not automatically delivered; requires [interlok-licensing][]| 3.8.0+
-|com.adaptris | [interlok-sonicmf][] | Interlok runtime as [part of a Sonic Container](/pages/advanced/advanced-sonic-container) | 3.8.0+
+|com.adaptris | [interlok-sonicmf][] | Interlok runtime as [part of a Sonic Container](/pages/advanced/advanced-sonic-container) | 3.8.0+, deprecated since 3.11.1; Will be removed in 4.0
 |com.adaptris | [interlok-sshtunnel][] | Management component that opens one or more SSH tunnels | 3.7.1+ | available on [github](https://github.com/adaptris/interlok-sshtunnel)
 |com.adaptris | ~~[interlok-stackify][]~~ | ~~Supports Stackify Profiling; requires [interlok-profiler][]~~ |3.8.0 only, removed in 3.8.1|available on [github](https://github.com/adaptris/interlok-stackify)
 |com.adaptris | [interlok-stax][] | Using the STaX API to read/write XML | 3.6.6+ | available on [github](https://github.com/adaptris/interlok-stax)
@@ -224,7 +224,7 @@ In release 3.8.0; we renamed all the artefacts so that they consistently started
 |com.adaptris | [adp-schema][] | RelaxNG [schema validation](/pages/advanced/advanced-configuration-pre-processors#schema-validation) for Interlok configuration files | until 3.7.3 |  _since 3.8.0_ use [interlok-schema][] instead.
 |com.adaptris | [adp-simple-csv][] | Transform a CSV file to XML | until 3.7.3 |  _since 3.8.0_ use [interlok-csv][] instead.
 |com.adaptris | [adp-solace][] | Integration with Solace Systems as a JMS provider; requires additional jars not automatically delivered; requires [adp-licensing][]| until 3.7.3 |  _since 3.8.0_ use [interlok-solace][] instead.
-|com.adaptris | [adp-sonicmf][] | Interlok runtime as [part of a Sonic Container](/pages/advanced/advanced-sonic-container) | until 3.7.3 |  _since 3.8.0_ use [interlok-sonicmf][] instead.
+|com.adaptris | [adp-sonicmf][] | Interlok runtime as [part of a Sonic Container](/pages/advanced/advanced-sonic-container) | until 3.7.3 |  _since 3.8.0_ use [interlok-sonicmf][] instead which is deprecated since 3.11.1 and Will be removed in 4.0.
 |com.adaptris | [adp-stackify][] | Supports Stackify Profiling; requires [adp-profiler][] | until 3.7.3 |  _since 3.8.0_ use [interlok-stackify][] instead.
 |com.adaptris | [adp-stubs][] | [Test Scaffolding](/pages/developer/developer-services#writing-tests) for developers | until 3.7.3|  _since 3.8.0_ use [interlok-stubs][] instead.
 |com.adaptris | [adp-swift][] | Transform to and from the Swift message format; requires [adp-licensing][] | until 3.7.3|  _since 3.8.0_ use [interlok-swift][] instead.

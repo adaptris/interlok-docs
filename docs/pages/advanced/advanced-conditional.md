@@ -80,7 +80,7 @@ __Switch__ acts a bit like __If / Then / Otherwise__, but allows you to specify 
 
 An Example;
 
-In this example we will check the values of the messages metadata named "myKey1", "myKey2" and "myKey3" are equal to the values "1", "2" and "3", respectively.  In this instance some, all or none of those conditions may be met.  
+In this example we will check the values of the messages metadata named "myKey1", "myKey2" and "myKey3" are equal to the values "1", "2" and "3", respectively.  In this instance some, all or none of those conditions may be met.
 
 ```xml
   <switch>

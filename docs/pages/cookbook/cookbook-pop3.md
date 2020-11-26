@@ -5,7 +5,7 @@ On a high level:
 - Receiving emails is done by using a message consumer that is configured for POP3 or IMAP.
 - Sending emails is done by using a message producer that is configured for SMTP.
 
-The worked examples used in this guide all refer to a locally running mail server that has been configured for this exercise. See the [instructions at the end](#setting-up-a-local-test-environment) for how you can set up your very own mail server with a corresponding configuration. To keep the examples simple, all workflows are a combination of a mail consumer with a [fs-producer] or of a [fs-consumer] with a mail producer. Throughout this guide you will find examples with snippets of adapter configuration, which are all taken from the whole configuration file [adapter.xml](./files/cookbook/email/adapter.xml).
+The worked examples used in this guide all refer to a locally running mail server that has been configured for this exercise. See the [instructions at the end](#setting-up-a-local-test-environment) for how you can set up your very own mail server with a corresponding configuration. To keep the examples simple, all workflows are a combination of a mail consumer with a [fs-producer] or of a [fs-consumer] with a mail producer. Throughout this guide you will find examples with snippets of adapter configuration, which are all taken from the whole configuration file [adapter.xml](../../files/cookbook/email/adapter.xml ':ignore').
 
 # Consumers and producers
 

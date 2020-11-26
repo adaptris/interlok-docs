@@ -535,7 +535,7 @@ The JSON format returned by the endpoint should be like:
 
 The `icon` is one icon from [Font Awesome 4.7.0](https://fontawesome.com/v4.7.0/icons/) icon list.
 
-The JSON payload can be validated using the JSON schema: [custom-widget-count-schema](../../files/json-schema/custom-widget-count-schema-01.json ':ignore')
+The JSON payload can be validated using the JSON schema: [custom-widget-count-schema](../files/json-schema/custom-widget-count-schema-01.json ':ignore')
 
 ### Table Widget
 
@@ -578,7 +578,7 @@ Or
 }
 ```
 
-The JSON payload can be validated using the JSON schema: [custom-widget-table-and-chart-schema](../../files/json-schema/custom-widget-table-and-chart-schema-01.json ':ignore')
+The JSON payload can be validated using the JSON schema: [custom-widget-table-and-chart-schema](../files/json-schema/custom-widget-table-and-chart-schema-01.json ':ignore')
 
 ### Chart Widget
 
@@ -623,7 +623,7 @@ Or
 }
 ```
 
-The JSON payload can be validated using the JSON schema: [custom-widget-table-and-chart-schema](../../files/json-schema/custom-widget-table-and-chart-schema-01.json ':ignore')
+The JSON payload can be validated using the JSON schema: [custom-widget-table-and-chart-schema](../files/json-schema/custom-widget-table-and-chart-schema-01.json ':ignore')
 
 Where the `data.type` line can be line, area, scatter, bar, pie, donut, step.
 
@@ -670,7 +670,7 @@ Or
 }
 ```
 
-The JSON payload can be validated using the JSON schema: [custom-widget-table-and-chart-schema](../../files/json-schema/custom-widget-table-and-chart-schema-01.json ':ignore')
+The JSON payload can be validated using the JSON schema: [custom-widget-table-and-chart-schema](../files/json-schema/custom-widget-table-and-chart-schema-01.json ':ignore')
 
 ?> **NOTE** The full content of the widgets will be refreshed every time so the endpoints need to return the all the data that need to be displayed.
 

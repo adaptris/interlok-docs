@@ -1,6 +1,6 @@
 ## Version 3.11.1 ##
 
-Release Date : 2020-11
+Release Date : 2020-11-30
 
 ### Key Highlights
 
@@ -24,6 +24,7 @@ Release Date : 2020-11
 - 'INTERLOK-3477' - UI - The Generate Services button from the DysnamicServiceLocator is not available for the DysnamicServiceExecutor
 - 'INTERLOK-3484' - Json validator dups
 - 'INTERLOK-3490' - PluggableJdbcConnection + HikariCP fails to pass configuration checks
+- 'INTERLOK-3503' - UI - self referenced vars improvements - varsub infinite loop
 
 ### Improvements
 
@@ -46,6 +47,11 @@ Release Date : 2020-11
 - 'INTERLOK-3472' - Conditional loops - StopProcessingService
 - 'INTERLOK-3473' - Tidy up the solace project
 - 'INTERLOK-3474' - interlok-mail: send-email-attachment should allow body contentType to be set
+- 'INTERLOK-3501' - Add a new listener to JettyRetry that allows delete
+- 'INTERLOK-3508' - ConfigChecker - SharedComponents doesn't support nested services
+- 'INTERLOK-2330' - MS Graph - Impl prototype for pulling and pushing to One Drive.
+- 'INTERLOK-2331' - MS Graph - interlok-azure - Office365 consumer and producer
+- 'INTERLOK-2332' - MS Graph - extend the OneDrive consumer/producer, so documents can now be retrieved and converted into other formats
 - 'INTERLOK-748' - JMS translators - be able to specify an encoding?
 - 'INTERLOK-3436' - Update resolvable expressions Jsonpath documentation
 - 'INTERLOK-3449' - UI - Upgrade xtream, common-io, snakeyaml, mockito and maven dependency-check

@@ -175,10 +175,10 @@ The annotations explained:
 * [s] Just a UI link, goes to the component search feature, and will populate the search with details from this component
 
 And where do all these values come from:
-* [i] pom.xml xpath: /project/properties/license or /project/properties/property[@name='license']/@value (note, it doesn't matter what the value is, if this element is present, then it's assumed that this component requires a license)
-* [j] pom.xml xpath: /project/properties/deprecated or /project/properties/property[@name='deprecated']/@value (note, if this element is present and has text in it, then it's assumed that this component is deprecated)
-* [k] pom.xml xpath: /project/properties/developerOnly or /project/properties/property[@name='developerOnly']/@value (note, again, it doesn't matter what the value is, if this element is present, then it's assumed that this component is for developing custom code)
-* [l] pom.xml xpath: /project/url
+* [i] pom.xml xpath: /project/properties/license or /project/properties/property[@name='license']/@value (value should be true or false)
+* [j] pom.xml xpath: /project/properties/deprecated or /project/properties/property[@name='deprecated']/@value (value should be the deprecated text that should be shown to the user)
+* [k] pom.xml xpath: /project/properties/developerOnly or /project/properties/property[@name='developerOnly']/@value (value should be true or false)
+* [l] pom.xml xpath: /project/url or /project/properties/url or /project/properties/property[@name='url']/@value
 * [m] dyanamically created by the UI
 * [n] dyanamically created by the UI
 * [o] dyanamically created by the UI
@@ -192,7 +192,7 @@ This is a cut down version of the pom.xml, showing examples of what we've detail
 <project>
     <properties>
         <property name="license" value="true"/> <!-- [i] -->
-        <property name="deprecated" value="true"/> <!-- [j] -->
+        <property name="deprecated" value="This component has been deprecated from 3.10.0 and you should use interlok-new-thing instead"/> <!-- [j] -->
         <property name="developerOnly" value="true"/> <!-- [k] -->
         <property name="externalUrl" value="http://www.json.org/"/> <!-- [p] -->
         <property name="repository" value="https://github.com/adaptris/interlok-json"/> <!-- [r] -->
@@ -299,20 +299,22 @@ So here it is, all the above examples put together (not shown are elements such 
 
 ```xml
 <project>
+    <name>Interlok/JSON</name> <!-- [h] -->
+    <description>Everything JSON related; transformations, schemas, json-path (xpath-alike), splitting</description> <!-- [a] -->
+    <url>https://interlok.adaptris.net/interlok-docs/#/pages/cookbook/cookbook-json-transform</url> <!-- [l] -->
+
     <properties>
         <property name="tags" value="json,transform,jdbc"/> <!-- [e] -->
         <property name="notes" value="Requires additional jars not automatically delivered"/> <!-- [b] -->
         <property name="target" value="3.8.0+"/> <!-- [c] -->
         <property name="license" value="true"/> <!-- [i] -->
-        <property name="deprecated" value="true"/> <!-- [j] -->
+        <property name="deprecated" value="This component has been deprecated from 3.10.0 and you should use interlok-new-thing instead"/> <!-- [j] -->
         <property name="developerOnly" value="true"/> <!-- [k] -->
         <property name="externalUrl" value="http://www.json.org/"/> <!-- [p] -->
         <property name="repository" value="https://github.com/adaptris/interlok-json"/> <!-- [r] -->
         <property name="readme" value="https://github.com/adaptris/interlok-json/raw/develop/README.md"/> <!-- [t] -->
     </properties>
-    <name>Interlok/JSON</name> <!-- [h] -->
-    <description>Everything JSON related; transformations, schemas, json-path (xpath-alike), splitting</description> <!-- [a] -->
-    <url>https://interlok.adaptris.net/interlok-docs/#/pages/cookbook/cookbook-json-transform</url> <!-- [l] -->
+    
     <dependencies> <!-- u -->
         <org.apache.maven.model.Dependency>
             <groupId>com.adaptris</groupId>
@@ -328,21 +330,10 @@ So here it is, all the above examples put together (not shown are elements such 
             <type>jar</type>
             <scope>compile</scope>
         </org.apache.maven.model.Dependency>
-        <org.apache.maven.model.Dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
-            <type>jar</type>
-            <scope>compile</scope>
-        </org.apache.maven.model.Dependency>
-        <org.apache.maven.model.Dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-            <version>1.7.30</version>
-            <type>jar</type>
-            <scope>compile</scope>
-            <optional>true</optional>
-        </org.apache.maven.model.Dependency>
+        <!-- etc -->
     </dependencies>  
 </project>
 ```
+
+
+

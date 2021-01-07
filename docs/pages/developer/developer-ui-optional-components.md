@@ -137,7 +137,7 @@ And where do all these values come from:
 * [b] pom.xml xpath: /project/properties/notes or /project/properties/property[@name='notes']/@value
 * [c] pom.xml xpath: /project/properties/target or /project/properties/property[@name='target']/@value
 * [d] The UI has these values when it queried for the pom.xml, so it uses these
-* [e] pom.xml xpath: /project/properties/tags or /project/properties/property[@name='tags']/@value
+* [e] pom.xml xpath: /project/properties/tags or /project/properties/property[@name='tags']/@value (value should be a comma separated string)
 * [f] This url is dyanamically created by the UI, and points to an internally (so it's only available for Proagrica users) hosted [interlok-artifact-downloader](https://github.com/adaptris/interlok-artifact-downloader) instance. This helper application cleverly packages the jars from the nexus server and offers them in a zip file to the user
 * [g] This is calculated by the UI using the pages settings and the nexus details for this component. It is another nexus query, the actual URL to the component jar will depend on if we are after a release jar or a snapshot jar. e.g. the release url would be '${nexus-base}/service/local/repositories/releases/content/com/adaptris/interlok-json/3.11.1-RELEASE/interlok-json-3.11.1-RELEASE.jar' and the snapshot url would look like '${nexus-base}/service/local/artifact/maven/redirect?r=snapshots&g=com.adaptris&v=3.12-SNAPSHOT&a=interlok-json'
 * [h] pom.xml xpath: /project/name
@@ -284,6 +284,7 @@ This is a cut down version of the pom.xml, showing examples of what we've detail
     </dependencies>        
 </project>
 ```
+
 ### The Optional Component Logo ###
  
  A special mention for the component logo shown on the UI. 
@@ -292,8 +293,7 @@ This is a cut down version of the pom.xml, showing examples of what we've detail
 
  If a logo isn't found for a given artifact id, then the default Adaptris logo is used.
 
-
- ### TLDR; just show me the XML! ###
+ ### TLDR; just show me the POM XML! ###
 
 So here it is, all the above examples put together (not shown are elements such as artifactId, groupId, etc):
 
@@ -307,9 +307,9 @@ So here it is, all the above examples put together (not shown are elements such 
         <property name="tags" value="json,transform,jdbc"/> <!-- [e] -->
         <property name="notes" value="Requires additional jars not automatically delivered"/> <!-- [b] -->
         <property name="target" value="3.8.0+"/> <!-- [c] -->
-        <property name="license" value="true"/> <!-- [i] -->
+        <property name="license" value="false"/> <!-- [i] -->
         <property name="deprecated" value="This component has been deprecated from 3.10.0 and you should use interlok-new-thing instead"/> <!-- [j] -->
-        <property name="developerOnly" value="true"/> <!-- [k] -->
+        <property name="developerOnly" value="false"/> <!-- [k] -->
         <property name="externalUrl" value="http://www.json.org/"/> <!-- [p] -->
         <property name="repository" value="https://github.com/adaptris/interlok-json"/> <!-- [r] -->
         <property name="readme" value="https://github.com/adaptris/interlok-json/raw/develop/README.md"/> <!-- [t] -->
@@ -335,5 +335,104 @@ So here it is, all the above examples put together (not shown are elements such 
 </project>
 ```
 
+### What if i'm using gradle and not maven? ###
 
+Sure, all of the above explains what needs to go into the pom.xml file but what if you're not using maven (!)
+This section will cover what to put in your gradle file so that the POM is generated correctly.
 
+Basically, you need to utilise the [Maven Publish Plugin](https://docs.gradle.org/current/userguide/publishing_maven.html).
+
+So lets look at a real example, inside the interlok-json project [build.gradle](https://github.com/adaptris/interlok-json/raw/develop/interlok-json/build.gradle) file, is the publishing action, that is used to publish the build artifacts to our Nexus repository:
+```groovy
+publishing {
+  publications {
+    mavenJava(MavenPublication) {
+      from components.java
+
+      artifact javadocJar { classifier "javadoc" }
+      artifact examplesJar { classifier "examples" }
+      artifact sourcesJar { classifier "sources" }
+
+      pom.withXml {
+        asNode().appendNode("name", componentName)
+        asNode().appendNode("description", "Everything JSON related; transformations, schemas, json-path (xpath-alike), splitting")
+        asNode().appendNode("url", "https://interlok.adaptris.net/interlok-docs/cookbook-json-transform.html")
+        def properties = asNode().appendNode("properties")
+        properties.appendNode("target", "3.8.0+")
+        properties.appendNode("tags", "json,transform,jdbc")
+        properties.appendNode("license", "false")
+        properties.appendNode("externalUrl", "http://www.json.org/")
+        properties.appendNode("readme", "https://raw.githubusercontent.com/adaptris/interlok-json/develop/interlok-json/README.md")
+        properties.appendNode("repository", "https://github.com/adaptris/interlok-json")
+      }
+    }
+  }
+  repositories {
+    maven {
+      credentials {
+        username repoUsername
+        password repoPassword
+      }
+      url mavenPublishUrl
+    }
+  }
+}
+```
+
+So, above in the interlok-json project build.gradle, after adding the artifacts to the publication, there is [pom.withXml](https://docs.gradle.org/current/dsl/org.gradle.api.publish.maven.MavenPom.html#org.gradle.api.publish.maven.MavenPom:withXml(org.gradle.api.Action)) action and it's this action that allows configuration of the POM.
+
+Here is a full example of a pom.withXml displaying all the example elements and values that we've gone through on this page:
+
+```groovy
+pom.withXml {
+    asNode().appendNode("name", "Interlok/JSON") /* [h] */
+    asNode().appendNode("description", "Everything JSON related; transformations, schemas, json-path (xpath-alike), splitting") /* [a] */
+    asNode().appendNode("url", "https://interlok.adaptris.net/interlok-docs/cookbook-json-transform.html") /* [l] */
+
+    def properties = asNode().appendNode("properties")
+    properties.appendNode("target", "3.8.0+") /* [c] */
+    properties.appendNode("tags", "json,transform,jdbc") /* [e] */
+    properties.appendNode("license", "false") /* [i] */
+    properties.appendNode("externalUrl", "http://www.json.org/") /* [p] */
+    properties.appendNode("readme", "https://github.com/adaptris/interlok-json/raw/develop/README.md") /* [t] */
+    properties.appendNode("repository", "https://github.com/adaptris/interlok-json") /* [r] */
+    properties.appendNode("notes", "Requires additional jars not automatically delivered") /* [b] */
+    properties.appendNode("deprecated", "This component has been deprecated from 3.10.0 and you should use interlok-new-thing instead") /* [j] */
+    properties.appendNode("developerOnly", "false") /* [k] */
+}
+```
+
+Another real example, this is from the deprecated [interlok-shell](https://github.com/adaptris/interlok-shell/raw/develop/build.gradle) project, here you can see a real example of deprecation:
+```groovy
+pom.withXml {
+      pom.withXml {
+        asNode().appendNode("name", componentName)
+        asNode().appendNode("description", "SSH/Telnet to a running Interlok instance via Crashub")
+        asNode().appendNode("url", "http://interlok.adaptris.net/interlok-docs/advanced-shell.html")
+        def properties = asNode().appendNode("properties")
+        properties.appendNode("target", "3.4.1+")
+        properties.appendNode("tags", "management,ssh,telnet")
+        properties.appendNode("license", "false")
+        properties.appendNode("externalUrl", "http://www.crashub.org")
+        properties.appendNode("deprecated", "Removed in Interlok 4.0 since crashub itself is 'unloved' and Java 11 is unsupported")
+      }
+}
+```
+
+And another real example, this is from the [interlok-jmx-jms-stubs](https://github.com/adaptris/interlok-jmx-jms/raw/develop/interlok-jmx-jms-stubs/build.gradle) project, here you can see a real example of adding the 'Developer Only' flag, also this project adds the 'url' field to the properties node, rather than at the root:
+```groovy
+pom.withXml {
+      pom.withXml {
+        asNode().appendNode("name", componentName)
+        asNode().appendNode("description", "Test scaffolding for JMX/JMS Tests; of no use at Interlok runtime")
+        def properties = asNode().appendNode("properties")
+        properties.appendNode("url", "http://interlok.adaptris.net/interlok-docs/advanced-jmx-jms.html")
+        properties.appendNode("target", "3.10.0+")
+        properties.appendNode("tags", "jmx,jms")
+        properties.appendNode("license", "false")
+        properties.appendNode("developerOnly", "true")
+      }
+}
+```
+
+More examples can be found in the build.gradle files in the many Adaptris [GitHub](https://github.com/search?q=org%3Aadaptris+pom.withXml&type=code) projects.

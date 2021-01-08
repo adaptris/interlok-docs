@@ -7,6 +7,7 @@
  - [Custom Services](/pages/developer/developer-services.md)
  - [Working with the profiler](/pages/developer/developer-profiler.md)
  - [Java Generics And the UI](/pages/developer/developer-ui-java-generics-and-ui.md)
+ - [Optional Components display in the UI](/pages/developer/developer-ui-optional-components.md)
  - [UI API Getting Started](/pages/developer/developer-ui-api.md)
  - [UI API Swagger V3 Doc](/pages/developer/developer-ui-api-swagger-v3-doc.md)     
  - [UI API Swagger Doc](/pages/developer/developer-ui-api-swagger-doc.md)

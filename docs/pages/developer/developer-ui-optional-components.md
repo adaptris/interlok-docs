@@ -123,24 +123,24 @@ The 'Optional Component Detail Modal' general tab:
 ![optional components details general tab](../../images/developer/developer-ui-optional-components-details-general.png)
 
 The annotations explained:
-* [a] A short description of what the optional component is about
-* [b] Some additonal notes that might be important for the user to know before downloading/using
-* [c] This is the Interlok version that the component was developed for
-* [d] These are the nexus details for this component, used for querying nexus, or building  gradle, ivy or maven build files
-* [e] Component Tags are primarily used in the search features on the listings page, so it's a good idea to use the same tags in simular projects, i.e. add 'json' to every json related optional component
-* [f] Here is a link to the components jars including all of the dependencies jars
-* [g] This is the link to just the component jar without any of the dependencies jars
-* [h] The Name of the project (bet you're thinking, hey why's this last in this list, it's as if the author forgot all about it and had to remake the annotated image!)
+* **[a]** A short description of what the optional component is about
+* **[b]** Some additonal notes that might be important for the user to know before downloading/using
+* **[c]** This is the Interlok version that the component was developed for
+* **[d]** These are the nexus details for this component, used for querying nexus, or building  gradle, ivy or maven build files
+* **[e]** Component Tags are primarily used in the search features on the listings page, so it's a good idea to use the same tags in similar projects, i.e. add 'json' to every json related optional component
+* **[f]** Here is a link to the components jars including all of the dependencies jars
+* **[g]** This is the link to just the component jar without any of the dependencies jars
+* **[h]** The Name of the project (bet you're thinking, hey why's this last in this list, it's as if the author forgot all about it and had to remake the annotated image!)
 
 And where do all these values come from:
-* [a] pom.xml xpath: /project/description
-* [b] pom.xml xpath: /project/properties/notes or /project/properties/property[@name='notes']/@value
-* [c] pom.xml xpath: /project/properties/target or /project/properties/property[@name='target']/@value
-* [d] The UI has these values when it queried for the pom.xml, so it uses these
-* [e] pom.xml xpath: /project/properties/tags or /project/properties/property[@name='tags']/@value (value should be a comma separated string)
-* [f] This url is dyanamically created by the UI, and points to an internally (so it's only available for Proagrica users) hosted [interlok-artifact-downloader](https://github.com/adaptris/interlok-artifact-downloader) instance. This helper application cleverly packages the jars from the nexus server and offers them in a zip file to the user
-* [g] This is calculated by the UI using the pages settings and the nexus details for this component. It is another nexus query, the actual URL to the component jar will depend on if we are after a release jar or a snapshot jar. e.g. the release url would be '${nexus-base}/service/local/repositories/releases/content/com/adaptris/interlok-json/3.11.1-RELEASE/interlok-json-3.11.1-RELEASE.jar' and the snapshot url would look like '${nexus-base}/service/local/artifact/maven/redirect?r=snapshots&g=com.adaptris&v=3.12-SNAPSHOT&a=interlok-json'
-* [h] pom.xml xpath: /project/name
+* **[a]** pom.xml xpath: `/project/description`
+* **[b]** pom.xml xpath: `/project/properties/notes or /project/properties/property[@name='notes']/@value`
+* **[c]** pom.xml xpath: `/project/properties/target or /project/properties/property[@name='target']/@value`
+* **[d]** The UI has these values when it queried for the pom.xml, so it uses these
+* **[e]** pom.xml xpath: `/project/properties/tags` or `/project/properties/property[@name='tags']/@value` (value should be a comma separated string)
+* **[f]** This url is dynamically created by the UI and points to an internally (so it's only available for Proagrica users) hosted [interlok-artifact-downloader](https://github.com/adaptris/interlok-artifact-downloader) instance. This helper application cleverly packages the jars from the nexus server and offers them in a zip file to the user
+* **[g]** This is calculated by the UI using the pages settings and the nexus details for this component. It is another nexus query, the actual URL to the component jar will depend on if we are after a release jar or a snapshot jar. e.g. the release url would be *${nexus-base}/service/local/repositories/releases/content/com/adaptris/interlok-json/3.11.1-RELEASE/interlok-json-3.11.1-RELEASE.jar* and the snapshot url would look like *${nexus-base}/service/local/artifact/maven/redirect?r=snapshots&g=com.adaptris&v=3.12-SNAPSHOT&a=interlok-json*
+* **[h]** pom.xml xpath: `/project/name`
 
 This is a cut down version of the pom.xml, showing examples of what we've detailed so far:
 ```xml
@@ -162,30 +162,30 @@ The 'Optional Component Detail Modal' links tab:
 ![optional components details links tab](../../images/developer/developer-ui-optional-components-details-links.png)
 
 The annotations explained:
-* [i] Warn the user that this component requires an Interlok license
-* [j] Warn the user that this component is deprecated and suggest an alternative
-* [k] Inform the user that this component is a stub or development only component, used for writing custom code against 
-* [l] This is a link to where the main documentation for this component is
-* [m] A link to the nexus folder that contains this component
-* [n] A link to the projects nexus pom.xml, the same one used to generate the information on display here
-* [o] A link to the maven metadata file that contains a lot of versioning data for this optional component
-* [p] This is a link to further documentation that the developer of the component thinks would be useful for the user
-* [q] The javadocs location for this component
-* [r] This is the location of where the user can checkout the source code for the component
-* [s] Just a UI link, goes to the component search feature, and will populate the search with details from this component
+* **[i]** Warn the user that this component requires an Interlok license
+* **[j]** Warn the user that this component is deprecated and suggest an alternative
+* **[k]** Inform the user that this component is a stub or development only component, used for writing custom code against 
+* **[l]** A link to where the main documentation for this component is
+* **[m]** A link to the nexus folder that contains this component
+* **[n]** A link to the project's nexus pom.xml, the same one used to generate the information on display here
+* **[o]** A link to the maven metadata file that contains a lot of versioning data for this optional component
+* **[p]** A link to further documentation that the developer of the component thinks would be useful for the user
+* **[q]** The javadocs location for this component
+* **[r]** The location of where the user can checkout the source code for the component
+* **[s]** Just a UI link, goes to the component search feature, and will populate the search with details from this component
 
 And where do all these values come from:
-* [i] pom.xml xpath: /project/properties/license or /project/properties/property[@name='license']/@value (value should be true or false)
-* [j] pom.xml xpath: /project/properties/deprecated or /project/properties/property[@name='deprecated']/@value (value should be the deprecated text that should be shown to the user)
-* [k] pom.xml xpath: /project/properties/developerOnly or /project/properties/property[@name='developerOnly']/@value (value should be true or false)
-* [l] pom.xml xpath: /project/url or /project/properties/url or /project/properties/property[@name='url']/@value
-* [m] dyanamically created by the UI
-* [n] dyanamically created by the UI
-* [o] dyanamically created by the UI
-* [p] pom.xml xpath: /project/properties/externalUrl or /project/properties/property[@name='externalUrl']/@value
-* [q] dyanamically created by the UI
-* [r] pom.xml xpath: /project/properties/repository or /project/properties/property[@name='repository']/@value
-* [s] dyanamically created by the UI
+* **[i]** pom.xml xpath: `/project/properties/license` or `/project/properties/property[@name='license']/@value` (value should be true or false)
+* **[j]** pom.xml xpath: `/project/properties/deprecated` or `/project/properties/property[@name='deprecated']/@value` (value should be the deprecated text that should be shown to the user)
+* **[k]** pom.xml xpath: `/project/properties/developerOnly` or `/project/properties/property[@name='developerOnly']/@value` (value should be true or false)
+* **[l]** pom.xml xpath: `/project/url` or `/project/properties/url` or `/project/properties/property[@name='url']/@value`
+* **[m]** dynamically created by the UI
+* **[n]** dynamically created by the UI
+* **[o]** dynamically created by the UI
+* **[p]** pom.xml xpath: `/project/properties/externalUrl` or `/project/properties/property[@name='externalUrl']/@value`
+* **[q]** dynamically created by the UI
+* **[r]** pom.xml xpath: `/project/properties/repository` or `/project/properties/property[@name='repository']/@value`
+* **[s]** dynamically created by the UI
 
 This is a cut down version of the pom.xml, showing examples of what we've detailed in this section:
 ```xml
@@ -208,10 +208,10 @@ The 'Optional Component Detail Modal' Read Me tab:
 ![optional components details readme tab](../../images/developer/developer-ui-optional-components-details-readme.png)
 
 The annotations explained:
-* [t] Well the whole content in this tab is loaded from the projects markdown readme file url.
+* **[t]** Well the whole content in this tab is loaded from the projects markdown readme file url.
 
 And where do all these values come from:
-* [t] pom.xml xpath: /project/properties/readme or /project/properties/property[@name='readme']/@value
+* **[t]** pom.xml xpath: `/project/properties/readme` or `/project/properties/property[@name='readme']/@value`
 
 This is a cut down version of the pom.xml, showing examples of what we've detailed in this section:
 ```xml
@@ -237,16 +237,16 @@ The 'Optional Component Detail Modal' Dependencies tab:
 ![optional components details dependencies tab](../../images/developer/developer-ui-optional-components-details-dependencies.png)
 
 The annotations explained:
-* [u] This is a list of the projects dependencies
+* **[u]** This is a list of the projects dependencies
 
 And where do all these values come from:
-* [u] pom.xml xpath: /project/dependencies/org.apache.maven.model.Dependency
-  * Group ID xpath: ./groupId 	
-  * Artifact ID xpath: ./artifactId
-  * Version xpath: ./version
-  * Type xpath: ./type
-  * Scope xpath: ./scope
-  * Optional xpath: ./optional
+* **[u]** pom.xml xpath: `/project/dependencies/org.apache.maven.model.Dependency`
+  * Group ID xpath: `./groupId 	`
+  * Artifact ID xpath: `./artifactId`
+  * Version xpath: `./version`
+  * Type xpath: `./type`
+  * Scope xpath: `./scope`
+  * Optional xpath: `./optional`
 
 This is a cut down version of the pom.xml, showing examples of what we've detailed in this section:
 ```xml
@@ -335,14 +335,14 @@ So here it is, all the above examples put together (not shown are elements such 
 </project>
 ```
 
-### What if i'm using gradle and not maven? ###
+### What if I'm using gradle and not maven? ###
 
 Sure, all of the above explains what needs to go into the pom.xml file but what if you're not using maven (!)
 This section will cover what to put in your gradle file so that the POM is generated correctly.
 
 Basically, you need to utilise the [Maven Publish Plugin](https://docs.gradle.org/current/userguide/publishing_maven.html).
 
-So lets look at a real example, inside the interlok-json project [build.gradle](https://github.com/adaptris/interlok-json/raw/develop/interlok-json/build.gradle) file, is the publishing action, that is used to publish the build artifacts to our Nexus repository:
+Lets look at a real example, inside the interlok-json project [build.gradle](https://github.com/adaptris/interlok-json/raw/develop/interlok-json/build.gradle) file, is the publishing action, that is used to publish the build artifacts to our Nexus repository:
 ```groovy
 publishing {
   publications {
@@ -379,7 +379,7 @@ publishing {
 }
 ```
 
-So, above in the interlok-json project build.gradle, after adding the artifacts to the publication, there is [pom.withXml](https://docs.gradle.org/current/dsl/org.gradle.api.publish.maven.MavenPom.html#org.gradle.api.publish.maven.MavenPom:withXml(org.gradle.api.Action)) action and it's this action that allows configuration of the POM.
+Above in the interlok-json project build.gradle, after adding the artifacts to the publication, there is [pom.withXml](https://docs.gradle.org/current/dsl/org.gradle.api.publish.maven.MavenPom.html#org.gradle.api.publish.maven.MavenPom:withXml(org.gradle.api.Action)) action and it's this action that allows configuration of the POM.
 
 Here is a full example of a pom.withXml displaying all the example elements and values that we've gone through on this page:
 
@@ -402,7 +402,7 @@ pom.withXml {
 }
 ```
 
-Another real example, this is from the deprecated [interlok-shell](https://github.com/adaptris/interlok-shell/raw/develop/build.gradle) project, here you can see a real example of deprecation:
+Another real example from the deprecated [interlok-shell](https://github.com/adaptris/interlok-shell/raw/develop/build.gradle) project where you can see an example of deprecation:
 ```groovy
 pom.withXml {
       pom.withXml {
@@ -419,7 +419,8 @@ pom.withXml {
 }
 ```
 
-And another real example, this is from the [interlok-jmx-jms-stubs](https://github.com/adaptris/interlok-jmx-jms/raw/develop/interlok-jmx-jms-stubs/build.gradle) project, here you can see a real example of adding the 'Developer Only' flag, also this project adds the 'url' field to the properties node, rather than at the root:
+And another real example from the [interlok-jmx-jms-stubs](https://github.com/adaptris/interlok-jmx-jms/raw/develop/interlok-jmx-jms-stubs/build.gradle) project where you can see an example of adding the 'Developer Only' flag.
+This project also adds the 'url' field to the properties node, rather than at the root:
 ```groovy
 pom.withXml {
       pom.withXml {

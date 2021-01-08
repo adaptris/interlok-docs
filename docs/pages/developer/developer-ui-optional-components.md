@@ -10,7 +10,7 @@
 
 During the UI startup, where Interloks built-in jetty starts the ui and executes our initialisation servlets, the optional components list and details are loaded and cached. 
 
-This is all done by querying a nexus API. It is executed during startup as it can sometimes be slow, as it is an external callout, and we cache the results so the optional page usable immediately.
+This is all done by querying a nexus API. It is executed during startup as it can sometimes be slow, as it is an external callout, and we cache the results so the optional page is usable immediately.
 
 The default nexus instance that the UI uses is: https://nexus.adaptris.net/nexus
 

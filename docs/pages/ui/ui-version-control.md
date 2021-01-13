@@ -4,7 +4,7 @@
 
 The adapter gui will detect which version control system (Subversion, Git) are available upon start-up. If none available the option will be disabled in the configuration page.
 You can enable the Subversion and git VCS by adding the required libraries into the adapter lib folder.
-Check [version control with subversion](/pages/advanced/advanced-vcs-svn.html#installation) or [version control with git](advanced-vcs-git#installation) for more details on how to do it.
+Check [version control with subversion](/pages/advanced/advanced-vcs-svn#installation) or [version control with git](/pages/advanced/advanced-vcs-git#installation) for more details on how to do it.
 
 __Note:__ This is highly recommended to use SSL/TLS (https) when using VCS in the Interlok UI web application.
 

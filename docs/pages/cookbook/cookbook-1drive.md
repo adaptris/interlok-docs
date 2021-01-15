@@ -1,35 +1,31 @@
-> **Summary:** interlok-azure-mail now provides a way to use Interlok with Outlook365 email
+> **Summary:** interlok-azure-onedrive provides a way to use Interlok with OneDrive
 
 # Introduction
 
-Both the Ooutlook365 consumer and producer are new additions to
-interlok-azure-mail, that allow for the receiving and sending of email using
-Microsoft Outlook accounts via Azure and their Graph API. One major
-benefit of this is the increased security and use of [OAuth2 tokens][1].
-It also removes the need to understand the IMAP/SMTP protocols. That
-said, it's not without its own set of headaches, particularly revolving
-around the setup and configuration of the Azure application.
+The OneDrive component provides a consumer and producer, as well as the
+following services: upload, download, transform. They enable the
+reading/writing of files on a OneDrive, via Azure and the Graph API. The
+transform service allows for files in one format to be downloaded in
+another, although the list of currently supported formats is rather
+small.
 
 ## Prerequisites
 
 * Active Office365 subscription
 * An Azure Active Directory application with application the following
   permissions, and with [Admin Consent][2] granted:
-  - Mail.Read
-  - Mail.ReadBasic
-  - Mail.ReadBasic.All
-  - Mail.ReadWrite
-  - Mail.Send
+  - Files.Read.All
+  - Files.ReadWrite.All
   - User.Read
   - User.Read.All
-* A user to send/receive email
+* A user with OneDrive access
 
-The Office365 consumer and producer require the above because:
+The OneDrive consumer, producer, and services require the above because:
 * Daemon applications can work only in Azure AD tenants
 * As users cannot interact with daemon applications, incremental
   consent isn't possible
-* Users require an Exchange mailbox to send/receive email, and this
-  requires an [Office365 subscription][3]
+* Users require a OneDrive, and this requires an
+  [Office365 subscription][3]
 
 ## Azure Application Setup
 
@@ -45,13 +41,12 @@ The Office365 consumer and producer require the above because:
 4. Ensure there is a user with an Exchange mailbox
 ![Users Setup](../../images/cookbook/outlook365/o365-4.png)
 
-## Interlok-Mail Setup
+## Interlok-OneDrive Setup
 
 The application ID, tenant ID, client secret and username are all
-required and should match those given in the Azure portal. When sending
-mail a list of recipients is also required.
+required and should match those given in the Azure portal.
 
-### Consumer Configuration
+### Downloading Files
 
 For the consumer to be able to retrieve messages it requires several key
 bits of information, in addition to what is necessary for a polling
@@ -62,14 +57,19 @@ consumer:
   associated with
 * Client secret; essentially the password the application uses to
   authenticate with Azure
-* Username; the email address from which to poll for new messages
-* Delete; whether the emails should be deleted instead of marked as read
+* Username; the user whose OneDrive to download files
+
+NB The consumer is currently limited to polling the root of the
+OneDrive. At some point it may be worth investigating whether
+conventional paths work.
+
+#### Consumer Configuration Example
 
 ```xml
     <standalone-consumer>
-     <unique-id>aeb59eb9-8092-4820-8fa9-a597c377549b</unique-id>
+     <unique-id>ab7ca830-11ba-4b91-b450-70a59064550c</unique-id>
      <connection class="null-connection"/>
-     <consumer class="azure-office-365-mail-consumer">
+     <consumer class="azure-one-drive-mail-consumer">
       <message-factory class="multi-payload-message-factory">
        <default-char-encoding>UTF-8</default-char-encoding>
        <default-payload-id>default-payload</default-payload-id>
@@ -81,38 +81,70 @@ consumer:
       <tenant-id>cbf4a38d-3117-48cd-b54b-861480ee93cd</tenant-id>
       <client-secret>NGMyYjY0MTEtOTU0Ny00NTg0LWE3MzQtODg2ZDAzZGVmZmY1Cg==</client-secret>
       <username>user@example.com</username>
-      <delete>false</delete>
      </consumer>
     </standalone-consumer>
 ```
 
-### Producer Configuration
+#### Services Configuration Example
+
+```xml
+    <azure-one-drive-document-download-service>
+     <unique-id>39f0f131-7ea2-45d8-8895-7bf8af004780</unique-id>
+     <connection class="shared-connection">
+      <lookup-name>shared-connection-id</lookup-name>
+     </connection>
+     <username>user@example.com</username>
+     <filename>filename</filename>
+    </azure-one-drive-document-download-service>
+```
+
+```xml
+    <azure-one-drive-document-transform-service>
+     <unique-id>c3494322-8e4b-45d3-8b88-134398370cb2</unique-id>
+     <connection class="shared-connection">
+      <lookup-name>shared-connection-id</lookup-name>
+     </connection>
+     <username>one@drive.com</username>
+     <filename>filename</filename>
+     <format>JPG</format>
+    </azure-one-drive-document-transform-service>
+```
+
+### Uploading Files
 
 The producer needs much of the same configuration as the consumer:
-application ID, tenant ID, client secret, and username of sender. It
-also requires a lot of the same information as the standard mail
-producer (all of which is resolvable from the Adaptris Message):
-subject, comma separated lists of recipients (To/CC/BCC). There is also
-the option to save the sent mail.
+application ID, tenant ID, client secret, username, and a file name.
+
+
+#### Producer Configuration Example
 
 ```xml
     <standalone-producer>
      <unique-id>f7daa8c3-15fc-4fbd-a2a1-c0028c52fa12</unique-id>
      <connection class="null-connection"/>
-     <producer class="azure-office-365-mail-producer">
-      <application-id>47ea49b0-670a-47c1-9303-0b45ffb766ec</application-id>
-      <tenant-id>cbf4a38d-3117-48cd-b54b-861480ee93cd</tenant-id>
-      <client-secret>NGMyYjY0MTEtOTU0Ny00NTg0LWE3MzQtODg2ZDAzZGVmZmY1Cg==</client-secret>
+     <producer class="azure-one-drive-producer">
+      <unique-id>742b895d-ba01-4092-b5fa-f486d5488e56</unique-id>
       <username>user@example.com</username>
-      <subject>Interlok-Mail Office365 Test Message</subject>
-      <to-recipients>user@example.com</to-recipients>
-      <save>true</save>
+      <filename>filename</filename>
      </producer>
     </standalone-producer>
 ```
 
-## Miscellaneous Notes/URLs
+#### Upload Service Configuration Example
 
+```xml
+    <azure-one-drive-document-upload-service>
+     <unique-id>24b548e8-c593-4588-9e89-fe6781eeca0b</unique-id>
+      <connection class="shared-connection">
+       <lookup-name>shared-connection-id</lookup-name>
+      </connection>
+      <username>user@example.com</username>
+      <filename>filename</filename>
+     </azure-one-drive-document-upload-service>
+    <azure-one-drive-document-download-service>
+```
+
+## Miscellaneous Notes/URLs
 
 [1]: https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-overview
 [2]: https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-daemon-overview

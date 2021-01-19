@@ -61,7 +61,7 @@ As additional features are developed and released our public facing repository i
 |com.adaptris | [interlok-jmx-jms-common][]| Provider neutral runtime support for [JMX via JMS or AMQP 1.0](/pages/advanced/advanced-jmx-jms) | 3.10+ | available on [github](https://github.com/adaptris/interlok-jmx-jms)
 |com.adaptris | [interlok-jmx-solace][]| Solace Provider for [JMX via JMS or AMQP 1.0](/pages/advanced/advanced-jmx-jms) | 3.10+ | available on [github](https://github.com/adaptris/interlok-jmx-jms)
 |com.adaptris | [interlok-jmx-sonicmq][]| SonicMQ Provider for [JMX via JMS or AMQP 1.0](/pages/advanced/advanced-jmx-jms) | 3.10+ |
-|com.adaptris | [interlok-jruby][] | Tighter coupling with [jruby](http://jruby.org) as an alternative to [ScriptingService][]/[EmbeddedScriptingService][]|3.6.3+ | available on [github](https://github.com/adaptris/interlok-jruby)
+|com.adaptris | [interlok-jruby][] | Tighter coupling with [jruby](https://www.jruby.org) as an alternative to [ScriptingService][]/[EmbeddedScriptingService][]|3.6.3+ | available on [github](https://github.com/adaptris/interlok-jruby)
 |com.adaptris | [interlok-jsr107-cache][] | Cache implementation that wraps JSR107 cache implementations |3.8.0+ | available on [github](https://github.com/adaptris/interlok-cache)
 |com.adaptris | [interlok-jq][] | JSON transformations using JQ-like syntax |3.7.0+ | available on [github](https://github.com/adaptris/interlok-jq)
 |com.adaptris | [interlok-json][] | Transform JSON data to and from XML | 3.8.0+ |available on [github](https://github.com/adaptris/interlok-json)

@@ -2,7 +2,7 @@
 
 Release Date : 2016-10-05
 
-!> **IMPORTANT** Because of issues with XStream and AliasedJavaBeanConverter not honouring some annotations; if you are using [JmsTransactedWorkflow](https://development.adaptris.net/javadocs/v3-snapshot/Interlok-API/com/adaptris/core/jms/JmsTransactedWorkflow.html) you will need to remove any interceptors manually and reconfigure them after upgrading.
+!> **IMPORTANT** Because of issues with XStream and AliasedJavaBeanConverter not honouring some annotations; if you are using [JmsTransactedWorkflow](https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.12-SNAPSHOT/com/adaptris/core/jms/JmsTransactedWorkflow.html) you will need to remove any interceptors manually and reconfigure them after upgrading.
 
 ### Key Highlights
 

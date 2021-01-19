@@ -35,7 +35,7 @@ Every time an IDoc is sent from/received by SAP, it is assigned a transaction ID
 
 ### Interlok Workflow Design ###
 
-We recommend that the Adapter registers as a single program and all IDocs (to all partners, and of all message types) are consumed via that single point. This means that you need to devise a strategy to control the behaviour of the workflow for different partners and message types. You can do this by extracting the required metadata and then using a [dynamic-service-locator][] to control the required services that are invoked. Use a [pooling-workflow][] to increase throughput.
+We recommend that the Adapter registers as a single program and all IDocs (to all partners, and of all message types) are consumed via that single point. This means that you need to devise a strategy to control the behaviour of the workflow for different partners and message types. You can do this by extracting the required metadata and then using a [dynamic-service-executor][] to control the required services that are invoked. Use a [pooling-workflow][] to increase throughput.
 
 ### Receiving an IDoc ###
 
@@ -168,7 +168,7 @@ You can track IDocs going into and out of the SAP system using _BD87_ to see all
 
 
 [sap-xml-tid-repository]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-sap/3.11-SNAPSHOT/com/adaptris/core/sap/XmlFileRepository.html
-[dynamic-service-locator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/dynamic/DynamicServiceLocator.html
+[dynamic-service-executor]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.12-SNAPSHOT/com/adaptris/core/services/dynamic/DynamicServiceExecutor.html
 [sapjco3-idoc-consume-connection]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-sap/3.11-SNAPSHOT/com/adaptris/core/sap/jco3/idoc/IdocConsumeConnection.html
 [sapjco3-idoc-consumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-sap/3.11-SNAPSHOT/com/adaptris/core/sap/jco3/idoc/IdocConsumer.html
 [pooling-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/PoolingWorkflow.html

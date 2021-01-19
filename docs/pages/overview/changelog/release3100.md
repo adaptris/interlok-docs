@@ -20,7 +20,7 @@ Release Date : 2020-03-12
     - Initial support for Asynchronous messaging
     - The Default [JSON](https://github.com/adaptris/interlok-json) transformation driver is now "simple-json"
     - [apache-geode](https://github.com/adaptris/interlok-cache/tree/develop/interlok-apache-geode) is now supported as a caching provider
-    - Prototype support for [multi-payload messages](https://interlok.adaptris.net/interlok-docs/advanced-multi-payload-messages.html)
+    - Prototype support for [multi-payload messages](https://interlok.adaptris.net/interlok-docs/#/pages/advanced/advanced-multi-payload-messages)
     - The default Saxon [transformation engine](cookbook-xml-transform.html) has been upgraded from 9.8 to 9.9.x
 
 ### Bugs

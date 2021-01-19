@@ -8,7 +8,7 @@ Release Date : 2020-01-06
 - The [UI Config Page Navigation Tree](ui-config-navigation-tree.html) has been improved to display more collection components and now has a 'focus' mode.
 - A new MultiPayloadMessageFactory that enables AdaptrisMessage to support [multiple payloads](advanced-multi-payload-messages.html)
 - Additional Services that allow you to Add payloads to MultiPayloadMessage and switch the active payload for other services to work on
-- The [UI Config page](https://interlok.adaptris.net/interlok-docs/ui-config.html) has improved the opening of [shared service collections](ui-config.html#shared-components-area) from the shared components within config
+- The [UI Config page](https://interlok.adaptris.net/interlok-docs/#/pages/ui/ui-config) has improved the opening of [shared service collections](ui-config.html#shared-components-area) from the shared components within config
 - The [UI Profiler](ui-profiler-monitor.html) has been updated to allow multiple adapter/channel panels at the same time.
 - Interlok now supports NATS messaging (optional component [interlok-nats](https://github.com/adaptris/interlok-nats))
 - Added support for 'JSON Lines' in [json](https://github.com/adaptris/interlok-json)/[csv-json](https://github.com/adaptris/interlok-csv-json)/[elastic](https://github.com/adaptris/interlok-elastic) optional components

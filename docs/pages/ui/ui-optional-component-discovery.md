@@ -34,7 +34,7 @@ Clicking on the view more details button shows the optional component details wi
 
 ![Optional Component Discovery Details](../../images/ui-user-guide/optional-component-details.png)
 
-This modal shows some options and the dependencies that the component has and a link for the install instructions which takes you to [this documentation page][]
+This modal shows some options and the dependencies that the component has and a link for the install instructions which takes you to [this documentation page](/pages/user-guide/adapter-optional-components?id=how-to-install)
 
 ## Optional Component Detector ##
 
@@ -48,4 +48,3 @@ To change the selected Adapter just click on the dropdown and choose a different
 
 
 [artifact server]: https://nexus.adaptris.net/nexus/content/groups/
-[this documentation page]: https://development.adaptris.net/docs/Interlok/adapter-optional-components.html#how-to-install

@@ -62,7 +62,7 @@ In this guide we'll be using Interlok as a web server.  Therefore we'll expose a
 
 The following link will start a zip download of Apache JMeter;
 
-http://apache.mirrors.nublue.co.uk//jmeter/binaries/apache-jmeter-5.1.1.zip
+[http://apache.mirrors.nublue.co.uk/jmeter/binaries/apache-jmeter-5.2.1.zip](http://apache.mirrors.nublue.co.uk/jmeter/binaries/apache-jmeter-5.2.1.zip)
 
 Once downloaded, unzip to your preferred directory, example; C:\tools\apache-jmeter
  

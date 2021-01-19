@@ -1,8 +1,8 @@
-> **Summary:** interlok-azure-mail now provides a way to use Interlok with Office365 email
+> **Summary:** interlok-azure-mail now provides a way to use Interlok with Outlook365 email
 
 # Introduction
 
-Both the Office365 consumer and producer are new additions to
+Both the Ooutlook365 consumer and producer are new additions to
 interlok-azure-mail, that allow for the receiving and sending of email using
 Microsoft Outlook accounts via Azure and their Graph API. One major
 benefit of this is the increased security and use of [OAuth2 tokens][1].
@@ -34,16 +34,16 @@ The Office365 consumer and producer require the above because:
 ## Azure Application Setup
 
 1. Register an application in the Azure Portal
-![Application Registration](images/cookbook/outlook365/o365-1.png)
+![Application Registration](../../images/cookbook/outlook365/o365-1.png)
 
 2. Add a client secret so that the app can identify itself
-![Client Secret](images/cookbook/outlook365/o365-2.png)
+![Client Secret](../../images/cookbook/outlook365/o365-2.png)
 
 3. Add the necessary permissions
-![Permissions](images/cookbook/outlook365/o365-3.png)
+![Permissions](../../images/cookbook/outlook365/o365-3.png)
 
 4. Ensure there is a user with an Exchange mailbox
-![Users Setup](images/cookbook/outlook365/o365-4.png)
+![Users Setup](../../images/cookbook/outlook365/o365-4.png)
 
 ## Interlok-Mail Setup
 
@@ -67,8 +67,9 @@ consumer:
 
 ```xml
     <standalone-consumer>
+     <unique-id>aeb59eb9-8092-4820-8fa9-a597c377549b</unique-id>
      <connection class="null-connection"/>
-     <consumer class="office-365-mail-consumer">
+     <consumer class="azure-office-365-mail-consumer">
       <message-factory class="multi-payload-message-factory">
        <default-char-encoding>UTF-8</default-char-encoding>
        <default-payload-id>default-payload</default-payload-id>
@@ -98,7 +99,7 @@ the option to save the sent mail.
     <standalone-producer>
      <unique-id>f7daa8c3-15fc-4fbd-a2a1-c0028c52fa12</unique-id>
      <connection class="null-connection"/>
-     <producer class="office-365-mail-producer">
+     <producer class="azure-office-365-mail-producer">
       <application-id>47ea49b0-670a-47c1-9303-0b45ffb766ec</application-id>
       <tenant-id>cbf4a38d-3117-48cd-b54b-861480ee93cd</tenant-id>
       <client-secret>NGMyYjY0MTEtOTU0Ny00NTg0LWE3MzQtODg2ZDAzZGVmZmY1Cg==</client-secret>

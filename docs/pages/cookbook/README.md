@@ -5,7 +5,7 @@
     - [Data Extract](/pages/cookbook/cookbook-jdbc-data-query.md)
  - [Email](/pages/cookbook/cookbook-email.md)
     - [POP3/IMAP/SMTP](/pages/cookbook/cookbook-pop3.md)
-    - [Office365](/pages/cookbook/cookbook-o365.md)
+    - [Outlook365](/pages/cookbook/cookbook-o365.md)
  - [HTTP](/pages/cookbook/cookbook-http.md)
     - [Making HTTP Requests](/pages/cookbook/cookbook-http-client.md)
     - [Servicing HTTP Requests](/pages/cookbook/cookbook-http-server.md)
@@ -28,3 +28,5 @@
     - [JSON Data Transforms](/pages/cookbook/cookbook-json-transform.md)
     - [CSV to XML](/pages/cookbook/cookbook-csv-transform.md)
     - [EDI Data Transforms](/pages/cookbook/cookbook-edi-transform.md)
+ - Cloud File Storage
+    - [OneDrive](/pages/cookbook/cookbook-1drive.md)

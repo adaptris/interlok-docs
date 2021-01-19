@@ -13,7 +13,7 @@ small.
 
 * Active Office365 subscription
 * An Azure Active Directory application with application the following
-  permissions, and with [Admin Consent][2] granted:
+  permissions, and with [Admin Consent][1] granted:
   - Files.Read.All
   - Files.ReadWrite.All
   - User.Read
@@ -25,7 +25,7 @@ The OneDrive consumer, producer, and services require the above because:
 * As users cannot interact with daemon applications, incremental
   consent isn't possible
 * Users require a OneDrive, and this requires an
-  [Office365 subscription][3]
+  [Office365 subscription][2]
 
 ## Azure Application Setup
 
@@ -146,9 +146,8 @@ application ID, tenant ID, client secret, username, and a file name.
 
 ## Miscellaneous Notes/URLs
 
-[1]: https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-overview
-[2]: https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-daemon-overview
-[3]: https://docs.microsoft.com/en-us/microsoft-365/enterprise/azure-integration?view=o365-worldwide
+[1]: https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-daemon-overview
+[2]: https://docs.microsoft.com/en-us/microsoft-365/enterprise/azure-integration?view=o365-worldwide
 
 [8]: https://developer.microsoft.com/en-us/graph/graph-explorer
 [9]: https://github.com/Azure-Samples/active-directory-java-native-headless-v2

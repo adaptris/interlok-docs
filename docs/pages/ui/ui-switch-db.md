@@ -35,6 +35,22 @@ dataSource.password=int3rL0cku1DB
 
 ?> **NOTE** The given sql queries are just example an may need to be adjusted to your needs.
 
+## MariaDB Configuration ##
+
+To use MariaDB you can either follow the exact same configuration described above for for MySQL or use MariaDB connector jar that you can find on [MariaDB website](https://mariadb.com/downloads/#connectors)
+
+And the following properties:
+
+```properties
+dataSource.provider=mysql
+dataSource.driverClass=org.mariadb.jdbc.Driver
+dataSource.jdbcURL=jdbc:mariadb://localhost:3306/interlokuidb?autoReconnect=true
+dataSource.user=interlokuidb
+dataSource.password=int3rL0cku1DB
+```
+
+?> **NOTE** The given sql queries are just example an may need to be adjusted to your needs.
+
 ## PostgreSQL Configuration ##
 
 Since version 3.6.3 the web application can be configured to use PostgreSQL (from v9.6).

@@ -4,15 +4,15 @@ Release Date : 2020-03-12
 
 ### Key Highlights
 
-- The [UI Optional Component Page](ui-optional-component-discovery.html) has had many improvements, including:
+- The [UI Optional Component Page](/pages/ui/ui-optional-component-discovery) has had many improvements, including:
     - a reworked details modal that has had lots of new help text added to make things clearer
     - integration of project readme documents into the details window
     - more filtering options added, for better filtering of deprecated and licensed components
-- The [UI Service Tester Page](ui-service-tester.html) has had many improvements, including:
+- The [UI Service Tester Page](/pages/ui/ui-service-tester) has had many improvements, including:
     - A run option has been added to the test item that will run all its test cases.
     - When adding a new Test the Default Config File Source is now selected by default.
     - Improved the naming of tests when importing from existing config
-- The [UI User Preference](ui-user-preferences.html) 'Always attempt to load the active adapter' has now been set to false by default as we continue to promote the use of project based configuration.
+- The [UI User Preference](/pages/ui/ui-user-preferences) 'Always attempt to load the active adapter' has now been set to false by default as we continue to promote the use of project based configuration.
 - Interlok Runtime improvements include:
     - Added support for the Interlok to use the [Prometheus pushgateway](https://github.com/adaptris/interlok-profiler-prometheus)
     - By default, the standard [docker](https://hub.docker.com/r/adaptris/interlok/tags) images will run Interlok as an unprivileged user (You’ve always been able to run interlok as a unprivileged user, It just wasn’t done by default).
@@ -21,7 +21,7 @@ Release Date : 2020-03-12
     - The Default [JSON](https://github.com/adaptris/interlok-json) transformation driver is now "simple-json"
     - [apache-geode](https://github.com/adaptris/interlok-cache/tree/develop/interlok-apache-geode) is now supported as a caching provider
     - Prototype support for [multi-payload messages](https://interlok.adaptris.net/interlok-docs/#/pages/advanced/advanced-multi-payload-messages)
-    - The default Saxon [transformation engine](cookbook-xml-transform.html) has been upgraded from 9.8 to 9.9.x
+    - The default Saxon [transformation engine](/pages/cookbook/cookbook-xml-transform) has been upgraded from 9.8 to 9.9.x
 
 ### Bugs
 

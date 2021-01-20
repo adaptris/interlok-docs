@@ -2,7 +2,7 @@
 
 Release Date : 2018-08-13
 
-This release requires Java 8; Java 7 is no longer supported. Additionally there were some artefact name changes which are documented in [optional components](adapter-optional-components.html).
+This release requires Java 8; Java 7 is no longer supported. Additionally there were some artefact name changes which are documented in [optional components](/pages/user-guide/adapter-optional-components).
 
 !> **IMPORTANT** Use interlok-boot.jar instead of adp-core.jar when running directly from the commandline; also adp-core.jar has been renamed to interlok-core.jar
 

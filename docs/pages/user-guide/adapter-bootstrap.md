@@ -69,7 +69,7 @@ Management components are Interlok components that exist outside of the normal a
 
 #### JMX Component ####
 
-!> **WARNING** By default the JMXMP connector is run without authentication enabled.  For production environments it is highly recommended you enable JMXMP authentication as documented [here](/pages/https://interlok.adaptris.net/interlok/https://interlok.adaptris.net/interlok-docs/advanced-jmx).  Further information on the vulnerabilities of un-protected JMX can be found in [this blog post](https://www.acunetix.com/blog/web-security-zone/old-java-libraries/) by Aleksei Tiurin
+!> **WARNING** By default the JMXMP connector is run without authentication enabled.  For production environments it is highly recommended you enable JMXMP authentication as documented [here](/pages/advanced/advanced-jmx).  Further information on the vulnerabilities of un-protected JMX can be found in [this blog post](https://www.acunetix.com/blog/web-security-zone/old-java-libraries/) by Aleksei Tiurin
 
 If the JMX management component is specified via `managementComponents=jmx` then additional keys in bootstrap.properties determine the behaviour of the component.
 

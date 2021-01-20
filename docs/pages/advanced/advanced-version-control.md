@@ -1,6 +1,6 @@
 Since 3.0.2 Interlok will support configuration that is controlled by a version control systems automagically. Configuration files can be stored in VCS, checked out/updated prior to any management components / adapter instances starting up. The properties mentioned here are in addition to any properties that are normally defined in `bootstrap.properties`; so you will still need an `adapterConfigUrl=` in order to source the configuration file.
 
-The default version control system is for Subversion via the [SVN Client Adapter from subclipse](http://subclipse.tigris.org) and JavaHL which wraps the core Subversion C API. Check the [version control with subversion](/pages/advanced/advanced-vcs-svn) document.
+The default version control system is for Subversion via the [SVN Client Adapter from subclipse](https://github.com/subclipse/svnclientadapter) and JavaHL which wraps the core Subversion C API. Check the [version control with subversion](/pages/advanced/advanced-vcs-svn) document.
 
 ## Start-Up ##
 

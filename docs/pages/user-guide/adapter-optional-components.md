@@ -61,7 +61,7 @@ As additional features are developed and released our public facing repository i
 |com.adaptris | [interlok-jmx-jms-common][]| Provider neutral runtime support for [JMX via JMS or AMQP 1.0](/pages/advanced/advanced-jmx-jms) | 3.10+ | available on [github](https://github.com/adaptris/interlok-jmx-jms)
 |com.adaptris | [interlok-jmx-solace][]| Solace Provider for [JMX via JMS or AMQP 1.0](/pages/advanced/advanced-jmx-jms) | 3.10+ | available on [github](https://github.com/adaptris/interlok-jmx-jms)
 |com.adaptris | [interlok-jmx-sonicmq][]| SonicMQ Provider for [JMX via JMS or AMQP 1.0](/pages/advanced/advanced-jmx-jms) | 3.10+ |
-|com.adaptris | [interlok-jruby][] | Tighter coupling with [jruby](http://jruby.org) as an alternative to [ScriptingService][]/[EmbeddedScriptingService][]|3.6.3+ | available on [github](https://github.com/adaptris/interlok-jruby)
+|com.adaptris | [interlok-jruby][] | Tighter coupling with [jruby](https://www.jruby.org) as an alternative to [ScriptingService][]/[EmbeddedScriptingService][]|3.6.3+ | available on [github](https://github.com/adaptris/interlok-jruby)
 |com.adaptris | [interlok-jsr107-cache][] | Cache implementation that wraps JSR107 cache implementations |3.8.0+ | available on [github](https://github.com/adaptris/interlok-cache)
 |com.adaptris | [interlok-jq][] | JSON transformations using JQ-like syntax |3.7.0+ | available on [github](https://github.com/adaptris/interlok-jq)
 |com.adaptris | [interlok-json][] | Transform JSON data to and from XML | 3.8.0+ |available on [github](https://github.com/adaptris/interlok-json)
@@ -93,8 +93,8 @@ As additional features are developed and released our public facing repository i
 |com.adaptris | ~~[interlok-restful-services][]~~ | ~~[Exposing Workflows as a RESTful service](/pages/user-guide/adapter-hosting-rest)~~|3.8.0 to 3.8.2 only; removed in 3.8.3
 |com.adaptris | [interlok-reliable-messaging][] | Support for ordered and reliable messaging; requires [interlok-licensing][] | 3.8.0+
 |com.adaptris | ~~[interlok-salesforce][]~~ | ~~Integration with Salesforce via WebServices (generally use their REST interface via HTTP/HTTPS instead); requires [interlok-licensing][]~~ | 3.8.0+| Use their REST API instead.
-|com.adaptris | [interlok-sap][] | Integration with SAP via [IDocs](/pages/cookbook/cookbook-sap-idoc.html) or [RFC/BAPI](cookbook-sap-rfc); requires additional jars not automatically delivered; requires [interlok-licensing][] | 3.8.0+
-|com.adaptris | ~~[interlok-schema][]~~ | ~~RelaxNG [schema validation](advanced-configuration-pre-processors.html#schema-validation) for Interlok configuration files~~ | 3.8.0-3.10.2, deprecated since 3.9.0; removed in 3.11.0
+|com.adaptris | [interlok-sap][] | Integration with SAP via [IDocs](/pages/cookbook/cookbook-sap-idoc) or [RFC/BAPI](/pages/cookbook/cookbook-sap-rfc); requires additional jars not automatically delivered; requires [interlok-licensing][] | 3.8.0+
+|com.adaptris | ~~[interlok-schema][]~~ | ~~RelaxNG [schema validation](/pages/advanced/advanced-configuration-pre-processors#schema-validation) for Interlok configuration files~~ | 3.8.0-3.10.2, deprecated since 3.9.0; removed in 3.11.0
 |com.adaptris | [interlok-service-tester][] | Testing services as part of a CI pipeline | 3.5.0+ | available on [github](https://github.com/adaptris/interlok-service-tester)
 |com.adaptris | [interlok-shell][] | Commandline runtime UI based on [CRaSH](http://www.crashub.org) | 3.4.1+, deprecated since 3.11.0 |available on [github](https://github.com/adaptris/interlok-shell)
 |com.adaptris | [interlok-socket][] | Vanilla Socket support; migrated from [interlok-core][] into its own component  | 3.7.0+ | available on [github](https://github.com/adaptris/interlok-socket)
@@ -118,7 +118,7 @@ As additional features are developed and released our public facing repository i
 |com.adaptris | ~~[interlok-web-services][]~~ | ~~[Exposing workflows as webservices](/pages/user-guide/adapter-hosting-ws);~~ | 3.8.0-3.10.2; removed in 3.11.0
 |com.adaptris | [interlok-webspheremq][] | Connection to a [WebsphereMQ instance](/pages/cookbook/cookbook-native-wmq); requires [interlok-licensing][] | 3.8.0+
 |com.adaptris | [interlok-workflow-rest-services][] | [Exposing Workflows as a RESTful service](/pages/user-guide/adapter-hosting-rest) | 3.8.3+|available on [github](https://github.com/adaptris/interlok-workflow-rest-services)
-|com.adaptris | [interlok-xinclude][] | [XInclude pre-processor](advanced-configuration-pre-processors.html#xinclude)| 3.8.0+|available on [github](https://github.com/adaptris/interlok-xinclude)
+|com.adaptris | [interlok-xinclude][] | [XInclude pre-processor](/pages/advanced/advanced-configuration-pre-processors#xinclude)| 3.8.0+|available on [github](https://github.com/adaptris/interlok-xinclude)
 |com.adaptris | ~~[interlok-xa][]~~ | ~~XA support within the Adapter; requires [interlok-licensing][]~~ | 3.4.0 - 3.8.4; removed in 3.9.0 | XA support was split into various sub modules; see below
 |com.adaptris | [interlok-xa-activemq][] | ActiveMQ XA JMS Vendor implementaiton; requires [interlok-licensing][] | 3.9.0+
 |com.adaptris | [interlok-xa-atomikos][] | XA support using Atomikos as the transaction manage; requires [interlok-licensing][] | 3.9.0+ | Use this artefact in conjunction one of the other supported providers
@@ -220,7 +220,7 @@ In release 3.8.0; we renamed all the artefacts so that they consistently started
 |com.adaptris | [adp-restful-services][] | [Exposing Workflows as a RESTful service](/pages/user-guide/adapter-hosting-rest)|3.0.6 - 3.7.3 |  _since 3.8.0_ use [interlok-restful-services][] instead
 |com.adaptris | [adp-reliable-messaging][] | Support for ordered and reliable messaging; requires [adp-licensing][] | until 3.7.3 |  _since 3.8.0_ use [interlok-reliable-messaging][] instead
 |com.adaptris | [adp-salesforce][] | Integration with Salesforce via WebServices (generally use their REST interface via HTTP/HTTPS instead); requires [adp-licensing][] | until 3.7.3 |  _since 3.8.0_ use [interlok-salesforce][] instead
-|com.adaptris | [adp-sap][] | Integration with SAP via [IDocs](/pages/cookbook/cookbook-sap-idoc) or [RFC/BAPI](cookbook-sap-rfc); requires additional jars not automatically delivered; requires [adp-licensing][] | until 3.7.3 |  _since 3.8.0_ use [interlok-sap][] instead.
+|com.adaptris | [adp-sap][] | Integration with SAP via [IDocs](/pages/cookbook/cookbook-sap-idoc) or [RFC/BAPI](/pages/cookbook/cookbook-sap-rfc); requires additional jars not automatically delivered; requires [adp-licensing][] | until 3.7.3 |  _since 3.8.0_ use [interlok-sap][] instead.
 |com.adaptris | [adp-schema][] | RelaxNG [schema validation](/pages/advanced/advanced-configuration-pre-processors#schema-validation) for Interlok configuration files | until 3.7.3 |  _since 3.8.0_ use [interlok-schema][] instead.
 |com.adaptris | [adp-simple-csv][] | Transform a CSV file to XML | until 3.7.3 |  _since 3.8.0_ use [interlok-csv][] instead.
 |com.adaptris | [adp-solace][] | Integration with Solace Systems as a JMS provider; requires additional jars not automatically delivered; requires [adp-licensing][]| until 3.7.3 |  _since 3.8.0_ use [interlok-solace][] instead.

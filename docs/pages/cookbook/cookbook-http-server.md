@@ -7,7 +7,7 @@ As the name would suggest [jetty-embedded-connection][] makes use of the [jetty 
 
 There is currently only a single message consumer type: [jetty-message-consumer][]. The destination for the consumer should match the URI endpoint that you wish to listen on (e.g. /path/to/my/api); wildcards are supported and will be dependent on the servlet implementation of the underlying jetty instance. Parameters from the URI can be stored as metadata (or object metadata) with an optional prefix, as can any HTTP transport headers. If no [jetty-standard-response-producer][] or [jetty-response-service][] is configured as part of the workflow, then a standard HTTP OK response is sent back to the caller with no content.
 
-?> **TIP** You can use [http-request-parameter-converter-service][] to convert _html form post_ payloads into metadata, if required.
+?> **TIP** You can use [form-data-to-metadata][] to convert _html form post_ payloads into metadata, if required.
 
 There are a number of supporting components that make will help you configure a workflow that provides the behaviour you need.
 
@@ -267,7 +267,7 @@ Both [jetty-standard-response-producer][] and [jetty-response-service][] (3.6.5+
 [jetty-routing-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/http/jetty/JettyRoutingService.html
 [jetty-response-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/http/jetty/JettyResponseService.html
 [jetty-standard-response-producer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/http/jetty/StandardResponseProducer.html
-[http-request-parameter-converter-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/http/RequestParameterConverterService.html
+[form-data-to-metadata]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.12-SNAPSHOT/com/adaptris/core/services/metadata/FormDataToMetadata.html
 [embedded-scripting-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/EmbeddedScriptingService.html
 [standard-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/StandardWorkflow.html
 [pooling-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/PoolingWorkflow.html

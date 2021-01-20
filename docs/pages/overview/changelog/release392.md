@@ -4,15 +4,15 @@ Release Date : 2019-10-22
 
 ### Key Highlights
 
-- The [UI Config page](ui-config.html) has had many improvements including:
+- The [UI Config page](/pages/ui/ui-config) has had many improvements including:
     - The validation process now produces warnings for deprecated usage.
-    - The [settings editor](ui-config.html#settings-editor-features) now has a 3 way toggle for viewing different levels of settings (normal, advanced and rare settings) making is easier to configure components.
-    - The [service testing](ui-test-service.html) features now support testing with 'MIME' encoded messages.
-- The [UI Component Search](ui-interlok-component-search.html) has been improved to return more accurate results.
-- A new exciting UI Page, the [Interlok Profiler](ui-profiler-monitor.html) is now available (you need to enable technical preview features), allowing you analysis runtime performance metrics.
+    - The [settings editor](/pages/ui/ui-config?id=settings-editor-features) now has a 3 way toggle for viewing different levels of settings (normal, advanced and rare settings) making is easier to configure components.
+    - The [service testing](/pages/ui/ui-test-service) features now support testing with 'MIME' encoded messages.
+- The [UI Component Search](/pages/ui/ui-interlok-component-search) has been improved to return more accurate results.
+- A new exciting UI Page, the [Interlok Profiler](/pages/ui/ui-profiler-monitor) is now available (you need to enable technical preview features), allowing you analysis runtime performance metrics.
 - New services to provide [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) encryption, decryption, signing, and verification ([interlok-pgp](https://github.com/adaptris/interlok-pgp)).
 - FtpConsumers now support a range of FileFilters, including filters that aren't just 'name based'.
-- Interlok now supports JMS 2.0 asynchronous producers with [XA transactions](advanced-xa-integration.html).
+- Interlok now supports JMS 2.0 asynchronous producers with [XA transactions](/pages/advanced/advanced-xa-integration).
 - New simplified cache services that are simpler to configure and avoid XML bloat.
 - HikariCP is now supported as an implementation for Pooled JDBC Connections.
 - New alterative authentication schemes for [AWS](https://github.com/adaptris/interlok-aws).

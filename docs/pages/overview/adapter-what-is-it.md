@@ -67,7 +67,7 @@ The configuration file `adapter.xml` an XML representation of a graph of Java ob
 
 The standard camel case java naming convention is converted to use a `-` in XML element names, so `uniqueId` becomes `<unique-id>`; all string and primitive types are expressed as elements in XML and conversion is handled automatically. In cases where the property being set is an interface or abstract type, it is necessary to supply the runtime type of the implementation to use; which is where the `class=` attribute comes in (you can see this in the example above).
 
-All standard classes are [annotated with an alias](developer-annotations.html#class-level-annotations) which gives you a friendly name to use rather than the fully qualified class name. You can still use the fully qualified classname if you wish; but package/class names do change from time to time so using the friendly name is preferred. In the example above `fs-consumer` is the friendly name for the class `com.adaptris.core.fs.FsConsumer`.
+All standard classes are [annotated with an alias](/pages/developer/developer-annotations#class-level-annotations) which gives you a friendly name to use rather than the fully qualified class name. You can still use the fully qualified classname if you wish; but package/class names do change from time to time so using the friendly name is preferred. In the example above `fs-consumer` is the friendly name for the class `com.adaptris.core.fs.FsConsumer`.
 
 ## What is a Connection ##
 
@@ -87,7 +87,7 @@ An [AdaptrisMessageConsumer][] is responsible for receiving messages from the ta
 
 ## What is a Service ##
 
-[Services][Service] are a means of applying arbitrary functionality to messages and as such are the key low-level building block in Interlok. Examples of services included encrypting message payloads, applying XSLT transformations and extracting metadata using XPath or regular expressions. It is straightforward to create custom services if no existing off the shelf service meets a particular requirement (see [Custom Services](developer-services.html)).
+[Services][Service] are a means of applying arbitrary functionality to messages and as such are the key low-level building block in Interlok. Examples of services included encrypting message payloads, applying XSLT transformations and extracting metadata using XPath or regular expressions. It is straightforward to create custom services if no existing off the shelf service meets a particular requirement (see [Custom Services](/pages/developer/developer-services)).
 
 Services are often grouped into collections. Simple collections allow a linear list of services to be applied one after the other. More complex collections allow services to be applied conditionally based on configurable criteria, allowing complex processes to be modelled.
 

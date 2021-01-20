@@ -12,7 +12,7 @@ The Configuration page is an easy to use interface for creating or altering Inte
 
 ## Installation ##
 
-The Interlok UI is installed by default when a new installation of the Adaptris Interlok is completed. The web application is reachable using any modern internet browser at http://localhost:8080/adapter-web-gui/. The Adaptris Interlok container will need to be started to be able to use the UI. If no Adapter instances are registered in the web application database the UI will auto-discover the local Adapter running inside the Interlok container.
+The Interlok UI is installed by default when a new installation of the Adaptris Interlok is completed. The web application is reachable using any modern internet browser at http://localhost:8080/interlok/. The Adaptris Interlok container will need to be started to be able to use the UI. If no Adapter instances are registered in the web application database the UI will auto-discover the local Adapter running inside the Interlok container.
 
 
 ### JMX Service URL ###

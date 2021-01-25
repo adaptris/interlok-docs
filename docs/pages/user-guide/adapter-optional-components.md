@@ -93,8 +93,8 @@ As additional features are developed and released our public facing repository i
 | com.adaptris | interlok-service-tester-wiremock | Interlok Service Tester/Wiremock | Wiremock boostrapper for service-tester | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-service-tester) |
 | com.adaptris | interlok-service-tester-xml | Interlok Service Tester/XML | XML Assertions for service-tester using xmlunit | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-service-tester) |
 | com.adaptris | interlok-profiler-prometheus | Interlok/Prometheus | Profiling with Prometheus; metrics, profiling | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-profiler-prometheus) |
-| ~~com.adaptris~~ | ~~interlok-salesforce~~ | ~~Interlok/Salesforce Integration~~ | ~~Interlok/Salesforce Integration via Webservices~~ | undefined | Requires License; Deprecated: Since 3.10.2, use Salesforce REST API instead.|
-| com.adaptris | interlok-sap | Interlok/SAP Integration | Interlok/SAP Integration; Requires additional jars not automatically delivered | undefined | Requires License; |
+| ~~com.adaptris~~ | ~~interlok-salesforce~~ | ~~Interlok/Salesforce Integration~~ | ~~Interlok/Salesforce Integration via Webservices~~ | | Requires License; Deprecated: Since 3.10.2, use Salesforce REST API instead.|
+| com.adaptris | interlok-sap | Interlok/SAP Integration | Interlok/SAP Integration; Requires additional jars not automatically delivered | | Requires License; |
 | com.adaptris | interlok-socket | Interlok/TCP Socket Connector | Roll your own protocol over vanilla TCP sockets | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-socket) |
 | ~~com.adaptris~~ | ~~interlok-vcs-command-line~~ | ~~Interlok Integration with commandline VCS~~ | ~~Checkout config via a configurable executable on startup~~ | 3.5.1+ | Deprecated: Unloved, git pretty much won so we need to get over it|
 | com.adaptris | interlok-webservice-cxf | Interlok Webservices via CXF | Execute webservices using Apache CXF | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-cxf) |
@@ -170,6 +170,34 @@ Optional components javadocs can be opened in two ways:
 - **The javadocs are in a jar file:** Open your browser at <http://localhost:8080/interlok/javadocs/your-component.jar/index.html> **e.g.** <http://localhost:8080/interlok/javadocs/optional/adp-swiftmq-3.0.3-RELEASE-javadoc.jar/index.html>.
 
 If you've added an optional components following the steps explained above you can copy the javadocs jar file into `${adapter.home}/docs/javadocs` to be able to access it via the browser. You will have to restart your adapter to be able to access the javadocs.
+
+
+## Optional Components that have been removed/deprecated ##
+
+| GroupID | ArtifactID | Description | Versions | Notes
+|----|----|----|----|----|
+|com.adaptris | ~~[interlok-cirrus-db-webapp][]~~ | ~~Provides access to the cirrus database for web applications~~ | 3.8.0-3.10.2; removed in 3.11.0 | Now retired; you should have no need for this.
+|com.adaptris | ~~[interlok-cirrus-db][]~~ | ~~Provides access to the cirrus database for adapter services~~ | 3.8.0-3.10.2; removed in 3.11.0 | Now retired; you should have no need for this
+|com.adaptris | ~~[interlok-cirrus-services][]~~ | ~~Provides Cirrus routing services; requires [interlok-licensing][]~~ | 3.8.0-3.10.2; removed in 3.11.0 | Now retired; you should have no need for this
+|com.adaptris | ~~[interlok-config-conditional][]~~ | ~~Conditional branching and looping~~ | 3.7.3 - 3.8.4 only; merged into [interlok-core][] from 3.9.0 onwards; removed as an artefact in 3.11.0 | available on [github](https://github.com/adaptris/interlok-config-conditional)
+|com.adaptris | ~~[interlok-drools][]~~ | ~~Integration with JBoss Rules;~~ | 3.8.0-3.10.2; removed in 3.11.0; use [interlok-kie][]| available on [github](https://github.com/adaptris/interlok-drools)
+|com.adaptris | ~~[interlok-elastic-search][]~~ | ~~Integration with ElasticSearch via the v2 API (requires [interlok-csv][])~~ | 3.4.1 - 3.10.2; removed in 3.11.0; use [interlok-elastic-rest][] | available on [github](https://github.com/adaptris/interlok-elasticsearch)
+|com.adaptris | ~~[interlok-es5][]~~ | ~~Integration with ElasticSearch using v5 API (requires [interlok-csv][])~~ | 3.5.1- 3.10.2; removed in 3.11.0; use  [interlok-elastic-rest][] | available on [github](https://github.com/adaptris/interlok-es5)
+|com.adaptris | ~~[interlok-es-rest][]~~ | ~~Integration with ElasticSearch via their high level REST client (requires [interlok-csv][])~~ | 3.8.0-3.10.2; removed in 3.11.0; use  [interlok-elastic-rest][] | available on [github](https://github.com/adaptris/interlok-es-rest)
+|com.adaptris | ~~[interlok-hornetq][]~~ | ~~Connect to HornetQ JMS (will become obsolete as HornetQ is merged into ActiveMQ)~~ | 3.8.0-3.10.2; removed in 3.11.0
+|com.adaptris | ~~[interlok-interfax][]~~ | ~~Integration with the Java FAX API; requires [interlok-licensing][]~~ | 3.8.0-3.10.2; removed in 3.11.0
+|com.adaptris | ~~[interlok-jmx-jms][]~~| Support for [JMX via JMS or AMQP 1.0](/pages/advanced/advanced-jmx-jms) | 3.8.0+; removed in 3.10.0|
+|com.adaptris | ~~[interlok-legacyhttp][]~~ | ~~servicing HTTP requests without Jetty (Java 7 Compatibile where base Interlok Version is)~~ | 3.6.4-3.10.2; removed in 3.11.0 | available on [github](https://github.com/adaptris/interlok-legacyhttp)
+|com.adaptris | ~~[interlok-msmq][]~~ | ~~Connect to MSMQ via ActiveX; requires [interlok-licensing][]~~| 3.8.0-3.10.2; removed in 3.11.0| Requires a 32bit JVM due to JNI.
+|com.adaptris | ~~[interlok-profiler-failover][]~~ | ~~Running an adapter in failover mode; requires [interlok-profiler][]~~| 3.8.0 only; removed in 3.8.1
+|com.adaptris | ~~[interlok-restful-services][]~~ | ~~[Exposing Workflows as a RESTful service](/pages/user-guide/adapter-hosting-rest)~~|3.8.0 to 3.8.2 only; removed in 3.8.3
+|com.adaptris | ~~[interlok-salesforce][]~~ | ~~Integration with Salesforce via WebServices (generally use their REST interface via HTTP/HTTPS instead); requires [interlok-licensing][]~~ | 3.8.0+| Use their REST API instead.
+|com.adaptris | ~~[interlok-schema][]~~ | ~~RelaxNG [schema validation](/pages/advanced/advanced-configuration-pre-processors#schema-validation) for Interlok configuration files~~ | 3.8.0-3.10.2, deprecated since 3.9.0; removed in 3.11.0
+|com.adaptris | ~~[interlok-stackify][]~~ | ~~Supports Stackify Profiling; requires [interlok-profiler][]~~ |3.8.0 only, removed in 3.8.1|available on [github](https://github.com/adaptris/interlok-stackify)
+|com.adaptris | ~~[interlok-webservice-external][]~~ | ~~Accessing [external webservices](/pages/user-guide/adapter-executing-ws); requires [interlok-licensing][]~~ | 3.8.0-3.10.2; removed in 3.11.0
+|com.adaptris | ~~[interlok-web-services][]~~ | ~~[Exposing workflows as webservices](/pages/user-guide/adapter-hosting-ws);~~ | 3.8.0-3.10.2; removed in 3.11.0
+|com.adaptris | ~~[interlok-xa][]~~ | ~~XA support within the Adapter; requires [interlok-licensing][]~~ | 3.4.0 - 3.8.4; removed in 3.9.0 | XA support was split into various sub modules; see below
+
 
 ## Optional Components prior to 3.7.3 ##
 

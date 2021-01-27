@@ -4,6 +4,10 @@ Release Date : 2021-01-26
 
 The 3.12.0 release is a small release that focused on some dependency upgrades.
 
+### Known Issues
+
+- _2021-01-27_ - There is an issue with the [DatabaseConnection](https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.12-SNAPSHOT/com/adaptris/core/jdbc/DatabaseConnection.html), during this release the field [testStatement](https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.12-SNAPSHOT/com/adaptris/core/jdbc/DatabaseConnection.html#setTestStatement-java.lang.String-) was marked as Deprecated, but it was left as a required field. This means you can not blank this deprecated field. You can however, leave a test statement in and have 'Always Validate Connection' set to false (which is the default). This issue is being tracked in 'INTERLOK-3580'.
+
 ### Key Highlights
 
 - Added STS (Security Token Service) support for building AWS (Amazon Web Services) credentials

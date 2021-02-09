@@ -2,17 +2,17 @@
 
 ## Failover Mode ##
 
-When multiple instances of Interlok start in failover mode, only one single instance, known as the master, will fully start up ready to process messages.  All other Interlok instances in the cluster will sit and wait in a dormant state (slave) until they are promoted to the master.
+When multiple instances of Interlok start in failover mode, only one single instance, known as the primary, will fully start up ready to process messages.  All other Interlok instances in the cluster will sit and wait in a dormant state (secondary) until they are promoted to the primary.
 
-In failover mode all instances are started as slaves.
+In failover mode all instances are started as secondaries.
 
-Upon start-up of multiple instances in failover mode, if you have not configured the slave position for each, they will decide the order themselves.
+Upon start-up of multiple instances in failover mode, if you have not configured the secondary position for each, they will decide the order themselves.
 
-The instance nominated as slave at position 1 will be the next instance to promote itself to master.  If there is currently no master instance running this slave will promote itself immediately.
+The instance nominated as secondary at position 1 will be the next instance to promote itself to primary.  If there is currently no primary instance running this secondary will promote itself immediately.
 
-Should the master stop communicating with the other instances it is then assumed the master instance has gone down, in which case as soon as each slave recognises the lack of communication from the master, the slave in position 1 will promote itself to master.  Each additional slave in positions 2 and above will each promote themselves up one position.
+Should the primary stop communicating with the other instances it is then assumed the primary instance has gone down, in which case as soon as each secondary recognises the lack of communication from the primary, the secondary in position 1 will promote itself to primary.  Each additional secondary in positions 2 and above will each promote themselves up one position.
 
-If you start new slaves at any time, all slaves in the cluster may decide to re-order themselves to accomodate the new slave.
+If you start new secondaries at any time, all secondaries in the cluster may decide to re-order themselves to accomodate the new secondary.
 
 Each instance in the cluster constantly communicates with every other instance in the cluster via multicast or direct TCP, dpending on your configuration, specified below.
 
@@ -219,7 +219,7 @@ In addition to the properties specified above depending on the chosen mode, ther
 
 | Property | Notes |
 | failover.tcp.host | Optional property, only used with Direct TCP mode that specifies the host name or IP address of the current Interlok instance.  If not specified we will try to determine the local IP address. |
-| failover.slave.position | if you wish to preconfigure the slave position in the hierarchy then define this, otherwise one will be assigned |
+| failover.secondary.position | if you wish to preconfigure the secondary position in the hierarchy then define this, otherwise one will be assigned |
 | failover.ping.interval.seconds | How often each instance will attempt to communicate with each other, defaults to 3 seconds |
 | interval.instance.timeout.seconds | How long before an instance is deemed as no longer available, defaults to 20 seconds |
 
@@ -236,7 +236,7 @@ java -Dfailover.tcp.port=15555 -Dfailover.tcp.peers=localhost:15556;localhost:15
 
 ## Manual Failover ##
 
-Should you wish to stop the master instance running; either through the JMX API or the Web UI, the slave at position 1 is expected to promote itself to master.
+Should you wish to stop the primary instance running; either through the JMX API or the Web UI, the secondary at position 1 is expected to promote itself to primary.
 
 To enable this functionality you must change the default event handler in your Interlok configuration.  This is simply changed like this (notice the failover-event-handler);
 
@@ -246,7 +246,7 @@ To enable this functionality you must change the default event handler in your I
   <event-handler class="failover-event-handler"/>
 ```
 
-NOTE:  If you manually force a failover, you will not be able to re-start the master instance through the JMX API or Web UI.  The original master instance will need a full restart.
+NOTE:  If you manually force a failover, you will not be able to re-start the primary instance through the JMX API or Web UI.  The original primary instance will need a full restart.
 
 ## Runtime Logging ##
 
@@ -255,34 +255,34 @@ Once you have put it all together; then when you start your Interlok instances, 
 All Interlok instances in the failover cluster will include the following log lines;
 
 ```
-INFO  [main] [FailoverBootstrap] Starting Interlok instance in failover mode as a slave.
-INFO  [main] [FailoverBootstrap] Slave position 1
+INFO  [main] [FailoverBootstrap] Starting Interlok instance in failover mode as a secondary.
+INFO  [main] [FailoverBootstrap] Secondary position 1
 ```
 
-If you do not specify the slave positions, then you will see logging like this;
+If you do not specify the secondary positions, then you will see logging like this;
 
 ```
-INFO  [main] [FailoverBootstrap] Starting Interlok instance in failover mode as a slave.
-INFO  [main] [FailoverBootstrap] No slave position has been set, one will be allocated.
-INFO  [Failover Monitor Thread] [FailoverManager] Assigning myself slave position 1
+INFO  [main] [FailoverBootstrap] Starting Interlok instance in failover mode as a secondary.
+INFO  [main] [FailoverBootstrap] No secondary position has been set, one will be allocated.
+INFO  [Failover Monitor Thread] [FailoverManager] Assigning myself secondary position 1
 ```
 
-Only the master instance (slave at position 1, after it has promoted itself) will additionally show the following lines in the log file;
+Only the primary instance (secondary at position 1, after it has promoted itself) will additionally show the following lines in the log file;
 
 ```
-TRACE [Failover Monitor Thread] [FailoverManager] Master not available, promoting myself to master.
-INFO  [Failover Monitor Thread] [FailoverBootstrap] Promoting to MASTER
+TRACE [Failover Monitor Thread] [FailoverManager] Primary not available, promoting myself to primary.
+INFO  [Failover Monitor Thread] [FailoverBootstrap] Promoting to PRIMARY
 ```
 
 If you set the JVM parameter interlok.failover.debug to true, then periodically each instance in the failover cluster will report it's state and information (at TRACE level logging) about all known other online instances.
 
-Example below shows the logging from the slave at position 1, where 4 instances are in the cluster; a master and 3 slaves.
+Example below shows the logging from the secondary at position 1, where 4 instances are in the cluster; a primary and 3 secondaries.
 
 ```
 TRACE [Failover Monitor Thread] [com.adaptris.failover.FailoverManager] com.adaptris.failover.FailoverManager@7ce58397[
-  Self=OnlineInstance[ID=1f0eab39-e917-4b02-b987-bf37d9620c3d,Type=slave,Position=1,last=Thu Jan 01 01:00:00 GMT 1970]
-  master=OnlineInstance[ID=10cc907e-f4ca-4cb4-b96f-9547035028c4,Type=master,Position=0,last=Mon Jul 23 12:34:39 BST 2018]
-  slaves=[OnlineInstance[ID=9c9fc821-f257-420c-bffa-6838b4baecbc,Type=slave,Position=2,last=Mon Jul 23 12:34:40 BST 2018], OnlineInstance[ID=b22c7478-dafd-4d95-af1d-3b13c8cc9080,Type=slave,Position=3,last=Mon Jul 23 12:34:41 BST 2018]]
+  Self=OnlineInstance[ID=1f0eab39-e917-4b02-b987-bf37d9620c3d,Type=secondary,Position=1,last=Thu Jan 01 01:00:00 GMT 1970]
+  primary=OnlineInstance[ID=10cc907e-f4ca-4cb4-b96f-9547035028c4,Type=primary,Position=0,last=Mon Jul 23 12:34:39 BST 2018]
+  secondaries=[OnlineInstance[ID=9c9fc821-f257-420c-bffa-6838b4baecbc,Type=secondary,Position=2,last=Mon Jul 23 12:34:40 BST 2018], OnlineInstance[ID=b22c7478-dafd-4d95-af1d-3b13c8cc9080,Type=secondary,Position=3,last=Mon Jul 23 12:34:41 BST 2018]]
 ]
 
 ```

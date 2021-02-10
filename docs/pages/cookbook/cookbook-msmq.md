@@ -1,10 +1,10 @@
 # Integrating with MSMQ
 
-!> **IMPORTANT** This component has been removed since 3.10.2 and has been replaced by interlok-msmq-javonet which does require a third party license.
-
 > **Summary:** This document summarises configurations for consuming and producing messages using MSMQ. We will also describe some best practices related to the MSMQ infrastructure. It assumed that you have a passing knowledge of Interlok and its configuration with a basic understanding of MSMQ.
 
 !> **IMPORTANT** in 3.8.0; adp-msmq was renamed to interlok-msmq
+
+!> **IMPORTANT** The interlok-msmq component has been removed since 3.10.2 and has been replaced by interlok-msmq-javonet which will require a third party license. The configuration discussions here primarily relate to the legacy `interlok-msmq` component but can be applied to the `interlok-msmq-javonet` package since they are broadly functionally equivalent.
 
 ## Getting Started ##
 

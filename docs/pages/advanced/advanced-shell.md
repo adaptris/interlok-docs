@@ -1,6 +1,6 @@
 Interlok supports an integrated Java shell called [CRaSH][]. You can use [CRaSH][] to `ssh` into your running interlok instance.
 
-!> **IMPORTANT** This is deprecated notice because Interlok Shell will not work with Java 11, and the underlying libraries are well out of date
+!> **IMPORTANT** Since interlok-shell will not work with Java 11; this will be removed in the 4.x release onwards.
 
 ## Usage ##
 

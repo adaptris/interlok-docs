@@ -2,6 +2,9 @@
 
 > **Summary:** Configure Interlok to automatically check out config from VCS when starting.
 
+!> **IMPORTANT** This comment was removed in 4.x with no replacement. The direction of travel with containerisation means that having checking out configuration _on startup_ is largely a concept that is past its sell-by-date.
+
+
 ## Configuration ##
 
 [interlok-vcs-command-line][] allows you to configure an arbitrary version control system (rather than the optional [git](/pages/advanced/advanced-vcs-git) or [subversion](/pages/advanced/advanced-vcs-svn)) for use with the adapter. You will have to make sure that the commandline executable is available to the adapter; and that it already works from the commandline. Authentication will not be handled directly by interlok.

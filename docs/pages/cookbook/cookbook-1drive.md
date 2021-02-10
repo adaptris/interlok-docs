@@ -1,7 +1,5 @@
 > **Summary:** interlok-azure-onedrive provides a way to use Interlok with OneDrive
 
-# Introduction
-
 The OneDrive component provides a consumer and producer, as well as the
 following services: upload, download, transform. They enable the
 reading/writing of files on a OneDrive, via Azure and the Graph API. The
@@ -143,8 +141,6 @@ application ID, tenant ID, client secret, username, and a file name.
      </azure-one-drive-document-upload-service>
     <azure-one-drive-document-download-service>
 ```
-
-## Miscellaneous Notes/URLs
 
 [1]: https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-daemon-overview
 [2]: https://docs.microsoft.com/en-us/microsoft-365/enterprise/azure-integration?view=o365-worldwide

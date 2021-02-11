@@ -1,3 +1,13 @@
+## Version 3.12.0.1 ##
+
+Release Date : 2021-02-11
+
+The 3.12.0.1 release resolves a single issue; It does not have an installer, and only affects the following artifact jars since they are built from the same multi-module repository: _interlok-boot.jar, interlok-client.jar, interlok-client-jmx.jar, interlok-common.jar, interlok-core.jar, interlok-core-apt.jar, interlok-logging.jar_
+
+If you're affected by this issue, then you should update your dependency tree to use `com.adaptris:interlok-core:3.12.0.1-RELEASE`
+
+- 'INTERLOK-3702' - retry-via-jetty setting reporting-endpoint does not work
+
 ## Version 3.12.0 ##
 
 Release Date : 2021-01-26

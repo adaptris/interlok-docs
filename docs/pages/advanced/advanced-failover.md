@@ -218,10 +218,11 @@ java -cp $CLASSPATH com.adaptris.failover.SimpleBootstrap bootstrap.properties
 In addition to the properties specified above depending on the chosen mode, there are a few other properties that can also be set;
 
 | Property | Notes |
-| failover.tcp.host | Optional property, only used with Direct TCP mode that specifies the host name or IP address of the current Interlok instance.  If not specified we will try to determine the local IP address. |
-| failover.secondary.position | if you wish to preconfigure the secondary position in the hierarchy then define this, otherwise one will be assigned |
-| failover.ping.interval.seconds | How often each instance will attempt to communicate with each other, defaults to 3 seconds |
-| interval.instance.timeout.seconds | How long before an instance is deemed as no longer available, defaults to 20 seconds |
+|----|----|
+| failover.tcp.host | Optional property, only used with Direct TCP mode that specifies the host name or IP address of the current Interlok instance.  If not specified we will try to determine the local IP address.|
+| failover.secondary.position | if you wish to preconfigure the secondary position in the hierarchy then define this, otherwise one will be assigned|
+| failover.ping.interval.seconds | How often each instance will attempt to communicate with each other, defaults to 3 seconds|
+| interval.instance.timeout.seconds | How long before an instance is deemed as no longer available, defaults to 20 seconds|
 
 
 #### Example Java system properties ####

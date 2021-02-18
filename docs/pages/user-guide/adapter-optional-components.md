@@ -115,7 +115,7 @@ As additional features are developed and released our public facing repository i
 | com.adaptris | interlok-stax | Interlok/STaX support | STaX support within Interlok | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-stax) |
 | com.adaptris | interlok-swift | Interlok/SWIFT transforms | Handle transforms to and from the SWIFT format | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-swift) |
 | com.adaptris | interlok-swiftmq | Interlok/SwiftMQ integration | Using SwiftMQ as a JMS provider | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-variodoc | Interlok/Variodoc integration | Interlok Variodoc integration for Farm machinery. | 3.8.0+ | Requires License; |
+| ~~com.adaptris~~ | ~~interlok-variodoc~~ | ~~Interlok/Variodoc integration~~ | ~~Interlok Variodoc integration for Farm machinery.~~ | 3.8.0+ | Requires License; Deprecated: Removed in Interlok 4.0 |
 | com.adaptris | interlok-xinclude | Interlok Config Pre-Processor: xinclude/xslt support | XSLT and XInclude Config Pre-processors | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-xinclude) |
 | com.adaptris | interlok-xml-security | Interlok XML security | Services that support JSR106 XML Encryption standard. | 3.8.0+ | Requires License; |
 | com.adaptris | interlok-xa-solace | Interlok/XA-Solace Implementation | Solace specific XA Vendor implementations | 3.9.0+ | Requires License; |

@@ -1,3 +1,5 @@
+!> **IMPORTANT** since 4.0.0; This feature has been removed, and is only included as an historical archive
+
 > **Summary:** Since 3.9.2 the gui has a page that allows you to monitor running adapters using the Interlok Profiler.
 
 ## Prerequisite ##

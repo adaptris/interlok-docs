@@ -1,4 +1,5 @@
 !> **IMPORTANT** since 3.11.0; This has been removed, and is only included as an historical archive
+
 ?> **NOTE** This is only useful if you want to inject messages into an arbitrary workflow. Use a normal jetty based workflow if that is the intended endpoint
 
 Generally, if you are using Interlok as an HTTP endpoint, then you would just use one of the standard HTTP consumers as part of a normal workflow ([Servicing HTTP requests](/pages/cookbook/cookbook-http-server)); however, in certain situations it can be useful to expose an arbitrary workflow (e.g. a JMS bridge) so that you can inject messages into the workflow without doing additional configuration. This requires that you enable the built-in jetty instance, and to use a custom web application.

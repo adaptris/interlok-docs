@@ -6,121 +6,117 @@ As additional features are developed and released our public facing repository i
 
 | GroupID | ArtifactID | Name | Description | Versions | Notes
 |----|----|----|----|----|----|
-| com.adaptris | adaptris-saxon-extensions | Adaptris Saxon Extensions | Custom transformation support via Saxon | 3.6.6+ | Requires License; |
-| com.adaptris | interlok-apache-geode | Interlok Apache Geode/Integration | Using Apache Geode as a cache provider within Interlok | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-cache) |
-| ~~com.adaptris~~ | ~~interlok-as2~~ | ~~Interlok AS2~~ | ~~Services that support AS2 HTTP transport functionality.~~ | 3.8.0+ | Requires License; Deprecated: Will be removed post interlok 4.0; switch to using an alternative such as OpenAS2|
-| ~~com.adaptris~~ | ~~interlok-actional-interceptor~~ | ~~Interlok/Actional Integration~~ | ~~Interlok instrumentation with Actional; Requires additional jars not automatically delivered~~ | 3.8.0+ | Deprecated: Will be removed post interlok 4.0|
-| ~~com.adaptris~~ | ~~interlok-actional-stabiliser~~ | ~~Interlok/Actional Stabiliser~~ | ~~Interlok accessing the Actional Stabiliser; Requires additional jars not automatically delivered~~ | 3.8.0+ | Requires License; Deprecated: Will be removed post interlok 4.0|
-| com.adaptris | interlok-activemq | Interlok/ActiveMQ Broker | Embedded ActiveMQ management component | 3.6.0+ | [available on github](https://github.com/adaptris/interlok-activemq) |
-| com.adaptris | interlok-amqp | Interlok/AMQP | Connect to a AMQP 0.9.0/1.0 Provider via JMS | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-amqp) |
-| com.adaptris | interlok-artemis | Interlok/Apache Artemis Broker | Embedded Apache Artemis management component | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-artemis) |
-| com.adaptris | interlok-apache-http | Interlok/Apache HTTP | HTTP(s) using Apache http client | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-apache-http) |
-| com.adaptris | interlok-as400 | Interlok/AS400 integration | Interacting with AS400 systems | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-activemq | Interlok Management/ActiveMQ | Embedded ActiveMQ management component | 3.6.0+ | [available on github](https://github.com/adaptris/interlok-activemq) |
+| com.adaptris | interlok-amqp | Interlok Messaging/AMQP | Treating a AMQP 0.9.0/1.0 Provider as a JMS via Apache QPID | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-amqp) |
+| com.adaptris | interlok-apache-geode | Interlok Cache/Apache Geode | Using Apache Geode as a cache provider within Interlok | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-cache) |
+| com.adaptris | interlok-apache-http | Interlok HTTP/Apache HTTP | HTTP(s) using Apache http client | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-apache-http) |
+| com.adaptris | interlok-artemis | Interlok Management/Artemis | Embedded Apache Artemis management component | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-artemis) |
+| com.adaptris | interlok-as400 | Interlok OS/AS400 | Interacting with AS400 systems | 3.8.0+ | Requires License; |
 | com.adaptris | interlok-aws-common | Interlok AWS/Common | Common components for accessing AWS | 3.3.0+ | [available on github](https://github.com/adaptris/interlok-aws) |
 | com.adaptris | interlok-aws-kinesis | Interlok AWS/Kinesis | Components that interact AWS Kinesis data streams | 3.9.1+ | [available on github](https://github.com/adaptris/interlok-aws) |
 | com.adaptris | interlok-aws-kms | Interlok AWS/KMS | Components that interact with AWS KMS to perform sign/encrypt/decrypt/verify operations | 3.10.1+ | |
 | com.adaptris | interlok-aws-s3 | Interlok AWS/S3 | Services that interact (upload/download/delete) with AWS S3 Buckets and artefacts | 3.3.0+ | [available on github](https://github.com/adaptris/interlok-aws) |
 | com.adaptris | interlok-aws-sns | Interlok AWS/SNS | Publishing to AWS SNS topics | 3.7.2+ | [available on github](https://github.com/adaptris/interlok-aws) |
-| com.adaptris | interlok-aws-sqs | Interlok AWS/SQS | Publishing & Consuming from AWS S3 | 3.3.0+ | [available on github](https://github.com/adaptris/interlok-aws) |
-| com.adaptris | interlok-azure-core | Interlok Azure | Components that interact Outlook/Exchange in Office365 | 3.11.1+ | [available on github](https://github.com/adaptris/interlok-azure) |
-| com.adaptris | interlok-azure-cosmosdb | Interlok Azure/Cosmos DB | Components that interact Azure CosmosDB | 3.9.2+ | [available on github](https://github.com/adaptris/interlok-azure) |
-| com.adaptris | interlok-azure-datalake | Interlok Azure/Data Lake | Components that interact with Azure Data Lake | 3.11.1+ | [available on github](https://github.com/adaptris/interlok-azure) |
-| com.adaptris | interlok-azure-mail | Interlok Azure/Outlook | Components that interact Outlook/Exchange in Office365 | 3.11.1+ | [available on github](https://github.com/adaptris/interlok-azure) |
-| ~~com.adaptris~~ | ~~interlok-container~~ | ~~Interlok Archive Container~~ | ~~Multiple adapters in a single JVM~~ | 3.6.1+ | [available on github](https://github.com/adaptris/interlok-container) Deprecated: Deprecated, for removal in Interlok 4.0.0, since docker arrived, this component is unloved/not needed|
-| com.adaptris | interlok-azure-onedrive | Interlok Azure/OneDrive | Components that interact Onedrive | 3.11.1+ | [available on github](https://github.com/adaptris/interlok-azure) |
-| com.adaptris | interlok-edi-legacy | Interlok EDI Legacy transformations | Interlok EDI Legacy transformations | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-ehcache | Interlok EhCache/Integration | Using ehcache2.x as a cache provider within Interlok | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-cache) |
-| com.adaptris | interlok-elastic-common | Interlok Elastic/Common | Elasticsearch components that are not transport specific | 3.9.1+ | [available on github](https://github.com/adaptris/interlok-elastic) |
-| com.adaptris | interlok-cassandra | Interlok/Cassandra | Services to interace with Cassandra | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-cassandra) |
-| com.adaptris | interlok-cluster-manager | Interlok/Cluster Management | Management component for reporting on cluster instances. | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-cluster-manager) |
-| com.adaptris | interlok-csv | Interlok/CSV | Handling CSV files using Interlok; transform to XML, splitting, JDBC utilities | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-csv) |
-| com.adaptris | interlok-edi-stream | Interlok/EDI | Interlok EDI Transformation services with caching of definitions | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-csv-json | Interlok/JSON+CSV conversions | Transform CSV into JSON and vice versa | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-csv-json) |
-| com.adaptris | interlok-elastic-rest | Interlok Elastic/REST client | Producing to Elasticsearch using their REST api | 3.9.1+ | [available on github](https://github.com/adaptris/interlok-elastic) |
-| com.adaptris | interlok-failover | Interlok Failover | Interlok can start in a failover cluster. | 3.6.6+ | |
-| com.adaptris | interlok-filesystem | Interlok File System | Perform filesystem operations within Interlok | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-filesystem) |
-| com.adaptris | interlok-gcloud-pubsub | Interlok Google Cloud Pub/Sub | Consuming and producing messages via Google Cloud Pub/Sub | 3.6.3+ | [available on github](https://github.com/adaptris/interlok-gcloud-pubsub) |
-| com.adaptris | interlok-excel | Interlok/Excel (POI) integration | Extract data from an Excel spreadsheet | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-excel) |
-| com.adaptris | interlok-exec | Interlok/Exec management component | Management Component that starts arbitrary programs as part of Interlok bootstrap | 3.8.2+ | [available on github](https://github.com/adaptris/interlok-exec) |
-| com.adaptris | interlok-expressions | Interlok/Expressions | Simple mathematical expressions inside your adapter.xml | 3.6.4+ | [available on github](https://github.com/adaptris/interlok-expressions) |
-| com.adaptris | interlok-flatfile | Interlok/Flatfile Transform | Transformation of Flat files into XML | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-flatfile) |
-| com.adaptris | interlok-hpcc | Interlok/HPCC Integration | Interlok/HPCC Integration via dfuplus executable | 3.6.1+ | [available on github](https://github.com/adaptris/interlok-hpcc) |
-| com.adaptris | interlok-flyway | Interlok/JDBC Connection with Flyway | Custom JDBC Connection implementation that incorporates Flyway database migration | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-flyway) |
-| com.adaptris | interlok-jmx-activemq | Interlok JMX/JMS ActiveMQ provider | JMX/JMS provide for ActiveMQ | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-jmx-jms) |
-| com.adaptris | interlok-jmx-amqp | Interlok JMX/JMS AMQP provider via QPID | JMX/JMS AMQP Provider via Apache QPID | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-jmx-jms) |
-| com.adaptris | interlok-jmx-jms-common | Interlok JMX/JMS Common | JMX/JMS code shared across providers | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-jmx-jms) |
-| com.adaptris | interlok-jmx-jms-stubs | Interlok JMX/JMS Test Stubs | Test scaffolding for JMX/JMS Tests; of no use at Interlok runtime | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-jmx-jms) |
-| com.adaptris | interlok-jclouds-blobstore | Interlok/Apache jclouds blobstore | Use Apache jclouds to access your cloud storage | 3.7.3+ | [available on github](https://github.com/adaptris/interlok-jclouds) |
-| com.adaptris | interlok-jclouds-common | Interlok/Apache jclouds common components | Common classes for interacting with cloud providers via Apache JClouds | 3.10.2+ | [available on github](https://github.com/adaptris/interlok-jclouds) |
-| com.adaptris | interlok-jclouds-aws-sts | Interlok/Apache JClouds STS | Connect using Apache JClouds to AWS Services using AWS Secure Token Service | 3.10.2+ | [available on github](https://github.com/adaptris/interlok-jclouds) |
-| ~~com.adaptris~~ | ~~interlok-ironmq~~ | ~~Interlok/IronMQ~~ | ~~Connect to IronMQ (cloud-based message queuing service).~~ | 3.0.0+ | Deprecated: Since IronMQ has AWS SQS API support; you could just use interlok-aws-sqs instead|
-| com.adaptris | interlok-jms-sonicmq | Interlok/JMS - SonicMQ | Using SonicMQ as a JMS Provider | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-jms-oracleaq | Interlok/OracleAQ integration | Using OracleAQ as a JMS provider | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-jmx-solace | Interlok JMX/JMS Solace JMS provider | JMX/JMS Provider for Solace JMS | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-jmx-jms) |
-| com.adaptris | interlok-json-streaming | Interlok JSON Streaming | Everything JSON Streaming related | 3.8.2+ | [available on github](https://github.com/adaptris/interlok-json) |
-| com.adaptris | interlok-jsr107-cache | Interlok JSR107 Caching | Using any JSR107 cache implementation as a cache provider within Interlok | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-cache) |
-| com.adaptris | interlok-kie | Interlok KIE | Using KIE/Drools with Interlok services | 3.8.2+ | [available on github](https://github.com/adaptris/interlok-kie) |
-| com.adaptris | interlok-kafka | Interlok/Apache Kafka | Using Apache Kafka as a messaging platform | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-kafka) |
-| com.adaptris | interlok-jruby | Interlok/JRuby Integration | Tighter coupling with JRuby rather than via JSR223 | 3.6.3+ | [available on github](https://github.com/adaptris/interlok-jruby) |
-| com.adaptris | interlok-json | Interlok/JSON | Everything JSON related; transformations, schemas, json-path (xpath-alike), splitting | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-json) |
-| com.adaptris | interlok-jq | Interlok/JSON+JQ | Transform JSON using JQ style syntax | 3.7.0+ | [available on github](https://github.com/adaptris/interlok-json) |
-| com.adaptris | interlok-json-web-token | Interlok/JSON+JWT | Handling JWT in Interlok | 3.11.0+ | [available on github](https://github.com/adaptris/interlok-json) |
-| com.adaptris | interlok-jmx-sonicmq | JMX/JMS - SonicMQ | SonicMQ Provider for JMX/JMS | 3.10.0+ | |
-| com.adaptris | interlok-licensing-demo | Example Interlok Licensed services | Example licensed services, that do nothing, and just require a license. | 3.9.0+ | Requires License; |
-| com.adaptris | interlok-licensing | Interlok Licensing | Licensing support within Interlok | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-mongodb | Interlok MongoDB | Services and Connections for interacting with MongoDB | 3.7.0+ | [available on github](https://github.com/adaptris/interlok-mongodb) |
-| com.adaptris | interlok-mqtt | Interlok MQTT | Connect to a MQTT broker. Consume and produce MQTT messages.; Requires additional jars not automatically delivered | 3.5.0+ | [available on github](https://github.com/adaptris/interlok-mqtt) |
-| com.adaptris | interlok-msmq-javonet | Interlok MSMQ Integration via Javonet | Connect to MSMQ (Microsoft Message Queuing) via .NET Framework.; Requires a license from javonet | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-monitor-agent | Interlok Profiler Monitor | Expose profiling data via Multicast and JMX from the Interlok-Profiler. | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-monitor-agent) |
-| com.adaptris | interlok-kubernetes-prometheus | Interlok/Kubernetes Auto-Scaling | Management component for exposing metrics to Prometheus in Kuberenetes. | 3.9.1+ | [available on github](https://github.com/adaptris/interlok-kubernetes) |
-| com.adaptris | interlok-kubernetes-metrics | Interlok/Kubernetes Metrics | Management component for exposing metrics to Kuberenetes. | 3.9.1+ | [available on github](https://github.com/adaptris/interlok-kubernetes) |
-| com.adaptris | interlok-mail | Interlok/Mail | Integration with mail servers using javamail and apache mail libraries | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-mail) |
-| com.adaptris | interlok-nats | Interlok/NATS | Support for NATS.io | 3.9.3+ | [available on github](https://github.com/adaptris/interlok-nats) |
+| com.adaptris | interlok-aws-sqs | Interlok AWS/SQS | Publishing & Consuming from AWS SQS natively or via their JMS provider | 3.3.0+ | [available on github](https://github.com/adaptris/interlok-aws) |
+| com.adaptris | interlok-azure-core | Interlok Azure/Common | Common components for interacting with Azure and Office 365 | 3.11.1+ | [available on github](https://github.com/adaptris/interlok-azure) |
+| com.adaptris | interlok-azure-cosmosdb | Interlok Azure/CosmosDB | Components that interact with Azure CosmosDB | 3.9.2+ | [available on github](https://github.com/adaptris/interlok-azure) |
+| com.adaptris | interlok-azure-datalake | Interlok Azure/DataLake | Upload/Download files stored in Azure Datalake blobstorage | 3.11.1+ | [available on github](https://github.com/adaptris/interlok-azure) |
+| com.adaptris | interlok-azure-mail | Interlok Azure/Outlook | Send/Receive emails via Office 365/Exchange | 3.11.1+ | [available on github](https://github.com/adaptris/interlok-azure) |
+| com.adaptris | interlok-azure-onedrive | Interlok Azure/OneDrive | Support for upload/download of files stored in Onedrive | 3.11.1+ | [available on github](https://github.com/adaptris/interlok-azure) |
+| com.adaptris | interlok-cassandra | Interlok Storage/Cassandra | Services to interace with Datastax Cassandra | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-cassandra) |
+| com.adaptris | interlok-cluster-manager | Interlok Management/Cluster | Management component for reporting on cluster instances. | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-cluster-manager) |
+| com.adaptris | interlok-csv | Interlok Transform/CSV | Handling CSV files using Interlok; transform to XML, splitting, JDBC utilities | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-csv) |
+| com.adaptris | interlok-csv-json | Interlok Transform/JSON+CSV | Transform CSV into JSON and vice versa | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-csv-json) |
+| com.adaptris | interlok-edi-legacy | Interlok Transform/EDI legacy | Interlok EDI Legacy transformations | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-edi-stream | Interlok Transform/EDI | Interlok EDI Transformation services with caching of definitions | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-ehcache | Interlok Cache/EHCache | Using ehcache 2.x as a cache provider within Interlok | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-cache) |
+| com.adaptris | interlok-elastic-common | Interlok Storage/Elastic: Common | Elasticsearch components that are not transport specific | 3.9.1+ | [available on github](https://github.com/adaptris/interlok-elastic) |
+| com.adaptris | interlok-elastic-rest | Interlok Storage/Elastic: REST Client | Producing to Elasticsearch using their REST api | 3.9.1+ | [available on github](https://github.com/adaptris/interlok-elastic) |
+| com.adaptris | interlok-excel | Interlok Transform/Excel | Extract data from an Excel spreadsheet | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-excel) |
+| com.adaptris | interlok-exec | Interlok Management/Exec | Management Component that starts arbitrary programs as part of Interlok bootstrap | 3.8.2+ | [available on github](https://github.com/adaptris/interlok-exec) |
+| com.adaptris | interlok-expressions | Interlok Scripting/Expressions | Simple mathematical expressions inside your configuration | 3.6.4+ | [available on github](https://github.com/adaptris/interlok-expressions) |
+| com.adaptris | interlok-failover | Interlok Management/Failover | Starting Interlok as part of a failover cluster | 3.6.6+ | |
+| com.adaptris | interlok-filesystem | Interlok Storage/Filesystem | Perform filesystem operations within Interlok | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-filesystem) |
+| com.adaptris | interlok-flatfile | Interlok Transform/Flatfile | Transformation of Flat files into XML | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-flatfile) |
+| com.adaptris | interlok-flyway | Interlok Storage/Flyway | Custom JDBC Connection implementation that incorporates Flyway database migration | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-flyway) |
+| com.adaptris | interlok-gcloud-pubsub | Interlok Google/GCloud PubSub | Consuming and producing messages via Google Cloud PubSub | 3.6.3+ | [available on github](https://github.com/adaptris/interlok-gcloud-pubsub) |
+| com.adaptris | interlok-hpcc | Interlok HPCC/dfuplus | Upload/Download of files via dfuplus executable | 3.6.1+ | [available on github](https://github.com/adaptris/interlok-hpcc) |
+| com.adaptris | interlok-jclouds-aws-sts | Interlok JClouds/AWS STS | Connect using Apache JClouds to AWS Services using AWS Secure Token Service | 3.10.2+ | [available on github](https://github.com/adaptris/interlok-jclouds) |
+| com.adaptris | interlok-jclouds-blobstore | Interlok JClouds/Blobstore | Use Apache jclouds to access your cloud storage | 3.7.3+ | [available on github](https://github.com/adaptris/interlok-jclouds) |
+| com.adaptris | interlok-jclouds-common | Interlok JClouds/Common | Common classes for interacting with cloud providers via Apache JClouds | 3.10.2+ | [available on github](https://github.com/adaptris/interlok-jclouds) |
+| com.adaptris | interlok-jms-oracleaq | Interlok Messaging/OracleAQ | Using OracleAQ as a JMS provider | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-jms-sonicmq | Interlok Messaging/SonicMQ | Using SonicMQ as a JMS Provider | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-jmx-activemq | Interlok JMX/ActiveMQ | Tunnelling JMX calls via ActiveMQ | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-jmx-jms) |
+| com.adaptris | interlok-jmx-amqp | Interlok JMX/AMQP | Tunnelling JMX calls using AMQP via Apache QPID | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-jmx-jms) |
+| com.adaptris | interlok-jmx-jms-common | Interlok JMX/Common | Common classes required to tunnel JMX calls | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-jmx-jms) |
+| com.adaptris | interlok-jmx-jms-stubs | Interlok JMX/Stubs | Test scaffolding for JMX Tests; of no use at Interlok runtime | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-jmx-jms) |
+| com.adaptris | interlok-jmx-solace | Interlok JMX/Solace | Tunnelling JMX calls via Solace | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-jmx-jms) |
+| com.adaptris | interlok-jmx-sonicmq | Interlok JMX/SonicMQ | Tunnelling JMX calls via SonicMQ | 3.10.0+ | |
+| com.adaptris | interlok-jolokia | Interlok JMX/Jolokia | Tunnelling JMX calls via Jolokia | 4.0.0+ | [available on github](https://github.com/adaptris/interlok-jolokia) |
+| com.adaptris | interlok-jq | Interlok Transform/JQ | Transform JSON using JQ style syntax | 3.7.0+ | [available on github](https://github.com/adaptris/interlok-json) |
+| com.adaptris | interlok-jruby | Interlok Scripting/JRuby | Explicit JRuby scripting capabilities rather than via JSR223 | 3.6.3+ | [available on github](https://github.com/adaptris/interlok-jruby) |
+| com.adaptris | interlok-jslt | Interlok Transform/JSLT | Support for JSON transforms via JSLT | 3.12.0+ | [available on github](https://github.com/adaptris/interlok-json) |
+| com.adaptris | interlok-json | Interlok Transform/JSON | Everything JSON related; transformations, schemas, json-path (xpath-alike), splitting | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-json) |
+| com.adaptris | interlok-json-streaming | Interlok Transform/JSON Streaming | Streaming JSON in a STaX-alike manner | 3.8.2+ | [available on github](https://github.com/adaptris/interlok-json) |
+| com.adaptris | interlok-json-web-token | Interlok Transform/JWT | Handling JWT in Interlok | 3.11.0+ | [available on github](https://github.com/adaptris/interlok-json) |
+| com.adaptris | interlok-jsr107-cache | Interlok Cache/JSR107 | Using any JSR107 cache implementation as a cache provider within Interlok | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-cache) |
+| com.adaptris | interlok-kafka | Interlok Messaging/Kafka | Using Apache Kafka as a messaging platform | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-kafka) |
+| com.adaptris | interlok-kie | Interlok Rules/KIE | Using KIE/Drools with Interlok services | 3.8.2+ | [available on github](https://github.com/adaptris/interlok-kie) |
+| com.adaptris | interlok-kubernetes-metrics | Interlok Kubernetes/Metrics | Management component for exposing metrics to Kuberenetes. | 3.9.1+ | [available on github](https://github.com/adaptris/interlok-kubernetes) |
+| ~~com.adaptris~~ | ~~interlok-kubernetes-prometheus~~ | ~~Interlok Kubernetes/Prometheus pushgateway~~ | ~~Pushes metrics into Prometheus via pushgateway~~ | 3.9.1+ | [available on github](https://github.com/adaptris/interlok-kubernetes) Deprecated: Pushgateway is not the preferred way to get metrics into Kubernetes|
+| com.adaptris | interlok-licensing | Interlok Licence | Licensing support within Interlok | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-licensing-demo | Interlok License/Examples | Example licensed services, that do nothing, and just require a license. | 3.9.0+ | Requires License; |
+| com.adaptris | interlok-mail | Interlok Mail/Javamail | Integration with mail servers using javamail and apache mail libraries | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-mail) |
+| com.adaptris | interlok-mongodb | Interlok Storage/MongoDB | Services and Connections for interacting with MongoDB | 3.7.0+ | [available on github](https://github.com/adaptris/interlok-mongodb) |
+| com.adaptris | interlok-monitor-agent | Interlok Profiling/Monitor | Expose profiling data via Multicast and JMX from the Interlok-Profiler. | 3.9.0+ | [available on github](https://github.com/adaptris/interlok-monitor-agent) |
+| com.adaptris | interlok-mqtt | Interlok Messaging/MQTT | Use a MQTT broker as a messaging platform; Requires additional jars not automatically delivered | 3.5.0+ | [available on github](https://github.com/adaptris/interlok-mqtt) |
+| com.adaptris | interlok-msmq-javonet | Interlok Messaging/MSMQ | Connect to MSMQ via the javonet .NET bridge; Requires a license from javonet | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-nats | Interlok Messaging/NATS | Using NATS.io as a messaging platform | 3.9.3+ | [available on github](https://github.com/adaptris/interlok-nats) |
+| com.adaptris | interlok-new-relic | Interlok Profiling/New Relic | Instrumentation and Profiling with NewRelic | 3.8.0+ | |
 | com.adaptris | interlok-oauth-azure | Interlok OAUTH/Azure | Retrieving OAUTH access tokens from Azure | 3.6.5+ | [available on github](https://github.com/adaptris/interlok-oauth) |
-| com.adaptris | interlok-oauth-generic | Interlok OAUTH/Generic | Handling OAUTH where the provider does not have an explicit API | 3.8.1+ | [available on github](https://github.com/adaptris/interlok-oauth) |
-| com.adaptris | interlok-oauth-gcloud | Interlok OAUTH/Google Cloud | Retrieving OAUTH access tokens from Google Cloud | 3.6.5+ | [available on github](https://github.com/adaptris/interlok-oauth) |
+| com.adaptris | interlok-oauth-gcloud | Interlok OAUTH/Google | Retrieving OAUTH access tokens from Google Cloud | 3.6.5+ | [available on github](https://github.com/adaptris/interlok-oauth) |
+| com.adaptris | interlok-oauth-generic | Interlok OAUTH/Generic | Handling OAUTH where the provider does not have an explicit API or SDK | 3.8.1+ | [available on github](https://github.com/adaptris/interlok-oauth) |
 | com.adaptris | interlok-oauth-salesforce | Interlok OAUTH/Salesforce | Retrieving OAUTH access tokens from Salesforce | 3.6.5+ | [available on github](https://github.com/adaptris/interlok-oauth) |
-| ~~com.adaptris~~ | ~~interlok-oftp~~ | ~~Interlok OFTP~~ | ~~OFTP support with Interlok~~ | 3.8.0+ | Requires License; Deprecated: Fringe edge use case; Odette FTP is retired by almost all providers. If youre using it then F99|
-| com.adaptris | interlok-pgp | Interlok PGP Encryption/Decryption | A collection of services that provide PGP encryption, decryption, signing, and verification. | 3.9.2+ | [available on github](https://github.com/adaptris/interlok-pgp) |
-| com.adaptris | interlok-profiler | Interlok Profiler | Instrument Interlok to provide profiling data during runtime. | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-profiler) |
-| com.adaptris | interlok-pdf | Interlok Transform to PDF | Transform a document into PDF | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-pdf) |
-| com.adaptris | interlok-new-relic | Interlok/New Relic Integration | Optional Custom newrelic instrumentation | 3.8.0+ | |
-| com.adaptris | interlok-okhttp | Interlok/OK-HTTP | HTTP producer using the OK-HTTP library | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-okhttp) |
-| ~~com.adaptris~~ | ~~interlok-shell~~ | ~~Interlok CRaSH integration~~ | ~~SSH/Telnet to a running Interlok instance via Crashub~~ | 3.4.1+ | Deprecated: Removed in Interlok 4.0 since crashub itself is unloved and Java 11 is unsupported|
-| ~~com.adaptris~~ | ~~interlok-reliable-messaging~~ | ~~Interlok Reliable Messaging~~ | ~~Consume messages in order, and store messages that have failed to send, for automatic retry~~ | 3.8.0+ | Requires License; Deprecated: Deprecated since 3.11.0 due to low use|
-| com.adaptris | interlok-service-tester | Interlok Service Tester | Unit testing framework for Interlok | 3.5.0+ | [available on github](https://github.com/adaptris/interlok-service-tester) |
+| com.adaptris | interlok-okhttp | Interlok HTTP/okhttp | HTTP producer using the OK-HTTP library | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-okhttp) |
+| com.adaptris | interlok-pdf | Interlok Transform/PDF | Transform a document into PDF | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-pdf) |
+| com.adaptris | interlok-pgp | Interlok Security/PGP | A collection of services that provide PGP encryption, decryption, signing, and verification. | 3.9.2+ | [available on github](https://github.com/adaptris/interlok-pgp) |
+| com.adaptris | interlok-profiler | Interlok Profiling/Core | Instrument Interlok to provide profiling data during runtime. | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-profiler) |
+| com.adaptris | interlok-profiler-prometheus | Interlok Profiling/Prometheus | Unknown | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-profiler-prometheus) |
+| com.adaptris | interlok-rest-base | Interlok Management/REST: Base | Common components for Interloks RESTful management components | 3.8.3+ | [available on github](https://github.com/adaptris/interlok-workflow-rest-services) |
+| com.adaptris | interlok-rest-cluster | Interlok Management/REST: Cluster | Internal Cluster management via a REST interface | 3.8.3+ | [available on github](https://github.com/adaptris/interlok-workflow-rest-services) |
+| com.adaptris | interlok-rest-health-check | Interlok Management/REST: Health Check | Alive/Ready and general health exposed as a REST endpoint | 3.8.3+ | [available on github](https://github.com/adaptris/interlok-workflow-rest-services) |
+| com.adaptris | interlok-rest-metrics-jvm | Interlok Management/REST: JVM Metrics | Collecting JVM metrics and exposing them via a REST endpoint | 4.0.0+ | [available on github](https://github.com/adaptris/interlok-workflow-rest-services) |
+| com.adaptris | interlok-rest-metrics-profiler | Interlok Management/REST: Interlok Metrics | Collecting internal metrics for exposure | 4.0.0+ | [available on github](https://github.com/adaptris/interlok-workflow-rest-services) |
+| com.adaptris | interlok-rest-prometheus | Interlok Rest/Prometheus | Prometheus metric scraping endpoint | 3.8.3+ | [available on github](https://github.com/adaptris/interlok-workflow-rest-services) |
+| com.adaptris | interlok-rest-provider-prometheus | Interlok Management/REST: Prometheus | Expose metrics in a OpenTelemetry compliant fashion | 3.8.3+ | [available on github](https://github.com/adaptris/interlok-workflow-rest-services) |
+| com.adaptris | interlok-sap | Interlok Application/SAP | Support for SAP R/3 using BAPI/RFC; Requires additional jars not automatically delivered | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-service-tester | Interlok Service Tester/Core | Unit testing framework for Interlok | 3.5.0+ | [available on github](https://github.com/adaptris/interlok-service-tester) |
 | com.adaptris | interlok-service-tester-json | Interlok Service Tester/JSON | JSON Assertions for service-tester | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-service-tester) |
 | com.adaptris | interlok-service-tester-wiremock | Interlok Service Tester/Wiremock | Wiremock boostrapper for service-tester | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-service-tester) |
 | com.adaptris | interlok-service-tester-xml | Interlok Service Tester/XML | XML Assertions for service-tester using xmlunit | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-service-tester) |
-| com.adaptris | interlok-profiler-prometheus | Interlok/Prometheus | Profiling with Prometheus; metrics, profiling | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-profiler-prometheus) |
-| ~~com.adaptris~~ | ~~interlok-salesforce~~ | ~~Interlok/Salesforce Integration~~ | ~~Interlok/Salesforce Integration via Webservices~~ | | Requires License; Deprecated: Since 3.10.2, use Salesforce REST API instead.|
-| com.adaptris | interlok-sap | Interlok/SAP Integration | Interlok/SAP Integration; Requires additional jars not automatically delivered | | Requires License; |
-| com.adaptris | interlok-socket | Interlok/TCP Socket Connector | Roll your own protocol over vanilla TCP sockets | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-socket) |
-| ~~com.adaptris~~ | ~~interlok-vcs-command-line~~ | ~~Interlok Integration with commandline VCS~~ | ~~Checkout config via a configurable executable on startup~~ | 3.5.1+ | Deprecated: Unloved, git pretty much won so we need to get over it|
-| com.adaptris | interlok-webservice-cxf | Interlok Webservices via CXF | Execute webservices using Apache CXF | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-cxf) |
-| com.adaptris | interlok-workflow-rest-services | Interlok Workflow REST | Using a REST style API into the Interlok workflows. | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-workflow-rest-services) |
-| com.adaptris | interlok-vcs-git | Interlok/VCS:GIT | Checking config out of GIT on startup | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-vcs-git) |
-| com.adaptris | interlok-vcs-subversion | Interlok/VCS:Subversion | Checkout runtime configuration from Subversion on startup. | 3.8.0+ | |
-| com.adaptris | interlok-vertx | Interlok/VertX | Configure Interlok to use clustered workflows and services | 3.5.0+ | [available on github](https://github.com/adaptris/interlok-vertx) |
-| com.adaptris | interlok-webspheremq | Interlok/WebsphereMQ integration | Using WebsphereMQ as a JMS provider or natively | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-xa-activemq | Interlok/XA-ActiveMQ Implementation | ActiveMQ specific XA Vendor implementations | 3.9.0+ | Requires License; |
-| com.adaptris | interlok-xa-atomikos | Interlok/XA-Atomikos | XA JMS Consumer/Producer implementations that use Atomikos as the underlying transaction manager | 3.9.0+ | Requires License; |
-| com.adaptris | interlok-xa-jms | Interlok/XA-JMS | XA Components that are not provider specific | 3.9.0+ | Requires License; |
-| com.adaptris | interlok-varsub | Interlok Config Pre-Processor: variable substitution support | SystemProperty / Environment / Variable substitution Config Pre-processors | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-variable-substitution) |
+| com.adaptris | interlok-socket | Interlok Misc/Socket | Roll your own protocol over vanilla TCP sockets | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-socket) |
+| com.adaptris | interlok-solace | Interlok Messaging/Solace | Using Solace as a Messaging Provider | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-sshtunnel | Interlok Management/SSH Tunnel | Management Component that starts some SSH Tunnels | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-sshtunnel) |
+| com.adaptris | interlok-stax | Interlok Transform/STaX | Using STaX events to parse/emit XML within Interlok | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-stax) |
 | com.adaptris | interlok-stubs | Interlok Test Scaffolding | Test Scaffolding for custom Interlok components; of no consequence at runtime | 3.8.0+ | [available on github](https://github.com/adaptris/interlok) |
-| com.adaptris | interlok-triggered | Interlok Triggered Channels | Custom Channel implementation that can be externally triggered to start/stop | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-solace | Interlok/JMS - Solace | Using Solace as a JMS Provider | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-tibco | Interlok/JMS - Tibco | Using Tibco EMS as a JMS Provider | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-sshtunnel | Interlok/SSH Tunnel management component | Management Component that starts some SSH Tunnels | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-sshtunnel) |
-| com.adaptris | interlok-stax | Interlok/STaX support | STaX support within Interlok | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-stax) |
-| com.adaptris | interlok-swift | Interlok/SWIFT transforms | Handle transforms to and from the SWIFT format | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-swift) |
-| com.adaptris | interlok-swiftmq | Interlok/SwiftMQ integration | Using SwiftMQ as a JMS provider | 3.8.0+ | Requires License; |
-| ~~com.adaptris~~ | ~~interlok-variodoc~~ | ~~Interlok/Variodoc integration~~ | ~~Interlok Variodoc integration for Farm machinery.~~ | 3.8.0+ | Requires License; Deprecated: Removed in Interlok 4.0 |
-| com.adaptris | interlok-xinclude | Interlok Config Pre-Processor: xinclude/xslt support | XSLT and XInclude Config Pre-processors | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-xinclude) |
-| com.adaptris | interlok-xml-security | Interlok XML security | Services that support JSR106 XML Encryption standard. | 3.8.0+ | Requires License; |
-| com.adaptris | interlok-xa-solace | Interlok/XA-Solace Implementation | Solace specific XA Vendor implementations | 3.9.0+ | Requires License; |
-| com.adaptris | interlok-xa-tibco | Interlok/XA-Tibco Implementation | Tibco specific XA Vendor implementations | 3.9.0+ | Requires License; |
-| com.adaptris | interlok-xa-wmq | Interlok/XA-WebsphereMQ Implementation | WebsphereMQ specific XA Vendor implementations | 3.9.0+ | Requires License; |
+| com.adaptris | interlok-swift | Interlok Transforms/SWIFT | Handle transforms to and from the SWIFT format | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-swift) |
+| com.adaptris | interlok-swiftmq | Interlok Messaging/SwiftMQ | Using SwiftMQ as a messaging platform | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-tibco | Interlok Messaging/Tibco | Using Tibco as as messaging platform | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-triggered | Interlok Misc/Triggered | Custom Channel implementation that can be externally triggered to start/stop | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-varsub | Interlok Config/variable substitutions | SystemProperty / Environment / Variable substitution Config Pre-processors | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-variable-substitution) |
+| com.adaptris | interlok-vcs-git | Interlok VCS/GIT | Checking config out of GIT on startup | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-vcs-git) |
+| com.adaptris | interlok-vcs-subversion | Interlok VCS/SVN | Checkout runtime configuration from SVN on startup | 3.8.0+ | |
+| com.adaptris | interlok-vertx | Interlok/VertX | Configure Interlok to use clustered workflows and services | 3.5.0+ | [available on github](https://github.com/adaptris/interlok-vertx) |
+| com.adaptris | interlok-webservice-cxf | Interlok Webservices/CXF | Execute webservices using Apache CXF | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-cxf) |
+| com.adaptris | interlok-webspheremq | Interlok Messaging/WebsphereMQ | Use IBM WebsphereMQ as your messaging platform | 3.8.0+ | Requires License; |
+| com.adaptris | interlok-xa-activemq | Interlok XA/ActiveMQ | ActiveMQ specific XA Vendor implementations | 3.9.0+ | Requires License; |
+| com.adaptris | interlok-xa-atomikos | Interlok XA/Atomikos | XA JMS Consumer/Producer implementations that use Atomikos as the underlying transaction manager | 3.9.0+ | Requires License; |
+| com.adaptris | interlok-xa-jms | Interlok XA/Common | XA Components that are not provider specific | 3.9.0+ | Requires License; |
+| com.adaptris | interlok-xa-solace | Interlok XA/Solace | Solace specific XA Vendor implementations | 3.9.0+ | Requires License; |
+| com.adaptris | interlok-xa-tibco | Interlok XA/Tibco | Tibco specific XA Vendor implementations | 3.9.0+ | Requires License; |
+| com.adaptris | interlok-xa-wmq | Interlok XA/WebsphereMQ | WebsphereMQ specific XA Vendor implementations | 3.9.0+ | Requires License; |
+| com.adaptris | interlok-xinclude | Interlok Config/xinclude | XSLT and XInclude Config Pre-processors | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-xinclude) |
+| com.adaptris | interlok-xml-security | Interlok Security/XML | Services that support JSR106 XML Encryption standard. | 3.8.0+ | Requires License; |
 
 <br/>
 
@@ -196,7 +192,14 @@ If you've added an optional components following the steps explained above you c
 |com.adaptris | ~~[interlok-stackify][]~~ | ~~Supports Stackify Profiling; requires [interlok-profiler][]~~ |3.8.0 only, removed in 3.8.1|available on [github](https://github.com/adaptris/interlok-stackify)
 |com.adaptris | ~~[interlok-webservice-external][]~~ | ~~Accessing [external webservices](/pages/user-guide/adapter-executing-ws); requires [interlok-licensing][]~~ | 3.8.0-3.10.2; removed in 3.11.0
 |com.adaptris | ~~[interlok-web-services][]~~ | ~~[Exposing workflows as webservices](/pages/user-guide/adapter-hosting-ws);~~ | 3.8.0-3.10.2; removed in 3.11.0
-|com.adaptris | ~~[interlok-xa][]~~ | ~~XA support within the Adapter; requires [interlok-licensing][]~~ | 3.4.0 - 3.8.4; removed in 3.9.0 | XA support was split into various sub modules; see below
+|com.adaptris | ~~[interlok-xa][]~~ | ~~XA support within the Adapter; requires [interlok-licensing][]~~ | 3.4.0 - 3.8.4; removed in 3.9.0 | XA support was split into various sub modules; see above
+|com.adaptris | ~~interlok-container~~ | ~~Multiple adapters in a single JVM~~ | 3.6.1+ | [available on github](https://github.com/adaptris/interlok-container) Deprecated: Deprecated, for removal in Interlok 4.0.0, since docker arrived, this component is unloved/not needed; removed in 4.0.0
+|com.adaptris | ~~[interlok-ironmq][]~~ | ~~Connect to IronMQ (cloud-based message queuing service).~~ | 3.0.0+ | Deprecated: Since IronMQ has AWS SQS API support; you could just use interlok-aws-sqs instead; removed in 4.0.0
+|com.adaptris | ~~[interlok-oftp][]~~ | ~~OFTP support with Interlok~~ | 3.8.0+ | Requires License; Deprecated: Fringe edge use case; Odette FTP is retired by almost all providers. If youre using it then F99; removed in 4.0.0
+|com.adaptris | ~~[interlok-shell][]~~ | ~~SSH/Telnet to a running Interlok instance via Crashub~~ | 3.4.1+ | Deprecated: Removed in Interlok 4.0 since crashub itself is unloved and Java 11 is unsupported; removed in 4.0.0
+|com.adaptris | ~~[interlok-salesforce][]~~ | ~~Interlok/Salesforce Integration via Webservices~~ | | Requires License; Deprecated: Since 3.10.2, use Salesforce REST API instead.; removed in 4.0.0
+|com.adaptris | ~~[interlok-vcs-command-line][]~~ | ~~Checkout config via a configurable executable on startup~~ | 3.5.1+ | Deprecated: Unloved, git pretty much won so we need to get over it; removed in 4.0.0
+|com.adaptris | ~~interlok-variodoc~~ | ~~Interlok Variodoc integration for Farm machinery.~~ | 3.8.0+ | Requires License; Deprecated: Removed in Interlok 4.0;
 
 
 ## Optional Components prior to 3.7.3 ##

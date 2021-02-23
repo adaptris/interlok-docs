@@ -99,7 +99,7 @@ As additional features are developed and released our public facing repository i
 | com.adaptris | interlok-sshtunnel | Interlok Management/SSH Tunnel | Management Component that starts some SSH Tunnels | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-sshtunnel) |
 | com.adaptris | interlok-stax | Interlok Transform/STaX | Using STaX events to parse/emit XML within Interlok | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-stax) |
 | com.adaptris | interlok-stubs | Interlok Test Scaffolding | Test Scaffolding for custom Interlok components; of no consequence at runtime | 3.8.0+ | [available on github](https://github.com/adaptris/interlok) |
-| com.adaptris | interlok-swift | Interlok Transforms/SWIFT | Handle transforms to and from the SWIFT format | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-swift) |
+| com.adaptris | interlok-swift | Interlok Transform/SWIFT | Handle transforms to and from the SWIFT format | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-swift) |
 | com.adaptris | interlok-swiftmq | Interlok Messaging/SwiftMQ | Using SwiftMQ as a messaging platform | 3.8.0+ | Requires License; |
 | com.adaptris | interlok-tibco | Interlok Messaging/Tibco | Using Tibco as as messaging platform | 3.8.0+ | Requires License; |
 | com.adaptris | interlok-triggered | Interlok Misc/Triggered | Custom Channel implementation that can be externally triggered to start/stop | 3.8.0+ | Requires License; |

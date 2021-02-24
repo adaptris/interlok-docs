@@ -84,11 +84,7 @@ Workflow processing time depends on configured services and control is not passe
 
 ### JMS ReplyTo Workflow ###
 
-[jms-reply-to-workflow][] is an extension to `standard-workflow` and works simply by overriding any configured destination, and using the `JMSReplyTo` destination set on the JMS message that was originally consumed. This allows the messaging platform to set a JMS reply to destination on a message it is processing, and then send it to a [jms-reply-to-workflow][] for further processing. The requesting entity can choose to wait synchronously for a reply or to handle the reply asynchronously as appropriate.
-
-Note that this workflow requires both consumer and producer to be in the same JMS messaging domain and will not initialise if this is not the case. It also requires the JMSReplyTo Destination to be in the same domain as the configured producer.
-
-?> **TIP** Rather than using a JmsReplyToWorkflow it is generally preferable to use `%messageObject{JMSReplyTo}` as the destination for a JMS producer. This allows the producer to be included at any point of a workflow (or even as part of error-handling). This allows more flexibility in workflow design.
+?> **IMPOARTANT** JmsReplyToWorkflow has been replaced by an object metadata resolvable expression in the format of `%messageObject{JMSReplyTo}` as the destination for a JMS producer. This allows the producer to be included at any point of a workflow (or even as part of error-handling). This allows more flexibility in workflow design.
 
 ### JMS Transacted Workflow ###
 

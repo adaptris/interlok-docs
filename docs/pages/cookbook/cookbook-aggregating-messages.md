@@ -25,9 +25,7 @@ We can use a combination of [aggregating-jms-consume-service][] and [replace-met
 ```xml
 <standard-workflow>
   <consumer class="jms-queue-consumer">
-    <destination class="configured-produce-destination">
-       <destination>SampleQ1</destination>
-    </destination>
+    <queue>SampleQ1</queue>
     <message-translator class="text-message-translator">
       <move-jms-headers>true</move-jms-headers>
     </message-translator>
@@ -66,7 +64,7 @@ We can use a combination of [aggregating-jms-consume-service][] and [replace-met
     </services>
   </service-collection>
   <producer class="jms-queue-producer">
-    <destination class="jms-reply-to-destination"/>
+    <queue>%messageObject{JMSReplyTo}</queue>
   </producer>
 </standard-workflow>
 ```

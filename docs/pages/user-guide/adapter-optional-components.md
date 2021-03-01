@@ -105,7 +105,7 @@ As additional features are developed and released our public facing repository i
 | com.adaptris | interlok-triggered | Interlok Misc/Triggered | Custom Channel implementation that can be externally triggered to start/stop | 3.8.0+ | Requires License; |
 | com.adaptris | interlok-varsub | Interlok Config/variable substitutions | SystemProperty / Environment / Variable substitution Config Pre-processors | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-variable-substitution) |
 | com.adaptris | interlok-vcs-git | Interlok VCS/GIT | Checking config out of GIT on startup | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-vcs-git) |
-| com.adaptris | interlok-vcs-subversion | Interlok VCS/SVN | Checkout runtime configuration from SVN on startup | 3.8.0+ | |
+| ~~com.adaptris~~ | ~~interlok-vcs-subversion~~ | ~~Interlok VCS/SVN~~ | ~~Checkout runtime configuration from SVN on startup~~ | 3.8.0+ | This component has been deprecated and will be removed in 5.0.0 |
 | com.adaptris | interlok-vertx | Interlok/VertX | Configure Interlok to use clustered workflows and services | 3.5.0+ | [available on github](https://github.com/adaptris/interlok-vertx) |
 | com.adaptris | interlok-webservice-cxf | Interlok Webservices/CXF | Execute webservices using Apache CXF | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-cxf) |
 | com.adaptris | interlok-webspheremq | Interlok Messaging/WebsphereMQ | Use IBM WebsphereMQ as your messaging platform | 3.8.0+ | Requires License; |
@@ -115,7 +115,7 @@ As additional features are developed and released our public facing repository i
 | com.adaptris | interlok-xa-solace | Interlok XA/Solace | Solace specific XA Vendor implementations | 3.9.0+ | Requires License; |
 | com.adaptris | interlok-xa-tibco | Interlok XA/Tibco | Tibco specific XA Vendor implementations | 3.9.0+ | Requires License; |
 | com.adaptris | interlok-xa-wmq | Interlok XA/WebsphereMQ | WebsphereMQ specific XA Vendor implementations | 3.9.0+ | Requires License; |
-| com.adaptris | interlok-xinclude | Interlok Config/xinclude | XSLT and XInclude Config Pre-processors | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-xinclude) |
+| ~~com.adaptris~~ | ~~interlok-xinclude~~ | ~~Interlok Config/xinclude~~ | ~~XSLT and XInclude Config Pre-processors~~ | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-xinclude)  Deprecated and due to be removed in Interlok 5.0.0; One of the reasons for this, is the way the Interlok UI handles relative paths is not always compatible with the Interlok xincludes pre-processors.|
 | com.adaptris | interlok-xml-security | Interlok Security/XML | Services that support JSR106 XML Encryption standard. | 3.8.0+ | Requires License; |
 
 <br/>

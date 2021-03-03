@@ -1,6 +1,6 @@
 > **Summary:** This page describes how to use scripting services inside your Interlok configuration
 
-As of Interlok __3.9.0__ you can use scripting services to add some custom behaviour in your config.
+As of Interlok __3.6.x__ you can use scripting services to add some custom behaviour in your config.
 
 !> **IMPORTANT** From __4.0.0__ using Java 11, the Nashorn JavaScript engine has been deprecated and is due for removal in Java 15. See the [alternative below](#nashorn-alternative).
 
@@ -8,7 +8,7 @@ As of Interlok __3.9.0__ you can use scripting services to add some custom behav
 
 The scripting services supports arbitary scripting languages (JavaScript, JRuby ...) that are supported by [JSR223](https://jcp.org/aboutJava/communityprocess/pr/jsr223/index.html) a standard scripting API for Java Virtual Machine.
 
-You should take care when configuring this class; it can present an audit trail issue when used in combination with 
+You should take care when configuring this class; it can present an audit trail issue when used in combination with
 [DynamicServiceExecutor](https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.0-SNAPSHOT/com/adaptris/core/services/dynamic/DynamicServiceExecutor.html) if your script executes arbitrary system commands.
 In that situation, all commands will be executed with the current users permissions and may be subject to the virtual machines security manager.
 
@@ -18,7 +18,7 @@ The script is executed and the AdaptrisMessage that is due to be processed is bo
 
 ### ScriptingService (scripting-service)
 
-This service takes a file and executes it. Using JavaScript works out of the box with [interlok-core](https://github.com/adaptris/interlok-core) but JRuby needs [interlok-jruby](https://github.com/adaptris/interlok-jruby).
+This service takes a file and executes it. Using JavaScript works out of the box with [interlok-core](https://github.com/adaptris/interlok-core) via the Oracle Nashorn engine but other JSR223 scripting languges will require additional jars.
 
 ```xml
 <scripting-service>
@@ -29,7 +29,7 @@ This service takes a file and executes it. Using JavaScript works out of the box
 ```
 ### EmbeddedScriptingService (embedded-scripting-service)
 
-This service uses an embedded scrip and executes it. Using JavaScript works out of the box with [interlok-core](https://github.com/adaptris/interlok-core) but JRuby needs [interlok-jruby](https://github.com/adaptris/interlok-jruby).
+This service uses an embedded scrip and executes it. Using JavaScript works out of the box with [interlok-core](https://github.com/adaptris/interlok-core) via the Oracle Nashorn engine but other JSR223 scripting languges will require additional jars.
 
 ```xml
 <embedded-scripting-service>

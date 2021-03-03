@@ -84,11 +84,7 @@ Workflow processing time depends on configured services and control is not passe
 
 ### JMS ReplyTo Workflow ###
 
-[jms-reply-to-workflow][] is an extension to `standard-workflow` and works simply by overriding any configured destination, and using the `JMSReplyTo` destination set on the JMS message that was originally consumed. This allows the messaging platform to set a JMS reply to destination on a message it is processing, and then send it to a [jms-reply-to-workflow][] for further processing. The requesting entity can choose to wait synchronously for a reply or to handle the reply asynchronously as appropriate.
-
-Note that this workflow requires both consumer and producer to be in the same JMS messaging domain and will not initialise if this is not the case. It also requires the JMSReplyTo Destination to be in the same domain as the configured producer.
-
-?> **TIP** Rather than using a JmsReplyToWorkflow it is generally preferable to use a [jms-reply-to-destination][] as the destination for a JMS producer. This allows the producer to be included at any point of a workflow (or even as part of error-handling). This allows more flexibility in workflow design.
+?> **IMPOARTANT** JmsReplyToWorkflow has been replaced by an object metadata resolvable expression in the format of `%messageObject{JMSReplyTo}` as the destination for a JMS producer. This allows the producer to be included at any point of a workflow (or even as part of error-handling). This allows more flexibility in workflow design.
 
 ### JMS Transacted Workflow ###
 
@@ -119,7 +115,9 @@ The JMSCorrelationID header field is used for linking one message with another. 
 
 ### JMSReplyTo ###
 
-If you use [jms-reply-to-destination][] as the destination, then any _JMSReplyTo_ specified by the message will be used. This type of destination only works if the producer is in the same workflow as the JMS consumer as the javax.jms.Destination is stored in object metadata which does not lend itself to being transported across workflows. If you have `move-jms-headers` set to be true, then the string representation of the temporary destination will be stored as part standard metadata under the key _JMSReplyTo_; some JMS providers will allow you to use this as the destination, so in certain situations you can simply use a metadata-destination instead. Alternatively, if the workflow type is a [jms-reply-to-workflow][] then is handled for you automatically.
+The jms-reply-to-destination has been replaced by a resolvable expression in the format of `%messageObject{KEY}`, which allows for any object in the message object headers to be used as the reply-to destination. Typically this will just be the original reply-to destination from the inbound message, which is stored in object metadata with the key _JMSReplyTo_.
+
+This type of destination only works if the producer is in the same workflow as the JMS consumer as the javax.jms.Destination is stored in object metadata which does not lend itself to being transported across workflows. If you have `move-jms-headers` set to be true, then the string representation of the temporary destination will be stored as part standard metadata under the key _JMSReplyTo_; some JMS providers will allow you to use this as the destination, so in certain situations you can simply use a metadata-destination instead.
 
 If the adapter is initiating a request and then waiting for a reply, then the _JMSReplyTo_ header has a temporary destination associated with it. The expectation being that whatever is responding to the request will just use the JMSReplyTo header when replying to the request. Sometimes it doesn't work, perhaps the back-end application doesn't handle temporary destinations very well, or they don't translate well into whatever underlying message system the JMS layer sits on tops of (back-end apps that use IBM MQSeries seem quite prone to this). In situations like this we can specify a static reply to destination that already exists. Our JMS Producers can be told to _not generate a temporary destination_ and to use a fixed _JMSReplyTo_ destination by using the metadata key `JMSAsyncStaticReplyTo`; this will cause it to set whatever value stored against the metadata key as the _JMSReplyTo header_.
 
@@ -136,8 +134,7 @@ If the adapter is initiating a request and then waiting for a reply, then the _J
   </connection>
   <producer class="jms-queue-producer">
      ... boring config skipped
-    <destination class="configured-produce-destination">
-      <destination>SampleQ1</destination>
+    <queue>SampleQ1</queue>
     </destination>
   </producer>
 </standalone-requestor>
@@ -183,9 +180,7 @@ It is usually the case that the JMS Producer is configured with a specific Prior
      ... boring config skipped
   </connection>
   <producer class="jms-queue-producer">
-    <destination class="configured-produce-destination">
-      <destination>SampleQ1</destination>
-    </destination>
+    <queue>SampleQ1</queue>
     <priority>4</priority>
     <delivery-mode>PERSISTENT</delivery-mode>
     <time-to-live>0</time-to-live>
@@ -345,7 +340,6 @@ A feature of using Topics is that you can restrict the delivery of the message t
 
 
 [CorrelationIdSource]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/CorrelationIdSource.html
-[jms-reply-to-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/JmsReplyToWorkflow.html
 [ExtraFactoryConfiguration]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/jndi/ExtraFactoryConfiguration.html
 [no-op-jndi-factory-configuration]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/jndi/NoOpFactoryConfiguration.html
 [basic-sonic-mq-implementation]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-jms-sonicmq/3.11-SNAPSHOT/com/adaptris/core/jms/sonic/BasicSonicMqImplementation.html
@@ -376,9 +370,7 @@ A feature of using Topics is that you can restrict the delivery of the message t
 [jms-queue-consumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/PtpConsumer.html
 [quartz-cron-poller]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/QuartzCronPoller.html
 [fixed-interval-poller]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/FixedIntervalPoller.html
-[jms-reply-to-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/JmsReplyToWorkflow.html
 [jms-transacted-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/JmsTransactedWorkflow.html
-[jms-reply-to-destination]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/JmsReplyToDestination.html
 [VendorImplementation]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/VendorImplementation.html
 [failover-jms-connection]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/FailoverJmsConnection.html
 [basic-active-mq-implementation]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/activemq/BasicActiveMqImplementation.html

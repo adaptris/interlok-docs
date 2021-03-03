@@ -95,9 +95,7 @@ In both of these cases, an error will be logged; but the message may appear to h
 ```xml
 <consumer class="wmq-native-consumer">
   <error-handler class="wmq-forwarding-native-consumer-error-handler">
-    <destination class="configured-produce-destination">
-      <destination>The_Error_Queue</destination>
-    </destination>
+    <queue>The_Error_Queue</queue>
     <options>
       <queue-open-options>MQOO_INPUT_AS_Q_DEF,MQOO_OUTPUT,MQOO_BROWSE</queue-open-options>
       <queue-close-options>MQCO_NONE</queue-close-options>

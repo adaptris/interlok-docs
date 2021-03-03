@@ -84,7 +84,7 @@ Workflow processing time depends on configured services and control is not passe
 
 ### JMS ReplyTo Workflow ###
 
-?> **IMPOARTANT** JmsReplyToWorkflow has been replaced by an object metadata resolvable expression in the format of `%messageObject{JMSReplyTo}` as the destination for a JMS producer. This allows the producer to be included at any point of a workflow (or even as part of error-handling). This allows more flexibility in workflow design.
+?> **IMPORTANT** JmsReplyToWorkflow has been replaced by an object metadata resolvable expression in the format of `%messageObject{JMSReplyTo}` as the destination for a JMS producer. This allows the producer to be included at any point of a workflow (or even as part of error-handling). This allows more flexibility in workflow design.
 
 ### JMS Transacted Workflow ###
 

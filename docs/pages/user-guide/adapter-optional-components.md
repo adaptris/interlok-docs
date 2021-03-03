@@ -94,7 +94,6 @@ As additional features are developed and released our public facing repository i
 | com.adaptris | interlok-service-tester-json | Interlok Service Tester/JSON | JSON Assertions for service-tester | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-service-tester) |
 | com.adaptris | interlok-service-tester-wiremock | Interlok Service Tester/Wiremock | Wiremock boostrapper for service-tester | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-service-tester) |
 | com.adaptris | interlok-service-tester-xml | Interlok Service Tester/XML | XML Assertions for service-tester using xmlunit | 3.10.0+ | [available on github](https://github.com/adaptris/interlok-service-tester) |
-| com.adaptris | interlok-socket | Interlok Misc/Socket | Roll your own protocol over vanilla TCP sockets | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-socket) |
 | com.adaptris | interlok-solace | Interlok Messaging/Solace | Using Solace as a Messaging Provider | 3.8.0+ | Requires License; |
 | com.adaptris | interlok-sshtunnel | Interlok Management/SSH Tunnel | Management Component that starts some SSH Tunnels | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-sshtunnel) |
 | com.adaptris | interlok-stax | Interlok Transform/STaX | Using STaX events to parse/emit XML within Interlok | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-stax) |
@@ -200,7 +199,7 @@ If you've added an optional components following the steps explained above you c
 |com.adaptris | ~~[interlok-salesforce][]~~ | ~~Interlok/Salesforce Integration via Webservices~~ | | Requires License; Deprecated: Since 3.10.2, use Salesforce REST API instead.; removed in 4.0.0
 |com.adaptris | ~~[interlok-vcs-command-line][]~~ | ~~Checkout config via a configurable executable on startup~~ | 3.5.1+ | Deprecated: Unloved, git pretty much won so we need to get over it; removed in 4.0.0
 |com.adaptris | ~~interlok-variodoc~~ | ~~Interlok Variodoc integration for Farm machinery.~~ | 3.8.0+ | Requires License; Deprecated: Removed in Interlok 4.0;
-
+|com.adaptris | ~~interlok-socket~~ | ~~Roll your own protocol over vanilla TCP sockets~~ | 3.6.6+ | [available on github](https://github.com/adaptris/interlok-socket) Deprecated: Removed in Interlok 4.0;
 
 ## Optional Components prior to 3.7.3 ##
 

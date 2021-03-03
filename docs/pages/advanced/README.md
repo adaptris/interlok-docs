@@ -1,5 +1,5 @@
 
- - [Logic blocks in configuration](/pages/advanced/advanced-conditional.md)     
+ - [Logic blocks in configuration](/pages/advanced/advanced-conditional.md)
  - [Interlok Clustering](/pages/advanced/advanced-cluster.md)
  - [Autoscaling - Kubernetes](/pages/advanced/advanced-interlok-scaling.md)
  - [Clustered Workflows / Services](/pages/advanced/advanced-vertx.md)
@@ -29,3 +29,4 @@
      - [Command line Version Control](/pages/advanced/advanced-vcs-command-line.md)
  - [Workflow Interceptors](/pages/advanced/advanced-interceptors.md)
  - [XA Integration](/pages/advanced/advanced-xa-integration.md)
+ - [Scripting](/pages/advanced/advanced-scripting.md)

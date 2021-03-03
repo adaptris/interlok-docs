@@ -24,7 +24,7 @@ If you're interested in building a docker image from this guide and you have use
 
 Now simply edit the gradle.build file, specifically the dependencies section.
 
-```
+```groovy
 dependencies {
   interlokRuntime ("com.adaptris:interlok-json:$interlokVersion") { changing=true }
   interlokRuntime ("com.adaptris:interlok-csv:$interlokVersion") { changing=true }
@@ -79,5 +79,5 @@ After a moment to allow Interlok to complete it's startup you can log-in to the 
 
 ## Further reading / More options
 
-For more information and documented additional gradle options (including how to specify the Interlok version) see our parent gradle docs[here](https://github.com/adaptris-labs/interlok-build-parent).
+For more information and documented additional gradle options (including how to specify the Interlok version) see our parent gradle docs [here](https://github.com/adaptris-labs/interlok-build-parent).
 For more details on the sample project we've cloned for this exercise go [here](https://github.com/adaptris-labs/build-parent-json-csv/tree/docker-image).

@@ -111,6 +111,7 @@
      - [Command line Version Control](/pages/advanced/advanced-vcs-command-line.md)
   - [Workflow Interceptors](/pages/advanced/advanced-interceptors.md)
   - [XA Integration](/pages/advanced/advanced-xa-integration.md)
+  - [Scripting](/pages/advanced/advanced-scripting.md)
 - [Service Tester](/pages/service-tester/)
   - [Introduction](/pages/service-tester/service-tester-introduction.md)
   - [Configuration](/pages/service-tester/service-tester-configuration.md)

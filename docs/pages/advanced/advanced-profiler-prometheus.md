@@ -1,129 +1,36 @@
 > **Summary:** Using Prometheus and Grafana to view Interlok metrics.
 
-**Since 3.10+**
+**Since 4.0+**
 
 This document will walk you through the setup and configuration to have Interlok post profiling data directly into Prometheus.  You'll then be shown some of the basics of Prometheus and Grafana to view your Interlok metrics.
 
 ## Prerequisites.
 
-For ease of installation you will need access to a docker engine, your favourite tool for posting HTTP requests and a full Interlok 3.10+ installation.  This guide uses the following;
+For ease of installation you will need access to a docker engine, your favourite tool for posting HTTP requests and a full Interlok 4.0+ installation.  This guide uses the following;
 
 - Windows Docker Desktop
-- Interlok 3.10
+- Interlok 4.0
 - Apache JMeter
 
 Additionally, you will also need a few jar files to drop into your Interlok installations "lib" directory.
-Specifically, you will need the Interlok jar files and dependent jar files from these three Interlok components;
+See our guide on creating a new installation using gradle [here](https://interlok.adaptris.net/interlok-docs/#/pages/overview/adapter-gradle).
+Specifically, you will need the Interlok jar files and dependent jar files from these Interlok components;
 
  - [interlok-profiler](https://github.com/adaptris/interlok-profiler)
- - [interlok-profiler-prometheus](https://github.com/adaptris/interlok-profiler-prometheus)
  - [interlok-monitor-agent](https://github.com/adaptris/interlok-monitor-agent)
- - [interlok-workflow-rest-services](https://github.com/adaptris/interlok-workflow-rest-services)
-
+ - [interlok-rest-metrics-profiler](https://github.com/adaptris/interlok-workflow-rest-services/tree/develop/interlok-rest-metrics-profiler)
+ - [interlok-rest-metrics-jvm](https://github.com/adaptris/interlok-workflow-rest-services/tree/develop/interlok-rest-metrics-jvm)
+ - [interlok-rest-provider-prometheus](https://github.com/adaptris/interlok-workflow-rest-services/tree/develop/interlok-rest-provider-prometheus)
 
 ## Docker Configuration
 
-There are currently two methods to populate Prometheus with Interlok metrics; pushgateway and scraping.
-Allowing Prometheus to scrape metrics from Interlok is the preferred method, however this requires the Jetty component to be started, so if you prefer to not start Jetty then we have the pushgateway method as an alternative.
+Prometheus can be configured to periodically scrape a number of endpoints to collect and store metric data, therefore we'll be exposing a service to provide that endpoint and data.  For this you'll need to make sure you're running Interlok's Jetty to be the source of the HTTP endpoint.
 
-We'll use Docker to install and run 2 or 3 components; Prometheus, Prometheus-pushgateway and Grafana.  Following the steps below for each.
+We'll use Docker to install both the Prometheus engine and Grafana.  Following the steps below for each.
 
-### Prometheus Pushgateway
-
-Skip this step if you're running the Jetty container for Interlok.
-
-On your command line simply run the latest Prometheus pushgateway.  The run phase will automatically download the latest image before starting.
-
-```
-C:\>docker run -d -p 9091:9091 prom/pushgateway
-```
 ### Prometheus Engine
 
 Before the engine can be installed into Docker we need to provide our own custom yml configuration file that specifies how the Prometheus engine will scrape metrics from either the pushgateway or directly from Interlok.  
-
-#### If you're using the pushgateway method;
-
-The first step is to retrieve the IP address of the pushgateway container.  We do that by first getting the name of the pushgateway container with __docker ps__ and using that name we can find the IP address of that container using __docker network inspect bridge__  as shown below.
-
-```
-C:\>docker ps
-CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS              PORTS                    NAMES
-a67e1811399d        prom/pushgateway    "/bin/pushgateway"   19 hours ago        Up 2 minutes        0.0.0.0:9091->9091/tcp   modest_elbakyan
-
-C:\>docker network inspect bridge
-[
-    {
-        "Name": "bridge",
-        "Id": "c2ba0572abbaca0121c8ea81c2884eb074d846084af8ed7b47e1709b17a2a3de",
-        "Created": "2020-01-28T19:27:20.692480072Z",
-        "Scope": "local",
-        "Driver": "bridge",
-        "EnableIPv6": false,
-        "IPAM": {
-            "Driver": "default",
-            "Options": null,
-            "Config": [
-                {
-                    "Subnet": "172.17.0.0/16",
-                    "Gateway": "172.17.0.1"
-                }
-            ]
-        },
-        "Internal": false,
-        "Attachable": false,
-        "Ingress": false,
-        "ConfigFrom": {
-            "Network": ""
-        },
-        "ConfigOnly": false,
-        "Containers": {
-            "a67e1811399df898974d749823f7ff3026dcd1b918213398a8d350ef4808d236": {
-                "Name": "modest_elbakyan",
-                "EndpointID": "3a38303df15c44156aedaa4163490dc5db5e494451fc87348b8003a7027abb0d",
-                "MacAddress": "02:42:ac:11:00:02",
-                "IPv4Address": "172.17.0.2/16",
-                "IPv6Address": ""
-            }
-        },
-        "Options": {
-            "com.docker.network.bridge.default_bridge": "true",
-            "com.docker.network.bridge.enable_icc": "true",
-            "com.docker.network.bridge.enable_ip_masquerade": "true",
-            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
-            "com.docker.network.bridge.name": "docker0",
-            "com.docker.network.driver.mtu": "1500"
-        },
-        "Labels": {}
-    }
-]
-``` 
-
-From the above out of the first command we can see the containers name is __modest_elbakyan__.  From the output of the second command we can see that I actually only have one container running and the name matches the one above for which the IP address is __172.17.0.2__.
-
-Now we need to create a new configuration file for Prometheus, simply name this file __prometheus.yml__.  The content of the file will look like the following (remember to switch the IP address of the pushgateway to the yours as shown above;
-
-```yml
-global:
-  scrape_interval: 15s
-
-scrape_configs:
-  - job_name: 'prometheus'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['localhost:9090']
-
-  - job_name: 'pushgateway'
-    honor_labels: true
-    static_configs:
-      - targets: ['172.17.0.2:9091']
-```
-
-Now you can simply start the Prometheus engine with the full path to your new configuration file like this;
-```
-docker run -d -v C:\prometheus.yml:/etc/prometheus/prometheus.yml -p 9090:9090 prom/prometheus
-```
-
-#### If you're using the Prometheus scrape method;
 
 Create a new file named prometheus.yml with the following content;
 
@@ -168,15 +75,15 @@ Choose Prometheus as the data source type and enter the host with your IP addres
 
 In this guide we will be using a fairly simple Interlok configuration with two workflows that accept HTTP requests, run some services and simply return the result to the caller.  You can absolutely use any Interlok configuration you wish, but if you wish to use the same one as this guide, you can find a full copy at the very bottom of this guide.  Simply copy the content into the file named __adapter.xml__ in your Interlok __config__ directory.
 
-Assuming you have installed the required jar files as mentioned at the top of this document, we now need to configure the interlok-profiler and the specify the Prometheusmetric population method.
+Assuming you have installed the required jar files as mentioned at the top of this document, we now need to configure the interlok-profiler and the specify the Prometheus metric population method.
 
 When running the profiler it is always suggested to create your own scrip to launch the Interlok process.  Essentially we need to start the Java process with a javaagent, with the profiling configuration.  Here is a windows batch script (start-interlok-with-profiler.bat) that does the necessary;
 ```
 setlocal ENABLEDELAYEDEXPANSION
 
 set CLASSPATH=.
-set INTERLOK_HOME=C:\Adaptris\3.10
-set JAVA_HOME=C:\Java\Zulu\zulu-8\bin
+set INTERLOK_HOME=C:\Adaptris\4.0
+set JAVA_HOME=C:\Java\Zulu\zulu-11\bin
 
 set CLASSPATH=%CLASSPATH%;%INTERLOK_HOME%\lib\*;%INTERLOK_HOME%\config
 
@@ -192,45 +99,16 @@ Now we need a new file in your __config__ directory of your Interlok installatio
 com.adaptris.profiler.plugin.factory=com.adaptris.monitor.agent.InterlokMonitorPluginFactory
 com.adaptris.monitor.agent.EventPropagator=JMX
 ```
-#### If you've chosen to use the pushgateway to populate Prometheus
+#### Enabling the Prometheus endpoint for scraping
 
-Finally, we need to configure the Prometheus pushgateway endpoint for Interlok and make sure the interlok-profiler-prometheus management component starts up.  Edit the file named __bootstrap.properties__ in your __config__ directory at the root of your Interlok installation.  Add the management component named __profiler-prometheus__ to the management component list and add an additional property named __prometheusEndpointUrl__ as shown below;
-
-```
-# What management components to enable.
-managementComponents=jetty:jmx:profiler-prometheus
-
-# The adapter config files, primary + secondary.
-adapterConfigUrl.0=file://localhost/./config/FSx.xml
-adapterConfigUrl.1=file://localhost/./config/adapter-backup.xml
-
-# Configuration for jetty.
-webServerConfigUrl=./config/jetty.xml
-
-# configuration for JMX
-jmxserviceurl=service:jmx:jmxmp://localhost:5555
-
-# System Property needs to be set; equivalent to "-Dorg.jruby.embed.localcontext.scope=threadsafe"
-sysprop.org.jruby.embed.localcontext.scope=threadsafe
-
-# System Property that tells jboss logging to use slf4j.
-sysprop.org.jboss.logging.provider=slf4j
-
-preProcessors=xinclude:variableSubstitution:environmentVariables
-
-prometheusEndpointUrl=localhost:9091
-```
-
-This assumes you're running Interlok on the same host as your Docker engine.  If you are not, then change the __localhost__ part of the Url to the IP/host of the Prometheus pushgateway Docker container.
-
-#### If you've chosen to use the scraping method to populate Prometheus
-
-Simply modify Interlok's bootstrap.properties to include a new management component named __prometheus-rest__, also make sure the colon separated list includes __jetty__ and __jmx__ as shown below;
+Simply modify Interlok's bootstrap.properties to include the following management components;
 
 ```
 # What management components to enable.
-managementComponents=jetty:jmx:prometheus-rest
+managementComponents=jmx:jetty:metrics-interlok:metrics-provider-prometheus
 ```
+
+If you want Interlok to publish JVM metrics as well as Interlok specific metrics then also add the following to the colon separated list; __metrics-jvm__
 
 ## The metrics
 
@@ -238,19 +116,25 @@ The following will become important later when we start querying for metrics in 
 
 Currently Interlok pushes two types of metrics; the number of messages processed and the average amount of time a component takes to process a single message.
 
-For the number of messages processed by a workflow the metric name pushed to Prometheus will be prefixed with the following __workflowMessageCount__ followed by an underscore and then the unique id of the workflow.  Do be aware however, if your workflow name (unique id) has any of the following characters they will be stripped when creating the metric name; dot, dash or underscore.
+### Message counts
 
-An example would be if you have a workflow named __my_Message_Workflow__, then the metric to record the number of messages processed by this workflow will be named __workflowMessageCount_myMessageWorkflow__.
+There are two metrics Interlok will produce for each workflow; simply the number of messages processed within a given time frame and the number of messaged that have been deemed as failures.  The metric names are as follows;
+ - workflow_count
+ - workflow_fail_count
 
-Additionally to workflow message counting, we also push average processing times for each service and producer in your workflows.  We publish separate metrics both in milliseconds and nanoseconds.  The names of these metrics take the same rules and have a similar form to the above.
+To distinguish between workflows we have employed Prometheus tags.  Tags are simply name and value pairs added to a metric.  In our case you can target a particular workflow using the __workflow__ tag name with the value being the ID of the workflow (example below).
 
-For service metrics the metric name will be prefixed by __serviceAvgNanos__ for nanosecond timing and __serviceAvgMillis__ for millisecond timing.
+### Component performance
 
-For service metrics the metric name will be prefixed by __producerAvgNanos__ for nanosecond timing and __producerAvgMillis__ for millisecond timing.
+Interlok maintains a running average both in milliseconds and nanoseconds that each component needs to complete it's job.  The metric names are as follows;
+ - service_avgnanos
+ - service_avgmillis
+ - producer_avgmillis
+ - producer_avgnanos
+ - workflow_avgnanos
+ - workflow_avgmillis
 
-After the prefix and underscore followed by the parent workflow name, then followed by another underscore and then name of the service or producer component will make up the entire service/producer metric name.
-
-For example, if you have a producer named __my_Jms_Producer__ in the workflow named __my_Message_Workflow__, then two metrics will be published to Prometheus; __producerAvgMillis_myMessageWorkflow_myJmsProducer__ and __producerAvgNanos_myMessageWorkflow_myJmsProducer__.
+You can further deduce the actual service or producer using the tag name __component__.  You can also use the __workflow__ tag to query for components related to a particular workflow (examples below).
 
 ## Loading messages into Interlok
 
@@ -262,13 +146,21 @@ Continually fire messages into Interlok for a few seconds or so and then move on
 
 ## Grafana
 
+### JVM
+
+If you have opted to use the Interlok __metrics-jvm__ management component, explained above, then you can install [this](https://grafana.com/grafana/dashboards/4701) dashboard directly into Grafana to see all of the JVM stats reported by your Interlok instance.
+
+![JVM](../../images/prometheus/jvm.png)
+
+### Interlok
+
 You should have created the Prometheus data source in Grafana in a previous section so now you will create a new dashboard which will allow you to create new queries.  This guide will not go into detail on how to use Grafana or the power of Prometheus's query language, but we can show a couple of potentially useful queries below.
 
 __Note:__ The following queries may need to be changed to match your workflows unique id's, if you are not using this guides configuration.
 
 Using the query;
 ```
-{__name__=~"workflowMessageCount.*"}
+workflow_count
 ```
 In the following configuration window;
 
@@ -281,7 +173,7 @@ We end up with the following messages processed by workflow chart;
 We can also see the time in nanoseconds that each service in the workflow named __standardWorkflow__ takes to process each message with the following query;
 
 ```
-{__name__=~"serviceAvgNanos_standardWorkflow.*"}
+service_avgnanos{workflow="standardWorkflow"}
 ```
 
 ![Services](../../images/prometheus/servicenanos.PNG)

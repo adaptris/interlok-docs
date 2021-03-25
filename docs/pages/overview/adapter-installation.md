@@ -49,7 +49,7 @@ If you are in this situation, you should install with the bundled JRE (using `in
 On Some platforms; you may not be able to execute the installer without explicitly providing path to the java executable. This can be done by passing in the LAX_VM switch on the commandline and works on both Windows and Unix platforms. On Unix systems; if you installed java via the distribution repos, then you may not have a JAVA_HOME environment variable; the installer may not be able to find java.
 
 ```
-.\install-without-jre.exe LAX_VM "C:\Program Files\jdk1.8.0_102\bin\javaw.exe"
+.\install-without-jre.exe LAX_VM "C:\Program Files\jdk\bin\javaw.exe"
 sh ./install-without-jre.bin LAX_VM "/docker-java-home/bin/java"
 ```
 

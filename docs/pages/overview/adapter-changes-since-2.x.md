@@ -7,7 +7,9 @@ permalink: adapter-changes-since-2.x.html
 summary: This is a brief guide about what's changed in the adapter..
 ---
 
-- It requires Java 7
+!> **NOTE:** **Interlok 3.8+ requires at least Java 8 and Interlok 4.0+ requires Java 11**.
+
+- Interlok 3.0+ requires Java 7
 - There is now a web based UI
 - The underlying XML has been migrated from Castor to XStream
 - The XPath / XSLT engine has switched from Xalan to Saxon-HE

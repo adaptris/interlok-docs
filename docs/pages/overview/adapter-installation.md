@@ -1,6 +1,6 @@
 # Interlok Installation #
 
-?> **NOTE** 3.8.0 and later will require at least Java 8
+!> **NOTE:** **Interlok 3.8+ requires at least Java 8 and Interlok 4.0+ requires Java 11**.
 
 Installation is pretty easy. Download the installer, and execute it; due to a change in Java licensing as of 2019 you need to provide your own 64bit JVM.
 
@@ -66,9 +66,9 @@ INSTALLER_UI=silent
 INSTALL_AS_SERVICE=0
 
 # Only required if you aren't installing with the JVM bundle.
-JDK_HOME=/opt/java/jdk1.7
-JAVA_DOT_HOME=/opt/java/jdk1.7
-JAVA_EXECUTABLE=/opt/java/jdk1.7/bin/java
+JDK_HOME=/opt/java/jdk
+JAVA_DOT_HOME=/opt/java/jdk
+JAVA_EXECUTABLE=/opt/java/jdk/bin/java
 
 ```
 

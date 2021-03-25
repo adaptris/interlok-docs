@@ -21,7 +21,7 @@ setlocal ENABLEDELAYEDEXPANSION
 
 set CLASSPATH=.
 set INTERLOK_HOME=C:\Adaptris\3.10
-set JAVA_HOME=C:\Java\Zulu\zulu-8\bin
+set JAVA_HOME=C:\Java\jdk\bin
 
 set CLASSPATH=%CLASSPATH%;%INTERLOK_HOME%\lib\*;%INTERLOK_HOME%\config
 

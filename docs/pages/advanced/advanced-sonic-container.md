@@ -5,7 +5,7 @@
 !> **IMPORTANT** **Interlok SonicMF is deprecated since 3.11.1** and **will be removed in version 4.0**.
 
 
-Interlok requires a minimum JVM version of 1.7. SonicMQ version 8.5 and earlier may be running with Java 1.6.  In this case you will need a separate install of Java 1.7 on the SonicMQ host machine. You can download the required files from either then [snapshot repository](https://nexus.adaptris.net/nexus/content/groups/adaptris-snapshots/com/adaptris/interlok-sonicmf/) or the [release repository](https://nexus.adaptris.net/nexus/content/groups/public/com/adaptris/interlok-sonicmf/).
+Interlok requires a minimum JVM version of 1.8 (Interlok 4 requires Java 11). SonicMQ version 8.5 and earlier may be running with Java 1.6.  In this case you will need a separate install of Java 1.8 on the SonicMQ host machine. You can download the required files from either then [snapshot repository](https://nexus.adaptris.net/nexus/content/groups/adaptris-snapshots/com/adaptris/interlok-sonicmf/) or the [release repository](https://nexus.adaptris.net/nexus/content/groups/public/com/adaptris/interlok-sonicmf/).
 
 ----
 
@@ -132,6 +132,8 @@ Should you choose to upload your bootstrap.properties into the sonicfs, you may 
 The main reason for using the bootstrap.properties.url deployment parameter above the previous method would be to be able to have the full leverage of pre-processors and custom parameters within the bootstrap.properties.
 
 Next, you need to make sure the SonicMQ container starts Interlok with the correct version of java. By default all container components will be executed with the version installed with SonicMQ.  You may need to specify a later version of Java. To do this, you can edit your custom container and make sure the path to your java 1.8+ installation is specified as shown here;
+
+!> **IMPORTANT:** **Remember that Interlok 3.8+ requires Java 8 and Interlok 4.0+ requires Java 11**.
 
 ![Java version](../../images/sonic-container/sonicmq-container-Figure8.png)
 

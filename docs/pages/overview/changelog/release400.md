@@ -2,6 +2,33 @@
 
 Release Date : 2021-03
 
+### Key Highlights
+
+- This Interlok version has been compiled for Java 11.
+- The deprecated ProduceDestination & ConsumeDestination components have been removed and entirely replaced with simplified configuration elements.
+- The Nashorn script engine is deprecated and you will recieve warnings if the EmbeddedScriptingService language is set to 'nashorn'.
+- Lots of deprecated things have been removed; please execute --configtest (or use the parent gradle) with an existing 3.12 instance to see what might have been removed
+- To mitigate against XXE, XML Services now use a restricted instance if you leave it null, which means the default underlying document factory will disable things like doctype and entity handling. This change will not break config directly, but it will break currently-working functionality if you are relying on those featured being defaulted on in some DocumentBuilderFactory implementations.
+- interlok-xinclude has been marked as deprecated and due to be removed in Interlok 5.0.0; One of the reasons for this, is the way the Interlok UI handles relative paths; it is not always compatible with the Interlok xincludes pre-processors.    
+- Several optional components have been removed, either because there is an improved replacement or they are not compatible with Java 11 as they are too old, or they are unloved components:
+  - interlok-swiftmq
+  - interlok-socket
+  - interlok-variodoc
+  - interlok-kubernetes-metrics
+  - interlok-kubernetes-prometheus
+  - interlok-profiler-prometheus
+  - interlok-as2
+  - interlok-ironmq
+  - interlok-oftp
+  - interlok-reliable-messaging
+  - interlok-salesforce
+  - interlok-sonicmf
+  - interlok-shell
+  - interlok-vcs-command-line
+  - interlok-container
+  - interlok-actional-interceptor
+  - interlok-actional-stabiliser
+  - interlok-vcs-subversion
 
 ### Bugs
 

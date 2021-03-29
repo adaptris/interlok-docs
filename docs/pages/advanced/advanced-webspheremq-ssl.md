@@ -145,7 +145,7 @@ If you have your own Interlok start script simply add these parameters to the Ja
 ```
 set CLASSPATH=.
 set ADAPTRIS_HOME=C:\Adaptris\3.6.6
-set JAVA_HOME=C:\Java\jdk1.8.0_144\bin
+set JAVA_HOME=C:\Java\jdk\bin
 
 set CLASSPATH=%CLASSPATH%;%ADAPTRIS_HOME%\lib\*;%ADAPTRIS_HOME%\config
 

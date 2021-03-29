@@ -14,6 +14,8 @@ In this worked example we will be using [Apache Ant][] and [Apache Ivy][] to man
 - Ant 1.9+
 - JDK 8 (as you'll need this to run Interlok from 3.8 onwards)
 
+!> **IMPORTANT:** **Interlok 3.8+ requires at least Java 8 and Interlok 4.0+ requires Java 11**.
+
 The files are:
 
 - `ivy/ivy-settings.xml` : contains resolvers and settings for your build.

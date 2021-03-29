@@ -195,7 +195,7 @@ A short example of a windows start script; the last line setting the argument an
 
 ```
 set ADAPTRIS_HOME=C:\Adaptris\Interlok
-set JAVA_HOME=C:\Java\jdk1.8\bin
+set JAVA_HOME=C:\Java\jdk\bin
 
 cd %ADAPTRIS_HOME%
 %JAVA_HOME%\bin\java -jar lib\interlok-boot.jar --failover bootstrap.properties

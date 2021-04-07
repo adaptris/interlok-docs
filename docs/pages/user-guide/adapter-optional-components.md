@@ -72,7 +72,7 @@ As additional features are developed and released our public facing repository i
 | com.adaptris | interlok-mqtt | Interlok Messaging/MQTT | Use a MQTT broker as a messaging platform; Requires additional jars not automatically delivered | 3.5.0+ | [available on github](https://github.com/adaptris/interlok-mqtt) |
 | com.adaptris | interlok-msmq-javonet | Interlok Messaging/MSMQ | Connect to MSMQ via the javonet .NET bridge; Requires a license from javonet | 3.8.0+ | Requires License; |
 | com.adaptris | interlok-nats | Interlok Messaging/NATS | Using NATS.io as a messaging platform | 3.9.3+ | [available on github](https://github.com/adaptris/interlok-nats) |
-| com.adaptris | interlok-new-relic | Interlok Profiling/New Relic | Instrumentation and Profiling with NewRelic | 3.8.0+ | |
+| com.adaptris.labs | interlok-new-relic | Interlok Profiling/New Relic | Instrumentation and Profiling with NewRelic | 3.8.0+ | The artifact group id has been changed to 'com.adaptris.labs' as a dependency clash was found when using this component |
 | com.adaptris | interlok-oauth-azure | Interlok OAUTH/Azure | Retrieving OAUTH access tokens from Azure | 3.6.5+ | [available on github](https://github.com/adaptris/interlok-oauth) |
 | com.adaptris | interlok-oauth-gcloud | Interlok OAUTH/Google | Retrieving OAUTH access tokens from Google Cloud | 3.6.5+ | [available on github](https://github.com/adaptris/interlok-oauth) |
 | com.adaptris | interlok-oauth-generic | Interlok OAUTH/Generic | Handling OAUTH where the provider does not have an explicit API or SDK | 3.8.1+ | [available on github](https://github.com/adaptris/interlok-oauth) |

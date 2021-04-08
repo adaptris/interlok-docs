@@ -1,6 +1,18 @@
 ## Version 4.0.0 ##
 
-Release Date : 2021-03
+Release Date : 2021-04-08
+
+### Known Issues
+
+If you're using the docker images, then you may encounter issues with the zulu based images that look like this: 
+```
+GenericConnectorServer Receiver.run
+SEVERE: Unexpected IOException: java.net.SocketTimeoutException: Accept timed out
+GenericConnectorServer Receiver.run
+SEVERE: stopping server
+```
+We haven't been able to reproduce the issue consistently, our suggestion is that you switch to a different image in order to use remote JMX via JMXMP
+
 
 ### Key Highlights
 
@@ -48,6 +60,7 @@ Release Date : 2021-03
 - 'INTERLOK-3743' - SwiftMQ - Archive & Remove
 - 'INTERLOK-3748' - FileParameter no longer supports the same behaviour as "destination".
 - 'INTERLOK-3752' - JClouds Blobstore - Exception when running ListBlobs with prefix using aws-s3 provider
+- 'INTERLOK-3766' - Ui Config - fixed broken documentation links on the settings editor
 
 ### Improvements
 
@@ -218,4 +231,7 @@ Release Date : 2021-03
 - 'INTERLOK-3742' - Profiling Memory Issues
 - 'INTERLOK-3745' - Interlok Templates - Check all the templates and fix them if they use deprecated components.
 - 'INTERLOK-3753' - UI Salesforce - Fix UI salesforce producer template to not use destination
+- 'INTERLOK-3765' - Installer - Add a new column in the list display if a component is licensed
 - 'INTERLOK-3755' - Change the download page process to use zip/tar files.
+- 'INTERLOK-3760' - Update  xml-security project, change the iaik dependencies to be optional
+- 'INTERLOK-3759' - Update saxon-extensions project, so the groupId is 'com.proagrica'

@@ -20,7 +20,7 @@ The modal is divided in three tabs:
 ![Config Project Tabs](../../images/ui-user-guide/config-project-tabs.png)
 
 - **General:** Where you can configure the basic details of the project, name, description, add config file and the config file name.
-- **X-Includes:** Where you can specify which part of the XML config file should be split into multiple files.
+- **X-Includes:** Where you can specify which part of the XML config file should be split into multiple files (Deprecated  since 4.0.0).
 - **Variables:** Where you can add key/variable pairs to use for the XML config [Variables Substitutions](/pages/advanced/advanced-configuration-pre-processors#variable-substitution).
 - **Variable XPaths:** Where you can specify which value of the XML config file should use Variables Substitutions using some XPaths. You should not need to add Xpaths/key pairs manually as that can be done in the [Component settings modal](#component-settings-modal).
 - **Tests:** Where you can specify the test config file name. This is the file used in the [Service Tester Page](/pages/ui/ui-service-tester).
@@ -38,7 +38,7 @@ In the General tab you can configure:
 - **Config Unique Id:** This will be populated from the uploaded configuration XML. The **Upload Config File** button allows you to update the configuration file of the project.
 - **Config XML File Name:** The name of the Adapter config XML file. This is used when the project is saved or published to a [version control system](/pages/ui/ui-version-control). This is optional and `adapter.xml` is used by default.
 
-### X-Includes Tab ###
+### X-Includes Tab  (Deprecated  since 4.0.0) ###
 
 ![Config Project X-Includes Tab](../../images/ui-user-guide/config-project-xincludes-tab.png)
 
@@ -52,6 +52,7 @@ If you wish to add the files in a sub folder you can set the file path to *dir/f
 For instance to have all the workflows in a folder named 'workflows' you can do *workflows/workflow*. (Only forward slashes '/' are allowed)
 
 Since 3.9.3 If "Use unique id instead of index" is enabled, this option will append the component unique id, if it exists, to the file name.
+Since 4.0.0 Deprecated as X-Includes is no longer recommended for Interlok configurations.
 
 ### Variables Tab ###
 

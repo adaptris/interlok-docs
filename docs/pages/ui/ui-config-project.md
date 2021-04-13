@@ -52,6 +52,7 @@ If you wish to add the files in a sub folder you can set the file path to *dir/f
 For instance to have all the workflows in a folder named 'workflows' you can do *workflows/workflow*. (Only forward slashes '/' are allowed)
 
 Since 3.9.3 If "Use unique id instead of index" is enabled, this option will append the component unique id, if it exists, to the file name.
+
 Since 4.0.0 Deprecated as X-Includes is no longer recommended for Interlok configurations.
 
 ### Variables Tab ###

@@ -11,6 +11,7 @@
     - [Solace SSL](/pages/advanced/advanced-solace-ssl.md)
  - [JMX Runtime Controls](/pages/advanced/advanced-jmx.md)
  - [JMX via JMS](/pages/advanced/advanced-jmx-jms.md)
+ - [HTTP JMX via Jolokia](/pages/advanced/advanced-jolokia.md)
  - [Management using Remote Shell](/pages/advanced/advanced-shell.md)
  - [Measuring Performance](/pages/advanced/advanced-performance.md)
  - [Memory Requirements](/pages/advanced/advanced-memory-requirements.md)

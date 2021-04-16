@@ -93,7 +93,8 @@ curl --location --request POST 'http://localhost:8081/jolokia/' --header 'Conten
 
 Response
 
-```{
+```
+{
   "request": {
     "mbean": "com.adaptris:adapter=MyInterlokInstance,channel=*,id=*,type=Workflow",
     "type": "search"

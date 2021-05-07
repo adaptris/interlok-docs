@@ -105,7 +105,7 @@ Now simply start Interlok and within a couple of minutes you'll start to see Met
 
 Once you start to see non-web traffic in your dashboard you'll be able to query for the individual metrics;
 
-![NewRelicInterlokMetrics](../../images/profiling/NRAverageNanosWorkflow.png)
+![NewRelicInterlokMetrics](../../images/profiler/NRAverageNanosWorkflow.png)
 
 [New Relic]: http://newrelic.com
 [New Relic JMX Extension documentation]: https://docs.newrelic.com/docs/agents/java-agent/custom-instrumentation/java-agent-custom-jmx-instrumentation-yaml/

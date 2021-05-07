@@ -100,7 +100,7 @@
   - [Password Handling](/pages/advanced/advanced-password-handling.md)
   - [Profiling](/pages/advanced/advanced-profiling.md)
     - [Profiling with New Relic](/pages/advanced/advanced-new-relic-profiling_v4.md)
-	- [Profiling with Datadog](/pages/advanced/advanced-profiler-datadog_v4.md)
+	- [Profiling with Datadog](/pages/advanced/advanced-profiler-datadog.md)
     - [Profiling with Prometheus](/pages/advanced/advanced-profiler-prometheus.md)
     - [Automagically adding logging context](/pages/advanced/advanced-profiler-logging-context.md)
     - [JMS Performance](/pages/advanced/advanced-jms-performance.md)

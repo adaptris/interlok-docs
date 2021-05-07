@@ -81,5 +81,5 @@ For Services:
 
 For each Interlok component the metric will contain a "component" tag, the value of which will be the Interlok components unique-id.
 
-![Datadog](../../images/profiling/Datadog.png)
+![Datadog](../../images/profiler/Datadog.png)
 

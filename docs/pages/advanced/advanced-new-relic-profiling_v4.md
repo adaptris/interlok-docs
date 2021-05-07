@@ -101,7 +101,7 @@ jmx:
 
 Now simply start Interlok and within a couple of minutes you'll start to see Metrics flowing into your New Relic dashboard.
 
-![NewRelic](../../images/profiling/NRDefault.png)
+![NewRelic](../../images/profiler/NRDefault.png)
 
 Once you start to see non-web traffic in your dashboard you'll be able to query for the individual metrics;
 

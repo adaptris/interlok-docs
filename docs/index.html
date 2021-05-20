@@ -14,9 +14,19 @@
 	:root {
 		--content-max-width: 85em;
 		--theme-color-secondary: #C51162;
+		--theme-color-light: #45537E;
+		--theme-color-dark: #000029;
+		--sidebar-text-color: #E1E4E8;
+		--sidebar-toggle-background: var(--theme-color-light);
+		--sidebar-name-color: var(--sidebar-text-color);
+		--sidebar-toggle-icon-color: var(--sidebar-text-color);
+		--sidebar-background: var(--theme-color);
+		--search-result-keyword-background: var(--theme-color-secondary);
+		--sidebar-nav-link-border-color--active: var(--theme-color-secondary);
 		--sidebar-nav-pagelink-background-image--active:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
 		--sidebar-nav-pagelink-background-image--collapse:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='11.2' viewBox='0 0 7 11.2'%3E%3Cpath d='M1.5 1.5l4 4.1 -4 4.1' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
 		--sidebar-nav-pagelink-background-image--loaded:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+		--search-result-keyword-color: var(--mark-color);
 	}
 	footer .content {
 		margin-left: var(--sidebar-width);
@@ -32,11 +42,18 @@
         align-items: center;
         justify-content: space-between;
 	}
+	.sidebar h2, .sidebar strong, .sidebar a {
+		color: var(--sidebar-text-color) !important;
+	}
+    .sidebar-nav li.folder.level-1>span, .sidebar-nav li.folder.level-1>strong {
+        margin-top: 1.0em;
+        cursor: pointer;
+    }
     .sidebar-nav li.active>a, .sidebar-nav li.collapse>a {
         background-color: var(--sidebar-toggle-background);
     }
     .markdown-section h1 {
-        color: var(--sidebar-name-color);
+        color: var(--theme-color);
     }
     .markdown-section h2 {
         color: var(--theme-color-secondary);
@@ -52,7 +69,7 @@
 	}
 	
 	.interlok-docs-title {
-	    background-image: url(./svg/adaptris-logo.svg);
+	    background-image: url(./svg/adaptris-logo-grey.svg);
 		background-repeat: no-repeat;
 		background-position: 0 50%;
 		padding-left: 24px;

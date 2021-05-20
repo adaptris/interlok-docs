@@ -1,5 +1,6 @@
-- [Home](/)
-- [Overview](/pages/overview/)
+**Home**
+  - [Getting Started With Interlok V4](/)
+- **Overview**
   - [What is Interlok](/pages/overview/adapter-what-is-it.md)
   - [Installation](/pages/overview/adapter-installation.md)
   - [Installation Gradle](/pages/overview/adapter-gradle.md)
@@ -7,7 +8,7 @@
   - [Additional Resources](/pages/overview/adapter-additional.md)
   - [Change log](/pages/overview/changelog.md)
   - [Changes from 2.x](/pages/overview/adapter-changes-since-2.x.md)
-- [User guide](/pages/user-guide/)
+- **User guide**
   - [Optional Components](/pages/user-guide/adapter-optional-components.md)
   - [Startup in Detail](/pages/user-guide/adapter-bootstrap.md)
   - [Applying a license](/pages/user-guide/adapter-license.md)
@@ -17,7 +18,7 @@
   - [Interlok Hosted Webservices](/pages/user-guide/adapter-hosting-ws.md)
   - [Interlok Hosted Restful Services](/pages/user-guide/adapter-hosting-rest.md)
   - [Interlok As a Webservices Client](/pages/user-guide/adapter-executing-ws.md)
-- [UI](/pages/ui/)
+- **UI**
   - [Introduction to the UI](/pages/ui/ui-introduction.md)
   - [Quick Overview](/pages/ui/ui-quick-overview.md)
   - [Logging in](/pages/ui/ui-logging-in.md)
@@ -48,7 +49,7 @@
   - [User Preferences](/pages/ui/ui-user-preferences.md)
   - [Switch Database Provider](/pages/ui/ui-switch-db.md)
   - [Profiler Monitor](/pages/ui/ui-profiler-monitor.md)
-- [Integration Guides](/pages/cookbook/)
+- **Integration Guides**
   - [Aggregating Messages](/pages/cookbook/cookbook-aggregating-messages.md)
   - [Databases via JDBC](/pages/cookbook/cookbook-jdbc-data.md)
     - [Data Capture](/pages/cookbook/cookbook-jdbc-data-capture.md)
@@ -79,7 +80,7 @@
     - [CSV to XML](/pages/cookbook/cookbook-csv-transform.md)
     - [EDI Data Transforms](/pages/cookbook/cookbook-edi-transform.md)
   - [OneDrive](/pages/cookbook/cookbook-1drive.md)    
-- [Advanced](/pages/advanced/)
+- **Advanced**
   - [Logic blocks in configuration](/pages/advanced/advanced-conditional.md)
   - [Interlok Clustering](/pages/advanced/advanced-cluster.md)
   - [Autoscaling - Kubernetes](/pages/advanced/advanced-interlok-scaling.md)
@@ -114,12 +115,12 @@
   - [Workflow Interceptors](/pages/advanced/advanced-interceptors.md)
   - [XA Integration](/pages/advanced/advanced-xa-integration.md)
   - [Scripting](/pages/advanced/advanced-scripting.md)
-- [Service Tester](/pages/service-tester/)
+- **Service Tester**
   - [Introduction](/pages/service-tester/service-tester-introduction.md)
   - [Configuration](/pages/service-tester/service-tester-configuration.md)
   - [Output](/pages/service-tester/service-tester-output.md)
   - [Continuous Delivery](/pages/service-tester/service-tester-continuous-delivery.md)
-- [Developer](/pages/developer/)
+- **Developer**
   - [Annotating your Components](/pages/developer/developer-annotations.md)
   - [Compiling against Interlok](/pages/developer/developer-compiling.md)
   - [Custom Connections](/pages/developer/developer-connections.md)

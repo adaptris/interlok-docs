@@ -1,4 +1,3 @@
-# Getting Started With Interlok V4
 
 > **Summary:** This is the **Interlok V4** Documentation website. Choose a document and start reading.<br/>If you need documentation for Interlok V3 please go to https://interlok.adaptris.net/interlok-docsv3.
 

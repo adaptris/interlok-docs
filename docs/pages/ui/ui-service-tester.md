@@ -26,13 +26,13 @@ The actions are as follows:
 
 Button | Action | Meaning
 ------------ | ------------- | ------------
-![The service tester new config button](../../images/ui-user-guide/service-tester-new-config-btn.png) | New Config | Reset the page with a new config
-![The service tester open from saved projects button](../../images/ui-user-guide/service-tester-open-from-saved-projects-btn.png) | Open from saved projects | Open a config from a saved config project. Since 3.8.1
-![The service tester open from saved on local file system button](../../images/ui-user-guide/service-tester-open-from-saved-on-local-file-system-btn.png) | Open from saved on local file system | Open a config from a config project saved your local file system. Only available when the UI is accessed via localhost. Since 3.8.1
+![The service tester open config button](../../images/ui-user-guide/service-tester-open-config-btn.png) | Open config | Open a modal with several choices to open a project (New, File System, Save Projects, Local Project, Auto Saved and Version Control)
+![The service tester new project button](../../images/ui-user-guide/service-tester-new-project-btn.png) | New Project | Reset the page with a new project
 ![The service tester upload config button](../../images/ui-user-guide/service-tester-upload-config-btn.png) | Upload Config | Upload an XML config into the page
 ![The service tester load services fron adapter config button](../../images/ui-user-guide/service-tester-load-services-from-adapter-config-btn.png) | Load Services From Adapter Config | Load in the page context all the services from an Adapter XML config so they can be used in the Tests Source (File or Inline)
 ![The service tester generate services fron adapter config button](../../images/ui-user-guide/service-tester-generate-services-from-adapter-config-btn.png) | Generate Services From Adapter Config | Generate tests for all selected services from an Adapter XML config. The Tests can either have a File or an Inline Source
 ![The service tester save config button](../../images/ui-user-guide/service-tester-save-config-btn.png) | Save Config | Save the current config into a config project (existing, new or on the local file system)
+![The service tester publish project button](../../images/ui-user-guide/service-tester-publish-project-btn.png) | Publish project | Publish the current project to VCS
 ![The service tester download config button](../../images/ui-user-guide/service-tester-download-config-btn.png) | Download Config | Download the current config into an XML file
 ![The service tester run config button](../../images/ui-user-guide/service-tester-run-config-btn.png) | Run Config | Run the current config tests
 ![The service tester clear results button](../../images/ui-user-guide/service-tester-clear-results-btn.png) | Clear Results | Run the current config tests results
@@ -48,12 +48,16 @@ In the Edit Service Test modal you can change the service test unique id and sel
 The Service Test form inputs explained:
 
 - **Unique Id:** This provide an easy way to name the service test.
+- **Source:** The source of the adapter xml configuration. By default **Default Config File Source** is used.
+   - **Default Config File Source:** This has the **File** property set with *file:///${service.tester.working.directory}/src/main/interlok/config/adapter.xml* which is not changeable. This the right choice in a normal Interlok project.
+   - **File Source:** If the adapter xml configuration to use is not in the default location this should be use and the the xml config location should be provided in the **File** property.
 - **Test Adapter Type:** Adapter to run the tests. There are three kind of test client you can use. By default the **Local JMX test Client** is used to run the tests.
    - **Embedded JMX Test client:** Create a temporary adapter in the local JVM to run the tests.
    - **External JMX Test client:** Use the specified JMX URL to find the adapter to run the tests.
    - **Local JMX Test client:** Use the local adapter to run the tests. This means the adapter running the UI will run the tests.
+- **Helpers:** Helpers for the service tests. An empty list means that no helpers (such as interlok-service-tester-wiremock) exist in the classpath.
 
-## Looding/Generating Tests From Adapter Config ##
+## Loading/Generating Tests From Adapter Config ##
 
 Since 3.7.3 The Service Tester page allows to load services from an Adapter config to be able to use them as source (File or Inline) when creating a test.
 For that you will need to click on the **Load Services From Adapter Config** button in the page menu.
@@ -88,6 +92,7 @@ The Test form inputs explained:
 
 - **Unique Id:** This provide an easy way to differentiate tests in the service tester configuration.
 - **Source:** This is the service to be tested.
+    - **Main Source:** Uses the source defined in the [Service Test](#service-test).
     - **File Source:** Path to a file with the service xml configuration. **Note:** this will only work if the file is accessible by the adapter running the tests.
     - **Inline Source:** Service xml configuration.
 - **Preprocessors:** A list of preprocessors to apply on the service xml before running the tests.

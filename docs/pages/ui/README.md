@@ -27,4 +27,3 @@
  - [System Preferences](/pages/ui/ui-system-preferences.md)
  - [User Preferences](/pages/ui/ui-user-preferences.md)
  - [Switch Database Provider](/pages/ui/ui-switch-db.md)
- - [Profiler Monitor](/pages/ui/ui-profiler-monitor.md)

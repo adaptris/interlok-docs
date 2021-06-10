@@ -219,6 +219,8 @@ As well as log4j config, you would have to put the interlok-logging.jar into the
 
 ### Platform Runtime Details ###
 
+> **Note:** This widget has been removed from version 4.1.0. All the information contained in this widget is shown in the **Dashboard** page **Adapter Information** modal.
+
 This widget shows basic information about the platform running the Interlok container.
 
 ![Runtime Widget - Platform Runtime Details](../../images/ui-user-guide/widgets-platform-runtime-details-widget.png)
@@ -233,6 +235,8 @@ This widget shows the basic data from the [RuntimeMXBean](http://docs.oracle.com
 
 ### Platform Runtime Classpath ###
 
+> **Note:** This widget has been removed from version 4.1.0. All the information contained in this widget is shown in the **Dashboard** page **Adapter Information** modal.
+
 This widget shows the containers java Classpath.
 
 ![Runtime Widget - Platform Runtime Classpath](../../images/ui-user-guide/widgets-platform-classpath-details-widget.png)
@@ -245,6 +249,8 @@ This widget shows the classpath data from the [RuntimeMXBean](http://docs.oracle
 
 ### Platform System Properties ###
 
+> **Note:** This widget has been removed from version 4.1.0. All the information contained in this widget is shown in the **Dashboard** page **Adapter Information** modal.
+
 This widget shows the containers runtime system properties
 
 ![Runtime Widget - Platform Runtime System Properties](../../images/ui-user-guide/widgets-platform-runtime-sys-props-widget.png)
@@ -252,6 +258,8 @@ This widget shows the containers runtime system properties
 This widget shows the names and values of all system properties from the [RuntimeMXBean](http://docs.oracle.com/javase/7/docs/api/java/lang/management/RuntimeMXBean.html)
 
 ### Platform Operating System ###
+
+> **Note:** This widget has been removed from version 4.1.0. All the information contained in this widget is shown in the **Dashboard** page **Adapter Information** modal.
 
 This widget shows information regarding the system details.
 

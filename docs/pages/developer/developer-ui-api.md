@@ -4,8 +4,7 @@
 
 For a complete descriptions of all the possible operation with the API please have a look at:
 
-* [UI API Swagger Documentation](/pages/developer/developer-ui-api-swagger-v3-doc) for Interlok 3.10.2+.
-* [UI API Swagger Documentation](/pages/developer/developer-ui-api-swagger-doc) for older version of Interlok.
+* [UI API Swagger Documentation](/pages/developer/developer-ui-api-swagger-doc) for Interlok 3.10.2+.
 
 ## Swagger Goodness ##
 
@@ -15,10 +14,10 @@ Learn more about [Swagger](http://swagger.io/) and [Swagger UI](http://swagger.i
 
 ## Interlok UI 3.10.2+ ##
 
-From 3.10.2+ the Interlok UI API is using Swagger V3 Open API. For older version have a look at [Interlok UI 3.10.1 and older](/pages/developer/developer-ui-api#interlok-ui-3101-and-older).
+From 3.10.2+ the Interlok UI API is using Swagger V3 Open API.
 
 Once you've downloaded Swagger UI you should copy it into the `adapter/webapp` folder.
-You should be able to access it via [http://localhost:8080/swagger-ui-3.25.4/dist/index.html](http://localhost:8080/swagger-ui-3.25.4/dist/index.html) (where /swagger-ui-3.25.4/dist/ is the name of the folder you copied into `adapter/webapp`).
+You should be able to access it via [http://localhost:8080/swagger-ui/dist/index.html](http://localhost:8080/swagger-ui/dist/index.html) (where /swagger-ui/dist/ is the name of the folder you copied into `adapter/webapp`).
 
 The default API url in Swagger UI is a pet store example.
 Replace it with it the Interlok UI API url [http://localhost:8080/interlok/api/openapi.json](http://localhost:8080/interlok/api/openapi.json).
@@ -31,33 +30,35 @@ If you access this url directly you will see the json Swagger definition for the
   "info" : {
     "title" : "Interlok UI Api Documentation",
     "description" : "Interlok UI Api web service documentation.",
-    "version" : "3.10-SNAPSHOT"
+    "version" : "4.1.0-RELEASE"
   },
   "servers" : [ {
     "url" : "/interlok/api"
   } ],
   "tags" : [ {
-    "name" : "/adapter/failed-messages"
+    "name" : "/adapter"
   }, {
-    "name" : "/channel"
+    "name" : "/adapter/failed-messages"
   }, {
     "name" : "/adapter/metrics"
   }, {
-    "name" : "/channel/failed-messages"
-  }, {
     "name" : "/adapter/platform"
   }, {
-    "name" : "/workflow/metrics"
+    "name" : "/channel"
   }, {
-    "name" : "/workflow/failed-messages"
-  }, {
-    "name" : "/adapter/component-checker"
+    "name" : "/channel/failed-messages"
   }, {
     "name" : "/channel/metrics"
   }, {
-    "name" : "/adapter"
+    "name" : "/adapter/component-checker"
   }, {
     "name" : "/workflow"
+  }, {
+    "name" : "/workflow/failed-messages"
+  }, {
+    "name" : "/workflow/metrics"
+  }, {
+    "name" : "deprecated"
   } ],
     "/external/adapter" : {
       "get" : {
@@ -145,115 +146,6 @@ If you access this url directly you will see the json Swagger definition for the
 ...
 ```
 
-## Interlok UI 3.10.1 and older ##
-
-This is for older vesion of Interlok UI, 3.10.1 and older. For newer version have a look at [Interlok UI 3.10.1+](/pages/developer/developer-ui-api#interlok-ui-3102).
-
-Once you've downloaded Swagger UI you should copy it into the `adapter/webapp` folder.
-You should be able to access it via [http://localhost:8080/swagger-ui-2.1.4/dist/index.html](http://localhost:8080/swagger-ui-2.1.4/dist/index.html) (where /swagger-ui-2.1.4/dist/ is the name of the folder you copied into `adapter/webapp`).
-
-The default API url in Swagger UI is a pet store example.
-Replace it with it the Interlok UI API url [http://localhost:8080/interlok/api/swagger.json](http://localhost:8080/interlok/api/swagger.json).
-
-If you access this url directly you will see the json Swagger definition for the Interlok UI API with a list of all the operations which looks something like: 
-
-```json
-{
-  "swagger" : "2.0",
-  "info" : {
-    "description" : "Interlok UI Api web service documentation.",
-    "version" : "3.6.2-RELEASE",
-    "title" : "Interlok UI Api Documentation"
-  },
-  "basePath" : "/interlok/api",
-  "tags" : [ {
-    "name" : "/adapter/failed-messages"
-  }, {
-    "name" : "/channel"
-  }, {
-    "name" : "/adapter/metrics"
-  }, {
-    "name" : "/channel/failed-messages"
-  }, {
-    "name" : "/adapter/platform"
-  }, {
-    "name" : "/workflow/metrics"
-  }, {
-    "name" : "/workflow/failed-messages"
-  }, {
-    "name" : "/adapter/component-checker"
-  }, {
-    "name" : "/channel/metrics"
-  }, {
-    "name" : "/adapter"
-  }, {
-    "name" : "/workflow"
-  } ],
-  "paths" : {
-    "/external/adapter" : {
-      "get" : {
-        "tags" : [ "/adapter" ],
-        "summary" : "List all register adapters",
-        "description" : "",
-        "operationId" : "list",
-        "consumes" : [ "application/xml", "application/json" ],
-        "produces" : [ "application/json", "application/xml" ],
-        "parameters" : [ {
-          "name" : "pageSize",
-          "in" : "query",
-          "required" : false,
-          "type" : "integer",
-          "default" : -1,
-          "format" : "int32"
-        }, {
-          "name" : "page",
-          "in" : "query",
-          "required" : false,
-          "type" : "integer",
-          "default" : -1,
-          "format" : "int32"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/AdapterEntity"
-              }
-            }
-          }
-        }
-      },
-      "post" : {
-        "tags" : [ "/adapter" ],
-        "summary" : "Add an adapter",
-        "description" : "",
-        "operationId" : "save",
-        "consumes" : [ "application/json", "application/xml" ],
-        "produces" : [ "application/json", "application/xml" ],
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "body",
-          "required" : false,
-          "schema" : {
-            "$ref" : "#/definitions/AdapterEntity"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/AdapterEntity"
-            }
-          }
-        }
-      }
-    },
-...
-```
-
-
 Back to the Swagger UI, you should get a list of all the Interlok UI API operations (The page may slightly look different depending on which version of Swagger UI you are using.) e.g.
 
 ![Local Swagger UI With Data](../../images/ui-api/swagger-with-interlok-data.png)
@@ -264,10 +156,7 @@ You can then use this page to test the api against your own Interlok UI API:
 
 ## Deprecated ##
 
-All the Channel and Workflow api urls up to version 3.6.3 are deprecated. Adapter api urls are still valid.
-
-- Channel urls starting like `/external/channel/{url}/{jmxUid}/{channel}` have changed to `/external/adapter/{url}/{jmxUid}/channel/{channel}`
-- Workflows urls starting like `/external/workflow/{url}/{jmxUid}/{channel}/{workflow}` have changed to `/external/adapter/{url}/{jmxUid}/channel/{channel}/workflow/{workflow}`
+Deprecated endpoints uses the deprecated tag so are easy to find the openapi definition.
 
 ## Api Parameters ##
 

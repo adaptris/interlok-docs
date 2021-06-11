@@ -53,6 +53,7 @@
   - [Databases via JDBC](/pages/cookbook/cookbook-jdbc-data.md)
     - [Data Capture](/pages/cookbook/cookbook-jdbc-data-capture.md)
     - [Data Extract](/pages/cookbook/cookbook-jdbc-data-query.md)
+    - [Statement Builder](/pages/cookbook/cookbook-jdbc-statement-builder.md)
   - [Email](/pages/cookbook/cookbook-email.md)
     - [POP3/IMAP/SMTP](/pages/cookbook/cookbook-pop3.md)
     - [Office365](/pages/cookbook/cookbook-o365.md)
@@ -78,7 +79,7 @@
     - [JSON Data Transforms](/pages/cookbook/cookbook-json-transform.md)
     - [CSV to XML](/pages/cookbook/cookbook-csv-transform.md)
     - [EDI Data Transforms](/pages/cookbook/cookbook-edi-transform.md)
-  - [OneDrive](/pages/cookbook/cookbook-1drive.md)    
+  - [OneDrive](/pages/cookbook/cookbook-1drive.md)
 - **Advanced**
   - [Logic blocks in configuration](/pages/advanced/advanced-conditional.md)
   - [Interlok Clustering](/pages/advanced/advanced-cluster.md)

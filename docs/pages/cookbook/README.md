@@ -3,6 +3,7 @@
  - [Databases via JDBC](/pages/cookbook/cookbook-jdbc-data.md)
     - [Data Capture](/pages/cookbook/cookbook-jdbc-data-capture.md)
     - [Data Extract](/pages/cookbook/cookbook-jdbc-data-query.md)
+    - [Statement Builder](/pages/cookbook/cookbook-jdbc-statement-builder.md)
  - [Email](/pages/cookbook/cookbook-email.md)
     - [POP3/IMAP/SMTP](/pages/cookbook/cookbook-pop3.md)
     - [Outlook365](/pages/cookbook/cookbook-o365.md)

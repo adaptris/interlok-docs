@@ -118,12 +118,12 @@ You can read more about jolokia protocol at https://jolokia.org/reference/html/p
 
 GET request can also be used for simple queries (https://jolokia.org/reference/html/protocol.html#get-request) but Jolokia recommend to use POST requests.
 
-# UI ##
+## UI ##
 
-Since 4.1.0 the UI supports managing Adapters using Jolokia [Add Adapters to The Dashboard](/pages/ui/ui-dashboard#add-adapters-to-the-dashboard).
+Since 4.1.0 the UI supports managing Adapters using Jolokia ([Add Adapters to The Dashboard](/pages/ui/ui-dashboard#add-adapters-to-the-dashboard)).
 
 The main advantage of using Jolokia is that it runs on HTTP so that can help with some firewall restriction on non HTTP ports.
 
-However its usage is for now limited to managing / monitoring tasks only (mainly the Dashboard and Widgets pages) and therefore you cannot use the Config page to modify and apply config to an Adapter added via Jolokia.
-The UI Log Monitor and Log Config page will also not work with an Adapter added via Jolokia.
+However its usage is, for now, limited to managing / monitoring tasks only (mainly the Dashboard and Widgets pages) and therefore you cannot use the Config page to modify and apply config to Adapters added via Jolokia.
+The UI Log Monitor and Log Config page will also not work with Adapters added via Jolokia.
 

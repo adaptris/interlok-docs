@@ -244,7 +244,7 @@ The Add Adapter form inputs explained:
 
 - **Name:** This property is for display purposes and also an easy way to differentiate Adapters registered within the UI web application.
 - **Adapter Unique Id:** This is the Adapter unique identifier used in the Adapter configuration XML file: `<adapter><unique-id>adapterUid</unique-id</adapter>`. This is required for the UI to establish the JMX connection to the Adapter.
-- **URL:** The JMX URL used to connect to the Adapter, for example: localhost:5555. You can also provide the JMX protocol: service:jmx:jmxmp://localhost:5555
+- **URL:** The JMX URL used to connect to the Adapter, for example: localhost:5555. You can also provide the JMX protocol: service:jmx:jmxmp://localhost:5555. Since 4.1.0 a [Jolokia URL](/pages/advanced/advanced-jolokia) can be used to add and Adapter. By default just use http://host:8081/jolokia instead of the JMX URL. The UI will monitor the adapter using Jolokia instead of JMX.
 - **Tags:** The tags associated to the Adapter to make it easier to filter Adapters. (Since 3.7.3)
 - **Advanced Options** - Clicking the Advanced Options link will unveil three more properties, all of which are optional :
     - **Disable Url Validation:** This options disable the JMX URL front-end validation. It should be use with care and only if you know that the JMX URL you are using is valid but fails validation (Since 3.6.5)

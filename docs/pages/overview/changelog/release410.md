@@ -1,6 +1,6 @@
 ## Version 4.1.0 ##
 
-Release Date : 2021-06
+Release Date : 2021-06-22
 
 
 ### Key Highlights
@@ -17,6 +17,7 @@ Release Date : 2021-06
 
 ### Bug
 
+- 'INTERLOK-3803' - Installer : MAC installer doesn't chmod +x bin/start-interlok
 - 'INTERLOK-3801' - Swagger Codegen - Vulnerabilities in swagger-parser, httpclient-osgi and handlebars
 - 'INTERLOK-3799' - UI: Open Local Project doesn't work with relative paths.
 - 'INTERLOK-3794' - UI Config - Test component modal is broken with javascript error \(Uncaught SyntaxError: Unable to parse bindings\)

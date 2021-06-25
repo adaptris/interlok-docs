@@ -11,7 +11,7 @@ Unless you're in an environment where you must use an alternative build toolchai
 
 ## A short excursion into the whys and wherefores of dependency management
 
-Like the argument about whether or not your VCS is better than my VCS. What matters the most is that you aren't using CVS (where CVS is the equivalent of makding all the jars in `{adapter}/lib` present on the classpath.). Without dependency management there is a very real possibility that you end up in the equivalent of _DLL Hell_ where you have jackson-databind-2.10.1.jar trying to use jackson-core-2.9.jar for some of its baseline operations.
+Like the argument about whether or not your VCS is better than my VCS. What matters the most is that you aren't using CVS (where CVS is the equivalent of making all the jars in `{adapter}/lib` present on the classpath.). Without dependency management there is a very real possibility that you end up in the equivalent of _DLL Hell_ where you have jackson-databind-2.10.1.jar trying to use jackson-core-2.9.jar for some of its baseline operations.
 
 Previously we used ant+ivy to handle dependency management; we've moved to gradle for almost everything now. Examples remain in the public github example repository for the different build tools that we've built components with.
 

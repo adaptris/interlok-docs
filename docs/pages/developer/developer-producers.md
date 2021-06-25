@@ -26,6 +26,10 @@ Our [AdaptrisMessageProducer][] implementation can use `ClientConnection` to sen
 @XStreamAlias("my-client-producer")
 public class MyClientProducer extends ProduceOnlyProducerImp {
 
+  @Getter
+  @Setter
+  private String repository;
+
   public MyClientProducer() {
   }
 
@@ -50,9 +54,8 @@ public class MyClientProducer extends ProduceOnlyProducerImp {
 
   public void produce(AdaptrisMessage m, ProduceDestination d) throws ProduceException {
     try {
-      String to = getDestination().getDestination(m);
       ClientConnection conn = retrieveConnection(MyClientConnection.class).createConnection();
-      conn.sendMessage(to, this.encode(m));
+      conn.sendMessage(msg.resolve(getRepository()), this.encode(m));
     }
     catch (Exception e) {
       throw new ProduceException(e);
@@ -67,7 +70,8 @@ So, the summary of what we did is as follows :
 ?> **TIP** The target system only supports asynchronous messaging so we have not extended [RequestReplyProducerImp][]
 
 - The lifecycle methods do nothing; this pre-supposes that `ClientConnection` is pretty lightweight and can be disposed of via garbage collection.
-- We can figure out where we are sending messages to from the [ProduceDestination][] implementation.
+- We've created a new configurable field named "repository", which for this demonstration is the endpoint destination for our message.
+- Note we're using __msg.resolve__ which allows the configured "repository" to use Interlok expressions.
 - We call `retrieveConnection` to find the configured connection object.
 - We catch and throw a `ProduceException` to trigger error-handling behaviour.
 - We call `this.encode(AdaptrisMessage)` which encodes the message (or not).

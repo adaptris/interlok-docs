@@ -27,20 +27,25 @@ public class MyClientConsumer extends AdaptrisPollingConsumer {
 
   private static final TimeInterval DEF_INTERVAL = new TimeInterval(2L, TimeUnit.SECONDS.name());
 
+  @Getter
+  @Setter
   private TimeInterval receiveTimeout;
+
+  @Getter
+  @Setter
+  private String repository;
 
   public MyClientConsumer() {
   }
 
   @Override
   protected int processMessages() {
-    String repository = getDestination().getDestination();
     int msgCount = 0;
     AdaptrisMessageFactory factory = AdaptrisMessageFactory.defaultIfNull(getMessageFactory());
     try {
       ClientConnection conn = retrieveConnection(MyClientConnection.class).createConnection();
       do {
-        String data = conn.getMessage(repository, receiveTimeoutMs());
+        String data = conn.getMessage(getRepository(), receiveTimeoutMs());
         msgCount ++;
         AdaptrisMessage msg = factory.newMessage(data);
         retrieveAdaptrisMessageListener().onAdaptrisMessage(msg);
@@ -82,7 +87,7 @@ So, the summary of what we did is as follows :
 
 ?> **NOTE** We have not overridden any lifecycle methods; remember to call the super-class lifecycle methods if lifecycle is required.
 
-- We can figure out where we are receiving messages from via the [ConsumeDestination][] implementation.
+- In our example we're going to pull messages from a ficticious "repository", so we have a new field we have named repository; and because repository has public getters and setters this field will be configurable through both the Interlok configuration XML and UI.
 
 ?> **TIP** There is also a filter expression available (which may return null).
 

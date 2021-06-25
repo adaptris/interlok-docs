@@ -7,7 +7,7 @@ This document describes the Interlok Marshalling configuration and Architecture.
 The control of marshalling is configured in a file called: bootstrap.properties.
 This contains a number of properties, the keys of which are defined in the following class: [com.adaptris.core.management.Constants](https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/management/Constants.html "com.adaptris.core.management.Constants")
 
-We will be focusing of the following settings which relate to the marshalling functionality:
+We will be focusing on the following settings which relate to the marshalling functionality:
 
 - **marshallerOutputType**: Can be `XML` or `JSON` as specified in the enum com.adaptris.core.AdapterMarshallerFactory.MarshallingOutput
 - **beautifyXStreamOutput**: true or false

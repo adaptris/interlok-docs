@@ -1,10 +1,6 @@
 > **Summary:** This document is aimed at system developers who wish to create new or custom Interlok components and for those components to be fully integrated into the Interlok framework.
 
-!> **IMPORTANT** in 3.8.0; adp-core-apt and adp-core were renamed to interlok-core-apt and interlok-core respectively
-
 The Interlok code base uses annotations for a few reasons and all developers are encouraged to follow those recommendations detailed in this document; To fully incorporate your new components, you will need to make sure that the marshalling engine knows how to translate the configuration of your component into the running Interlok instance.
-
-And of course should an end-user want to incorporate schema validation, a newly generated schema will need to know the details of your component.
 
 ## Class Level Annotations ##
 
@@ -41,28 +37,9 @@ Or even;
 
 !> **WARNING** Your XStreamAlias may render as an XML Element; it needs to be well formed (e.g. don't start with a number; or special characters etc.).
 
-
-### @GenerateBeanInfo ###
-
-Use this to force XStream to use the public getters and setters when un-marshalling rather than the member variables directly. This is generally useful if the getters and setters in your component have behaviour associated with them that are not simple ```this.x=x``` methods.
-
-For example if you have the following class and annotation;
-
-```java
-@GenerateBeanInfo
-@XStreamAlias("channel")
-public class Channel ... {
-  ...
-}
-```
-
-When this class is un-marshalled, regardless of the non-transient class members only those with public getters and setters will be un-marshalled. This class is deprecated with no replacement as of __3.4.1__. You are encouraged to change your class so that getters and setters have no behaviour.
-
-!> **IMPORTANT** This class is deprecated with no replacement as of __3.4.1__.
-
 ### @AdapterComponent ###
 
-Use this to so that the component can be discovered by the UI and made available for configuration; it is generally used in conjunction with _@ComponentProfile_
+Use this so that the component can be discovered by the UI and made available for configuration; it is generally used in conjunction with _@ComponentProfile_
 
 ### @ComponentProfile ###
 
@@ -78,11 +55,12 @@ public class StandardWorkflow ... {
 | Annotation Parameter | Description |
 |----|----|
 | `summary` | A brief summary of the component |
-| `tag` | A comma separated list of tags |
+| `tag` | A comma separated list of tags, allowing a user to search for your component using key words |
 | `recommended` | (since __3.2.0__) an array of classes that are contextually related to this component (e.g. for a producer, it would be the connections you should use with it)  |
 | `metadata` | (since __3.4.0__) an array of strings that contain metadata keys that may be created or have an effect on the behaviour of this component |
 | `branchSelector` | (since __3.6.2__) if set to true, indicates that this service can be used as the `firstService` as part of a BranchingServiceCollection |
-
+| `author` | Developers name of this component |
+| `since` | The version number of Interlok this component has been compiled against. |
 
 ### @DisplayOrder ###
 
@@ -148,6 +126,31 @@ public class ComponentToBeRemoved ... {
 
 
 ## Member Level Annotations ##
+
+### Lombok ###
+
+Interlok core and many of the sub components now use Lombok to reduce boilerplate code.  Check the official documentation here [Lombok](https://projectlombok.org/features/all), but a couple of the more commonly used annotations are;
+
+#### Getter and Setters ####
+
+```java
+@Getter
+@Setter
+private String myConfigurableField;
+```
+
+```java
+@Getter(AccessLevel.PROTECTED)
+@Setter(AccessLevel.PROTECTED)
+private String myConfigurableField;
+```
+
+#### Constructor ####
+
+```java
+@NoArgsConstructor
+public class MyInterlokComponent {
+```
 
 ### @XStreamImplicit ###
 

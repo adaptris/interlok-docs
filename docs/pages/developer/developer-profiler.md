@@ -4,8 +4,7 @@
 
 Before we get into the technical bits, let us show you how to start an instance of Interlok with the profiler.
 
-You'll need a couple of additional Interlok jar files, that can be found here;
- - [interlok-monitor-agent](https://nexus.adaptris.net/nexus/content/repositories/releases/com/adaptris/interlok-monitor-agent/)
+You'll need the following additional Interlok jar file that can be found here;
  - [interlok-profiler](https://nexus.adaptris.net/nexus/content/repositories/releases/com/adaptris/interlok-profiler/)
 
 You'll also need the following external jars;

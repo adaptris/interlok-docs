@@ -11,7 +11,8 @@ The [Service][] interface allows arbitrary functionality to be applied to [Adapt
 
 ## Minimum number of methods ##
 
-If you simply extend [com.adaptris.core.ServiceImp][ServiceImp] then there are 4 methods that you must implement. They are [init()][], [close()][] and [doService(AdaptrisMessage)][doService()]. The only one that is of real interest is [doService(AdaptrisMessage)][doService()]. The others are inherited from [AdaptrisComponent][] and are related to managing the internal state of your service.
+
+If you simply extend [com.adaptris.core.ServiceImp][ServiceImp] then there are 3 methods that you must implement. They are [init()][], [close()][] and [doService(AdaptrisMessage)][doService()]. The only one that is of real interest is [doService(AdaptrisMessage)][doService()]. The others are inherited from [AdaptrisComponent][] and are related to managing the internal state of your service.
 
 !> **IMPORTANT** If you make use of other [AdaptrisComponent] instances, then you should override all lifecycle methods [init()][], [start()][], [stop()][], [close()][] and make sure those instances are transitioned correctly.
 
@@ -39,8 +40,12 @@ import org.hibernate.validator.constraints.NotBlank;
 @XStreamAlias("do-something-service")
 public class DoSomethingService extends ServiceImp {
 
+  @Getter
+  @Setter
   @NotBlank
   private String how;
+  @Getter
+  @Setter
   @NotBlank
   private String when;
   private transient DoSomething doSomething;
@@ -63,19 +68,6 @@ public class DoSomethingService extends ServiceImp {
     catch(Exception e) {
       ExceptionHelper.rethrowServiceException(e);
     }
-  }
-
-  public void setWhen(String when) {
-    this. when = when;
-  }
-  public String getWhen () {
-    return this. when;
-  }
-  public void setHow(String how) {
-    this.how = how;
-  }
-  public String getHow() {
-    return this.how;
   }
 }
 
@@ -100,7 +92,7 @@ So, the summary of what we did is as follows :
 
 # Writing Tests #
 
-Of course, you're going to be writing tests. As we are writing a [Service][] then you can add `com.adaptris:interlok-stubs` as a [dependency](/pages/developer/developer-compiling). This then means you can simply extend `com.adaptris.core.ServiceCase` and implement the required method `retrieveObjectForSampleConfig()`. Simply implementing that method automatically executes some tests for you provided by `ServiceCase`:
+Of course, you're going to be writing tests. As we are writing a [Service][] then you can add `com.adaptris:interlok-stubs` as a [dependency](/pages/developer/developer-compiling). This then means you can simply extend `com.adaptris.interlok.junit.scaffolding.services.ExampleServiceCase` and implement the required method `retrieveObjectForSampleConfig()`. Simply implementing that method automatically executes some tests for you provided by `ExampleServiceCase`:
 
 - Automatic XML round trip testing; it will reflectively test that your service that has gone through the marshalling process is logically identical to one that was created programatically.
 - Generate example XML; this requires that you have a `unit-test.properties` file available on the classpath for the tests.
@@ -113,15 +105,16 @@ package my.package.name;
 
 import com.adaptris.core.AdaptrisMessageFactory;
 import com.adaptris.core.ServiceException;
-import com.adaptris.core.ServiceCase;
+import com.adaptris.interlok.junit.scaffolding.services.ExampleServiceCase;
 
 @SuppressWarnings("deprecation")
-public class DoSomethingTest extends ServiceCase {
+public class DoSomethingTest extends ExampleServiceCase {
 
   public DoSomethingTest(java.lang.String testName) {
     super(testName);
   }
 
+  @Test
   public void testService() throws Exception {
     execute(new DoSomethingService(), AdaptrisMessageFactory.getDefaultInstance().newMessage("Hello World"));
   }

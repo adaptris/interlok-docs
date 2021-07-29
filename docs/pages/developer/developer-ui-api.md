@@ -4,7 +4,7 @@
 
 For a complete descriptions of all the possible operation with the API please have a look at:
 
-* [UI API Swagger Documentation](/pages/developer/developer-ui-api-swagger-doc) for Interlok 3.10.2+.
+* [UI API Swagger Documentation](/pages/developer/developer-ui-api-swagger-doc) for Interlok.
 
 ## Swagger Goodness ##
 
@@ -12,9 +12,9 @@ The Interlok UI API is accessible via restful web services. The best way to lear
 
 Learn more about [Swagger](http://swagger.io/) and [Swagger UI](http://swagger.io/swagger-ui/).
 
-## Interlok UI 3.10.2+ ##
+## Interlok UI ##
 
-From 3.10.2+ the Interlok UI API is using Swagger V3 Open API.
+Interlok UI API is using Swagger V3 Open API.
 
 Once you've downloaded Swagger UI you should copy it into the `adapter/webapp` folder.
 You should be able to access it via [http://localhost:8080/swagger-ui/dist/index.html](http://localhost:8080/swagger-ui/dist/index.html) (where /swagger-ui/dist/ is the name of the folder you copied into `adapter/webapp`).
@@ -169,24 +169,6 @@ This section aims to help understanding the most used api parameters.
 - **jmxEnv:** Query parameters corresponding to the Adapter JMX environment parameters.
 - **channel:** Path Path parameter corresponding to the Channel unique id.
 - **workflow:** Path Path parameter corresponding to the Workflow unique id.
-
-## Real World Example ##
-
-There is a working example of the UI API in action within the cm-dashboard project (the Cirrus UI).
-
-The cirrus ui lists the Interlok containers within it's given community:
-
-![Cirrus UI - Interlok Container Details Page](../../images/ui-api/1-Cirrus-UI-Adapter-Details-Page.png)
-
-by selecting the manage operation for a given Interlok container:
-
-![Cirrus UI - Interlok Container Details Page manage button](../../images/ui-api/2-Cirrus-UI-Adapter-Details-Page-manage-btn.png)
-
-you can view the manage Interlok container page:
-
-![Cirrus UI - Manage Interlok container Page](../../images/ui-api/3-Cirrus-UI-Manage-Adapter-Page.png)
-
-This manage Interlok container page is using the interlok ui api to obtain data & perform functions on this selected Interlok container. All the Interlok containers in this community are registered with one ui Interlok container, which is having the ui api accessed by this webapp. In essence, this page is its own Interlok container ui.
 
 ## Yeah, but... ##
 

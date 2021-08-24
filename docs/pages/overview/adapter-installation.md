@@ -1,76 +1,48 @@
 # Interlok Installation #
 
-!> **NOTE:** **Interlok 3.8+ requires at least Java 8 and Interlok 4.0+ requires Java 11**.
+!> **NOTE:** **Interlok 4.0+ requires Java 11**.
 
-Installation is pretty easy. Download the installer, and execute it; due to a change in Java licensing as of 2019 you need to provide your own 64bit JVM.
+Installation is pretty easy, however due to a change in Java licensing as of 2019 you need to provide your own 64bit JVM.
+You have 3 choices for installation;
+ - Manual zip download
+ - Using our Java based installer
+ - Using gradle
 
-## Unix ##
+## Manual download
 
-- Download the [unix installer][] and execute it from a prompt after download `sh ./interlok-install-{version}.bin`
-- The default installation mode is console, in order to use the GUI installer, invoke the binary with the -i gui switch.
+Use this method if you simply want to get Interlok up and running quickly.  Unless you know what you're doing when it comes to adding new components to Interlok you should use one of the other methods however.
 
-## Windows ##
+Simply extract the following two zip files into the same directory and you're good to go;
 
-- Download the appropriate [windows installer][] and execute it.
-- On Windows 2012 R2 you may have to run the installer in Windows 7 compatibility mode.
+[Base directory files](https://development.adaptris.net/installers/interlok/latest-stable/base-filesystem.zip)
 
-### Elevated Rights ###
+[Base Java libraries](https://development.adaptris.net/installers/interlok/latest-stable/runtime-libraries.zip)
 
-Because on Windows you can install the adapter as a service; then the installer will ask for elevated rights; in the instance that you cannot provide elevated rights then you can force the installer to run as the invoker. This means, of course, that you will not be able to install the adapter as a service. You need to set the `__COMPAT_LAYER` environment variable to be `RUNASINVOKER` before starting the installer.
+## Java based installer
 
- ![RunAsInvoker](../../images/user-guide/run-as-invoker.png)
+### Unix ###
+Simply download and execute the Java library from one of the following links to initiate the graphical installation wizard;
 
-### Windows DLL failed to load ###
+[Java installer jar](https://development.adaptris.net/installers/interlok/latest-stable/interlok-installer-linux.jar)
 
-On some Windows platforms (consistently Windows 10 x64); the installer may never start and always fails with a `This Application unexpectedly quit` exception. This is a problem with the installer and later versions of Java 8. Java 1.8.0_51 is known to work, but later versions may not (the exact circumstances are unclear); it generally always works on Windows 7. It only affects the installer and not the application runtime.
+[Java installer jar (tar)](https://development.adaptris.net/installers/interlok/latest-stable/interlok-installer-linux.tar)
 
- ![UnexpectedlyQuit](../../images/user-guide/installation-failed.png)
+### Windows ###
 
-```
-Flexeraawm$aaa: Windows DLL failed to load
-	at Flexeraawm.af(Unknown Source)
-	at Flexeraawm.aa(Unknown Source)
-	at com.zerog.ia.installer.LifeCycleManager.init(Unknown Source)
-	at com.zerog.ia.installer.LifeCycleManager.executeApplication(Unknown Source)
-	at com.zerog.ia.installer.Main.main(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at com.zerog.lax.LAX.launch(Unknown Source)
-	at com.zerog.lax.LAX.main(Unknown Source)
-```
+Simply download and execute the Java library from one of the following links to initiate the graphical installation wizard;
 
-If you are in this situation, you should install with the bundled JRE (using `install-with-jre.exe`); selecting the bundled JRE as the java runtime to use. After installation, edit the `adapter.lax` file and modify java location to your preferred version. Doing it this way allows you to _uninstall_ the application from the control panel; otherwise you have to use the `Uninstall.exe LAX_VM="path/to/a/1.8.0_51/java"` from the commandline in order to uninstall.
+[Java installer jar](https://development.adaptris.net/installers/interlok/latest-stable/interlok-installer-win.jar)
 
+[Java installer jar (zip)](https://development.adaptris.net/installers/interlok/latest-stable/interlok-installer-win.zip)
 
-## Starting with an alternate JVM ##
+### Mac ###
 
-On Some platforms; you may not be able to execute the installer without explicitly providing path to the java executable. This can be done by passing in the LAX_VM switch on the commandline and works on both Windows and Unix platforms. On Unix systems; if you installed java via the distribution repos, then you may not have a JAVA_HOME environment variable; the installer may not be able to find java.
+Simply download and execute the Java library from one of the following links to initiate the graphical installation wizard;
 
-```
-.\install-without-jre.exe LAX_VM "C:\Program Files\jdk\bin\javaw.exe"
-sh ./install-without-jre.bin LAX_VM "/docker-java-home/bin/java"
-```
+[Java installer jar](https://development.adaptris.net/installers/interlok/latest-stable/interlok-installer-mac.jar)
 
-## Unattended Installation ##
+[Java installer jar (tar)](https://development.adaptris.net/installers/interlok/latest-stable/interlok-installer-mac.tar)
 
-It is possible to install the framework unattended; this makes it suitable for embedding part of a scripted deployment. In order to perform unattended installation you will need to create a response file to cover the various questions that are asked during installation. This can then be passed into the installer using the -f parameter (/f on windows) e.g. `./install.bin -f silent.ini`.
+### Gradle ###
 
-```
-COMPANY_NAME=<My Company Name>
-USER_INSTALL_DIR=<My Installation Directory>
-INSTALLER_UI=silent
-
-# Don't install as a service (1=install as service) - Windows platforms only
-INSTALL_AS_SERVICE=0
-
-# Only required if you aren't installing with the JVM bundle.
-JDK_HOME=/opt/java/jdk
-JAVA_DOT_HOME=/opt/java/jdk
-JAVA_EXECUTABLE=/opt/java/jdk/bin/java
-
-```
-
-[unix installer]: https://development.adaptris.net/installers/Interlok/latest-stable/#unix
-[windows installer]: https://development.adaptris.net/installers/Interlok/latest-stable/#windows
+Please see the full gradle installation guide [here](/pages/overview/adapter-gradle).

@@ -1,7 +1,5 @@
 > **Summary:** This document summarises various configurations and concepts for handling various types of JMS messaging platforms using Interlok. Interlok can be configured for the more popular flavours of JMS Provider. In most cases you will be required to add the vendor specific Interlok component to your Interlok installation.
 
-!> **IMPORTANT** in 3.8.0; adp-jms-sonicmq, adp-jms-oracleaq, adp-webspheremq were renamed to interlok-jms-sonicmq, interlok-jms-oracleaq, interlok-webspheremq respectively
-
 Each of the sub components are vendor specific and are known to work in most standard configuration instances. Installation of a sub component is very straight forward, simply drop the java archive files into your Interlok "lib" directory. However, it is recommended that you replace any vendor specific java archive files in your Interlok installation with those shipped with your JMS specific vendor.  This ensures that you get the best performance and reliability with Interlok.
 
 ----
@@ -14,7 +12,10 @@ The basic error handling mechanism in JMS is the `ExceptionListener` interface; 
 
 ?> **TIP** In some cases you might have to use an [active-jms-connection-error-handler][], some JMS providers don't always seem to honour the _ExceptionListener_ contract.
 
-There is one situation where you can't have a [jms-connection-error-handler][] configured on each and every connection; that is when you are physically connecting to the same broker for both ends of a channel. Some very interesting things used to happen if you did; in the end we couldn't reliably guarantee restarts of the affected channel so we put a check so that it caused an error upon initialisation. If this is the case then the exception _"com.adaptris.core.CoreException: This channel has been configured with 2 ErrorHandlers that are incompatible with each other"_ is reported.
+?> **Best Practice** Configure your connections in the shared-connection space.  This means less expensive resources that Interlok must manage and allows your channels to take full advantage of any pooling your connections might offer.
+
+
+If you configure your connections directly in the channels, thereby not using the shared space, there is one situation where you can't have a [jms-connection-error-handler][] configured on each and every connection; that is when you are physically connecting to the same broker for both ends of a channel. Some very interesting things used to happen if you did; in the end we couldn't reliably guarantee restarts of the affected channel so we put a check so that it caused an error upon initialisation. If this is the case then the exception _"com.adaptris.core.CoreException: This channel has been configured with 2 ErrorHandlers that are incompatible with each other"_ is reported.
 
 
 ### JMS Topics ###

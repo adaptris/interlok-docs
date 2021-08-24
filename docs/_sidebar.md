@@ -7,7 +7,6 @@
   - [Starting Interlok](/pages/overview/adapter-commandline.md)
   - [Additional Resources](/pages/overview/adapter-additional.md)
   - [Change log](/pages/overview/changelog.md)
-  - [Changes from 2.x](/pages/overview/adapter-changes-since-2.x.md)
 - **User guide**
   - [Optional Components](/pages/user-guide/adapter-optional-components.md)
   - [Startup in Detail](/pages/user-guide/adapter-bootstrap.md)

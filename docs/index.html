@@ -28,6 +28,9 @@
 		--sidebar-nav-pagelink-background-image--loaded:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
 		--search-result-keyword-color: var(--mark-color);
 	}
+	main {
+    	min-height: 100%;
+	}
 	footer .content {
 		margin-left: var(--sidebar-width);
 	}
@@ -153,8 +156,8 @@
           });
         },
         function(hook, vm) {
-          // Add swagger iframe resize function when an iframe with the class swagger-iframe is detected
           hook.beforeEach(function(content) {
+		    // Add swagger iframe resize function when an iframe with the class swagger-iframe is detected
             if (content.indexOf("class=\"swagger-iframe\"") > -1) {
               window.resizeSwaggerIframe = function resizeSwaggerIframe(iframe) {
                 setTimeout(function() {
@@ -171,9 +174,30 @@
                   resizeSwaggerIframe(iframe);
                 });
               }
+            } else if (content.indexOf("class=\"interlok-search-iframe\"") > -1) {
+			  // Add interlok search iframe resize function when an iframe with the class interlok-search-iframe is detected
+              window.monitorInterlokSearchframeContentHeight = function monitorSwaggerIframeContentHeight(iframe) {
+			  const mainHeightOffset = 90;
+				setTimeout(function() {
+					if (document.getElementById("main").style.height != (iframe.scrollHeight + mainHeightOffset) + "px") {
+						document.getElementById("main").style.height = (iframe.scrollHeight + mainHeightOffset) + "px";
+					}
+
+				}, 500);
+				window.resizeInterlokSearchIframeEventListener = function(event){
+				  document.getElementById("main").style.height = (iframe.scrollHeight + mainHeightOffset) + "px";
+				};
+				window.addEventListener("resize", window.resizeInterlokSearchIframeEventListener);
+              }
             } else {
+			  // listeners cleaning
               window.resizeSwaggerIframe = undefined;
               window.monitorSwaggerIframeContentHeight = undefined;
+			  if (window.resizeInterlokSearchIframeEventListener) {
+			    window.removeEventListener("resize", window.resizeInterlokSearchIframeEventListener);
+				window.resizeInterlokSearchIframeEventListener = undefined;
+				document.getElementById("main").style.height = "auto";
+			  }
             }
             return content;
           });

@@ -3,4 +3,5 @@
   - [github](https://github.com/adaptris/interlok)
   - [Installers](https://development.adaptris.net/installers)
   - [Javadocs](https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/)
+  - [Component Search](https://interlok.adaptris.net/interlok-component-search/)
 - [![Latest Version](https://img.shields.io/github/v/tag/adaptris/interlok?label=Latest&sort=semver&style=flat-square)]()

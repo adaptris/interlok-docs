@@ -1,6 +1,6 @@
 ## Version 4.2.0 ##
 
-Release Date : 2021-08
+Release Date : 2021-09-03
 
 
 ### Key Highlights
@@ -15,7 +15,7 @@ Release Date : 2021-08
 
 
 ### Bug
-
+- 'INTERLOK-3836' - UI Service Tester - Issue with loading the config service list used when adding a Test
 - 'INTERLOK-3829' - UI Config Templates - wmq connection template results in javascript errors
 - 'INTERLOK-3824' - UI Config - Settings modal expanded doc error on some services
 - 'INTERLOK-3822' - ApacheHTTP - Error on empty response payloads

@@ -2,6 +2,9 @@
 
 Release Date : 2021-09-03
 
+### Known Issues
+
+- _2021-09-08_ - There is an issue when using a file-payload-provider inside a service-test. When tests with that provider are being executed, they result in the error 'java.lang.UnsupportedOperationException'. This issue is being tracked in 'INTERLOK-3839'. A fix is available within the snapshot release from 2021-09-08 onwards.
 
 ### Key Highlights
 

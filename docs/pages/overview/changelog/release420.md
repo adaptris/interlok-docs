@@ -1,10 +1,21 @@
+## Version 4.2.1 ##
+
+Release Date : 2021-09-14
+
+The 4.2.1 release resolves a single issue; It does not have an installer, and only affects the following artifact jars since they are built from the same multi-module repository: _interlok-service-tester.jar, interlok-service-tester-json.jar, interlok-service-tester-wiremock.jar, interlok-service-tester-xml.jar_
+
+If you're affected by this issue, then you should update your dependency tree to use `com.adaptris:interlok-service-tester:4.2.1-RELEASE`
+
+- 'INTERLOK-3839' - Service Tester failing with Unsupported Operation
+
+
 ## Version 4.2.0 ##
 
 Release Date : 2021-09-03
 
 ### Known Issues
 
-- _2021-09-08_ - There is an issue when using a file-payload-provider inside a service-test. When tests with that provider are being executed, they result in the error 'java.lang.UnsupportedOperationException'. This issue is being tracked in 'INTERLOK-3839'. A fix is available within the snapshot release from 2021-09-08 onwards.
+- _2021-09-08_ - There is an issue when using a file-payload-provider inside a service-test. When tests with that provider are being executed, they result in the error 'java.lang.UnsupportedOperationException'. This issue is being tracked in 'INTERLOK-3839'.
 
 ### Key Highlights
 

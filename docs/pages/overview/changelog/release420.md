@@ -1,13 +1,24 @@
 ## Version 4.2.1 ##
 
+### Interlok Core
+
+Release Date : 2021-10-04
+
+The 4.2.1 (Core) release resolves a single issue; It does not have an installer, and only affects the following artifact jars since they are built from the same multi-module repository: _interlok-boot.jar, interlok-client.jar, interlok-client-jmx.jar, interlok-common.jar, interlok-core.jar, interlok-core-apt.jar, interlok-logging.jar_
+
+If you're affected by this issue, then you should update your dependency tree to use `com.adaptris:interlok-core:4.2.1-RELEASE`
+
+- ['782'](https://github.com/adaptris/interlok/issues/782) - interlok-boot.jar gives inconsistent results depending on platform
+
+### Interlok Service Tester
+
 Release Date : 2021-09-14
 
-The 4.2.1 release resolves a single issue; It does not have an installer, and only affects the following artifact jars since they are built from the same multi-module repository: _interlok-service-tester.jar, interlok-service-tester-json.jar, interlok-service-tester-wiremock.jar, interlok-service-tester-xml.jar_
+The 4.2.1 (Service Tester) release resolves a single issue; It does not have an installer, and only affects the following artifact jars since they are built from the same multi-module repository: _interlok-service-tester.jar, interlok-service-tester-json.jar, interlok-service-tester-wiremock.jar, interlok-service-tester-xml.jar_
 
 If you're affected by this issue, then you should update your dependency tree to use `com.adaptris:interlok-service-tester:4.2.1-RELEASE`
 
 - 'INTERLOK-3839' - Service Tester failing with Unsupported Operation
-
 
 ## Version 4.2.0 ##
 
@@ -16,6 +27,7 @@ Release Date : 2021-09-03
 ### Known Issues
 
 - _2021-09-08_ - There is an issue when using a file-payload-provider inside a service-test. When tests with that provider are being executed, they result in the error 'java.lang.UnsupportedOperationException'. This issue is being tracked in 'INTERLOK-3839'.
+- _2021-09-24_ - There is an issue with the InterlokLauncher (inside interlok-boot). Depending on the platform you are running on, the InterlokLauncher may load jars in a different order (on Windows it's 'order alphabetically', on docker (alpine image) it's whatever you want sort order). This issue is being tracked in ['782'](https://github.com/adaptris/interlok/issues/782).
 
 ### Key Highlights
 

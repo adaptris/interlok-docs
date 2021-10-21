@@ -27,3 +27,4 @@
  - [System Preferences](/pages/ui/ui-system-preferences.md)
  - [User Preferences](/pages/ui/ui-user-preferences.md)
  - [Switch Database Provider](/pages/ui/ui-switch-db.md)
+ - [Auto Register an Adapter to a Remote UI](/pages/ui/ui-auto-register-to-remote.md)

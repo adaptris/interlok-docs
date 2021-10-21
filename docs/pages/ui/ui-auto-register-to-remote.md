@@ -14,7 +14,7 @@ In order to do that you can use the Interlok Exec (interlok-exec) optional compo
 
 * Then, the bootstrap.properties need the following properties: 
 
-```
+```properties
 ...
 managementComponents=jmx:jetty:exec
 ...
@@ -29,12 +29,7 @@ exec.registerinui.process.debug=true
 
 **register-in-ui.sh**
 
-```
-#!/bin/bash
-
-```
-
-```
+```bash
 #!/bin/bash
 
 ### Remote UI Details ###
@@ -59,7 +54,7 @@ curl -s -X POST $REMOTE_UI_URL -H  "accept: application/json" -H  "Content-Type:
 
 If your Interlok instance is password protected you can add the username and password in the curl command payload:
 
-```
+```bash
 curl -s -X POST $REMOTE_UI_URL -H  "accept: application/json" -H  "Content-Type: application/json" -H "Authorization: Basic $REMOTE_UI_AUTH" -d "{\"jmxUid\":\"$TO_REGISTER_UID\",\"url\":\"$TO_REGISTER_URL\",\"jmxUsername\":\"$TO_REGISTER_USER\",\"jmxPassword\":\"$TO_REGISTER_PASSWORD\",\"name\":\"$TO_REGISTER_NAME\"}"
 ```
 
@@ -69,7 +64,7 @@ You may want to register an Interlok instance when it starts and remove it when 
 
 To do that you should follow the same principal as mentioned above but using the interlok-exec stop command as well.
 
-```
+```properties
 ...
 managementComponents=jmx:jetty:exec
 ...
@@ -85,7 +80,9 @@ You can also see that we provided arguments to our script, 'register' for the st
 
 We need to modify our script to deal with those arguments:
 
-```
+**register-in-ui.sh**
+
+```bash
 #!/bin/bash
 
 ACTION=$1

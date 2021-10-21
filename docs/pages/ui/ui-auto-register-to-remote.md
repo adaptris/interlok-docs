@@ -33,7 +33,7 @@ exec.registerinui.process.debug=true
 #!/bin/bash
 
 ### Remote UI Details ###
-REMOTE_UI_URL="http://localhost:8082/interlok/api/external/adapter"
+REMOTE_UI_URL="http://localhost:8080/interlok/api/external/adapter"
 REMOTE_UI_USER="admin"
 # Base 64 encoded password (admin) but you may use environment properties
 REMOTE_UI_PASSWORD="YWRtaW4="
@@ -88,7 +88,7 @@ We need to modify our script to deal with those arguments:
 ACTION=$1
 
 ### Remote UI Details ###
-REMOTE_UI_URL="http://localhost:8082/interlok/api/external/adapter"
+REMOTE_UI_URL="http://localhost:8080/interlok/api/external/adapter"
 REMOTE_UI_USER="admin"
 # Base 64 encoded password (admin) but you may use environment properties
 REMOTE_UI_PASSWORD="YWRtaW4="

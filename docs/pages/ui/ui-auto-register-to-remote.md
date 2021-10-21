@@ -6,7 +6,7 @@ You can of course register them manually in the [UI Dashboard page](/pages/ui/ui
 
 However you may want the Interlok instances to register themselves so the UI is becomes aware of each instances only when they've started and registered.
 
-## Registerting an Interlok instance
+## Registering an Interlok instance
 
 In order to do that you can use the Interlok Exec (interlok-exec) optional component and a small bash script:
 
@@ -63,7 +63,7 @@ If your Interlok instance is password protected you can add the username and pas
 curl -s -X POST $REMOTE_UI_URL -H  "accept: application/json" -H  "Content-Type: application/json" -H "Authorization: Basic $REMOTE_UI_AUTH" -d "{\"jmxUid\":\"$TO_REGISTER_UID\",\"url\":\"$TO_REGISTER_URL\",\"jmxUsername\":\"$TO_REGISTER_USER\",\"jmxPassword\":\"$TO_REGISTER_PASSWORD\",\"name\":\"$TO_REGISTER_NAME\"}"
 ```
 
-## Registerting and removing an Interlok instance
+## Registering and removing an Interlok instance
 
 You may want to register an Interlok instance when it starts and remove it when it stop.
 

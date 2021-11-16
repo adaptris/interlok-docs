@@ -20,43 +20,43 @@
   <link rel="stylesheet" href="./css/panels.css">
   
   <style>
-	:root {
-		--content-max-width: 85em;
-		--theme-color-secondary: #C51162;
-		--theme-color-light: #45537E;
-		--theme-color-dark: #000029;
-		--sidebar-text-color: #E1E4E8;
-		--sidebar-toggle-background: var(--theme-color-light);
-		--sidebar-name-color: var(--sidebar-text-color);
-		--sidebar-toggle-icon-color: var(--sidebar-text-color);
-		--sidebar-background: var(--theme-color);
-		--search-result-keyword-background: var(--theme-color-secondary);
-		--sidebar-nav-link-border-color--active: var(--theme-color-secondary);
-		--sidebar-nav-pagelink-background-image--active:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
-		--sidebar-nav-pagelink-background-image--collapse:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='11.2' viewBox='0 0 7 11.2'%3E%3Cpath d='M1.5 1.5l4 4.1 -4 4.1' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
-		--sidebar-nav-pagelink-background-image--loaded:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
-		--search-result-keyword-color: var(--mark-color);
-	}
-	main {
-    	min-height: 100%;
-	}
-	footer .content {
-		margin-left: var(--sidebar-width);
-	}
-	footer .info {
-		position: relative;
-		max-width: var(--content-max-width);
-		margin: 0 auto;
-		padding: 2rem 45px;
-	}
-	footer .info .rbi-relx {
+    :root {
+        --content-max-width: 85em;
+        --theme-color-secondary: #C51162;
+        --theme-color-light: #45537E;
+        --theme-color-dark: #000029;
+        --sidebar-text-color: #E1E4E8;
+        --sidebar-toggle-background: var(--theme-color-light);
+        --sidebar-name-color: var(--sidebar-text-color);
+        --sidebar-toggle-icon-color: var(--sidebar-text-color);
+        --sidebar-background: var(--theme-color);
+        --search-result-keyword-background: var(--theme-color-secondary);
+        --sidebar-nav-link-border-color--active: var(--theme-color-secondary);
+        --sidebar-nav-pagelink-background-image--active:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+        --sidebar-nav-pagelink-background-image--collapse:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='11.2' viewBox='0 0 7 11.2'%3E%3Cpath d='M1.5 1.5l4 4.1 -4 4.1' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+        --sidebar-nav-pagelink-background-image--loaded:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+        --search-result-keyword-color: var(--mark-color);
+    }
+    main {
+        min-height: 100%;
+    }
+    footer .content {
+        margin-left: var(--sidebar-width);
+    }
+    footer .info {
+        position: relative;
+        max-width: var(--content-max-width);
+        margin: 0 auto;
+        padding: 2rem 45px;
+    }
+    footer .info .rbi-relx {
         display: flex;
         align-items: center;
         justify-content: space-between;
-	}
-	.sidebar h2, .sidebar strong, .sidebar a {
-		color: var(--sidebar-text-color) !important;
-	}
+    }
+    .sidebar h2, .sidebar strong, .sidebar a {
+        color: var(--sidebar-text-color) !important;
+    }
     .sidebar-nav li.folder.level-1>span, .sidebar-nav li.folder.level-1>strong {
         margin-top: 1.0em;
         cursor: pointer;
@@ -70,25 +70,25 @@
     .markdown-section h2 {
         color: var(--theme-color-secondary);
     }
-	.markdown-section a {
-		color: var(--theme-color);
-	}
-	.quick-links {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
+    .markdown-section a {
+        color: var(--theme-color);
+    }
+    .quick-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         justify-content: space-between;
-	}
-	
-	.interlok-docs-title {
-	    background-image: url(./svg/adaptris-logo-grey.svg);
-		background-repeat: no-repeat;
-		background-position: 0 50%;
-		padding-left: 24px;
-		padding-bottom: 2px;
-		background-size: 20px;
-		font-weight: bold;
-	}
+    }
+
+    .interlok-docs-title {
+        background-image: url(./svg/adaptris-logo-grey.svg);
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        padding-left: 24px;
+        padding-bottom: 2px;
+        background-size: 20px;
+        font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -140,6 +140,7 @@
       coverpage: false,
       formatUpdated: '{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}',
       plugins: [
+        // Add last modified date - time
         function(hook, vm) {
           hook.beforeEach(function(content) {
             return (
@@ -149,6 +150,7 @@
             );
           });
         },
+        // Format legacy Jekyll tags to markdown equivalent
         function(hook, vm) {
           // Convert things like {% include important%} to a markdown equivalent
           hook.beforeEach(function(content) {
@@ -164,17 +166,18 @@
             return content;
           });
         },
+        // Iframe resize
         function(hook, vm) {
           hook.beforeEach(function(content) {
-		    // Add swagger iframe resize function when an iframe with the class swagger-iframe is detected
+            // Add swagger iframe resize function when an iframe with the class swagger-iframe is detected
             if (content.indexOf("class=\"swagger-iframe\"") > -1) {
               window.resizeSwaggerIframe = function resizeSwaggerIframe(iframe) {
                 setTimeout(function() {
-				  // This is hacky but we want the iframe to be resized quickly but also making sure it is resized if there is a slowdown
+                  // This is hacky but we want the iframe to be resized quickly but also making sure it is resized if there is a slowdown
                   iframe.height = iframe.contentWindow.document.documentElement.scrollHeight + "px";
-					setTimeout(function() {
-					  iframe.height = iframe.contentWindow.document.documentElement.scrollHeight + "px";
-					}, 400);
+                    setTimeout(function() {
+                      iframe.height = iframe.contentWindow.document.documentElement.scrollHeight + "px";
+                    }, 400);
                 }, 300);
               }
               window.monitorSwaggerIframeContentHeight = function monitorSwaggerIframeContentHeight(iframe) {
@@ -184,32 +187,48 @@
                 });
               }
             } else if (content.indexOf("class=\"interlok-search-iframe\"") > -1) {
-			  // Add interlok search iframe resize function when an iframe with the class interlok-search-iframe is detected
+              // Add interlok search iframe resize function when an iframe with the class interlok-search-iframe is detected
               window.monitorInterlokSearchframeContentHeight = function monitorSwaggerIframeContentHeight(iframe) {
-			  const mainHeightOffset = 90;
-				setTimeout(function() {
-					if (document.getElementById("main").style.height != (iframe.scrollHeight + mainHeightOffset) + "px") {
-						document.getElementById("main").style.height = (iframe.scrollHeight + mainHeightOffset) + "px";
-					}
+              const mainHeightOffset = 90;
+                setTimeout(function() {
+                    if (document.getElementById("main").style.height != (iframe.scrollHeight + mainHeightOffset) + "px") {
+                        document.getElementById("main").style.height = (iframe.scrollHeight + mainHeightOffset) + "px";
+                    }
 
-				}, 500);
-				window.resizeInterlokSearchIframeEventListener = function(event){
-				  document.getElementById("main").style.height = (iframe.scrollHeight + mainHeightOffset) + "px";
-				};
-				window.addEventListener("resize", window.resizeInterlokSearchIframeEventListener);
+                }, 500);
+                window.resizeInterlokSearchIframeEventListener = function(event){
+                  document.getElementById("main").style.height = (iframe.scrollHeight + mainHeightOffset) + "px";
+                };
+                window.addEventListener("resize", window.resizeInterlokSearchIframeEventListener);
               }
             } else {
-			  // listeners cleaning
+              // listeners cleaning
               window.resizeSwaggerIframe = undefined;
               window.monitorSwaggerIframeContentHeight = undefined;
-			  if (window.resizeInterlokSearchIframeEventListener) {
-			    window.removeEventListener("resize", window.resizeInterlokSearchIframeEventListener);
-				window.resizeInterlokSearchIframeEventListener = undefined;
-				document.getElementById("main").style.height = "auto";
-			  }
+              if (window.resizeInterlokSearchIframeEventListener) {
+                window.removeEventListener("resize", window.resizeInterlokSearchIframeEventListener);
+                window.resizeInterlokSearchIframeEventListener = undefined;
+                document.getElementById("main").style.height = "auto";
+              }
             }
             return content;
           });
+        },
+        // Change meta
+        function(hook, vm) {
+          function meta(name, content) {
+            const metaElt = document.querySelector(`meta[name="${name}"]`) || document.querySelector(`meta[property="${name}"]`);
+			if (metaElt.content !== content) {
+              metaElt.content = metaElt.content + (content ? " - " + content : "");
+            }
+          }
+          const refreshMeta = () => {
+			const pageTitle = document.title;
+            meta("twitter:title", pageTitle);
+            meta("og:title", pageTitle);
+          }
+          hook.init(refreshMeta)
+          hook.doneEach(refreshMeta)
         }
       ]
     }

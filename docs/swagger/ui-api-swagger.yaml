@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Interlok UI Api Documentation
   description: Interlok UI Api web service documentation.
-  version: 4.1.0-RELEASE
+  version: 4.3.0-RELEASE
 servers:
 - url: /interlok/api
 tags:

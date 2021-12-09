@@ -8,9 +8,10 @@ Release Date : 2021-11
 - A new service collection editor has been added to the [Config Page](https://interlok.adaptris.net/interlok-docs/#/pages/ui/ui-config-screens?id=navigating-the-config-page) that changes the nested display of services in the list container (needs the [User Preference](https://interlok.adaptris.net/interlok-docs/#/pages/ui/ui-user-preferences?id=global-preferences) 'enable technical preview features' to be enabled)
 - [UI Templates](https://interlok.adaptris.net/interlok-docs/#/pages/ui/ui-templates) now display the list of required optional components to use the given template
 - New [documentation page](https://interlok.adaptris.net/interlok-docs/#/pages/ui/ui-auto-register-to-remote) that explains how to auto register an adapter to remote UI Dashboard
-- The [Solace](https://github.com/adaptris/interlok-solace) JCSMP has had many [improvements](https://github.com/adaptris/interlok-solace/pull/24), including updates to use their latest API and add advanced connection/session properties; Reworking of the per-message-properties to be resolvable items, so we can use static and dynamic values; and improvements to the async event handler.
+- The [Solace](https://github.com/adaptris/interlok-solace) JCSMP has had many [improvements](https://github.com/adaptris/interlok-solace/pull/24), including updates to use their latest API and add advanced connection/session properties; Reworking of the per-message-properties to be resolvable items, so we can use static and dynamic values; and improvements to the async event handler
 - A new command line installer is available to download
 - New ['proxy' management component](https://github.com/adaptris/interlok-workflow-rest-services/tree/develop/interlok-proxy) that allows you, for example, to have an API endpoint serviced by Interlok and have jolokia enabled
+- New ['rabbitmq' optional component](https://github.com/adaptris/interlok-amqp/tree/develop/interlok-rabbitmq) that uses the rabbitmq java client
 
 ### Bug
 

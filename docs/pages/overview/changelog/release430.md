@@ -2,6 +2,10 @@
 
 Release Date : 2021-11
 
+### Known Issues
+
+- _2021-12-13_ - Log4j2 vulnerability - CVE-2021-44228 - [Refer to this page concerning Apache Log4j 2 security vulnerabilities](https://logging.apache.org/log4j/2.x/security.html)
+
 ### Key Highlights
 
 - There is a new '[Interlok Component Search](https://interlok.adaptris.net/interlok-docs/#/pages/overview/adapter-component-search)' feature in our documentation allowing you to discover all our configurable components

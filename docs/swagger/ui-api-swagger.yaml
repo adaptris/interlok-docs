@@ -51,6 +51,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -161,6 +162,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -201,6 +203,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -309,6 +312,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -348,6 +352,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -858,6 +863,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -898,6 +904,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -955,6 +962,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -1046,6 +1054,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -1097,6 +1106,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -1137,6 +1147,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -1781,6 +1792,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -2357,6 +2369,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -2426,6 +2439,8 @@ paths:
       parameters:
       - name: adapter
         in: path
+        description: The unique Id or Name of an Adapter in the UI or 'local' to get
+          the UI local Adapter.
         required: true
         schema:
           type: string
@@ -2611,28 +2626,36 @@ paths:
     get:
       tags:
       - /channel
+      description: Get a channel's configuration
       operationId: configuration_3
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
       - name: jmxUid
         in: path
+        description: The unique identifier used in the Adapter configuration XML.
         required: true
         schema:
           type: string
       - name: Jmx-Credentials
         in: header
+        description: "The JMX credentials used to connect to an Adapter. You can encode\
+          \ the password using the Interlok utility class 'Password.encode(plain,\
+          \ Password.PORTABLE_PASSWORD)'."
         schema:
           type: string
       - name: jmxEnv
         in: query
+        description: The JMX environment parameters used to connect to an Adapter.
         schema:
           type: string
       - name: channel
         in: path
+        description: The channel unique id.
         required: true
         schema:
           type: string
@@ -2649,24 +2672,31 @@ paths:
     get:
       tags:
       - /channel
+      description: Counts channels for an adapter
       operationId: count_1
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
       - name: jmxUid
         in: path
+        description: The unique identifier used in the Adapter configuration XML.
         required: true
         schema:
           type: string
       - name: Jmx-Credentials
         in: header
+        description: "The JMX credentials used to connect to an Adapter. You can encode\
+          \ the password using the Interlok utility class 'Password.encode(plain,\
+          \ Password.PORTABLE_PASSWORD)'."
         schema:
           type: string
       - name: jmxEnv
         in: query
+        description: The JMX environment parameters used to connect to an Adapter.
         schema:
           type: string
       responses:
@@ -2683,28 +2713,36 @@ paths:
     get:
       tags:
       - /channel
+      description: Get details for a channel
       operationId: details_3
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
       - name: jmxUid
         in: path
+        description: The unique identifier used in the Adapter configuration XML.
         required: true
         schema:
           type: string
       - name: Jmx-Credentials
         in: header
+        description: "The JMX credentials used to connect to an Adapter. You can encode\
+          \ the password using the Interlok utility class 'Password.encode(plain,\
+          \ Password.PORTABLE_PASSWORD)'."
         schema:
           type: string
       - name: jmxEnv
         in: query
+        description: The JMX environment parameters used to connect to an Adapter.
         schema:
           type: string
       - name: channel
         in: path
+        description: The channel unique id.
         required: true
         schema:
           type: string
@@ -2722,28 +2760,36 @@ paths:
     get:
       tags:
       - /channel
+      description: Get a channel for an adapter
       operationId: get_3
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
       - name: jmxUid
         in: path
+        description: The unique identifier used in the Adapter configuration XML.
         required: true
         schema:
           type: string
       - name: Jmx-Credentials
         in: header
+        description: "The JMX credentials used to connect to an Adapter. You can encode\
+          \ the password using the Interlok utility class 'Password.encode(plain,\
+          \ Password.PORTABLE_PASSWORD)'."
         schema:
           type: string
       - name: jmxEnv
         in: query
+        description: The JMX environment parameters used to connect to an Adapter.
         schema:
           type: string
       - name: channel
         in: path
+        description: The channel unique id.
         required: true
         schema:
           type: string
@@ -2761,28 +2807,36 @@ paths:
     get:
       tags:
       - /channel
+      description: Get a channel's state
       operationId: getState_3
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
       - name: jmxUid
         in: path
+        description: The unique identifier used in the Adapter configuration XML.
         required: true
         schema:
           type: string
       - name: Jmx-Credentials
         in: header
+        description: "The JMX credentials used to connect to an Adapter. You can encode\
+          \ the password using the Interlok utility class 'Password.encode(plain,\
+          \ Password.PORTABLE_PASSWORD)'."
         schema:
           type: string
       - name: jmxEnv
         in: query
+        description: The JMX environment parameters used to connect to an Adapter.
         schema:
           type: string
       - name: channel
         in: path
+        description: The channel unique id.
         required: true
         schema:
           type: string
@@ -2799,33 +2853,42 @@ paths:
     put:
       tags:
       - /channel
+      description: Update a channel's state
       operationId: updateState_3
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
       - name: jmxUid
         in: path
+        description: The unique identifier used in the Adapter configuration XML.
         required: true
         schema:
           type: string
       - name: Jmx-Credentials
         in: header
+        description: "The JMX credentials used to connect to an Adapter. You can encode\
+          \ the password using the Interlok utility class 'Password.encode(plain,\
+          \ Password.PORTABLE_PASSWORD)'."
         schema:
           type: string
       - name: jmxEnv
         in: query
+        description: The JMX environment parameters used to connect to an Adapter.
         schema:
           type: string
       - name: channel
         in: path
+        description: The channel unique id.
         required: true
         schema:
           type: string
       - name: adpMgmtTimeout
         in: query
+        description: adpMgmtTimeout
         schema:
           type: string
       - name: option
@@ -2858,24 +2921,31 @@ paths:
     get:
       tags:
       - /channel
+      description: Lists channels for an adapter
       operationId: list_2
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
       - name: jmxUid
         in: path
+        description: The unique identifier used in the Adapter configuration XML.
         required: true
         schema:
           type: string
       - name: Jmx-Credentials
         in: header
+        description: "The JMX credentials used to connect to an Adapter. You can encode\
+          \ the password using the Interlok utility class 'Password.encode(plain,\
+          \ Password.PORTABLE_PASSWORD)'."
         schema:
           type: string
       - name: jmxEnv
         in: query
+        description: The JMX environment parameters used to connect to an Adapter.
         schema:
           type: string
       responses:
@@ -2931,6 +3001,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -3050,24 +3121,31 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
       - name: jmxUid
         in: path
+        description: The unique identifier used in the Adapter configuration XML.
         required: true
         schema:
           type: string
       - name: Jmx-Credentials
         in: header
+        description: "The JMX credentials used to connect to an Adapter. You can encode\
+          \ the password using the Interlok utility class 'Password.encode(plain,\
+          \ Password.PORTABLE_PASSWORD)'."
         schema:
           type: string
       - name: jmxEnv
         in: query
+        description: The JMX environment parameters used to connect to an Adapter.
         schema:
           type: string
       - name: channel
         in: path
+        description: The channel unique id.
         required: true
         schema:
           type: string
@@ -3094,24 +3172,31 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
       - name: jmxUid
         in: path
+        description: The unique identifier used in the Adapter configuration XML.
         required: true
         schema:
           type: string
       - name: Jmx-Credentials
         in: header
+        description: "The JMX credentials used to connect to an Adapter. You can encode\
+          \ the password using the Interlok utility class 'Password.encode(plain,\
+          \ Password.PORTABLE_PASSWORD)'."
         schema:
           type: string
       - name: jmxEnv
         in: query
+        description: The JMX environment parameters used to connect to an Adapter.
         schema:
           type: string
       - name: channel
         in: path
+        description: The channel unique id.
         required: true
         schema:
           type: string
@@ -3175,6 +3260,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -3259,6 +3345,8 @@ paths:
       parameters:
       - name: adapter
         in: path
+        description: The unique Id or Name of an Adapter in the UI or 'local' to get
+          the UI local Adapter.
         required: true
         schema:
           type: string
@@ -3288,6 +3376,8 @@ paths:
       parameters:
       - name: adapter
         in: path
+        description: The unique Id or Name of an Adapter in the UI or 'local' to get
+          the UI local Adapter.
         required: true
         schema:
           type: string
@@ -3323,6 +3413,8 @@ paths:
       parameters:
       - name: adapter
         in: path
+        description: The unique Id or Name of an Adapter in the UI or 'local' to get
+          the UI local Adapter.
         required: true
         schema:
           type: string
@@ -3358,6 +3450,8 @@ paths:
       parameters:
       - name: adapter
         in: path
+        description: The unique Id or Name of an Adapter in the UI or 'local' to get
+          the UI local Adapter.
         required: true
         schema:
           type: string
@@ -3392,6 +3486,8 @@ paths:
       parameters:
       - name: adapter
         in: path
+        description: The unique Id or Name of an Adapter in the UI or 'local' to get
+          the UI local Adapter.
         required: true
         schema:
           type: string
@@ -3448,6 +3544,8 @@ paths:
       parameters:
       - name: adapter
         in: path
+        description: The unique Id or Name of an Adapter in the UI or 'local' to get
+          the UI local Adapter.
         required: true
         schema:
           type: string
@@ -3481,6 +3579,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -3533,6 +3632,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -3580,6 +3680,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -3633,6 +3734,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -3686,6 +3788,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -3738,6 +3841,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -3812,6 +3916,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string
@@ -3863,6 +3968,8 @@ paths:
       parameters:
       - name: adapter
         in: path
+        description: The unique Id or Name of an Adapter in the UI or 'local' to get
+          the UI local Adapter.
         required: true
         schema:
           type: string
@@ -3898,6 +4005,7 @@ paths:
       parameters:
       - name: url
         in: path
+        description: The JMX URL used to connect to an Adapter.
         required: true
         schema:
           type: string

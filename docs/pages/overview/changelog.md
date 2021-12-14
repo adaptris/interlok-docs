@@ -2,7 +2,8 @@
 
 ## Important information ##
 
-- _2021-12-13_ - [Log4J2 Vulnerability and Interlok](https://interlok.adaptris.net/blog/2021/12/14/log4j-security-vulnerabilities.html)
+- _2021-12-13_ - There has been a recently discovered [vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2021-44228) in [Apache Log4j2](https://logging.apache.org/log4j/2.x/security.html). Please refer to our [blog post](https://interlok.adaptris.net/blog/2021/12/14/log4j-security-vulnerabilities.html) for our latest advice.
+
 
 [filename](changelog/release430.md ':include')
 

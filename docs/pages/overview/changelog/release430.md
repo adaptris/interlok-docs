@@ -1,10 +1,6 @@
 ## Version 4.3.0 ##
 
-Release Date : 2021-11
-
-### Known Issues
-
-- _2021-12-13_ - Log4j2 vulnerability - CVE-2021-44228 - [Refer to this page concerning Apache Log4j 2 security vulnerabilities](https://logging.apache.org/log4j/2.x/security.html)
+Release Date : 2021-12-06
 
 ### Key Highlights
 

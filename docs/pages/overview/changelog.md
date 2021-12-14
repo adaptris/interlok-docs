@@ -1,5 +1,9 @@
 > **Summary:** This is the change log summarizing the key changes in Interlok for each release.
 
+## Important information ##
+
+- _2021-12-13_ - [Log4J2 Vulnerability and Interlok](https://interlok.adaptris.net/blog/2021/12/14/log4j-security-vulnerabilities.html)
+
 [filename](changelog/release430.md ':include')
 
 [filename](changelog/release420.md ':include')

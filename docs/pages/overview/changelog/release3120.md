@@ -1,3 +1,24 @@
+## Version 3.12.0.3 ##
+
+Release Date : 2021-12-21
+
+The 3.12.0.3 release resolves a single issue; It does not have an installer, and only affects the following artifact jars since they are built from the same multi-module repository: _interlok-boot.jar, interlok-client.jar, interlok-client-jmx.jar, interlok-common.jar, interlok-core.jar, interlok-core-apt.jar, interlok-logging.jar_
+
+If you're affected by this issue, then you should update your dependency tree to use `com.adaptris:interlok-core:3.12.0.3-RELEASE`
+
+- 'INTERLOK-3846' - Update 3.12 components with missing deprecation notices (so users can trust gradle check before updating to v4)
+- Updated Log4j dependencies from 2.14.0 to 2.17.0
+
+## Version 3.12.0.2 ##
+
+Release Date : 2021-07-06
+
+The 3.12.0.2 release resolves a single issue; It does not have an installer, and only affects the following artifact jars since they are built from the same multi-module repository: _interlok-boot.jar, interlok-client.jar, interlok-client-jmx.jar, interlok-common.jar, interlok-core.jar, interlok-core-apt.jar, interlok-logging.jar_
+
+If you're affected by this issue, then you should update your dependency tree to use `com.adaptris:interlok-core:3.12.0.2-RELEASE`
+
+- 'INTERLOK-3818' - Shutdown Operation Timeout now configurable (ShutdownHandler should be configurable)
+
 ## Version 3.12.0.1 ##
 
 Release Date : 2021-02-11

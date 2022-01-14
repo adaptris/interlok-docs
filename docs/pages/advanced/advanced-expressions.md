@@ -50,6 +50,18 @@ of thing.
 
     %payload{id:…}
 
+## Safer Document Type
+
+Sometimes it may be necessary to resolved data verbatim and as such it
+may need escaping in some way. Such as using &lt; or &gt; and embedding
+the resolved string into an XML document, or including a string with
+various &quot; or &apos; inside a JSON document. To do this safely,
+there exists the following:
+
+    %asCDATA{…}
+
+    %asJSONSting{…}
+
 ## External Resolvers
 
 ### Environment
@@ -201,11 +213,11 @@ Copy it and replace what's currently in your adapter.xml file:
                 <new-payload class="constant-data-input-parameter">
                   <value>                    City: %payload{xpath:current/city/@name}
                     Country: %payload{xpath:current/city/country/text()}
-      
+
                     Wind Level: %payload{xpath:current/wind/speed/@name}
-                    Wind Direction: %payload{xpath:current/wind/direction/@name} 
+                    Wind Direction: %payload{xpath:current/wind/direction/@name}
                     Cloud frequency: %payload{xpath:current/clouds/@name}
-      
+
                     Temperature: %payload{xpath:current/temperature/@value} %payload{xpath:current/temperature/@unit}
                     Humidity: %payload{xpath:current/humidity/@value}%payload{xpath:current/humidity/@unit}
                     Raining: %payload{xpath:current/precipitation/@mode}
@@ -290,7 +302,7 @@ City: %payload{xpath:current/city/@name}
 Country: %payload{xpath:current/city/country/text()}
 
 Wind Level: %payload{xpath:current/wind/speed/@name}
-Wind Direction: %payload{xpath:current/wind/direction/@name} 
+Wind Direction: %payload{xpath:current/wind/direction/@name}
 Cloud frequency: %payload{xpath:current/clouds/@name}
 
 Temperature: %payload{xpath:current/temperature/@value} %payload{xpath:current/temperature/@unit}
@@ -754,14 +766,14 @@ The result is a weather forecast output to a text file which should look like th
 
 ```text
   Location: London, GB
-  
+
   Weather condition: light rain
-  
+
   Temperature: 12.51°C
   Feels like:  5.74°C
-  
+
   Wind Speed: 10.3 metres/sec
   Wind Direction: 100°
-  
+
   Humidity: 93%
 ```

@@ -58,9 +58,9 @@ the resolved string into an XML document, or including a string with
 various &quot; or &apos; inside a JSON document. To do this safely,
 there exists the following:
 
-    %asCDATA{…}
+    %asCDATA{…} // From 4.4.0
 
-    %asJSONSting{…}
+    %asJSONSting{…} // From 4.4.0, included in Interlok JSON
 
 ## External Resolvers
 

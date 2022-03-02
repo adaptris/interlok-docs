@@ -25,5 +25,4 @@ Log4j provides support for JSR 223 scripting languages to be used in some of its
 - 'INTERLOK-3832' - UI Config - Remove the Action Button Size user pref
 - 'INTERLOK-2931' - UI API - Upgrade swagger resources
 - 'INTERLOK-2866' - Friendly error when your config cannot be found.
-- 'INTERLOK-2824' - Add a seed based "password" implementation
 - 'INTERLOK-2752' - message resolution should have safe versions

@@ -1,6 +1,6 @@
 ## Version 4.4.0 ##
 
-Release Date : 2021-03-02
+Release Date : 2022-03-02
 
 The 4.4.0 release is a small release that focused on some dependency upgrades.
 

@@ -7,6 +7,7 @@ By default the Interlok web application uses an Embedded database called Derby. 
 In order to use MySQL you will need to follow these steps:
 
  - Add the java MySQL connector jar to the adapter/lib directory. You can find the connector on [MySQL website](https://dev.mysql.com/downloads/connector/j/).
+ - **Since 4.4.0** you will also need to add flyway-mysql.jar to the adapter/lib directory. You can download the right version on [https://repo1.maven.org/maven2/org/flywaydb/flyway-mysql/](https://repo1.maven.org/maven2/org/flywaydb/flyway-mysql/).
  - Create a database for the interlok web application (e.g. `interlokuidb`) and a user with access to it (e.g. user: `interlokuidb`, password: `int3rL0cku1DB`)
 
 ```sql
@@ -86,6 +87,7 @@ Microsoft's SQLServer.
 In order to use SQLServer you will need to follow these steps:
 
  - Add the Java SQLServer connector jar to the adapter/lib directory. You can find the connector on the Microsoft [SQLServer website](https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server).
+ - **Since 4.4.0** you will also need to add flyway-sqlserver.jar to the adapter/lib directory. You can download the right version on [https://repo1.maven.org/maven2/org/flywaydb/flyway-sqlserver/](https://repo1.maven.org/maven2/org/flywaydb/flyway-sqlserver/).
  - Create a database for the interlok web application (e.g. `interlokuidb`) and a user with access to it (e.g. user: `interlokuidb`, password: `int3rL0cku1DB`)
 
 ```sql

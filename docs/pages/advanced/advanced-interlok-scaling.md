@@ -171,36 +171,36 @@ If you have followed these instructions verbatim, then see the above instruction
 C:\ProgramData\chocolatey\lib\kubernetes-cli\tools\kubernetes\client\bin
 ```
 
-If you need to rerun the "kubectl version" (in a brand new!) command line prompt, here is the output you're looking for;
+If you need to rerun the `kubectl version` (in a brand new!) command line prompt, here is the output you're looking for;
 
 ```text
-Client Version: version.Info{Major:"1", Minor:"15", GitVersion:"v1.15.0", GitCommit:"e8462b5b5dc2584fdcd18e6bcfe9f1e4d970a529", GitTreeState:"clean", BuildDate:"2019-06-19T16:40:16Z", GoVersion:"go1.12.5", Compiler:"gc", Platform:"windows/amd64"}
-Server Version: version.Info{Major:"1", Minor:"15", GitVersion:"v1.15.0", GitCommit:"e8462b5b5dc2584fdcd18e6bcfe9f1e4d970a529", GitTreeState:"clean", BuildDate:"2019-06-19T16:32:14Z", GoVersion:"go1.12.5", Compiler:"gc", Platform:"linux/amd64"}
+WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.
+Client Version: version.Info{Major:"1", Minor:"24", GitVersion:"v1.24.1", GitCommit:"3ddd0f45aa91e2f30c70734b175631bec5b5825a", GitTreeState:"clean", BuildDate:"2022-05-24T12:26:19Z", GoVersion:"go1.18.2", Compiler:"gc", Platform:"windows/amd64"}
+Kustomize Version: v4.5.4
+Server Version: version.Info{Major:"1", Minor:"24", GitVersion:"v1.24.1", GitCommit:"3ddd0f45aa91e2f30c70734b175631bec5b5825a", GitTreeState:"clean", BuildDate:"2022-05-24T12:18:48Z", GoVersion:"go1.18.2", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-At time of writing the latest versions were 1.15.0.  Your's may be different, just ensure the reported versions match as mine do above.  Both server and client report 1.15.0.
+At time of writing the latest versions were 1.24.1. Yours may be different, just ensure the reported versions match as mine do above. Both server and client report 1.24.1.
 
 Helm is the package management tool of choice for Kubernetes.
 
-To be able to use Helm, the server-side component tiller needs to be installed on your cluster.
+To be able to use Helm, the server-side component Tiller needs to be installed on your cluster.
 
 ### Install Tiller on the Cluster ###
 
-Helm installs the tiller service on your cluster to manage charts.
+Helm installs the Tiller service on your cluster to manage charts.
 
 Since RBAC (Role-based access control) is enabled by default we will need to use kubectl to create a serviceaccount and clusterrolebinding so tiller has permission to deploy to the cluster.
 
-- Create the ServiceAccount in the kube-system namespace.
-- Create the ClusterRoleBinding to give the tiller account access to the cluster.
-- Finally use helm to install the tiller service
+1. Create the ServiceAccount in the kube-system namespace.
+1. Create the ClusterRoleBinding to give the Tiller account access to the cluster.
+1. Finally use helm to install the Tiller service
 
 ```powershell
 > kubectl -n kube-system create serviceaccount tiller
-
-> kubectl create clusterrolebinding tiller \
---clusterrole=cluster-admin \
---serviceaccount=kube-system:tiller
-
+serviceaccount/tiller created
+> kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+clusterrolebinding.rbac.authorization.k8s.io/tiller created
 > helm init --service-account tiller
 ```
 

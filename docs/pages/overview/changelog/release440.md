@@ -1,6 +1,6 @@
 ## Version 4.4.1 ##
 
-Release Date : 2021-03-16
+Release Date : 2022-03-16
 
 The 4.4.1 release resolves a single issue; It does not have an installer, and only affects the following artifact jars since they are built from the same multi-module repository: _interlok-boot.jar, interlok-client.jar, interlok-client-jmx.jar, interlok-common.jar, interlok-core.jar, interlok-core-apt.jar, interlok-logging.jar_
 

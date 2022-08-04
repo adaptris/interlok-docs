@@ -52,7 +52,7 @@ public class MyClientProducer extends ProduceOnlyProducerImp {
   @Override
   public void prepare() throws CoreException {}
 
-  public void produce(AdaptrisMessage m, ProduceDestination d) throws ProduceException {
+  public void produce(AdaptrisMessage m) throws ProduceException {
     try {
       ClientConnection conn = retrieveConnection(MyClientConnection.class).createConnection();
       conn.sendMessage(msg.resolve(getRepository()), this.encode(m));
@@ -87,4 +87,3 @@ So, the summary of what we did is as follows :
 [AdaptrisMessageEncoder]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/AdaptrisMessageEncoder.html
 [ProduceOnlyProducerImp]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/ProduceOnlyProducerImp.html
 [RequestReplyProducerImp]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/RequestReplyProducerImp.html
-[ProduceDestination]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/ProduceDestination.html

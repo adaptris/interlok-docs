@@ -111,6 +111,5 @@ So, the summary of what we did is as follows :
 [AdaptrisConnection]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/AdaptrisConnection.html
 [AdaptrisConnectionImp]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/AdaptrisConnectionImp.html
 [AdaptrisMessageEncoder]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/AdaptrisMessageEncoder.html
-[ConsumeDestination]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/ConsumeDestination.html
 [AdaptrisMessageFactory]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/AdaptrisMessageFactory.html
 [reacquireLockBetweenMessages]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/AdaptrisPollingConsumer.html#setReacquireLockBetweenMessages-java.lang.Boolean-

@@ -50,7 +50,18 @@ __com.adaptris:type=Profiler,componentType=producer,id=my-workflow-id__
 
 ## Enabling Datadog ##
 
-Simply modify your Interlok bootstrap.properties with the following properties;
+First make sure you have the correct managementComponents enabled;
+
+```
+managementComponents=jmx:jetty:metrics-interlok:metrics-jvm:metrics-provider-datadog
+```
+
+This will enable the 3 extra components;
+ - metrics-interlok  Enable Interlok to generate performance metrics for services, producers and workflows
+ - metrics-jvm  Enable Interlok to also generate Java process metrics.
+ - metrics-provider-datadog  Organise and format the metrics specifically for DataDog.
+
+Then again modify your Interlok bootstrap.properties with the following properties;
 ```
 datadogApiKey=my-datadog-api-key
 datadogUrlKey=https://app.datadoghq.eu

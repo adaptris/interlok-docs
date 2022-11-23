@@ -64,9 +64,7 @@ The most basic of all configurations would consist of a file system consumer and
           <unique-id>FS-FS-Workflow</unique-id>
           <consumer class="fs-consumer">
             <unique-id>FS-Consumer</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>messages_in</destination>
-            </destination>
+            <base-directory-url>messages_in</base-directory-url>
             <poller class="fixed-interval-poller">
               <poll-interval>
                 <unit>SECONDS</unit>
@@ -89,9 +87,7 @@ The most basic of all configurations would consist of a file system consumer and
           </service-collection>
           <producer class="fs-producer">
             <unique-id>FS-Producer</unique-id>
-            <destination class="configured-produce-destination">
-              <destination>messages_out</destination>
-            </destination>
+            <base-directory-url>messages_out</base-directory-url>
             <create-dirs>true</create-dirs>
           </producer>
         </standard-workflow>
@@ -153,9 +149,7 @@ A basic JMS configuration, that includes 2 channels.  The first channel simply l
           <unique-id>ToJMSWorkflow1</unique-id>
           <consumer class="jms-topic-consumer">
             <message-factory class="default-message-factory"/>
-            <destination class="configured-consume-destination">
-              <destination>SampleTopic1</destination>
-            </destination>
+            <topic>SampleTopic1</endpoint>
             <acknowledge-mode>CLIENT_ACKNOWLEDGE</acknowledge-mode>
             <message-translator class="auto-convert-message-translator">
               <jms-output-type>Text</jms-output-type>
@@ -164,9 +158,7 @@ A basic JMS configuration, that includes 2 channels.  The first channel simply l
           </consumer>
           <producer class="jms-topic-producer">
             <message-factory class="default-message-factory"/>
-            <destination class="configured-produce-destination">
-              <destination>SampleTopic2</destination>
-            </destination>
+            <topic>SampleTopic2</topic>
             <acknowledge-mode>CLIENT_ACKNOWLEDGE</acknowledge-mode>
             <message-translator class="text-message-translator"/>
             <correlation-id-source class="null-correlation-id-source"/>
@@ -212,9 +204,7 @@ A basic JMS configuration, that includes 2 channels.  The first channel simply l
           <unique-id>ToJMSWorkflow2</unique-id>
           <consumer class="jms-topic-consumer">
             <message-factory class="default-message-factory"/>
-            <destination class="configured-consume-destination">
-              <destination>SampleTopic2</destination>
-            </destination>
+            <topic>SampleTopic2</topic>
             <acknowledge-mode>CLIENT_ACKNOWLEDGE</acknowledge-mode>
             <message-translator class="auto-convert-message-translator">
               <jms-output-type>Text</jms-output-type>
@@ -223,9 +213,7 @@ A basic JMS configuration, that includes 2 channels.  The first channel simply l
           </consumer>
           <producer class="jms-topic-producer">
             <message-factory class="default-message-factory"/>
-            <destination class="configured-produce-destination">
-              <destination>SampleTopic3</destination>
-            </destination>
+            <topic>SampleTopic3</topic>
             <acknowledge-mode>CLIENT_ACKNOWLEDGE</acknowledge-mode>
             <message-translator class="text-message-translator"/>
             <correlation-id-source class="null-correlation-id-source"/>
@@ -297,9 +285,7 @@ To demonstrate how configuration can affect memory usage, we have purposefully n
           <unique-id>ToJMSWorkflow1</unique-id>
           <consumer class="jms-topic-consumer">
             <message-factory class="default-message-factory"/>
-            <destination class="configured-consume-destination">
-              <destination>SampleTopic1</destination>
-            </destination>
+            <topic>SampleTopic1</topic>
             <acknowledge-mode>CLIENT_ACKNOWLEDGE</acknowledge-mode>
             <message-translator class="auto-convert-message-translator">
               <jms-output-type>Text</jms-output-type>
@@ -332,9 +318,7 @@ To demonstrate how configuration can affect memory usage, we have purposefully n
                 </service-collection>
           <producer class="jms-topic-producer">
             <message-factory class="default-message-factory"/>
-            <destination class="configured-produce-destination">
-              <destination>SampleTopic2</destination>
-            </destination>
+            <topic>SampleTopic2</topic>
             <acknowledge-mode>CLIENT_ACKNOWLEDGE</acknowledge-mode>
             <message-translator class="text-message-translator"/>
             <correlation-id-source class="null-correlation-id-source"/>
@@ -380,9 +364,7 @@ To demonstrate how configuration can affect memory usage, we have purposefully n
           <unique-id>ToJMSWorkflow2</unique-id>
           <consumer class="jms-topic-consumer">
             <message-factory class="default-message-factory"/>
-            <destination class="configured-consume-destination">
-              <destination>SampleTopic2</destination>
-            </destination>
+            <topic>SampleTopic2</topic>
             <acknowledge-mode>CLIENT_ACKNOWLEDGE</acknowledge-mode>
             <message-translator class="auto-convert-message-translator">
               <jms-output-type>Text</jms-output-type>
@@ -415,9 +397,7 @@ To demonstrate how configuration can affect memory usage, we have purposefully n
                 </service-collection>
           <producer class="jms-topic-producer">
             <message-factory class="default-message-factory"/>
-            <destination class="configured-produce-destination">
-              <destination>SampleTopic3</destination>
-            </destination>
+            <topic>SampleTopic3</topic>
             <acknowledge-mode>CLIENT_ACKNOWLEDGE</acknowledge-mode>
             <message-translator class="text-message-translator"/>
             <correlation-id-source class="null-correlation-id-source"/>

@@ -15,9 +15,7 @@ The [default-event-handler][] may only be configured as [part of the Adapter][] 
       .. skipped for brevity.
     </connection>
     <producer class="jms-topic-producer">
-      <destination class="configured-produce-destination">
-        <destination>events</destination>
-      </destination>
+      <topic>events</topic>
     </producer>
   </event-handler>
   ... Other configuration skipped.

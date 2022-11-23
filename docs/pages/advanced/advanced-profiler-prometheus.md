@@ -220,9 +220,7 @@ service_avgnanos{workflow="standardWorkflow"}
               <default-payload-id>default-payload</default-payload-id>
             </message-factory>
             <unique-id>httpMessageConsumer</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>/endpoint1</destination>
-            </destination>
+            <path>/endpoint1</path>
             <parameter-handler class="jetty-http-ignore-parameters"/>
             <header-handler class="jetty-http-ignore-headers"/>
           </consumer>
@@ -289,9 +287,7 @@ service_avgnanos{workflow="standardWorkflow"}
               <default-payload-id>default-payload</default-payload-id>
             </message-factory>
             <unique-id>secondHttpMessageConsumer</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>/endpoint2</destination>
-            </destination>
+            <path>/endpoint2</path>
             <parameter-handler class="jetty-http-ignore-parameters"/>
             <header-handler class="jetty-http-ignore-headers"/>
           </consumer>

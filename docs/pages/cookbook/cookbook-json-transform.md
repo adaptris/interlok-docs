@@ -71,9 +71,7 @@ Giving a resulting configuration of
 ```xml
 <json-transform-service>
   <mapping-spec class="file-data-input-parameter">
-    <destination class="configured-destination">
-      <destination>file:///path/to/my/mapping.json</destination>
-    </destination>
+    <url>file:///path/to/my/mapping.json</url>
   </mapping-spec>
   <metadata-filter class="regex-metadata-filter"/>
 </json-transform-service>
@@ -146,9 +144,7 @@ along with configuration, which will throw an exception for error handling if th
 ```xml
 <json-schema-service>
   <schema-url class="file-data-input-parameter">
-    <destination class="configured-destination">
-       <destination>file:///./config/schema.rectangle.json</destination>
-    </destination>
+     <url>file:///./config/schema.rectangle.json</url>
   </schema-url>
 </json-schema-service>
 ```

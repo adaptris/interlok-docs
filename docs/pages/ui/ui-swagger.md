@@ -315,11 +315,7 @@ This will give an Adapter configuration xml like:
         <pooling-workflow>
           <consumer class="jetty-message-consumer">
             <unique-id>/path/to/converter/service</unique-id>
-            <destination class="configured-consume-destination">
-              <configured-thread-name>Convert currency</configured-thread-name>
-              <destination>/path/to/converter/service</destination>
-              <filter-expression>GET</filter-expression>
-            </destination>
+            <path>/path/to/converter/service</path>
             <warn-after-message-hang-millis>20000</warn-after-message-hang-millis>
             <parameter-handler class="jetty-http-parameters-as-metadata"/>
             <header-handler class="jetty-http-ignore-headers"/>
@@ -357,11 +353,7 @@ This will give an Adapter configuration xml like:
         <pooling-workflow>
           <consumer class="jetty-message-consumer">
             <unique-id>/path/to/weather/service/</unique-id>
-            <destination class="configured-consume-destination">
-              <configured-thread-name>My Weather Service</configured-thread-name>
-              <destination>/path/to/weather/service/</destination>
-              <filter-expression>GET</filter-expression>
-            </destination>
+            <path>/path/to/weather/service/</path>
             <warn-after-message-hang-millis>20000</warn-after-message-hang-millis>
             <parameter-handler class="jetty-http-parameters-as-metadata"/>
             <header-handler class="jetty-http-ignore-headers"/>
@@ -1021,9 +1013,7 @@ This will give an Adapter configuration xml like:
         <standard-workflow>
           <consumer class="jetty-message-consumer">
             <unique-id>/contacts/*</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>/contacts/*</destination>
-            </destination>
+            <path>/contacts/*</path>
             <parameter-handler class="jetty-http-parameters-as-metadata"/>
             <header-handler class="jetty-http-ignore-headers"/>
           </consumer>

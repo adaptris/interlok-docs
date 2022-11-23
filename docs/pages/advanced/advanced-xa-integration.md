@@ -202,9 +202,7 @@ The XA compliant consumer is built upon the standard jms-consumer, therefore all
 
   <consumer class="xa-jms-consumer">
     <unique-id>JMS-Consumer</unique-id>
-    <destination class="configured-consume-destination">
-      <destination>jms:queue:myQueue</destination>
-    </destination>
+    <endpoint>jms:queue:myQueue</endpoint>
     <message-translator class="text-message-translator">
       <move-metadata>false</move-metadata>
       <move-jms-headers>false</move-jms-headers>
@@ -263,9 +261,7 @@ We also must configure the session-factory, all shown below.
 ```xml
 
   <producer class="xa-jms-producer">
-    <destination class="configured-produce-destination">
-      <destination>jms:queue:myQueue</destination>
-    </destination>
+    <endpoint>jms:queue:myQueue</endpoint>
     <message-translator class="text-message-translator">
       <move-metadata>false</move-metadata>
       <move-jms-headers>false</move-jms-headers>
@@ -517,9 +513,7 @@ Three identical channels, locked so that only one is active at a time, with a tr
           <consumer class="xa-jms-consumer">
             <unique-id>JMS-Consumer</unique-id>
             <max-batch>250</max-batch>
-            <destination class="configured-consume-destination">
-              <destination>jms:queue:Q1</destination>
-            </destination>
+            <endpoint>jms:queue:Q1</endpoint>
             <message-translator class="text-message-translator">
               <move-metadata>false</move-metadata>
               <move-jms-headers>false</move-jms-headers>
@@ -532,9 +526,7 @@ Three identical channels, locked so that only one is active at a time, with a tr
           </consumer>
 
           <producer class="xa-jms-producer">
-            <destination class="configured-produce-destination">
-              <destination>jms:queue:Q2</destination>
-            </destination>
+            <endpoint>jms:queue:Q2</endpoint>
             <message-translator class="text-message-translator">
               <move-metadata>false</move-metadata>
               <move-jms-headers>false</move-jms-headers>
@@ -636,9 +628,7 @@ Three identical channels, locked so that only one is active at a time, with a tr
           <consumer class="xa-jms-consumer">
             <unique-id>JMS-Consumer</unique-id>
             <max-batch>250</max-batch>
-            <destination class="configured-consume-destination">
-              <destination>jms:queue:Q1</destination>
-            </destination>
+            <endpoint>jms:queue:Q1</endpoint>
             <message-translator class="text-message-translator">
               <move-metadata>false</move-metadata>
               <move-jms-headers>false</move-jms-headers>
@@ -652,9 +642,7 @@ Three identical channels, locked so that only one is active at a time, with a tr
           </consumer>
 
           <producer class="xa-jms-producer">
-            <destination class="configured-produce-destination">
-              <destination>jms:queue:Q2</destination>
-            </destination>
+            <endpoint>jms:queue:Q2</endpoint>
             <message-translator class="text-message-translator">
               <move-metadata>false</move-metadata>
               <move-jms-headers>false</move-jms-headers>
@@ -737,9 +725,7 @@ Three identical channels, locked so that only one is active at a time, with a tr
           <consumer class="xa-jms-consumer">
             <unique-id>JMS-Consumer</unique-id>
             <max-batch>250</max-batch>
-            <destination class="configured-consume-destination">
-              <destination>jms:queue:Q1</destination>
-            </destination>
+            <endpoint>jms:queue:Q1</endpoint>
             <message-translator class="text-message-translator">
               <move-metadata>false</move-metadata>
               <move-jms-headers>false</move-jms-headers>
@@ -753,9 +739,7 @@ Three identical channels, locked so that only one is active at a time, with a tr
           </consumer>
 
           <producer class="xa-jms-producer">
-            <destination class="configured-produce-destination">
-              <destination>jms:queue:Q2</destination>
-            </destination>
+            <endpoint>jms:queue:Q2</endpoint>
             <message-translator class="text-message-translator">
               <move-metadata>false</move-metadata>
               <move-jms-headers>false</move-jms-headers>
@@ -838,9 +822,7 @@ Three identical channels, locked so that only one is active at a time, with a tr
           <consumer class="xa-jms-consumer">
             <unique-id>JMS-Consumer2</unique-id>
             <max-batch>250</max-batch>
-            <destination class="configured-consume-destination">
-              <destination>jms:queue:Q1</destination>
-            </destination>
+            <endpoint>jms:queue:Q1</endpoint>
             <message-translator class="text-message-translator">
               <move-metadata>false</move-metadata>
               <move-jms-headers>false</move-jms-headers>
@@ -854,9 +836,7 @@ Three identical channels, locked so that only one is active at a time, with a tr
           </consumer>
 
           <producer class="xa-jms-producer">
-            <destination class="configured-produce-destination">
-              <destination>jms:queue:Q2</destination>
-            </destination>
+            <endpoint>jms:queue:Q2</endpoint>
             <message-translator class="text-message-translator">
               <move-metadata>false</move-metadata>
               <move-jms-headers>false</move-jms-headers>

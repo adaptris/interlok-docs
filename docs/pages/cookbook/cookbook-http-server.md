@@ -28,9 +28,7 @@ If you intend on spreading the work across multiple workflows then since 3.7.3 y
     <mode>REQUEST</mode>
   </jetty-async-workflow-interceptor>
   <consumer class="jetty-message-consumer">
-    <destination class="configured-consume-destination">
-      <destination>/dummy/index.html</destination>
-    </destination>
+    <path>/dummy/index.html</path>
   </consumer>
 
   <service-collection class="service-list">

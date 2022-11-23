@@ -50,10 +50,7 @@ We can use a combination of [aggregating-jms-consume-service][] and [replace-met
           <lookup-name>sharedJMS</lookup-name>
        </connection>
        <jms-consumer class="aggregating-queue-consumer">
-         <destination class="consume-destination-from-metadata">
-           <default-destination>SampleQ2</default-destination>
-           <filter-metadata-key>filterSelectorKey</filter-metadata-key>
-         </destination>
+         <endpoint>$message{SampleQ2}</endpoint>
          <aggregator class="xml-document-aggregator">
           <merge-implementation class="xml-insert-node">
            <xpath-to-parent-node>/envelope/aggregated</xpath-to-parent-node>

@@ -18,9 +18,7 @@ As part of a standard installation, you get access to [standard-processing-excep
   <services>
    <standalone-producer>
     <producer class="fs-producer">
-     <destination class="configured-produce-destination">
-      <destination>/path/to/bad-directory</destination>
-     </destination>
+     <base-directory-url>/path/to/bad-directory</base-directory-url>
      <encoder class="mime-encoder"/>
     </producer>
    </standalone-producer>
@@ -46,9 +44,7 @@ This is useful if you want to have the same _final home_ for failed messages, bu
     <services>
      <standalone-producer>
       <producer class="fs-producer">
-       <destination class="configured-produce-destination">
-        <destination>/opt/adaptris/bad</destination>
-       </destination>
+       <base-directory-url>/opt/adaptris/bad</base-directory-url>
        <encoder class="mime-encoder"/>
       </producer>
      </standalone-producer>
@@ -126,9 +122,7 @@ The [FailedMessageRetrier] component allows messages that have failed, to be ret
 <failed-message-retrier class="default-failed-message-retrier">
  <standalone-consumer>
   <consumer class="fs-consumer">
-   <destination class="configured-consume-destination">
-    <destination>/path/to/retry-directory</destination>
-   </destination>
+   <base-directory-url>/path/to/retry-directory</base-directory-url>
    <poller class="quartz-cron-poller">
     <cron-expression>0 */5 * * * ?</cron-expression>
    </poller>

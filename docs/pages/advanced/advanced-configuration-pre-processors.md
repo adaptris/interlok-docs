@@ -226,9 +226,6 @@ And you have an xml document named channel.xml that looks like this;
     <standard-workflow>
       <unique-id>SendMessage</unique-id>
       <consumer class="polling-trigger">
-        <destination class="configured-consume-destination">
-          <configured-thread-name>SendMessage</configured-thread-name>
-        </destination>
         <template>hello world</template>
         <poller class="quartz-cron-poller">
           <cron-expression>*/7 * * * * ?</cron-expression>
@@ -255,9 +252,6 @@ During initialization of Interlok, the XInclude pre-processor will pick up the d
         <standard-workflow>
           <unique-id>SendMessage</unique-id>
           <consumer class="polling-trigger">
-            <destination class="configured-consume-destination">
-              <configured-thread-name>SendMessage</configured-thread-name>
-            </destination>
             <template>hello world</template>
             <poller class="quartz-cron-poller">
               <cron-expression>*/7 * * * * ?</cron-expression>

@@ -34,9 +34,7 @@ to originate from any Data Input Parameter String.
         <unique-id>add-payload-unique-id</unique-id>
         <new-payload-id>payload-2</new-payload-id>
         <new-payload class="file-data-input-parameter">
-            <destination class="configured-destination">
-                <destination><!-- path to file to include as new payload --></destination>
-            </destination>
+            <url><!-- path to file to include as new payload --></url>
         </new-payload>
     </add-payload-service>
 ```

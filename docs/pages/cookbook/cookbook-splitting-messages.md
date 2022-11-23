@@ -13,9 +13,7 @@ The key difference [basic-message-splitter-service][] and  [advanced-message-spl
  ... Configuration skipped
   </connection>
   <producer class="jms-topic-producer">
-    <destination class="configured-produce-destination">
-      <destination>split.message</destination>
-    </destination>
+    <topic>split.message</topic>
   </producer>
   <splitter class="line-count-splitter">
     <split-on-line>10</split-on-line>
@@ -46,9 +44,7 @@ To replicate the same behaviour as [basic-message-splitter-service][] using [adv
    ... Configuration skipped
     </connection>
     <producer class="jms-topic-producer">
-      <destination class="configured-produce-destination">
-        <destination>split.message</destination>
-      </destination>
+      <topic>split.message</topic>
     </producer>
    </standalone-producer>
   </services>

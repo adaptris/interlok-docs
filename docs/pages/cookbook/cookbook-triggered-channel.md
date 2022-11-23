@@ -20,26 +20,20 @@ In this instance we'll make the trigger a message on a JMS Topic; any message re
        ... config skipped for brevity
     </connection>
     <consumer class="jms-topic-consumer">
-      <destination class="configured-consume-destination">
-        <destination>retry-failed-messages</destination>
-        <configured-thread-name>JMS RETRY Trigger</configured-thread-name>
-      </destination>
+      <topic>retry-failed-messages</topic>
+      <configured-thread-name>JMS RETRY Trigger</configured-thread-name>
     </consumer>
   </trigger>
   <workflow-list>
     <standard-workflow>
       <consumer class="fs-consumer">
-        <destination class="configured-consume-destination">
-          <destination>/path/to/bad/directory</destination>
-        </destination>
+        <base-directory-url>/path/to/bad/directory</base-directory-url>
         <poller class="triggered-one-time-poller"/>
         <create-dirs>true</create-dirs>
         <reset-wip-files>true</reset-wip-files>
       </consumer>
       <producer class="fs-producer">
-        <destination class="configured-produce-destination">
-          <destination>/path/to/retry/directory</destination>
-        </destination>
+        <base-directory-url>/path/to/retry/directory</base-directory-url>
         <create-dirs>true</create-dirs>
       </producer>
     </standard-workflow>

@@ -225,9 +225,7 @@ The full XML that is created will look similar to the below
         <standard-workflow>
           <consumer class="jms-queue-consumer">
             <unique-id>JmsQueueConsumer</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>SampleQ1</destination>
-            </destination>
+            <queue>SampleQ1</queue>
             <acknowledge-mode>CLIENT_ACKNOWLEDGE</acknowledge-mode>
             <message-translator class="auto-convert-message-translator">
               <jms-output-type>Text</jms-output-type>
@@ -248,9 +246,7 @@ The full XML that is created will look similar to the below
           </service-collection>
           <producer class="jms-queue-producer">
             <unique-id>PtpProducer-2133069</unique-id>
-            <destination class="configured-produce-destination">
-              <destination>SampleQ2</destination>
-            </destination>
+            <queue>SampleQ2</queue>
             <acknowledge-mode>CLIENT_ACKNOWLEDGE</acknowledge-mode>
             <message-translator class="text-message-translator"/>
             <correlation-id-source class="null-correlation-id-source"/>

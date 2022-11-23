@@ -146,10 +146,8 @@ The easiest way to check what configuration options are avaialble in using the [
         <standard-workflow>
           <unique-id>workflow</unique-id>
           <consumer class="jetty-message-consumer">
-            <destination class="configured-consume-destination">
-              <configured-thread-name>hello-world</configured-thread-name>
-              <destination>/*</destination>
-            </destination>
+            <configured-thread-name>hello-world</configured-thread-name>
+            <path>/*</path>
             <parameter-handler class="jetty-http-ignore-parameters"/>
             <header-handler class="jetty-http-headers-as-metadata"/>
           </consumer>

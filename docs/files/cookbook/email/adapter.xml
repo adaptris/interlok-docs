@@ -2,7 +2,6 @@
   <unique-id>MyInterlokInstance</unique-id>
   <start-up-event-imp>com.adaptris.core.event.StandardAdapterStartUpEvent</start-up-event-imp>
   <heartbeat-event-imp>com.adaptris.core.HeartbeatEvent</heartbeat-event-imp>
-  <log-handler class="null-log-handler"/>
   <shared-components>
     <connections/>
   </shared-components>
@@ -36,11 +35,9 @@
         <standard-workflow>
           <consumer class="raw-mail-consumer">
             <unique-id>raw-mail-consumer</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>pop3://mail.local:110/INBOX</destination>
-              <filter-expression>SUBJECT=^consume me.*$</filter-expression>
-            </destination>
-            <poller class="fixed-interval-poller">
+              <mailbox-url>pop3://mail.local:110/INBOX</mailbox-url>
+			  <filter-expression>SUBJECT=^consume me.*$</filter-expression>
+              <poller class="fixed-interval-poller">
               <poll-interval>
                 <unit>SECONDS</unit>
                 <interval>30</interval>
@@ -60,9 +57,7 @@
           <producer class="fs-producer">
             <encoder class="mime-encoder"/>
             <unique-id>fs-producer</unique-id>
-            <destination class="configured-produce-destination">
-              <destination>file:////C:/apps/Adaptris/Interlok/test/mail-drop-raw</destination>
-            </destination>
+			<base-directory-url>file:////C:/apps/Adaptris/Interlok/test/mail-drop-raw</base-directory-url>
             <create-dirs>true</create-dirs>
             <fs-worker class="fs-nio-worker"/>
             <filename-creator class="formatted-filename-creator">
@@ -83,10 +78,8 @@
         <standard-workflow>
           <consumer class="default-mail-consumer">
             <unique-id>default-mail-consumer-without-selector</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>pop3://mail.local:110/INBOX</destination>
-              <filter-expression>SUBJECT=^consume me.*$</filter-expression>
-            </destination>
+			<mailbox-url>pop3://mail.local:110/INBOX</mailbox-url>
+			<filter-expression>SUBJECT=^consume me.*$</filter-expression>
             <poller class="fixed-interval-poller">
               <poll-interval>
                 <unit>SECONDS</unit>
@@ -99,8 +92,9 @@
             <mail-receiver-factory class="javamail-receiver-factory">
               <session-properties/>
             </mail-receiver-factory>
-            <preserve-headers>true</preserve-headers>
-            <header-prefix>MailHeader-</header-prefix>
+  		    <header-handler class="mail-headers-as-metadata">
+			  <prefix>MailHeader-</prefix>
+		    </header-handler>
           </consumer>
           <service-collection class="service-list">
             <unique-id>ServiceList-8225643</unique-id>
@@ -109,9 +103,7 @@
           <producer class="fs-producer">
             <encoder class="mime-encoder"/>
             <unique-id>fs-producer</unique-id>
-            <destination class="configured-produce-destination">
-              <destination>file:////C:/apps/Adaptris/Interlok/test/mail-drop-default-without-selector</destination>
-            </destination>
+			<base-directory-url>file:////C:/apps/Adaptris/Interlok/test/mail-drop-default-without-selector</base-directory-url>
             <create-dirs>true</create-dirs>
             <fs-worker class="fs-nio-worker"/>
             <filename-creator class="formatted-filename-creator">
@@ -132,10 +124,8 @@
         <standard-workflow>
           <consumer class="default-mail-consumer">
             <unique-id>default-mail-consumer-with-selector</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>pop3://mail.local:110/INBOX</destination>
-              <filter-expression>SUBJECT=^consume me.*$</filter-expression>
-            </destination>
+			<mailbox-url>pop3://mail.local:110/INBOX</mailbox-url>
+			<filter-expression>SUBJECT=^consume me.*$</filter-expression>
             <poller class="fixed-interval-poller">
               <poll-interval>
                 <unit>SECONDS</unit>
@@ -151,8 +141,9 @@
             <part-selector class="mime-select-by-position">
               <position>0</position>
             </part-selector>
-            <preserve-headers>true</preserve-headers>
-            <header-prefix>MailHeader-</header-prefix>
+			<header-handler class="mail-headers-as-metadata">
+			  <prefix>MailHeader-</prefix>
+			</header-handler>
           </consumer>
           <service-collection class="service-list">
             <unique-id>ServiceList-8225643</unique-id>
@@ -161,9 +152,7 @@
           <producer class="fs-producer">
             <encoder class="mime-encoder"/>
             <unique-id>fs-producer</unique-id>
-            <destination class="configured-produce-destination">
-              <destination>file:////C:/apps/Adaptris/Interlok/test/mail-drop-default-with-selector</destination>
-            </destination>
+			<base-directory-url>file:////C:/apps/Adaptris/Interlok/test/mail-drop-default-with-selector</base-directory-url>
             <create-dirs>true</create-dirs>
             <fs-worker class="fs-nio-worker"/>
             <filename-creator class="formatted-filename-creator">
@@ -195,9 +184,7 @@
         <standard-workflow>
           <consumer class="fs-consumer">
             <unique-id>fs-consumer</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>file:////C:/apps/Adaptris/Interlok/test/mail-pickup-default-no-attachment</destination>
-            </destination>
+			<base-directory-url>file:////C:/apps/Adaptris/Interlok/test/mail-pickup-default-no-attachment</base-directory-url>
             <poller class="fixed-interval-poller">
               <poll-interval>
                 <unit>SECONDS</unit>
@@ -220,23 +207,17 @@
               </add-metadata-service>
             </services>
           </service-collection>
-          <producer class="default-smtp-producer">
-            <unique-id>default-smtp-producer</unique-id>
-            <destination class="configured-produce-destination">
-              <destination>imap@mail.local</destination>
-            </destination>
-            <smtp-url>smtp://mail.local:25</smtp-url>
-            <subject>Test email sent by Interlok</subject>
-            <from>pop3@mail.local</from>
-            <session-properties/>
-            <metadata-filter class="remove-all-metadata-filter"/>
-            <password>test</password>
-            <username>pop3@mail.local</username>
-            <is-attachment>false</is-attachment>
-            <content-type>text/plain</content-type>
-            <content-encoding>quoted-printable</content-encoding>
-            <attachment-content-type>application/octet-stream</attachment-content-type>
-          </producer>
+		  <producer class="send-email">
+			<unique-id>default-smtp-producer</unique-id>
+			<smtp-url>smtp://mail.local:25</smtp-url>
+			<subject>Test email sent by Interlok</subject>
+			<from>pop3@mail.local</from>
+			<session-properties/>
+			<metadata-filter class="remove-all-metadata-filter"/>
+			<password>test</password>
+			<username>pop3@mail.local</username>
+			<to>imap@mail.local</to>
+		  </producer>
           <produce-exception-handler class="null-produce-exception-handler"/>
           <unique-id>file-to-smtp-workflow-no-attachment</unique-id>
           <message-metrics-interceptor>
@@ -251,9 +232,7 @@
         <standard-workflow>
           <consumer class="fs-consumer">
             <unique-id>fs-consumer</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>file:////C:/apps/Adaptris/Interlok/test/mail-pickup-default-with-attachment</destination>
-            </destination>
+			<base-directory-url>file:////C:/apps/Adaptris/Interlok/test/mail-pickup-default-with-attachment</base-directory-url>
             <poller class="fixed-interval-poller">
               <poll-interval>
                 <unit>SECONDS</unit>
@@ -289,23 +268,19 @@
               </copy-metadata-service>
             </services>
           </service-collection>
-          <producer class="default-smtp-producer">
-            <unique-id>default-smtp-producer</unique-id>
-            <destination class="configured-produce-destination">
-              <destination>imap@mail.local</destination>
-            </destination>
-            <smtp-url>smtp://mail.local:25</smtp-url>
-            <subject>Test email with attachment sent by Interlok</subject>
-            <from>pop3@mail.local</from>
-            <session-properties/>
-            <metadata-filter class="remove-all-metadata-filter"/>
-            <password>test</password>
-            <username>pop3@mail.local</username>
-            <is-attachment>true</is-attachment>
-            <content-type>text/plain</content-type>
-            <content-encoding>quoted-printable</content-encoding>
-            <attachment-content-type>application/octet-stream</attachment-content-type>
-          </producer>
+		  <producer class="send-email-attachment">
+			<unique-id>default-smtp-producer</unique-id>
+			<smtp-url>smtp://mail.local:25</smtp-url>
+			<subject>Test email with attachment sent by Interlok</subject>
+			<from>pop3@mail.local</from>
+			<session-properties/>
+			<metadata-filter class="remove-all-metadata-filter"/>
+			<password>test</password>
+			<username>pop3@mail.local</username>
+			<to>imap@mail.local</to>
+			<content-type>text/plain</content-type>
+			<attachment-content-type>application/octet-stream</attachment-content-type>
+		  </producer>
           <produce-exception-handler class="null-produce-exception-handler"/>
           <unique-id>file-to-smtp-workflow-one-attachment</unique-id>
           <message-metrics-interceptor>
@@ -320,9 +295,7 @@
         <standard-workflow>
           <consumer class="fs-consumer">
             <unique-id>fs-consumer</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>file:////C:/apps/Adaptris/Interlok/test/mail-pickup-multi-attachment-mime</destination>
-            </destination>
+			<base-directory-url>file:////C:/apps/Adaptris/Interlok/test/mail-pickup-multi-attachment-mime</base-directory-url>
             <poller class="fixed-interval-poller">
               <poll-interval>
                 <unit>SECONDS</unit>
@@ -337,25 +310,20 @@
             <unique-id>service-list-8919318</unique-id>
             <services/>
           </service-collection>
-          <producer class="multi-attachment-smtp-producer">
-            <unique-id>multi-attachment-smtp-producer</unique-id>
-            <destination class="configured-produce-destination">
-              <destination>imap@mail.local</destination>
-            </destination>
-            <smtp-url>smtp://mail.local:25</smtp-url>
-            <subject>Test email sent by Interlok with multiple attachments from MIME message</subject>
-            <from>pop3@mail.local</from>
-            <session-properties/>
-            <metadata-filter class="remove-all-metadata-filter"/>
-            <password>test</password>
-            <username>pop3@mail.local</username>
-            <mail-creator class="mail-mime-content-creator">
-              <body-selector class="mime-select-by-position">
-                <position>1</position>
-              </body-selector>
-            </mail-creator>
-            <content-encoding>quoted-printable</content-encoding>
-          </producer>
+		  <producer class="send-email-attachment">
+			<encoder class="com.adaptris.core.MultiPayloadMessageMimeEncoder"/>
+			<unique-id>default-smtp-producer</unique-id>
+			<smtp-url>smtp://mail.local:25</smtp-url>
+			<subject>Test email with attachment sent by Interlok</subject>
+			<from>pop3@mail.local</from>
+			<session-properties/>
+			<metadata-filter class="remove-all-metadata-filter"/>
+			<password>test</password>
+			<username>pop3@mail.local</username>
+			<to>imap@mail.local</to>
+			<content-type>text/plain</content-type>
+			<attachment-content-type>application/octet-stream</attachment-content-type>
+		  </producer>
           <produce-exception-handler class="null-produce-exception-handler"/>
           <unique-id>file-to-smtp-workflow-multiple-attachments-from-mime</unique-id>
           <message-metrics-interceptor>
@@ -370,9 +338,7 @@
         <standard-workflow>
           <consumer class="fs-consumer">
             <unique-id>fs-consumer</unique-id>
-            <destination class="configured-consume-destination">
-              <destination>file:////C:/apps/Adaptris/Interlok/test/mail-pickup-multi-attachment-xml</destination>
-            </destination>
+			<base-directory-url>file:////C:/apps/Adaptris/Interlok/test/mail-pickup-multi-attachment-xml</base-directory-url>
             <poller class="fixed-interval-poller">
               <poll-interval>
                 <unit>SECONDS</unit>
@@ -387,31 +353,20 @@
             <unique-id>service-list-8919318</unique-id>
             <services/>
           </service-collection>
-          <producer class="multi-attachment-smtp-producer">
-            <unique-id>multi-attachment-smtp-producer</unique-id>
-            <destination class="configured-produce-destination">
-              <destination>imap@mail.local</destination>
-            </destination>
-            <smtp-url>smtp://mail.local:25</smtp-url>
-            <subject>Test email sent by Interlok with multiple attachments from XML message</subject>
-            <from>pop3@mail.local</from>
-            <session-properties/>
-            <metadata-filter class="remove-all-metadata-filter"/>
-            <password>test</password>
-            <username>pop3@mail.local</username>
-            <mail-creator class="mail-xml-content-creator">
-              <attachment-handler class="mail-xml-attachment-handler">
-                <xpath>/document/attachment</xpath>
-                <filename-xpath>@filename</filename-xpath>
-                <encoding-xpath>@encoding</encoding-xpath>
-              </attachment-handler>
-              <body-handler class="mail-xml-body-handler">
-                <xpath>/document/content</xpath>
-                <content-type>text/plain</content-type>
-              </body-handler>
-            </mail-creator>
-            <content-encoding>quoted-printable</content-encoding>
-          </producer>
+		  <producer class="send-email-attachment">
+			<encoder class="com.adaptris.core.MultiPayloadMessageMimeEncoder"/>
+			<unique-id>default-smtp-producer</unique-id>
+			<smtp-url>smtp://mail.local:25</smtp-url>
+			<subject>Test email sent by Interlok with multiple attachments from XML message</subject>
+			<from>pop3@mail.local</from>
+			<session-properties/>
+			<metadata-filter class="remove-all-metadata-filter"/>
+			<password>test</password>
+			<username>pop3@mail.local</username>
+			<to>imap@mail.local</to>
+			<content-type>text/plain</content-type>
+			<attachment-content-type>application/octet-stream</attachment-content-type>
+		  </producer>
           <produce-exception-handler class="null-produce-exception-handler"/>
           <unique-id>file-to-smtp-workflow-multiple-attachments-from-xml</unique-id>
           <message-metrics-interceptor>

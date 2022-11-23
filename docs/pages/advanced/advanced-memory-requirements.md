@@ -49,6 +49,8 @@ After running Interlok for 30 minutes we can see the heap usage climbs and then 
 
 #### Configuration ####
 
+?> **NOTE**:  The configuration shown on this page was written for Interlok V3; destination elements have been replaced in Interlok V4. 
+
 The most basic of all configurations would consist of a file system consumer and file system producer, without any services.  The effect of this configuration will simply move files from the consuming directory to the configured producer directory. We could reduce the memory usage even further here by disabling Interloks embedded Jetty service which powers Interloks Web UI.  However, for these examples we assume a factory install of Interlok and to show real comparisons between these examples only the specified configuration will be modified beyond that factory install.
 
 ```xml

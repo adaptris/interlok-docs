@@ -36,7 +36,7 @@ preProcessors=variableSubstitution:schema
 
 This pre-processor allows you to configure place-holders in your Interlok configuration, which will be swapped out with values configured in a separate property file. The idea is that multiple environments that require almost identical configuration can more easily be set-up by simply duplicating the main Interlok configuration files across all environments.
 
-Typically broker URL's, usernames, passwords and destination values would be a fair use for variable substitution.
+Typically broker URL's, usernames, passwords and endpoint/queue values would be a fair use for variable substitution.
 
 ### Additional Configuration ###
 
@@ -226,13 +226,12 @@ And you have an xml document named channel.xml that looks like this;
     <standard-workflow>
       <unique-id>SendMessage</unique-id>
       <consumer class="polling-trigger">
-        <destination class="configured-consume-destination">
-          <configured-thread-name>SendMessage</configured-thread-name>
-        </destination>
-        <template>hello world</template>
         <poller class="quartz-cron-poller">
           <cron-expression>*/7 * * * * ?</cron-expression>
         </poller>
+        <message-provider class="static-polling-trigger-template">
+          <template><![CDATA[hello world]]></template>
+        </message-provider>
       </consumer>
       <service-collection class="service-list"/>
     </standard-workflow>
@@ -255,13 +254,12 @@ During initialization of Interlok, the XInclude pre-processor will pick up the d
         <standard-workflow>
           <unique-id>SendMessage</unique-id>
           <consumer class="polling-trigger">
-            <destination class="configured-consume-destination">
-              <configured-thread-name>SendMessage</configured-thread-name>
-            </destination>
-            <template>hello world</template>
             <poller class="quartz-cron-poller">
               <cron-expression>*/7 * * * * ?</cron-expression>
             </poller>
+            <message-provider class="static-polling-trigger-template">
+              <template><![CDATA[hello world]]></template>
+            </message-provider>
           </consumer>
           <service-collection class="service-list"/>
         </standard-workflow>

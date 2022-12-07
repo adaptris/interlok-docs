@@ -49,6 +49,7 @@
   - [User Preferences](/pages/ui/ui-user-preferences.md)
   - [Switch Database Provider](/pages/ui/ui-switch-db.md)
   - [Auto Register an Adapter to a Remote UI](/pages/ui/ui-auto-register-to-remote.md)
+  - [Change Port](/pages/ui/ui-change-port.md)
 - **Integration Guides**
   - [Aggregating Messages](/pages/cookbook/cookbook-aggregating-messages.md)
   - [Databases via JDBC](/pages/cookbook/cookbook-jdbc-data.md)

@@ -77,7 +77,7 @@ The three services are [jwt-creator][], [jwt-decode][] and [jwt-encode][]
 When encrypting the JWT you have 3 options:
 
 ### Hashing ###
-You can hash encode the secret that uses HMAC. You can also choose the strength of the algorithm(256, 384 and 512).
+You can hash encode the secret using HMAC. You can also choose the strength of the algorithm(256, 384 and 512).
 
 ### RSA ###
 If using RSA you will need to provide a private key when generating a JWT and a public key when decoding one. You can also choose the strength of the algorithm(256, 384 and 512). Password encrypted private keys are also supported.

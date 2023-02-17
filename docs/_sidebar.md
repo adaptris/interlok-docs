@@ -77,6 +77,7 @@
     - [CSV to XML](/pages/cookbook/cookbook-csv-transform.md)
     - [EDI Data Transforms](/pages/cookbook/cookbook-edi-transform.md)
   - [OneDrive](/pages/cookbook/cookbook-1drive.md)
+  - [JSON Web Token](/pages/cookbook/cookbook-jwt.md)
 - **Advanced**
   - [Logic blocks in configuration](/pages/advanced/advanced-conditional.md)
   - [Interlok Clustering](/pages/advanced/advanced-cluster.md)

@@ -26,7 +26,7 @@ The three services are [jwt-creator][], [jwt-decode][] and [jwt-encode][]
     </jwt-creator>
 ```
 - Creates a JWT using key/value pairs.
-- Signs the JWT with either a secret(using the HMAC algorithm), a public/private key pair(using RSA) or a PGP key.
+- Encrypts the JWT with either a hash encoded secret(using the HMAC algorithm), a private key(using RSA) or a PGP key.
 - The JWT is then set as the current payload.
 
 ## JWT Decode ##
@@ -47,7 +47,7 @@ The three services are [jwt-creator][], [jwt-decode][] and [jwt-encode][]
     </jwt-decode>
 ```
 - Takes a JWT and allows you to decode it to extract the JSON object.
-- Decodes the JWT with either a secret(using the HMAC algoithm), a public/private key pair(using RSA) or a PGP key.
+- Decodes the JWT with either a secret(using the HMAC algoithm), a public key(using RSA) or a PGP key.
 
 ## JWT Encode ##
 ```xml
@@ -69,10 +69,37 @@ The three services are [jwt-creator][], [jwt-decode][] and [jwt-encode][]
     </jwt-encode>
 ```
 - Creates a JWT using inputted data.
-- Signs the JWT with either a secret(using the HMAC algorithm), a public/private key pair(using RSA) or a PGP key.
+- Encrypts the JWT with either a hash encoded secret(using the HMAC algorithm), a private key(using RSA) or a PGP key.
 - The JWT can then be output as either the current payload, as metadata, etc
 
-?> When defining what type of encoded secret you wish to you if you are using the base64 or rsa options you can define which algorithm you wish to use(i.e HS256, HS384, RS256, RS384).
+## Encryption ##
+
+When encrypting the JWT you have 3 options:
+
+### Hashing ###
+You can hash encode the secret that uses HMAC. You can also choose the strength of the algorithm(256, 384 and 512).
+
+### RSA ###
+If using RSA you will need to provide a private key when generating a JWT and a public key when decoding one. You can also choose the strength of the algorithm(256, 384 and 512). Password encrypted private keys are also supported.
+
+!> You must ensure the keys are in a PEM format.
+
+```
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAvYR1lPyrsUrsJyu5ieu9CN9vqgEhfx0feCo1kC1t8YffvvXu
+II+0XkMlbiaePK7tz44nF3J3t1h0UI1xxkme/JmwoqgdwZ0ctln+RFONzlskfB9l
+63K1wHnYdvckanRhCLqVqUObeLFSKhYf9AZsHscx9qJ3hk0bl+Wbfg==
+-----END RSA PRIVATE KEY-----
+```
+```
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3pRb1R3Br4eXMRQ8lNyB
+RpKZk8+ofskvxmK6MashqYw5yenhaC8XMdGYyDioKZz12cmCg42sqhULReISn+zs
+-----END PUBLIC KEY-----
+```
+
+### PGP ###
+Another encryption option is PGP(Pretty Good Privacy).
 
 ## Further Reading ##
 

@@ -13,9 +13,10 @@ The three services are [jwt-creator][], [jwt-decode][] and [jwt-encode][]
       <audience>everyone</audience>
       <expiration>2040-12-31 00:00:00.0 UTC</expiration>
       <not-before>2020-01-01 00:00:00.0 UTC</not-before>
-      <secret class="base64-encoded-secret">
-        <secret>c64975ba3cf3f9cd58459710b0a42369f34b0759c9967fb5a47eea488e8bea79</secret>
-        <algorithm>HS256</algorithm>
+      <secret class="rsa-encoded-secret">
+        <private-key-file-path>./rsa.private</private-key-file-path>
+        <private-key-passphrase>AES_GCM:xXRJ73DO7sxHhk5BW88NNkc2cIRvX/RiJpbkTA8A9NmePCYelKJBOK+9vtwd8RA2</private-key-passphrase>
+        <algorithm>RS256</algorithm>
       </secret>
       <custom-claims>
         <key-value-pair>
@@ -34,9 +35,9 @@ The three services are [jwt-creator][], [jwt-decode][] and [jwt-encode][]
    <jwt-decode>
       <unique-id>jwt-decode</unique-id>
       <jwt-string class="string-payload-data-input-parameter"/>
-      <secret class="base64-encoded-secret">
-        <secret>c64975ba3cf3f9cd58459710b0a42369f34b0759c9967fb5a47eea488e8bea79</secret>
-        <algorithm>HS256</algorithm>
+      <secret class="rsa-encoded-secret">
+        <public-key-file-path>./rsa.public</public-key-file-path>
+        <algorithm>RS256</algorithm>
       </secret>
       <header class="multi-payload-string-output-parameter">
         <payload-id>header</payload-id>
@@ -59,9 +60,10 @@ The three services are [jwt-creator][], [jwt-decode][] and [jwt-encode][]
       <claims class="multi-payload-string-input-parameter">
         <payload-id>claims</payload-id>
       </claims>
-      <secret class="base64-encoded-secret">
-        <secret>c64975ba3cf3f9cd58459710b0a42369f34b0759c9967fb5a47eea488e8bea79</secret>
-        <algorithm>HS256</algorithm>
+      <secret class="rsa-encoded-secret">
+        <private-key-file-path>./rsa.private</private-key-file-path>
+        <private-key-passphrase>AES_GCM:cDDYG2wUST3NAMb1fhkziKTXo4rgJnDMB4Ksle6wlvWs0aeo1RyfXZIB/7JFpY5x</private-key-passphrase>
+        <algorithm>RS256</algorithm>
       </secret>
       <jwt-output class="multi-payload-string-output-parameter">
         <payload-id>output</payload-id>
@@ -77,7 +79,7 @@ The three services are [jwt-creator][], [jwt-decode][] and [jwt-encode][]
 When encrypting the JWT you have 3 options:
 
 ### Hashing ###
-You can hash encode the secret using HMAC. You can also choose the strength of the algorithm(256, 384 and 512).
+You can hash encode the secret using HMAC with an algorithm strength of 256
 
 ### RSA ###
 If using RSA you will need to provide a private key when generating a JWT and a public key when decoding one. You can also choose the strength of the algorithm(256, 384 and 512). Password encrypted private keys are also supported.

@@ -79,6 +79,33 @@ After a moment to allow Interlok to complete it's startup you can log-in to the 
 
 ## Build a 3.12 Interlok instance
 
+So the above guide will build you the latest v4 version of Interlok, but what if you wanted the latest v3 version (3.12.0.3 at the time of writing).
+
+Here's what you would do:
+
+Simply edit ext section from the 'build.gradle' file 
+```
+ext {
+  interlokVersion = '3.12.0-RELEASE' 
+  interlokUiVersion = interlokVersion
+  interlokParentGradle = "https://raw.githubusercontent.com/adaptris/interlok-build-parent/develop/v3/build.gradle"
+```
+The above changes, point to the v3 build parent file, and also change the Interlok version to 3.12.0
+
+Also, changes the dependencies section in the 'build.gradle' file:
+```
+dependencies {
+  interlokRuntime ("com.adaptris:interlok-core:3.12.0.3-RELEASE") { changing=true }
+```
+This will make sure the core version is at the latest 3.12.0.3 version
+
+Then you would do exactly like before
+Windows:
+```
+> gradle clean assemble
+> (cd ./build/distribution && java -jar lib/interlok-boot.jar)
+```
+Note, that I used gradle assemble rather than gradle build, as the tests for this example project will fail with v3 jars, but we can still build and execute interlok without running the tests.
 
 
 ## Further reading / More options

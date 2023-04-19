@@ -308,7 +308,16 @@ Interlok does not come supplied with any of the required MQSeries java archive f
 
 ### Vendor Implementations ###
 
-The associated vendor implementation class that should be used is [basic-mq-series-implementation][] or, if you want to control the connection factory properties more explicitly, [advanced-mq-series-implementation][]. As well as setting the JMS vendor implementation with the above to options you can also use the native consumer/producer, detailed separately. You can always use the more generic JNDI implementation to connect to IBM MQSeries.
+The associated vendor implementation class that should be used is [basic-mq-series-implementation][] or, if you want to control the connection factory properties more explicitly, [advanced-mq-series-implementation][]. As well as setting the JMS vendor implementation with the above to options you can also use the native consumer/producer, detailed separately, **although they have been deprecated since 3.11.1 without replacement since IBM recommend you use JMS instead**. You can always use the more generic JNDI implementation to connect to IBM MQSeries.
+
+!> **IMPORTANT** Please note that using the the *mq-series-implementations* with an *active-jms-connection-error-handler* has known issues where it will cause the channel containing the connection to close. Depending on your logging level you might see the following error:
+```
+Caused by: com.ibm.mq.MQException: JMSCMQ0001: IBM MQ call failed with compcode '2' ('MQCC_FAILED') reason '2035' ('MQRC_NOT_AUTHORIZED').
+        at com.ibm.msg.client.wmq.common.internal.Reason.createException(Reason.java:203) ~[com.ibm.mq.allclient.jar:9.3.0.1 - p930-001-220907]
+        ... 10 more
+TRACE [JmsConnectionErrorHandler for wmq] [ActiveJmsConnectionErrorHandler] Stop/Close affected component : [Channel(gloomy-wing)]
+``` 
+This is due to an issue with the way WMQ handles permissions.
 
 The standard configuration table is as follows :
 

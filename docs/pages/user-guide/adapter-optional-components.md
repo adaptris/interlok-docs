@@ -119,8 +119,8 @@ As additional features are developed and released our public facing repository i
 | com.adaptris | interlok-xa-solace | Interlok XA/Solace | Solace specific XA Vendor implementations | 3.9.0+ | Requires License; |
 | com.adaptris | interlok-xa-tibco | Interlok XA/Tibco | Tibco specific XA Vendor implementations | 3.9.0+ | Requires License; |
 | com.adaptris | interlok-xa-wmq | Interlok XA/WebsphereMQ | WebsphereMQ specific XA Vendor implementations | 3.9.0+ | Requires License; |
-| ~~com.adaptris~~ | ~~interlok-xinclude~~ | ~~Interlok Config/xinclude~~ | ~~XSLT and XInclude Config Pre-processors~~ | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-xinclude)  Deprecated and due to be removed in Interlok 5.0.0; One of the reasons for this, is the way the Interlok UI handles relative paths is not always compatible with the Interlok xincludes pre-processors.|
-| com.adaptris | interlok-xml-security | Interlok Security/XML | Services that support JSR106 XML Encryption standard. | 3.8.0+ | Requires License; Requires additional jars not automatically delivered |
+| ~~com.adaptris~~ | ~~interlok-xinclude~~ | ~~Interlok Config/xinclude~~ | ~~XSLT and XInclude Config Pre-processors~~ | 3.8.0+ | [available on github](https://github.com/adaptris/interlok-xinclude). Deprecated and due to be removed in Interlok 5.0.0; One of the reasons for this, is the way the Interlok UI handles relative paths is not always compatible with the Interlok xincludes pre-processors.|
+| ~~com.adaptris~~ | ~~interlok-xml-security~~ | ~~Interlok Security/XML~~ | ~~Services that support JSR106 XML Encryption standard.~~ | 3.8.0+ | Requires License; Requires additional jars not automatically delivered. Deprecated and due to be removed in Interlok 5.0.0. |
 
 <br/>
 

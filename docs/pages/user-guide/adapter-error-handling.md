@@ -84,11 +84,11 @@ This is useful if you want to have the same _final home_ for failed messages, bu
             </processing-exception-service>
           </message-error-handler>
           ... Actual workflow skipped
-        <pooling-workflow>
+        </pooling-workflow>
         <pooling-workflow>
           <unique-id>workflow2</unique-id>
           ... Actual workflow skipped
-        <pooling-workflow>
+        </pooling-workflow>
       </workflow-list>
     </channel>
   </channel-list>

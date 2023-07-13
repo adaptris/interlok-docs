@@ -62,8 +62,8 @@ public class DoSomethingService extends ServiceImp {
 
   public void doService(AdaptrisMessage msg) throws ServiceException {
     try {
-      String payload = msg.getStringPayload();
-      msg.setStringPayload(doSomething.doSomething(payload));
+      String payload = msg.getContent();
+      msg.setContentd(doSomething.doSomething(payload), msg.getContentEncoding());
     }
     catch(Exception e) {
       ExceptionHelper.rethrowServiceException(e);
@@ -92,7 +92,24 @@ So, the summary of what we did is as follows :
 
 # Writing Tests #
 
-Of course, you're going to be writing tests. As we are writing a [Service][] then you can add `com.adaptris:interlok-stubs` as a [dependency](/pages/developer/developer-compiling). This then means you can simply extend `com.adaptris.interlok.junit.scaffolding.services.ExampleServiceCase` and implement the required method `retrieveObjectForSampleConfig()`. Simply implementing that method automatically executes some tests for you provided by `ExampleServiceCase`:
+Of course, you're going to be writing tests.  Add the following dependencies to your projects build.gradle;
+```yaml
+ext {
+...
+    junitVersion = '5.9.3'
+    interlokCoreVersion = '5.0-SNAPSHOT'
+}
+
+dependencies {
+...
+    testImplementation ("org.junit.jupiter:junit-jupiter-api:$junitVersion")
+    testImplementation ("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+    testImplementation ("com.adaptris:interlok-stubs:$interlokCoreVersion") { changing= true }
+}
+```
+
+
+As we are writing a [Service][] then you can add `com.adaptris:interlok-stubs` as a [dependency](/pages/developer/developer-compiling). This then means you can simply extend `com.adaptris.interlok.junit.scaffolding.services.ExampleServiceCase` and implement the required method `retrieveObjectForSampleConfig()`. Simply implementing that method automatically executes some tests for you provided by `ExampleServiceCase`:
 
 - Automatic XML round trip testing; it will reflectively test that your service that has gone through the marshalling process is logically identical to one that was created programatically.
 - Generate example XML; this requires that you have a `unit-test.properties` file available on the classpath for the tests.
@@ -107,6 +124,9 @@ import com.adaptris.core.AdaptrisMessageFactory;
 import com.adaptris.core.ServiceException;
 import com.adaptris.interlok.junit.scaffolding.services.ExampleServiceCase;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.fail;
+
 @SuppressWarnings("deprecation")
 public class DoSomethingTest extends ExampleServiceCase {
 
@@ -116,7 +136,11 @@ public class DoSomethingTest extends ExampleServiceCase {
 
   @Test
   public void testService() throws Exception {
-    execute(new DoSomethingService(), AdaptrisMessageFactory.getDefaultInstance().newMessage("Hello World"));
+    try {
+      execute(new DoSomethingService(), AdaptrisMessageFactory.getDefaultInstance().newMessage("Hello World"));
+    } catch (Exception ex) {
+      fail("Should not have failed for some reason.");
+    }
   }
 
   @Override
@@ -147,16 +171,16 @@ Post running the tests; we should have a file `./build/examples/my.package.name.
 There are similar classes that provide test scaffolding for other types of components.
 
 
-[AdaptrisComponent]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/AdaptrisComponent.html
-[Workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/Workflow.html
-[Service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/Service.html
-[StateManagedComponent]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/StateManagedComponent.html
-[LifecycleHelper]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/util/LifecycleHelper.html
-[ServiceImp]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/ServiceImp.html
-[AdaptrisMessage]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/AdaptrisMessage.html
-[ExceptionHelper]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/util/ExceptionHelper.html
-[doService()]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/Service.html#doService-com.adaptris.core.AdaptrisMessage-
-[init()]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/ComponentLifecycle.html#init--
-[start()]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/ComponentLifecycle.html#start--
-[stop()]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/ComponentLifecycle.html#stop--
-[close()]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/ComponentLifecycle.html#close--
+[AdaptrisComponent]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/AdaptrisComponent.html
+[Workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/Workflow.html
+[Service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/Service.html
+[StateManagedComponent]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/StateManagedComponent.html
+[LifecycleHelper]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/util/LifecycleHelper.html
+[ServiceImp]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/ServiceImp.html
+[AdaptrisMessage]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/AdaptrisMessage.html
+[ExceptionHelper]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/util/ExceptionHelper.html
+[doService()]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/Service.html#doService-com.adaptris.core.AdaptrisMessage-
+[init()]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/ComponentLifecycle.html#init--
+[start()]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/ComponentLifecycle.html#start--
+[stop()]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/ComponentLifecycle.html#stop--
+[close()]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/ComponentLifecycle.html#close--

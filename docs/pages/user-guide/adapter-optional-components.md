@@ -137,10 +137,10 @@ For components that are not normally delivered with the installer; the recommend
 
 ?> **NOTE** Additional jars may need to be sourced from your target application / 3rd party provider.
 
-You should always match the version number with your primary Interlok installation version; so if you wanted [adp-simple-csv][] and your Interlok version is 3.0.2 then you would  configure your ivy dependency :
+You should always match the version number with your primary Interlok installation version; so if you wanted [adp-simple-csv][] and your Interlok version is 5.0.0 then you would  configure your ivy dependency :
 
 ```xml
-<dependency org="com.adaptris" name="adp-simple-csv" rev="3.0.2-RELEASE"/>
+<dependency org="com.adaptris" name="adp-simple-csv" rev="5.0.0-RELEASE"/>
 ```
 
 or add something to your POM file
@@ -149,7 +149,7 @@ or add something to your POM file
 <dependency>
 	<groupId>com.adaptris</groupId>
 	<artifactId>adp-simple-csv</artifactId>
-	<version>3.0.2-RELEASE</version>
+	<version>5.0.0-RELEASE</version>
 </dependency>
 ```
 
@@ -167,7 +167,7 @@ If the tooltip has `Help not found` it's most likely that the setting does not h
 Optional components javadocs can be opened in two ways:
 
 - **The javadocs are within a folder:** Open your browser at <http://localhost:8080/interlok/javadocs/optional/your-component/index.html> **e.g.** <http://localhost:8080/interlok/javadocs/optional/xml-security/index.html>.
-- **The javadocs are in a jar file:** Open your browser at <http://localhost:8080/interlok/javadocs/your-component.jar/index.html> **e.g.** <http://localhost:8080/interlok/javadocs/optional/adp-swiftmq-3.0.3-RELEASE-javadoc.jar/index.html>.
+- **The javadocs are in a jar file:** Open your browser at <http://localhost:8080/interlok/javadocs/your-component.jar/index.html> **e.g.** <http://localhost:8080/interlok/javadocs/optional/adp-swiftmq-5.0.0-RELEASE-javadoc.jar/index.html>.
 
 If you've added an optional components following the steps explained above you can copy the javadocs jar file into `${adapter.home}/docs/javadocs` to be able to access it via the browser. You will have to restart your adapter to be able to access the javadocs.
 

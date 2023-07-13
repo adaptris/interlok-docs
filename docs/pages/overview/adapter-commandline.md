@@ -308,21 +308,21 @@ It is possible to invoke the adapter with a number of different switches. These 
 
 ```
 $ java -jar lib/interlok-boot.jar -version
-Bootstrap of Interlok 3.6-SNAPSHOT(2017-02-22) complete
+Bootstrap of Interlok 5.0-SNAPSHOT(2023-04-25:08:17:11 UTC complete
 Version Information
-  Base Interlok: 3.6-SNAPSHOT(2017-02-22)
-  Interlok Annotation Support: 3.6-SNAPSHOT(2017-02-22)
-  Interlok Common Classes: 3.6-SNAPSHOT(2017-02-22)
-  Interlok Config Pre-Processor: variable substitution support: 3.6-SNAPSHOT(2017-02-22)
-  Interlok Config Pre-Processor: xinclude support: 3.6-SNAPSHOT(2017-02-22)
-  Interlok Logging components: 3.6-SNAPSHOT(2017-02-22)
+  Base Interlok: 5.0-SNAPSHOT(2023-04-25:08:17:11 UTC)
+  Interlok Annotation Support: 5.0-SNAPSHOT(2023-04-25:08:17:11 UTC)
+  Interlok Common Classes: 5.0-SNAPSHOT(2023-04-25:08:17:11 UTC)
+  Interlok Config Pre-Processor: variable substitution support: 5.0-SNAPSHOT(2023-04-25:08:17:11 UTC)
+  Interlok Config Pre-Processor: xinclude support: 5.0-SNAPSHOT(2023-04-25:08:17:11 UTC)
+  Interlok Logging components: 5.0-SNAPSHOT(2023-04-25:08:17:11 UTC)
 ```
 
 ```
 $ java -jar lib/interlok-boot.jar -configcheck bootstrap.properties
-Bootstrap of Interlok 3.6-SNAPSHOT(2017-02-22) complete
+Bootstrap of Interlok 5.0-SNAPSHOT(2023-04-25:08:17:11 UTC) complete
 TRACE [main] [BootstrapProperties] Properties resource is [bootstrap.properties]
-TRACE [main] [PropertyResolver] Parsing PropertyResolver URL [jar:file:/C:/Users/lchan/work/runtime/v3-nightly/lib/adp-core.jar!/META-INF/com/adaptris/core/management/properties/resolver]
+TRACE [main] [PropertyResolver] Parsing PropertyResolver URL [jar:file:/C:/Users/lchan/work/runtime/v5-nightly/lib/adp-core.jar!/META-INF/com/adaptris/core/management/properties/resolver]
 TRACE [main] [PropertyResolver] Registered Decoders : {password=com.adaptris.core.management.properties.PasswordDecoder}
 TRACE [main] [BootstrapProperties] Adding org.jruby.embed.localcontext.scope=threadsafe to system properties
 TRACE [main] [BootstrapProperties] Adding org.jboss.logging.provider=slf4j to system properties

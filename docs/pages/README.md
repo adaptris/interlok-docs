@@ -1,5 +1,5 @@
 
-> **Summary:** This is the **Interlok V4** Documentation website. Choose a document and start reading.<br/>If you need documentation for Interlok V3 please go to https://interlok.adaptris.net/interlok-docsv3.
+> **Summary:** This is the **Interlok V5** Documentation website. Choose a document and start reading.<br/>If you need documentation for Interlok V4 / V3 please go to https://interlok.adaptris.net/interlok-docsv4 / https://interlok.adaptris.net/interlok-docsv3.
 
 Of course there must be an obligatory [xkcd](http://xkcd.com) reference.
 

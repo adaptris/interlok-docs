@@ -51,11 +51,11 @@ We can use a combination of [aggregating-jms-consume-service][] and [replace-met
        </connection>
        <jms-consumer class="aggregating-queue-consumer">
          <endpoint>$message{SampleQ2}</endpoint>
-         <aggregator class="xml-document-aggregator">
+         <message-aggregator class="xml-document-aggregator">
           <merge-implementation class="xml-insert-node">
            <xpath-to-parent-node>/envelope/aggregated</xpath-to-parent-node>
           </merge-implementation>
-         </aggregator>
+         </message-aggregator>
        </jms-consumer>
       </aggregating-jms-consume-service>
     </services>

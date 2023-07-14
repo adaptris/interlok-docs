@@ -116,23 +116,23 @@ The Adaptris Interlok installer ships with a number of modular components that c
 For those components (such as [SAP](/pages/cookbook/cookbook-sap-idoc), [WebsphereMQ](/pages/cookbook/cookbook-native-wmq), [Oracle AQ](/pages/cookbook/cookbook-oracleaq) you may need to source some additional binaries; which are discussed in their respective Integration Guides.
 They are discussed more fully in the [list of optional components](/pages/user-guide/adapter-optional-components)
 
-[Adapter]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/Adapter.html
-[Channel]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/Channel.html
-[AdaptrisConnection]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/AdaptrisConnection.html
-[Workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/Workflow.html
-[AdaptrisMessageConsumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/AdaptrisMessageConsumer.html
-[AdaptrisMessageProducer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/AdaptrisMessageProducer.html
-[Service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/Service.html
-[AdaptrisMessage]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/AdaptrisMessage.html
-[ServiceList]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/ServiceList.html
-[FtpProducer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/ftp/FtpProducer.html
-[DefaultSmtpProducer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/mail/DefaultSmtpProducer.html
-[JdkHttpProducer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/http/client/net/StandardHttpProducer.html
-[JmsProducer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/jms/JmsProducer.html
-[FtpConsumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/ftp/FtpConsumer.html
-[DefaultMailConsumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/mail/DefaultMailConsumer.html
-[JmsConsumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/jms/JmsConsumer.html
-[NullService]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/NullService.html
-[standard-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/StandardWorkflow.html
-[pooling-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/PoolingWorkflow.html
-[jms-transacted-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/4.1.0-RELEASE/com/adaptris/core/jms/JmsTransactedWorkflow.html
+[Adapter]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/Adapter.html
+[Channel]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/Channel.html
+[AdaptrisConnection]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/AdaptrisConnection.html
+[Workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/Workflow.html
+[AdaptrisMessageConsumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/AdaptrisMessageConsumer.html
+[AdaptrisMessageProducer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/AdaptrisMessageProducer.html
+[Service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/Service.html
+[AdaptrisMessage]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/AdaptrisMessage.html
+[ServiceList]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/ServiceList.html
+[FtpProducer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/ftp/FtpProducer.html
+[DefaultSmtpProducer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/mail/DefaultSmtpProducer.html
+[JdkHttpProducer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/http/client/net/StandardHttpProducer.html
+[JmsProducer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/jms/JmsProducer.html
+[FtpConsumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/ftp/FtpConsumer.html
+[DefaultMailConsumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/mail/DefaultMailConsumer.html
+[JmsConsumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/jms/JmsConsumer.html
+[NullService]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/NullService.html
+[standard-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/StandardWorkflow.html
+[pooling-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/PoolingWorkflow.html
+[jms-transacted-workflow]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/jms/JmsTransactedWorkflow.html

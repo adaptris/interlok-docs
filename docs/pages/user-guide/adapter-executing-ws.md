@@ -158,8 +158,8 @@ This is the expected payload you will be required to have as input for your new 
 For testing purposes you can simply consume this sample message document and configure your new service as the first service.
 
 
-[apache-cxf-soap-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-webservice-cxf/3.11-SNAPSHOT/com/adaptris/core/services/cxf/ApacheSoapService.html
+[apache-cxf-soap-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-webservice-cxf/5.0-SNAPSHOT/com/adaptris/core/services/cxf/ApacheSoapService.html
 [snapshot]: https://nexus.adaptris.net/nexus/content/groups/adaptris-snapshots/com/adaptris/interlok-webservice-external/
 [release]: https://nexus.adaptris.net/nexus/content/groups/public/com/adaptris/interlok-webservice-external/
-[payload-from-metadata-service]:https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/metadata/PayloadFromMetadataService.html
-[log-message-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/LogMessageService.html
+[payload-from-metadata-service]:https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/metadata/PayloadFromMetadataService.html
+[log-message-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/LogMessageService.html

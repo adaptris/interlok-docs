@@ -252,9 +252,9 @@ Since 3.8.3 : see [Exposing Workflows as a RESTful service](/pages/user-guide/ad
 
 ### System Properties ###
 
-Properties prefixed by `sysprop.` (note the `.`) will be converted into system properties at boot time (minus the prefix). For instance specifying `sysprop.myEnvironment=ABCDE` will be equivalent to using `-DmyEnvironment=ABCDE` on the command-line. These will overwrite any system properties that you may have already specified on the command-line. Use one method or the other, don’t mix the two.
+Properties prefixed by `sysprop.` (note the `.`) will be converted into system properties at boot time (minus the prefix). For instance specifying `sysprop.myEnvironment=ABCDE` will be equivalent to using `-DmyEnvironment=ABCDE` on the command-line. These will overwrite any system properties that you may have already specified on the command-line. Use one method or the other, don???t mix the two.
 
-Sensitive system property values may be stored encoded in the file; they will be decoded at boot time and the decoded value used for System.setProperty(). Of course, this means these values still plain text within the JVM, but are encoded for the purposes of storage on the file system in configuration/startup scripts. The syntax for an encoded property is to use {password} at the start of the property value; for instance: `sysprop.myEncodedString={password}PW:AA...N` (skipped some actual characters) is functionally equivalent to specifying –DmyEncodedString=admin on the command-line. These sensitive values will have been encrypted using the [password handling mechanism][advanced-password-handling].
+Sensitive system property values may be stored encoded in the file; they will be decoded at boot time and the decoded value used for System.setProperty(). Of course, this means these values still plain text within the JVM, but are encoded for the purposes of storage on the file system in configuration/startup scripts. The syntax for an encoded property is to use {password} at the start of the property value; for instance: `sysprop.myEncodedString={password}PW:AA...N` (skipped some actual characters) is functionally equivalent to specifying ???DmyEncodedString=admin on the command-line. These sensitive values will have been encrypted using the [password handling mechanism][advanced-password-handling].
 
 If you were using JRuby, and you wanted to ensure that variable scope was threadsafe; and you needed to specify a javax.net.ssl keystore and password; the keystore password is of course sensitive so you have encrypted it.
 
@@ -271,8 +271,8 @@ sysprop.javax.net.ssl.keyStore=/path/to/my/keystore
 
 Pre-Processors are components that allow you to inject some additional processing of Interlok configuration files before attempting to unmarshal them. It is discussed in more detail in the [pre-processors](/pages/advanced/advanced-configuration-pre-processors) document.
 
-[XStreamConfigManager]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/management/config/XStreamConfigManager.html
-[ManagementComponent]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/management/ManagementComponent.html
+[XStreamConfigManager]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/management/config/XStreamConfigManager.html
+[ManagementComponent]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/management/ManagementComponent.html
 [Authenticator]: http://docs.oracle.com/javase/7/docs/api/java/net/Authenticator.html
 [interlok-mgmt-artemis]: https://nexus.adaptris.net/nexus/content/groups/public/com/adaptris/interlok-artemis/
 [interlok-sshtunnel]: https://github.com/adaptris/interlok-sshtunnel

@@ -110,7 +110,7 @@ More information around JWTs can be found here:
 [JWT Introduction][]
 
 
-[jwt-creator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-json-web-token/4.7-SNAPSHOT/com/adaptris/core/jwt/JWTCreator.html
-[jwt-decode]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-json-web-token/4.7-SNAPSHOT/com/adaptris/core/jwt/JWTDecoder.html
-[jwt-encode]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-json-web-token/4.7-SNAPSHOT/com/adaptris/core/jwt/JWTEncoder.html
+[jwt-creator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-json-web-token/5.0-SNAPSHOT/com/adaptris/core/jwt/JWTCreator.html
+[jwt-decode]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-json-web-token/5.0-SNAPSHOT/com/adaptris/core/jwt/JWTDecoder.html
+[jwt-encode]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-json-web-token/5.0-SNAPSHOT/com/adaptris/core/jwt/JWTEncoder.html
 [JWT Introduction]: https://jwt.io/introduction

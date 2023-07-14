@@ -39,6 +39,7 @@ Our source input document is simply:
 # Handling the ResultSet #
 
 There are two main ways to handle the results of your query. Either by using an [XML ResultSetTranslator][] or a [Metadata ResultSetTranslator][]; we have found that these translator types will cover the majority of use cases. Each of the translator types defines common behaviour shared between the concrete sub classes. Naturally, if your use case isn't covered then you can write your own implementation of [ResultSetTranslator][].
+
 Interlok also supports handling resultsets using a JSON implementation provided you have the **interlok-json** optional component and required dependencies.
 [Json All Resultset Output][], [Json First Resultset Line Output][] and[Json First Resultset Output][]
 
@@ -179,6 +180,56 @@ Would give us:
 - The original message is unchanged.
 - The message now has additional metadata `testtable+name+1=Mitch Chung` and `testtable+name+2=Keis Agrebi`.
 
+## JdbcJsonArrayOutput ##
+
+[Json All Resultset Output][] Outputs all result sets as a JSON Array.
+
+```xml
+<jdbc-data-query-service>
+ <connection class="jdbc-connection">
+  <driver-imp>com.mysql.jdbc.Driver</driver-imp>
+  <connect-url>jdbc:mysql://localhost:3306/mydatabase</connect-url>
+ </connection>
+ <statement>SELECT name from testtable</statement>
+ <result-set-translator class="jdbc-json-all-resultset-output">
+    <column-name-style>NoStyle</column-name-style>
+  </result-set-translator>
+</jdbc-data-query-service>
+```
+
+## JdbcJsonOutputLines ##
+
+[Json First Resultset Line Output][] Outputs the first resultset as JSON line-by-line.
+
+```xml
+<jdbc-data-query-service>
+ <connection class="jdbc-connection">
+  <driver-imp>com.mysql.jdbc.Driver</driver-imp>
+  <connect-url>jdbc:mysql://localhost:3306/mydatabase</connect-url>
+ </connection>
+ <statement>SELECT name from testtable</statement>
+ <result-set-translator class="jdbc-json-first-resultset-output">
+    <column-name-style>NoStyle</column-name-style>
+  </result-set-translator>
+</jdbc-data-query-service>
+```
+
+## JdbcJsonOutput ##
+
+[Json First Resultset Output][] Outputs the first resultset as JSON.
+
+```xml
+<jdbc-data-query-service>
+ <connection class="jdbc-connection">
+  <driver-imp>com.mysql.jdbc.Driver</driver-imp>
+  <connect-url>jdbc:mysql://localhost:3306/mydatabase</connect-url>
+ </connection>
+ <statement>SELECT name from testtable</statement>
+ <result-set-translator class="jdbc-json-first-resultset-output">
+    <column-name-style>NoStyle</column-name-style>
+  </result-set-translator>
+</jdbc-data-query-service>
+```
 
 ## Column Translation ##
 
@@ -190,7 +241,7 @@ The name of each column (if using an [XML ResultSetTranslator][]) will be checke
 
 ### Column Style ###
 
-There are 4 supported styles for column names: [Capitalize][], [UpperCase][], [LowerCase][], [NoStyle][]. The style specified will affect both XML element names and also metadata keys. For metadata keys, the prefix is not affected by the style specified.
+There are 4 supported styles for column names: [Capitalize][], [UpperCase][], [LowerCase][], [NoStyle][]. The style specified will affect XML element names, JSON key names and also metadata keys. For metadata keys, the prefix is not affected by the style specified.
 
 ### Column Translators ###
 

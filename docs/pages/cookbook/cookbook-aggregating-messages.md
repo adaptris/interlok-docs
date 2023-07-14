@@ -14,7 +14,9 @@ There are currently 2 [AggregatingConsumeService][] implementations : [aggregati
 |[replace-with-first-message-aggregator][]| Replaces the message payload with the _first processed message_.|
 |[xml-document-aggregator][]| Merges each processed message into the original document.|
 |[ignore-original-xml-document-aggregator][]| Merges each processed message into the configured template, ignoring the original document.|
-|[zip-aggregator][]| Adds each processed message into a zip file; the filename associated with each message determined by metadata|
+|[multi-payload-aggregator][]| Combine multiple standard Adaptris messages into a single multi-payload Adaptris message.|
+|[appending-message-aggregator][]| Iterates over each of the messages; and appends their payloads to the original message.|
+|[null-aggregator][]| A special implementation of MessageAggregator that does not aggregate messages. |
 
 ## Example ##
 

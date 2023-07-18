@@ -188,7 +188,7 @@ This will execute the BAPI, and also write all the flights that match the query 
 
 ## Stateful Execution Chain ##
 
-In some cases it is often a requirement to invoke a sequence of BAPI???s or RFC???s in order; using the same connection configuration. In this case there is an additional service [sapjco3-rfc-service-list][] which can be configured with either a [sapjco3-configured-rfc-connection][] or [sapjco3-dynamic-rfc-connection][] which all nested producers will have access to (so nested producers do not need to have an explicit connection defined). In addition, there are two services [sapjco3-start-session-service][] and [sapjco3-end-session-service][] which will force the underlying JCo libraries to use the same connection for all invocations to the same JCo destination for any services sandwiched between them.
+In some cases it is often a requirement to invoke a sequence of BAPI's or RFC's in order; using the same connection configuration. In this case there is an additional service [sapjco3-rfc-service-list][] which can be configured with either a [sapjco3-configured-rfc-connection][] or [sapjco3-dynamic-rfc-connection][] which all nested producers will have access to (so nested producers do not need to have an explicit connection defined). In addition, there are two services [sapjco3-start-session-service][] and [sapjco3-end-session-service][] which will force the underlying JCo libraries to use the same connection for all invocations to the same JCo destination for any services sandwiched between them.
 
 ```xml
   <sapjco3-rfc-service-list>

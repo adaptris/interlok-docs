@@ -125,32 +125,31 @@ As additional features are developed and released our public facing repository i
 <br/>
 
 ## How to install ##
+Once you have an installation running, you can manually add components to Interlok by dropping the required libraries into the lib directory and then restarting Interlok.
+There are some components that will require additional jars (e.g. [SAP][adp-sap], [WebsphereMQ][adp-webspheremq], [Tibco][adp-tibco], [Oracle][adp-jms-oracleaq]) which you will need to source from your installation / 3rd party provider.
 
-For optional components that come with the installer; all you need to do is to copy the contents of `optional/[required-component]` into `${adapter.home}/lib` and restart your adapter. This will automatically enable those components for runtime and use within the UI. There are some components that will require additional jars (e.g. [SAP][adp-sap], [WebsphereMQ][adp-webspheremq], [Tibco][adp-tibco], [Oracle][adp-jms-oracleaq]) which you will need to source from your installation / 3rd party provider.
-
-?> **NOTE** Additional jars may need to be sourced from your target application / 3rd party provider.
-
-
-## Manual install ##
-
-For components that are not normally delivered with the installer; the recommended installation is via a [dependency management](/pages/advanced/advanced-ant-ivy-deploy) system. This will automagically download everything that is required for the optional component in question.
+Use the component search [here](/pages/ui/ui-interlok-component-search), switch to the optional-component tab and search for the component required.
+Clicking the "view" button on your chosen component will show you how to include this component and it's requirted dependencies into your installtion.
 
 ?> **NOTE** Additional jars may need to be sourced from your target application / 3rd party provider.
 
-You should always match the version number with your primary Interlok installation version; so if you wanted [adp-simple-csv][] and your Interlok version is 3.0.2 then you would  configure your ivy dependency :
+You should always match the version number with your primary Interlok installation version; so if you wanted the ** interlok-json ** component and your Interlok version is 5.0 then you would configure your gradle build dependency :
 
-```xml
-<dependency org="com.adaptris" name="adp-simple-csv" rev="3.0.2-RELEASE"/>
+```groovy
+ext {
+  interlokVersion = '5.0-RELEASE' 
+  interlokUiVersion = interlokVersion
+  interlokParentGradle = "https://raw.githubusercontent.com/adaptris/interlok-build-parent/main/v5/build.gradle"
 ```
 
-or add something to your POM file
+```groovy
+dependencies {
+  interlokRuntime ("com.adaptris:interlok-core:$interlokVersion") { changing=true }
+  interlokRuntime ("com.adaptris:interlok-json:$interlokVersion") { changing=true }
 
-```xml
-<dependency>
-	<groupId>com.adaptris</groupId>
-	<artifactId>adp-simple-csv</artifactId>
-	<version>3.0.2-RELEASE</version>
-</dependency>
+  interlokJavadocs group: "com.adaptris", name: "interlok-apache-http", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
+  interlokJavadocs group: "com.adaptris", name: "interlok-json", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
+}
 ```
 
 ## Javadoc ##

@@ -1,3 +1,5 @@
+!> **NOTE:** **Interlok 5.0+ requires gRADLE 7.6.1**.
+
 Interlok's core component provides the base functionality to give you a start for your integration solution.  Many other components can be bolted on to provide extended functionality or custom handling for vendor specific technologies.  You can find a list of additional components [here](/pages/user-guide/adapter-optional-components).
 Each component essentially consists of an additional Interlok Java library and it's required dependent Java libraries.  Therefore making sure you add all of the required dependant libraries can be a challenge.  The standard way to to build your Interlok instances without fear of dependency management is to use our gradle builds.
 
@@ -77,27 +79,20 @@ Then run it;
 ```
 After a moment to allow Interlok to complete it's startup you can log-in to the Interlok web interface at [http://localhost:8080](http://localhost:8080)
 
-## Build a 3.12 Interlok instance
+## Build a 4.x Interlok instance
 
-So the above guide will build you the latest v4 version of Interlok, but what if you wanted the latest v3 version (3.12.0.3 at the time of writing).
+So the above guide will build you the latest v5 version of Interlok, but what if you wanted the latest v4 version.
 
 Here's what you would do:
 
 Simply edit ext section from the 'build.gradle' file 
 ```
 ext {
-  interlokVersion = '3.12.0-RELEASE' 
+  interlokVersion = '4.9-RELEASE' 
   interlokUiVersion = interlokVersion
-  interlokParentGradle = "https://raw.githubusercontent.com/adaptris/interlok-build-parent/develop/v3/build.gradle"
+  interlokParentGradle = "https://raw.githubusercontent.com/adaptris/interlok-build-parent/develop/v4/build.gradle"
 ```
-The above changes, point to the v3 build parent file, and also change the Interlok version to 3.12.0
-
-Also, changes the dependencies section in the 'build.gradle' file:
-```
-dependencies {
-  interlokRuntime ("com.adaptris:interlok-core:3.12.0.3-RELEASE") { changing=true }
-```
-This will make sure the core version is at the latest 3.12.0.3 version
+The above changes, point to the v4 build parent file, and also change the Interlok version to 4.9
 
 Then you would do exactly like before
 Windows:
@@ -105,7 +100,6 @@ Windows:
 > gradle clean assemble
 > (cd ./build/distribution && java -jar lib/interlok-boot.jar)
 ```
-Note, that I used gradle assemble rather than gradle build, as the tests for this example project will fail with v3 jars, but we can still build and execute interlok without running the tests.
 
 ## Further reading / More options
 

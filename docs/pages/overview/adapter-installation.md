@@ -1,6 +1,6 @@
 # Interlok Installation #
 
-!> **NOTE:** **Interlok 4.0+ requires Java 11**.
+!> **NOTE:** **Interlok 5.0+ requires Java 17**.
 
 Installation is pretty easy, however due to a change in Java licensing as of 2019 you need to provide your own 64bit JVM.
 You have 2 choices for installation;

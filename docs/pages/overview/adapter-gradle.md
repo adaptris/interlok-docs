@@ -67,6 +67,14 @@ Your full Interlok installation including required additional components will be
 > java -jar ./lib/interlok-boot.jar
 ```
 
+## What if the build fails?
+
+During the build several verification steps are executed, each should generate a report in the **./build/reports/** directory.  If the file is empty it means no errors were found.  Otherwise you should see the detail causing your build failure.
+
+One of these verification tasks will run the service tester if you have set up tests for your workflows.  The configuration for service-tester can be found at **./src/test/interlok**.
+
+!> **The default project has a sample service-tester configuration, which MUST be removed or changed to your service-test configuration.**
+
 ## Build your docker instance
 
 Simply use your local docker installation to create your image;

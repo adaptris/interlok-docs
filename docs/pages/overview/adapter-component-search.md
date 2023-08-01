@@ -1,2 +1,3 @@
-
-<iframe class="interlok-search-iframe" onload="monitorInterlokSearchframeContentHeight(this)" src="https://interlok.adaptris.net/interlok-component-search/index-embeddable.html" frameBorder="0" style="position: fixed; top: 150px; height: calc(100% - 300px); width: 75%; max-width: var(--content-max-width); z-index: 20"/>
+<div style="position: relative; height: calc(100vh - 370px); margin-bottom: 20px;">
+  <interlok-search page="component-search"></interlok-search>
+</div>

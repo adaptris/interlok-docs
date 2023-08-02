@@ -4,6 +4,8 @@ As additional features are developed and released our public facing repository i
 
 ## Component List ##
 
+A more interactive list of optional components is available in [Optional Components Search](/pages/user-guide/adapter-optional-components-search)
+
 | GroupID | ArtifactID | Name | Description | Versions | Notes
 |----|----|----|----|----|----|
 | com.adaptris | interlok-activemq | Interlok Management/ActiveMQ | Embedded ActiveMQ management component | 3.6.0+ | [available on github](https://github.com/adaptris/interlok-activemq) |

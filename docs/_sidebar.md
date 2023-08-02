@@ -1,5 +1,5 @@
 **Home**
-  - [Getting Started With Interlok V4](/)
+  - [Getting Started With Interlok V5](/)
 - **Overview**
   - [What is Interlok](/pages/overview/adapter-what-is-it.md)
   - [Installation](/pages/overview/adapter-installation.md)
@@ -10,6 +10,7 @@
   - [Component Search](/pages/overview/adapter-component-search.md)
 - **User guide**
   - [Optional Components](/pages/user-guide/adapter-optional-components.md)
+  - [Optional Components Search](/pages/user-guide/adapter-optional-components-search.md)
   - [Startup in Detail](/pages/user-guide/adapter-bootstrap.md)
   - [Applying a license](/pages/user-guide/adapter-license.md)
   - [Error Handling](/pages/user-guide/adapter-error-handling.md)

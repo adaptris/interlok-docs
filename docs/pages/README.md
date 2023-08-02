@@ -85,4 +85,4 @@ You probably came here from [http://interlok.adaptris.net](http://interlok.adapt
 
 * Comic reproduced because of the generous [xkcd license](http://xkcd.com/license.html)
 * Now built with [docsify](https://docsify.js.org/#/)
-* Previous version available [here](https://interlok.adaptris.net/interlok-docs-legacy); and its [github project](https://github.com/adaptris/interlok-docs-legacy)
+* Previous version available: [docs v4](https://interlok.adaptris.net/interlok-docsv4 ), [docs v3](https://interlok.adaptris.net/interlok-docsv3 ) and [docs legacy](https://interlok.adaptris.net/interlok-docs-legacy); and their github projects: [docs v4](https://github.com/adaptris/interlok-docsv4 ), [docs v3](https://github.com/adaptris/interlok-docsv3 ) and  [docs legacy](https://github.com/adaptris/interlok-docs-legacy)

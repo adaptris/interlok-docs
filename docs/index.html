@@ -17,29 +17,27 @@
   <meta property="og:description" content="Documentation for Interlok v4+">
   <meta property="og:image" content="https://interlok.adaptris.net/interlok-docs/images/adaptris-bg@2x.png">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">
   <link rel="stylesheet" href="./css/panels.css">
   
   <style>
     :root {
         --content-max-width: 85em;
-        --theme-color-secondary: #C51162;
-        --theme-color-light: #45537E;
-        --theme-color-dark: #000029;
-        --sidebar-text-color: #E1E4E8;
-        --sidebar-toggle-background: var(--theme-color-light);
-        --sidebar-name-color: var(--sidebar-text-color);
-        --sidebar-toggle-icon-color: var(--sidebar-text-color);
-        --sidebar-background: var(--theme-color);
-        --search-result-keyword-background: var(--theme-color-secondary);
-        --sidebar-nav-link-border-color--active: var(--theme-color-secondary);
-        --sidebar-nav-pagelink-background-image--active:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
-        --sidebar-nav-pagelink-background-image--collapse:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='11.2' viewBox='0 0 7 11.2'%3E%3Cpath d='M1.5 1.5l4 4.1 -4 4.1' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
-        --sidebar-nav-pagelink-background-image--loaded:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='rgb%28197, 17, 98%29' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
-        --search-result-keyword-color: var(--mark-color);
+        --theme-color: #ea6f5a;
     }
-    main {
-        min-height: 100%;
+    /* Override the aggressive white on dropdown menu*/
+    .app-nav li ul {
+      background-color: #514442;
+    }
+    .markdown-section {
+      max-width: var(--content-max-width);
+    }
+    /* Override the aggressive white on odd rows*/
+    .markdown-section tr:nth-child(2n) {
+        background-color: rgba(234,111,90,.1);
+    }
+    .markdown-section iframe {
+        min-width: var(--content-max-width);
     }
     footer .content {
         margin-left: var(--sidebar-width);
@@ -47,32 +45,24 @@
     footer .info {
         position: relative;
         max-width: var(--content-max-width);
-        margin: 0 auto;
-        padding: 2rem 45px;
-    }
+     }
     footer .info .rbi-relx {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .sidebar h2, .sidebar strong, .sidebar a {
-        color: var(--sidebar-text-color) !important;
+    .sidebar-nav > p {
+        margin: 0 0 0 15px;
     }
     .sidebar-nav li.folder.level-1>span, .sidebar-nav li.folder.level-1>strong {
         margin-top: 1.0em;
         cursor: pointer;
     }
-    .sidebar-nav li.active>a, .sidebar-nav li.collapse>a {
-        background-color: var(--sidebar-toggle-background);
-    }
-    .markdown-section h1 {
-        color: var(--theme-color);
-    }
-    .markdown-section h2 {
-        color: var(--theme-color-secondary);
-    }
-    .markdown-section a {
-        color: var(--theme-color);
+    .sidebar-nav ul>li>span, .sidebar-nav ul>li>strong, .sidebar nav ul>li>span, .sidebar nav ul>li>strong {
+        display: block;
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: var(--sidebar-nav-strong-border-color);
     }
     .quick-links {
         display: flex;
@@ -80,7 +70,6 @@
         align-items: center;
         justify-content: space-between;
     }
-
     .interlok-docs-title {
         background-image: url(./svg/adaptris-logo-grey.svg);
         background-repeat: no-repeat;
@@ -94,27 +83,6 @@
 </head>
 <body>
   <div id="app"></div>
-  <footer>
-    <section class="content">
-      <div class="info">
-        <hr />
-        <div>
-          <span>&copy;2021 Adaptris. All rights reserved.</span><br/>
-        </div>
-        <div class="rbi-relx">
-          <div class="company-logo">
-            <a href="https://risk.lexisnexis.com/group" target="_blank"><img id="rbi-logo" src="./images/RSG-Logo_POS_RGB.png" alt="LexisNexis Risk Solutions Group" width="140px"></a>
-          </div>
-          <div class="company-logo adaptris-logo">
-            <a href="https://www.adaptris.com" target="_blank"><img id="adaptris-logo" src="./images/company_logo.png" alt="Company logo" width="140px"/></a>
-          </div>
-          <div class="company-logo">
-            <a href="https://www.relx.com" target="_blank"><img id="relx-logo" src="./images/relx-logo.png" alt="RELX logo" width="140px"></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </footer>
   <script>
     window.$docsify = {
       name: '<span class="interlok-docs-title" />Interlok Docs</span>',
@@ -137,7 +105,6 @@
         depth: 5
       },
       noEmoji: true, // Emojis Cause some rendering issues when we have something like :string: which happens a lot e.g. service:jmx:jmxmp:
-      themeColor: '#182B51',
       coverpage: false,
       formatUpdated: '{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}',
       plugins: [
@@ -148,6 +115,37 @@
               content +
               '\n----\n' +
               '*Last modified {docsify-updated}*'
+            );
+          });
+        },
+        // Add footer
+        function(hook, vm) {
+          hook.afterEach(function(content) {
+            return (
+              content +
+              /*html*/`
+                <footer>
+                  <section class="">
+                    <div class="info">
+                      <hr />
+                      <div>
+                        <span>&copy;2023 Adaptris. All rights reserved.</span><br/>
+                      </div>
+                      <div class="rbi-relx">
+                        <div class="company-logo">
+                          <a href="https://risk.lexisnexis.com/group" target="_blank"><img id="rbi-logo" src="./images/RSG-Logo_POS_RGB.png" alt="LexisNexis Risk Solutions Group" width="140px"></a>
+                        </div>
+                        <div class="company-logo adaptris-logo">
+                          <a href="https://www.adaptris.com" target="_blank"><img id="adaptris-logo" src="./images/company_logo.png" alt="Company logo" width="140px"/></a>
+                        </div>
+                        <div class="company-logo">
+                          <a href="https://www.relx.com" target="_blank"><img id="relx-logo" src="./images/relx-logo.png" alt="RELX logo" width="140px"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </footer>
+              `
             );
           });
         },
@@ -195,7 +193,6 @@
                     if (document.getElementById("main").style.height != (iframe.scrollHeight + mainHeightOffset) + "px") {
                         document.getElementById("main").style.height = (iframe.scrollHeight + mainHeightOffset) + "px";
                     }
-
                 }, 500);
                 window.resizeInterlokSearchIframeEventListener = function(event){
                   document.getElementById("main").style.height = (iframe.scrollHeight + mainHeightOffset) + "px";
@@ -219,12 +216,12 @@
         function(hook, vm) {
           function meta(name, content) {
             const metaElt = document.querySelector(`meta[name="${name}"]`) || document.querySelector(`meta[property="${name}"]`);
-			if (metaElt.content !== content) {
+			      if (metaElt.content !== content) {
               metaElt.content = metaElt.content + (content ? " - " + content : "");
             }
           }
           const refreshMeta = () => {
-			const pageTitle = document.title;
+			      const pageTitle = document.title;
             meta("title", pageTitle);
             meta("twitter:title", pageTitle);
             meta("og:title", pageTitle);
@@ -245,5 +242,6 @@
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-groovy.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-properties.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="https://interlok.adaptris.net/interlok-component-search/js/interlok-search.js"></script>
 </body>
 </html>

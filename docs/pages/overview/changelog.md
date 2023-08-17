@@ -1,5 +1,7 @@
 > **Summary:** This is the change log summarizing the key changes in Interlok for each release.
 
+[filename](changelog/release490.md ':include')
+
 [filename](changelog/release480.md ':include')
 
 [filename](changelog/release470.md ':include')

@@ -31,3 +31,4 @@
  - [Workflow Interceptors](/pages/advanced/advanced-interceptors.md)
  - [XA Integration](/pages/advanced/advanced-xa-integration.md)
  - [Scripting](/pages/advanced/advanced-scripting.md)
+ - [Work Unit](/pages/advanced/advanced-work-unit.md)

@@ -1,13 +1,31 @@
+## Version 3.12.0.4 ##
+
+Release Date : 2023-10-27
+
+The 3.12.0.4 release resolves a couple issues; It does not have an installer, and only affects the following artifact jars since they are built from the same multi-module repository: _interlok-boot.jar, interlok-client.jar, interlok-client-jmx.jar, interlok-common.jar, interlok-core.jar, interlok-core-apt.jar, interlok-logging.jar_
+
+If you're affected by this issues, then you should update your dependency tree to use `com.adaptris:interlok-core:3.12.0.4-RELEASE`
+
+- 'INTERLOK-4206' - Bump Jetty from 9.4.36.v20210114 to 9.4.53.v20231009. Fix **CVE-2023-44487** and **CVE-2023-36478**. This upgrade had a few impacts: 
+  - Jetty 9.4.44.v20210927 introduced a breaking change. In the absence of explicit config 9.4.44.v20210927 causes JASPI to come into play which ultimately causes a NPE when inistialising Jetty and its AuthenticatorFactory. The fix is to inialise a default AuthenticatorFactory that does nothing.
+  - Jetty 9.4.52.v20230823 introduced another breaking change with its XmlParser backport from Jetty 10 which enforce unique XML ids. This means that Interlok jetty-failsafe.xml (Interlok default jetty config file) which has duplicated IDs, prevent Jetty to start as the XmlParser throws an error on validation.
+
+In 3.12.0.4-RELEASE both of those issues are fixed.
+
+If you cannot upgrade to 3.12.0.4-RELEASE but still want to fix **CVE-2023-44487** and **CVE-2023-36478** you should replace all jetty jars in the lib directory with their 9.4.53.v20231009 equivalent.
+Than you either need to use a fixed jetty.xml (no duplicated id) in the config directory or use a system property to disable XML validation `org.eclipse.jetty.xml.XmlParser.Validating=false`.
+
 ## Version 3.12.0.3 ##
 
 Release Date : 2021-12-21
 
-The 3.12.0.3 release resolves a single issue; It does not have an installer, and only affects the following artifact jars since they are built from the same multi-module repository: _interlok-boot.jar, interlok-client.jar, interlok-client-jmx.jar, interlok-common.jar, interlok-core.jar, interlok-core-apt.jar, interlok-logging.jar_
+The 3.12.0.3 release resolves a few issues; It does not have an installer, and only affects the following artifact jars since they are built from the same multi-module repository: _interlok-boot.jar, interlok-client.jar, interlok-client-jmx.jar, interlok-common.jar, interlok-core.jar, interlok-core-apt.jar, interlok-logging.jar_
 
-If you're affected by this issue, then you should update your dependency tree to use `com.adaptris:interlok-core:3.12.0.3-RELEASE`
+If you're affected by this issues, then you should update your dependency tree to use `com.adaptris:interlok-core:3.12.0.3-RELEASE`
 
 - 'INTERLOK-3846' - Update 3.12 components with missing deprecation notices (so users can trust gradle check before updating to v4)
-- Updated Log4j dependencies from 2.14.0 to 2.17.0
+- 'INTERLOK-3850' - Jetty Consumer - Possible threading issue when initializing the handlers
+- Bump Log4j from 2.14 to 2.17
 
 ## Version 3.12.0.2 ##
 

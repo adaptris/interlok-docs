@@ -31,3 +31,4 @@ The 5.0.0 release is focused on Interlok supporting Java 17.
 - 'INTERLOK-4187' - Flyway - flyway jar should be in lib dir and not in UI war
 - 'INTERLOK-4182' - VCS Git - Upgrade to JGit 6.7+
 - 'INTERLOK-4205' - Change artefact downloader url to use the new URL
+- 'INTERLOK-4081' - Upgrade to Jetty 10. Note: As Wiremock is no longer working with jetty 10, interlok-service-tester-wiremock now uses mockserver instead. More info [here](https://github.com/adaptris/interlok-service-tester/blob/5.0.0/interlok-service-tester-wiremock/README.md).

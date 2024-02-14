@@ -1,4 +1,4 @@
-> **Summary:** This is the dependency log summarizing the 3rd party dependency changes in Interlok for each release.
+> **Summary:** This is the dependency log summarizing the 3rd party dependency changes in Interlok for each release *(excludes test and optional dependencies)*.
 
 [filename](dependencylog/501release.md ':include')
 

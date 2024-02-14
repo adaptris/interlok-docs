@@ -1,4 +1,4 @@
-## Version 3.8.0-RELEASE ##
+## Version 3.8.0 ##
 
 ### interlok-actional-interceptor ###
 
@@ -23,7 +23,7 @@
 
 ### interlok-activemq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-core:2.9.6
 - com.fasterxml.jackson.core:jackson-databind:2.9.6
 - com.google.guava:guava:26.0-jre
@@ -36,6 +36,20 @@
 - org.apache.activemq:activemq-stomp:5.15.4
 - org.springframework:spring-beans:4.3.18.RELEASE
 - org.springframework:spring-context:4.3.18.RELEASE
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-core:2.9.6 *(from 2.8.11)*
+- com.fasterxml.jackson.core:jackson-databind:2.9.6 *(from 2.8.11.1)*
+- com.google.guava:guava:26.0-jre *(from 24.1.1-jre)*
+- org.apache.activemq:activemq-amqp:5.15.4 *(from 5.15.2)*
+- org.apache.activemq:activemq-client:5.15.4 *(from 5.15.2)*
+- org.apache.activemq:activemq-jaas:5.15.4 *(from 5.15.2)*
+- org.apache.activemq:activemq-kahadb-store:5.15.4 *(from 5.15.2)*
+- org.apache.activemq:activemq-mqtt:5.15.4 *(from 5.15.2)*
+- org.apache.activemq:activemq-spring:5.15.4 *(from 5.15.2)*
+- org.apache.activemq:activemq-stomp:5.15.4 *(from 5.15.2)*
+- org.springframework:spring-beans:4.3.18.RELEASE *(from 4.3.2.RELEASE)*
+- org.springframework:spring-context:4.3.18.RELEASE *(from 4.3.2.RELEASE)*
 
 ### interlok-amqp ###
 
@@ -73,9 +87,13 @@
 
 ### interlok-aws-sqs ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.6
 - org.apache.httpcomponents:httpclient:4.5.6
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.6 *(from 2.8.11.1)*
+- org.apache.httpcomponents:httpclient:4.5.6 *(from 4.5.2)*
 
 ### interlok-cassandra ###
 
@@ -151,39 +169,48 @@
 
 ### interlok-client ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.25
 
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.25 *(from 1.7.5)*
+
 #### Removed Dependencies ####
-- junit:junit:4.11
-- log4j:log4j:1.2.17
-- org.apache.velocity:velocity:1.7
-- org.slf4j:jcl-over-slf4j:1.7.5
-- org.slf4j:slf4j-log4j12:1.7.5
+- ~~junit:junit:4.11~~
+- ~~log4j:log4j:1.2.17~~
+- ~~org.apache.velocity:velocity:1.7~~
+- ~~org.slf4j:jcl-over-slf4j:1.7.5~~
+- ~~org.slf4j:slf4j-log4j12:1.7.5~~
 
 ### interlok-client-jmx ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.25
 
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.25 *(from 1.7.5)*
+
 #### Removed Dependencies ####
-- junit:junit:4.11
-- log4j:log4j:1.2.17
-- org.apache.velocity:velocity:1.7
-- org.glassfish.external:opendmk_jmxremote_optional_jar:1.0-b01-ea
-- org.slf4j:jcl-over-slf4j:1.7.5
-- org.slf4j:slf4j-log4j12:1.7.5
+- ~~junit:junit:4.11~~
+- ~~log4j:log4j:1.2.17~~
+- ~~org.apache.velocity:velocity:1.7~~
+- ~~org.glassfish.external:opendmk_jmxremote_optional_jar:1.0-b01-ea~~
+- ~~org.slf4j:jcl-over-slf4j:1.7.5~~
+- ~~org.slf4j:slf4j-log4j12:1.7.5~~
 
 ### interlok-common ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.eclipse.jetty.aggregate:jetty-all:9.4.11.v20180605
+
+#### Updated Dependencies ####
+- org.eclipse.jetty.aggregate:jetty-all:9.4.11.v20180605 *(from 9.4.8.v20171121)*
 
 ### interlok-config-conditional ###
 
 #### Removed Dependencies ####
-- org.apache.commons:commons-compress:1.17
-- org.json:json:20160810
+- ~~org.apache.commons:commons-compress:1.17~~
+- ~~org.json:json:20160810~~
 
 ### interlok-core ###
 
@@ -262,8 +289,11 @@
 
 ### interlok-csv-json ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.6
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.6 *(from 2.8.11.1)*
 
 ### interlok-drools ###
 
@@ -302,8 +332,11 @@
 
 ### interlok-elastic-search ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.jayway.jsonpath:json-path:2.4.0
+
+#### Updated Dependencies ####
+- com.jayway.jsonpath:json-path:2.4.0 *(from 2.2.0)*
 
 ### interlok-es-rest ###
 
@@ -318,9 +351,13 @@
 
 ### interlok-es5 ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.6
 - com.jayway.jsonpath:json-path:2.4.0
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.6 *(from 2.8.11.1)*
+- com.jayway.jsonpath:json-path:2.4.0 *(from 2.2.0)*
 
 ### interlok-excel ###
 
@@ -339,30 +376,39 @@
 
 ### interlok-failover ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.25
 
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.25 *(from 1.7.12)*
+
 #### Removed Dependencies ####
-- junit:junit:4.11
-- log4j:log4j:1.2.17
-- org.mockito:mockito-all:1.9.5
-- org.slf4j:jcl-over-slf4j:1.7.12
-- org.slf4j:slf4j-log4j12:1.7.12
+- ~~junit:junit:4.11~~
+- ~~log4j:log4j:1.2.17~~
+- ~~org.mockito:mockito-all:1.9.5~~
+- ~~org.slf4j:jcl-over-slf4j:1.7.12~~
+- ~~org.slf4j:slf4j-log4j12:1.7.12~~
 
 ### interlok-filesystem ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.json:json:20180130
+
+#### Updated Dependencies ####
+- org.json:json:20180130 *(from 20160810)*
 
 ### interlok-gcloud-pubsub ###
 
 #### New Dependencies ####
-- org.apache.httpcomponents:httpclient:4.5.6
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.6
 - com.google.cloud:google-cloud-pubsub:1.38.0
 - com.google.guava:guava:26.0-jre
+- org.apache.httpcomponents:httpclient:4.5.6
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.6 *(from 2.8.11.1)*
+- com.google.cloud:google-cloud-pubsub:1.38.0 *(from 0.20.0-beta)*
+- com.google.guava:guava:26.0-jre *(from 24.1.1-jre)*
 
 ### interlok-hornetq ###
 
@@ -405,8 +451,11 @@
 
 ### interlok-jclouds-blobstore ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.google.guava:guava:26.0-jre
+
+#### Updated Dependencies ####
+- com.google.guava:guava:26.0-jre *(from 24.1.1-jre)*
 
 ### interlok-jetty-auth-realm ###
 
@@ -491,14 +540,21 @@
 
 ### interlok-jq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.6
 - net.thisptr:jackson-jq:0.0.9
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.6 *(from 2.8.11.1)*
+- net.thisptr:jackson-jq:0.0.9 *(from 0.0.8)*
+
 ### interlok-jruby ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.jruby:jruby:9.2.0.0
+
+#### Updated Dependencies ####
+- org.jruby:jruby:9.2.0.0 *(from 9.1.15.0)*
 
 ### interlok-json ###
 
@@ -550,17 +606,24 @@
 
 ### interlok-mongodb ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.6
 - org.mongodb:mongodb-driver:3.8.0
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.6 *(from 2.8.11.1)*
+- org.mongodb:mongodb-driver:3.8.0 *(from 3.6.3)*
+
 ### interlok-mqtt ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.httpcomponents:httpclient:4.5.6
 
+#### Updated Dependencies ####
+- org.apache.httpcomponents:httpclient:4.5.6 *(from 4.5.2)*
+
 #### Removed Dependencies ####
-- com.atomikos:transactions-jms:3.8.0
+- ~~com.atomikos:transactions-jms:3.8.0~~
 
 ### interlok-msmq ###
 
@@ -601,23 +664,37 @@
 
 ### interlok-oauth-azure ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.microsoft.azure:adal4j:1.6.0
 - net.minidev:json-smart:2.3
 
+#### Updated Dependencies ####
+- com.microsoft.azure:adal4j:1.6.0 *(from 1.2.0)*
+- net.minidev:json-smart:2.3 *(from 2.2.1)*
+
 ### interlok-oauth-gcloud ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-core:2.9.6
 - com.google.auth:google-auth-library-oauth2-http:0.10.0
 - com.google.guava:guava:26.0-jre
 - org.apache.httpcomponents:httpclient:4.5.6
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-core:2.9.6 *(from 2.8.11)*
+- com.google.auth:google-auth-library-oauth2-http:0.10.0 *(from 0.9.1)*
+- com.google.guava:guava:26.0-jre *(from 24.1.1-jre)*
+- org.apache.httpcomponents:httpclient:4.5.6 *(from 4.5.2)*
+
 ### interlok-oauth-salesforce ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.6
 - org.apache.httpcomponents:httpclient:4.5.6
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.6 *(from 2.8.11.1)*
+- org.apache.httpcomponents:httpclient:4.5.6 *(from 4.5.2)*
 
 ### interlok-oftp ###
 
@@ -871,19 +948,25 @@
 
 ### interlok-vertx ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.hazelcast:hazelcast:3.10.4
 - io.vertx:vertx-core:3.5.3
 - io.vertx:vertx-hazelcast:3.5.3
 - org.slf4j:slf4j-api:1.7.25
 
+#### Updated Dependencies ####
+- com.hazelcast:hazelcast:3.10.4 *(from 3.7.1)*
+- io.vertx:vertx-core:3.5.3 *(from 3.3.2)*
+- io.vertx:vertx-hazelcast:3.5.3 *(from 3.3.2)*
+- org.slf4j:slf4j-api:1.7.25 *(from 1.7.12)*
+
 #### Removed Dependencies ####
-- junit:junit:4.11
-- log4j:log4j:1.2.17
-- org.apache.velocity:velocity:1.7
-- org.mockito:mockito-all:1.9.5
-- org.slf4j:jcl-over-slf4j:1.7.12
-- org.slf4j:slf4j-log4j12:1.7.12
+- ~~junit:junit:4.11~~
+- ~~log4j:log4j:1.2.17~~
+- ~~org.apache.velocity:velocity:1.7~~
+- ~~org.mockito:mockito-all:1.9.5~~
+- ~~org.slf4j:jcl-over-slf4j:1.7.12~~
+- ~~org.slf4j:slf4j-log4j12:1.7.12~~
 
 ### interlok-webservice-cxf ###
 

@@ -1,4 +1,4 @@
-> **Summary:** This is the dependency log summarizing the dependency changes in Interlok for each release.
+> **Summary:** This is the dependency log summarizing the 3rd party dependency changes in Interlok for each release.
 
 [filename](dependencylog/501release.md ':include')
 
@@ -75,3 +75,73 @@
 [filename](dependencylog/3801release.md ':include')
 
 [filename](dependencylog/380release.md ':include')
+
+[filename](dependencylog/373release.md ':include')
+
+[filename](dependencylog/3721release.md ':include')
+
+[filename](dependencylog/372release.md ':include')
+
+[filename](dependencylog/371release.md ':include')
+
+[filename](dependencylog/370release.md ':include')
+
+[filename](dependencylog/3663release.md ':include')
+
+[filename](dependencylog/3662release.md ':include')
+
+[filename](dependencylog/3661release.md ':include')
+
+[filename](dependencylog/366release.md ':include')
+
+[filename](dependencylog/365release.md ':include')
+
+[filename](dependencylog/364release.md ':include')
+
+[filename](dependencylog/3631release.md ':include')
+
+[filename](dependencylog/363release.md ':include')
+
+[filename](dependencylog/3621release.md ':include')
+
+[filename](dependencylog/362release.md ':include')
+
+[filename](dependencylog/361release.md ':include')
+
+[filename](dependencylog/360release.md ':include')
+
+[filename](dependencylog/3512release.md ':include')
+
+[filename](dependencylog/3511release.md ':include')
+
+[filename](dependencylog/351release.md ':include')
+
+[filename](dependencylog/350release.md ':include')
+
+[filename](dependencylog/341release.md ':include')
+
+[filename](dependencylog/340release.md ':include')
+
+[filename](dependencylog/330release.md ':include')
+
+[filename](dependencylog/321release.md ':include')
+
+[filename](dependencylog/320release.md ':include')
+
+[filename](dependencylog/311release.md ':include')
+
+[filename](dependencylog/310release.md ':include')
+
+[filename](dependencylog/306release.md ':include')
+
+[filename](dependencylog/305release.md ':include')
+
+[filename](dependencylog/304release.md ':include')
+
+[filename](dependencylog/303release.md ':include')
+
+[filename](dependencylog/302release.md ':include')
+
+[filename](dependencylog/301release.md ':include')
+
+[filename](dependencylog/300release.md ':include')

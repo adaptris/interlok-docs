@@ -1,12 +1,10 @@
-## Version 4.6.0-RELEASE ##
+## Version 4.6.0 ##
 
 ### interlok-activemq ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.apache.activemq:activemq-amqp:5.17.2
 - org.apache.activemq:activemq-broker:5.17.2
@@ -20,9 +18,23 @@
 - org.springframework:spring-beans:5.3.23
 - org.springframework:spring-context:5.3.23
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.apache.activemq:activemq-amqp:5.17.2 *(from 5.17.1)*
+- org.apache.activemq:activemq-broker:5.17.2 *(from 5.17.1)*
+- org.apache.activemq:activemq-client:5.17.2 *(from 5.17.1)*
+- org.apache.activemq:activemq-jaas:5.17.2 *(from 5.17.1)*
+- org.apache.activemq:activemq-kahadb-store:5.17.2 *(from 5.17.1)*
+- org.apache.activemq:activemq-mqtt:5.17.2 *(from 5.17.1)*
+- org.apache.activemq:activemq-spring:5.17.2 *(from 5.17.1)*
+- org.apache.activemq:activemq-stomp:5.17.2 *(from 5.17.1)*
+- org.apache.qpid:proton-j:0.34.0 *(from 0.33.10)*
+- org.springframework:spring-beans:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-context:5.3.23 *(from 5.3.20)*
+
 ### interlok-amqp ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.rabbitmq:amqp-client:5.16.0
 - io.netty:netty-buffer:4.1.84.Final
 - io.netty:netty-codec-http:4.1.84.Final
@@ -37,38 +49,67 @@
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.rabbitmq:amqp-client:5.16.0 *(from 5.14.2)*
+- io.netty:netty-buffer:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-codec-http:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-codec:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-common:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-handler:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-epoll:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-kqueue:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-unix-common:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport:4.1.84.Final *(from 4.1.77.Final)*
+- org.apache.qpid:proton-j:0.34.0 *(from 0.33.10)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-apache-geode ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-annotations:
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.apache.geode:geode-core:1.15.1
 - org.apache.shiro:shiro-core:1.10.0
 - org.slf4j:slf4j-api:2.0.3
 - org.springframework:spring-web:5.3.23
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.apache.geode:geode-core:1.15.1 *(from 1.14.4)*
+- org.apache.shiro:shiro-core:1.10.0 *(from 1.9.0)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+- org.springframework:spring-web:5.3.23 *(from 5.3.20)*
+
 ### interlok-apache-http ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-apache-http-async ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-apache-http5 ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-artemis ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - io.netty:netty-buffer:4.1.84.Final
 - io.netty:netty-codec-http:4.1.84.Final
 - io.netty:netty-codec:4.1.84.Final
@@ -82,11 +123,29 @@
 - org.apache.activemq:artemis-server:2.26.0
 - org.apache.commons:commons-configuration2:2.8.0
 
+#### Updated Dependencies ####
+- io.netty:netty-buffer:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-codec-http:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-codec:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-common:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-handler:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-epoll:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-kqueue:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-unix-common:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport:4.1.84.Final *(from 4.1.77.Final)*
+- org.apache.activemq:artemis-jms-server:2.26.0 *(from 2.22.0)*
+- org.apache.activemq:artemis-server:2.26.0 *(from 2.22.0)*
+- org.apache.commons:commons-configuration2:2.8.0 *(from 2.7)*
+
 ### interlok-as400 ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-aws-common ###
 
@@ -98,15 +157,18 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 #### Removed Dependencies ####
-- com.amazonaws:aws-java-sdk-core:1.12.228
-- com.amazonaws:aws-java-sdk-sts:1.12.228
+- ~~com.amazonaws:aws-java-sdk-core:1.12.228~~
+- ~~com.amazonaws:aws-java-sdk-sts:1.12.228~~
 
 ### interlok-aws-kinesis ###
 
@@ -118,6 +180,10 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013
+- com.google.protobuf:protobuf-java:3.21.7
+- com.squareup.wire:wire-compiler:4.4.2
+- com.squareup.wire:wire-schema:4.4.2
 - io.netty:netty-bom:4.1.84.Final
 - io.netty:netty-buffer:
 - io.netty:netty-codec-http:
@@ -128,30 +194,34 @@
 - io.netty:netty-transport-native-kqueue:
 - io.netty:netty-transport-native-unix-common:
 - io.netty:netty-transport:
-- org.apache.kafka:kafka-clients:2.8.2
-
-#### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.13.4.20221013
-- com.google.protobuf:protobuf-java:3.21.7
-- com.squareup.wire:wire-compiler:4.4.2
-- com.squareup.wire:wire-schema:4.4.2
 - org.apache.avro:avro:1.11.1
+- org.apache.kafka:kafka-clients:2.8.2
 - org.jetbrains.kotlin:kotlin-bom:1.7.10
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- com.google.protobuf:protobuf-java:3.21.7 *(from 3.20.1)*
+- com.squareup.wire:wire-compiler:4.4.2 *(from 4.3.0)*
+- com.squareup.wire:wire-schema:4.4.2 *(from 4.3.0)*
+- org.apache.avro:avro:1.11.1 *(from 1.11.0)*
+- org.jetbrains.kotlin:kotlin-bom:1.7.10 *(from 1.4.32)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 #### Removed Dependencies ####
-- com.amazonaws:aws-java-sdk-core:1.12.228
-- com.amazonaws:aws-java-sdk-kinesis:1.12.228
-- io.netty:netty-buffer:4.1.77.Final
-- io.netty:netty-codec-http:4.1.77.Final
-- io.netty:netty-codec:4.1.77.Final
-- io.netty:netty-common:4.1.77.Final
-- io.netty:netty-handler:4.1.77.Final
-- io.netty:netty-transport-native-epoll:4.1.77.Final
-- io.netty:netty-transport-native-kqueue:4.1.77.Final
-- io.netty:netty-transport-native-unix-common:4.1.77.Final
-- io.netty:netty-transport:4.1.77.Final
+- ~~com.amazonaws:aws-java-sdk-core:1.12.228~~
+- ~~com.amazonaws:aws-java-sdk-kinesis:1.12.228~~
+- ~~io.netty:netty-buffer:4.1.77.Final~~
+- ~~io.netty:netty-codec-http:4.1.77.Final~~
+- ~~io.netty:netty-codec:4.1.77.Final~~
+- ~~io.netty:netty-common:4.1.77.Final~~
+- ~~io.netty:netty-handler:4.1.77.Final~~
+- ~~io.netty:netty-transport-native-epoll:4.1.77.Final~~
+- ~~io.netty:netty-transport-native-kqueue:4.1.77.Final~~
+- ~~io.netty:netty-transport-native-unix-common:4.1.77.Final~~
+- ~~io.netty:netty-transport:4.1.77.Final~~
 
 ### interlok-aws-kinesis-sdk ###
 
@@ -163,15 +233,18 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 #### Removed Dependencies ####
-- com.amazonaws:aws-java-sdk-core:1.12.228
-- com.amazonaws:aws-java-sdk-kinesis:1.12.228
+- ~~com.amazonaws:aws-java-sdk-core:1.12.228~~
+- ~~com.amazonaws:aws-java-sdk-kinesis:1.12.228~~
 
 ### interlok-aws-kms ###
 
@@ -183,15 +256,18 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 #### Removed Dependencies ####
-- com.amazonaws:aws-java-sdk-core:1.12.228
-- com.amazonaws:aws-java-sdk-kms:1.12.228
+- ~~com.amazonaws:aws-java-sdk-core:1.12.228~~
+- ~~com.amazonaws:aws-java-sdk-kms:1.12.228~~
 
 ### interlok-aws-s3 ###
 
@@ -203,15 +279,18 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 #### Removed Dependencies ####
-- com.amazonaws:aws-java-sdk-core:1.12.228
-- com.amazonaws:aws-java-sdk-s3:1.12.228
+- ~~com.amazonaws:aws-java-sdk-core:1.12.228~~
+- ~~com.amazonaws:aws-java-sdk-s3:1.12.228~~
 
 ### interlok-aws-sns ###
 
@@ -223,45 +302,50 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 #### Removed Dependencies ####
-- com.amazonaws:aws-java-sdk-core:1.12.228
-- com.amazonaws:aws-java-sdk-sns:1.12.228
+- ~~com.amazonaws:aws-java-sdk-core:1.12.228~~
+- ~~com.amazonaws:aws-java-sdk-sns:1.12.228~~
 
 ### interlok-aws-sqs ###
 
 #### New Dependencies ####
+- com.amazonaws:amazon-sqs-java-messaging-lib:1.1.0
+- com.amazonaws:aws-java-sdk-core:1.12.319
+- com.amazonaws:aws-java-sdk-sqs:1.12.319
 - com.fasterxml.jackson.core:jackson-annotations:
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
-
-#### Updated Dependencies ####
-- com.amazonaws:amazon-sqs-java-messaging-lib:1.1.0
-- com.amazonaws:aws-java-sdk-core:1.12.319
-- com.amazonaws:aws-java-sdk-sqs:1.12.319
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.amazonaws:amazon-sqs-java-messaging-lib:1.1.0 *(from 1.0.8)*
+- com.amazonaws:aws-java-sdk-core:1.12.319 *(from 1.12.228)*
+- com.amazonaws:aws-java-sdk-sqs:1.12.319 *(from 1.12.228)*
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-azure-core ###
 
 #### New Dependencies ####
+- com.azure:azure-identity:1.5.5
+- com.azure:azure-storage-file-datalake:12.13.0
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-xml:
 - com.fasterxml.jackson.datatype:jackson-datatype-jsr310:
-- io.netty:netty-resolver-dns:4.1.84.Final
-- org.codehaus.woodstox:stax2-api:4.2.1
-
-#### Updated Dependencies ####
-- com.azure:azure-identity:1.5.5
-- com.azure:azure-storage-file-datalake:12.13.0
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - com.google.code.gson:gson:2.9.1
 - com.microsoft.azure:msal4j:1.13.2
@@ -273,81 +357,133 @@
 - io.netty:netty-codec:4.1.84.Final
 - io.netty:netty-handler-proxy:4.1.84.Final
 - io.netty:netty-handler:4.1.84.Final
+- io.netty:netty-resolver-dns:4.1.84.Final
 - io.netty:netty-transport-native-epoll:4.1.84.Final
 - io.netty:netty-transport-native-kqueue:4.1.84.Final
 - io.netty:netty-transport-native-unix-common:4.1.84.Final
+- org.codehaus.woodstox:stax2-api:4.2.1
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- com.azure:azure-identity:1.5.5 *(from 1.5.1)*
+- com.azure:azure-storage-file-datalake:12.13.0 *(from 12.10.0)*
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- com.google.code.gson:gson:2.9.1 *(from 2.9.0)*
+- com.microsoft.azure:msal4j:1.13.2 *(from 1.12.0)*
+- com.microsoft.graph:microsoft-graph:5.36.0 *(from 2.5.0)*
+- com.squareup.okhttp3:okhttp:4.10.0 *(from 4.9.3)*
+- com.squareup.okio:okio:3.2.0 *(from 3.1.0)*
+- io.netty:netty-codec-http2:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-codec-http:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-codec:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-handler-proxy:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-handler:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-epoll:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-kqueue:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-unix-common:4.1.84.Final *(from 4.1.77.Final)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-azure-cosmosdb ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-azure-datalake ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-azure-mail ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-azure-onedrive ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-cassandra ###
 
 #### New Dependencies ####
-- com.fasterxml.jackson.core:jackson-core:
-- com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.datastax.cassandra:cassandra-driver-core:3.11.3
 - com.datastax.cassandra:cassandra-driver-mapping:3.11.3
+- com.fasterxml.jackson.core:jackson-core:
+- com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - io.netty:netty-codec:4.1.84.Final
 - io.netty:netty-handler:4.1.84.Final
 - io.netty:netty-transport-native-epoll:4.1.84.Final
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.datastax.cassandra:cassandra-driver-core:3.11.3 *(from 3.11.1)*
+- com.datastax.cassandra:cassandra-driver-mapping:3.11.3 *(from 3.11.1)*
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- io.netty:netty-codec:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-handler:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-epoll:4.1.84.Final *(from 4.1.77.Final)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-client ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-client-jmx ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-common ###
 
 #### New Dependencies ####
-- org.apache.logging.log4j:log4j-slf4j2-impl:2.19.0
-
-#### Updated Dependencies ####
 - org.apache.logging.log4j:log4j-1.2-api:2.19.0
 - org.apache.logging.log4j:log4j-api:2.19.0
 - org.apache.logging.log4j:log4j-core:2.19.0
+- org.apache.logging.log4j:log4j-slf4j2-impl:2.19.0
 - org.eclipse.jetty.aggregate:jetty-all:9.4.49.v20220914
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:jul-to-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- org.apache.logging.log4j:log4j-1.2-api:2.19.0 *(from 2.17.2)*
+- org.apache.logging.log4j:log4j-api:2.19.0 *(from 2.17.2)*
+- org.apache.logging.log4j:log4j-core:2.19.0 *(from 2.17.2)*
+- org.eclipse.jetty.aggregate:jetty-all:9.4.49.v20220914 *(from 9.4.46.v20220331)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:jul-to-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 #### Removed Dependencies ####
-- org.apache.logging.log4j:log4j-slf4j-impl:2.17.2
+- ~~org.apache.logging.log4j:log4j-slf4j-impl:2.17.2~~
 
 ### interlok-core ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.github.mwiede:jsch:0.2.4
 - net.sf.saxon:Saxon-HE:11.4
 - org.apache.activemq:activemq-client:5.17.2
@@ -355,42 +491,70 @@
 - org.eclipse.jetty.aggregate:jetty-all:9.4.49.v20220914
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.github.mwiede:jsch:0.2.4 *(from 0.2.1)*
+- net.sf.saxon:Saxon-HE:11.4 *(from 11.3)*
+- org.apache.activemq:activemq-client:5.17.2 *(from 5.17.1)*
+- org.apache.commons:commons-text:1.10.0 *(from 1.9)*
+- org.eclipse.jetty.aggregate:jetty-all:9.4.49.v20220914 *(from 9.4.46.v20220331)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-csv ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-csv-json ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-csv-schema ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-edi-legacy ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-edi-stream ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-ehcache ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-elastic-common ###
 
@@ -399,16 +563,22 @@
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-smile:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:
-- org.apache.lucene:lucene-core:8.11.1
-- org.elasticsearch:elasticsearch-x-content:7.17.6
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - joda-time:joda-time:2.12.0
 - org.apache.logging.log4j:log4j-api:2.19.0
+- org.apache.lucene:lucene-core:8.11.1
+- org.elasticsearch:elasticsearch-x-content:7.17.6
 - org.elasticsearch:elasticsearch:7.17.6
 - org.slf4j:slf4j-api:2.0.3
 - org.yaml:snakeyaml:1.33
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- joda-time:joda-time:2.12.0 *(from 2.10.14)*
+- org.apache.logging.log4j:log4j-api:2.19.0 *(from 2.17.2)*
+- org.elasticsearch:elasticsearch:7.17.6 *(from 7.15.1)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+- org.yaml:snakeyaml:1.33 *(from 1.30)*
 
 ### interlok-elastic-rest ###
 
@@ -417,16 +587,23 @@
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-smile:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:
-- org.elasticsearch:elasticsearch-x-content:7.17.6
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - joda-time:joda-time:2.12.0
 - org.apache.logging.log4j:log4j-api:2.19.0
 - org.elasticsearch.client:elasticsearch-rest-client-sniffer:7.17.6
 - org.elasticsearch.client:elasticsearch-rest-high-level-client:7.17.6
+- org.elasticsearch:elasticsearch-x-content:7.17.6
 - org.slf4j:slf4j-api:2.0.3
 - org.yaml:snakeyaml:1.33
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- joda-time:joda-time:2.12.0 *(from 2.10.14)*
+- org.apache.logging.log4j:log4j-api:2.19.0 *(from 2.17.2)*
+- org.elasticsearch.client:elasticsearch-rest-client-sniffer:7.17.6 *(from 7.15.1)*
+- org.elasticsearch.client:elasticsearch-rest-high-level-client:7.17.6 *(from 7.15.1)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+- org.yaml:snakeyaml:1.33 *(from 1.30)*
 
 ### interlok-elastic-sdk ###
 
@@ -448,42 +625,60 @@
 
 ### interlok-excel ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-exec ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-expressions ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-failover ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-filesystem ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.tika:tika-core:2.5.0
 - org.json:json:20220924
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- org.apache.tika:tika-core:2.5.0 *(from 2.4.0)*
+- org.json:json:20220924 *(from 20220320)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-flyway ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.flywaydb:flyway-core:8.5.13
+
+#### Updated Dependencies ####
+- org.flywaydb:flyway-core:8.5.13 *(from 8.5.11)*
 
 ### interlok-gcloud-pubsub ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - com.google.cloud:google-cloud-pubsub:1.120.20
 - com.google.code.gson:gson:2.9.1
@@ -501,45 +696,85 @@
 - io.netty:netty-handler:4.1.82.Final
 - io.netty:netty-transport-native-epoll:4.1.82.Final
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- com.google.cloud:google-cloud-pubsub:1.120.20 *(from 1.118.0)*
+- com.google.code.gson:gson:2.9.1 *(from 2.9.0)*
+- com.google.protobuf:protobuf-java-util:3.21.7 *(from 3.20.1)*
+- com.google.protobuf:protobuf-java:3.21.7 *(from 3.20.1)*
+- io.grpc:grpc-alts:1.50.0 *(from 1.46.0)*
+- io.grpc:grpc-auth:1.50.0 *(from 1.46.0)*
+- io.grpc:grpc-netty:1.50.0 *(from 1.46.0)*
+- io.grpc:grpc-protobuf:1.50.0 *(from 1.46.0)*
+- io.grpc:grpc-stub:1.50.0 *(from 1.46.0)*
+- io.netty:netty-codec-http2:4.1.82.Final *(from 4.1.77.Final)*
+- io.netty:netty-codec-http:4.1.82.Final *(from 4.1.77.Final)*
+- io.netty:netty-codec:4.1.82.Final *(from 4.1.77.Final)*
+- io.netty:netty-handler-proxy:4.1.82.Final *(from 4.1.77.Final)*
+- io.netty:netty-handler:4.1.82.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-epoll:4.1.82.Final *(from 4.1.77.Final)*
+
 ### interlok-hpcc ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-jclouds-aws-sts ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-jclouds-blobstore ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-jclouds-common ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-jdbc ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-jms-oracleaq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-jms-sonicmq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-jmx-activemq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.activemq:activemq-client:5.17.2
 - org.slf4j:slf4j-api:2.0.3
 - org.springframework:spring-aop:5.3.23
@@ -548,9 +783,18 @@
 - org.springframework:spring-core:5.3.23
 - org.springframework:spring-jms:5.3.23
 
+#### Updated Dependencies ####
+- org.apache.activemq:activemq-client:5.17.2 *(from 5.17.1)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+- org.springframework:spring-aop:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-beans:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-context:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-core:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-jms:5.3.23 *(from 5.3.20)*
+
 ### interlok-jmx-amqp ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - io.netty:netty-buffer:4.1.84.Final
 - io.netty:netty-codec-http:4.1.84.Final
 - io.netty:netty-codec:4.1.84.Final
@@ -568,9 +812,27 @@
 - org.springframework:spring-core:5.3.23
 - org.springframework:spring-jms:5.3.23
 
+#### Updated Dependencies ####
+- io.netty:netty-buffer:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-codec-http:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-codec:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-common:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-handler:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-epoll:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-kqueue:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-unix-common:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport:4.1.84.Final *(from 4.1.77.Final)*
+- org.apache.qpid:proton-j:0.34.0 *(from 0.33.10)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+- org.springframework:spring-aop:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-beans:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-context:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-core:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-jms:5.3.23 *(from 5.3.20)*
+
 ### interlok-jmx-jms-common ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
 - org.springframework:spring-aop:5.3.23
 - org.springframework:spring-beans:5.3.23
@@ -578,13 +840,19 @@
 - org.springframework:spring-core:5.3.23
 - org.springframework:spring-jms:5.3.23
 
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+- org.springframework:spring-aop:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-beans:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-context:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-core:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-jms:5.3.23 *(from 5.3.20)*
+
 ### interlok-jmx-jms-stubs ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.apache.activemq:activemq-amqp:5.17.2
 - org.apache.activemq:activemq-broker:5.17.2
@@ -597,9 +865,22 @@
 - org.springframework:spring-core:5.3.23
 - org.springframework:spring-jms:5.3.23
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.apache.activemq:activemq-amqp:5.17.2 *(from 5.17.1)*
+- org.apache.activemq:activemq-broker:5.17.2 *(from 5.17.1)*
+- org.apache.activemq:activemq-jaas:5.17.2 *(from 5.17.1)*
+- org.apache.activemq:activemq-kahadb-store:5.17.2 *(from 5.17.1)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+- org.springframework:spring-aop:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-beans:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-context:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-core:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-jms:5.3.23 *(from 5.3.20)*
+
 ### interlok-jmx-solace ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.solacesystems:sol-common:10.16.0
 - com.solacesystems:sol-jcsmp:10.16.0
 - com.solacesystems:sol-jms:10.16.0
@@ -610,43 +891,72 @@
 - org.springframework:spring-core:5.3.23
 - org.springframework:spring-jms:5.3.23
 
+#### Updated Dependencies ####
+- com.solacesystems:sol-common:10.16.0 *(from 10.14.0)*
+- com.solacesystems:sol-jcsmp:10.16.0 *(from 10.14.0)*
+- com.solacesystems:sol-jms:10.16.0 *(from 10.14.0)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+- org.springframework:spring-aop:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-beans:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-context:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-core:5.3.23 *(from 5.3.20)*
+- org.springframework:spring-jms:5.3.23 *(from 5.3.20)*
+
 ### interlok-jmx-sonicmq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-jolokia ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.eclipse.jetty.aggregate:jetty-all:9.4.49.v20220914
+
+#### Updated Dependencies ####
+- org.eclipse.jetty.aggregate:jetty-all:9.4.49.v20220914 *(from 9.4.46.v20220331)*
 
 ### interlok-jq ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - net.thisptr:jackson-jq-extra:1.0.0-preview.20220705
 - net.thisptr:jackson-jq:1.0.0-preview.20220705
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- net.thisptr:jackson-jq-extra:1.0.0-preview.20220705 *(from 1.0.0-preview.20210928)*
+- net.thisptr:jackson-jq:1.0.0-preview.20220705 *(from 1.0.0-preview.20210928)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-jruby ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.jruby:jruby:9.3.8.0
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.jruby:jruby:9.3.8.0 *(from 9.3.4.0)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-jslt ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - com.schibsted.spt.data:jslt:0.1.13
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- com.schibsted.spt.data:jslt:0.1.13 *(from 0.1.12)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-json ###
 
@@ -655,12 +965,16 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.json:json:20220924
 - org.slf4j:slf4j-api:2.0.3
 - xom:xom:1.3.8
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.json:json:20220924 *(from 20220320)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+- xom:xom:1.3.8 *(from 1.3.7)*
 
 ### interlok-json-streaming ###
 
@@ -668,190 +982,283 @@
 - com.fasterxml.jackson.core:jackson-annotations:
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - com.google.code.gson:gson:2.9.1
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- com.google.code.gson:gson:2.9.1 *(from 2.9.0)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-json-web-token ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.json:json:20220924
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.json:json:20220924 *(from 20220320)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-jsr107-cache ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-kafka ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - io.netty:netty-codec:4.1.84.Final
 - io.netty:netty-handler:4.1.84.Final
 - io.netty:netty-transport-native-epoll:4.1.84.Final
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- io.netty:netty-codec:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-handler:4.1.84.Final *(from 4.1.77.Final)*
+- io.netty:netty-transport-native-epoll:4.1.84.Final *(from 4.1.77.Final)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-kie ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.drools:drools-compiler:7.73.0.Final
 - org.drools:drools-core:7.73.0.Final
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- org.drools:drools-compiler:7.73.0.Final *(from 7.70.0.Final)*
+- org.drools:drools-core:7.73.0.Final *(from 7.70.0.Final)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-licensing ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-licensing-demo ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-logging ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.logging.log4j:log4j-api:2.19.0
 - org.apache.logging.log4j:log4j-core:2.19.0
+
+#### Updated Dependencies ####
+- org.apache.logging.log4j:log4j-api:2.19.0 *(from 2.17.2)*
+- org.apache.logging.log4j:log4j-core:2.19.0 *(from 2.17.2)*
 
 ### interlok-mongodb ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-mqtt ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-msmq-javonet ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-nats ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - io.nats:jnats:2.16.1
+
+#### Updated Dependencies ####
+- io.nats:jnats:2.16.1 *(from 2.15.1)*
 
 ### interlok-oauth-azure ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.google.code.gson:gson:2.9.1
 - com.nimbusds:nimbus-jose-jwt:9.25.4
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.google.code.gson:gson:2.9.1 *(from 2.9.0)*
+- com.nimbusds:nimbus-jose-jwt:9.25.4 *(from 9.22)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-oauth-gcloud ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-core:2.13.4
 - com.google.auth:google-auth-library-oauth2-http:1.11.0
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-core:2.13.4 *(from 2.13.3)*
+- com.google.auth:google-auth-library-oauth2-http:1.11.0 *(from 1.7.0)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-oauth-generic ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-oauth-salesforce ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-okhttp ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.squareup.okhttp3:okhttp:4.10.0
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- com.squareup.okhttp3:okhttp:4.10.0 *(from 4.9.3)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-pdf ###
 
 #### New Dependencies ####
-- org.apache.xmlgraphics:batik-extension:1.15
-- org.apache.xmlgraphics:batik-transcoder:1.15
-
-#### Updated Dependencies ####
 - org.apache.pdfbox:fontbox:2.0.27
 - org.apache.pdfbox:pdfbox-tools:2.0.27
 - org.apache.pdfbox:pdfbox:2.0.27
+- org.apache.xmlgraphics:batik-extension:1.15
+- org.apache.xmlgraphics:batik-transcoder:1.15
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.apache.pdfbox:fontbox:2.0.27 *(from 2.0.26)*
+- org.apache.pdfbox:pdfbox-tools:2.0.27 *(from 2.0.26)*
+- org.apache.pdfbox:pdfbox:2.0.27 *(from 2.0.26)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-pgp ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-profiler ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-rabbitmq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.rabbitmq:amqp-client:5.16.0
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.rabbitmq:amqp-client:5.16.0 *(from 5.14.2)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-rest-metrics-jvm ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - io.micrometer:micrometer-core:1.9.5
+
+#### Updated Dependencies ####
+- io.micrometer:micrometer-core:1.9.5 *(from 1.9.0)*
 
 ### interlok-rest-provider-datadog ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - io.micrometer:micrometer-registry-datadog:1.9.5
+
+#### Updated Dependencies ####
+- io.micrometer:micrometer-registry-datadog:1.9.5 *(from 1.9.0)*
 
 ### interlok-rest-provider-prometheus ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - io.micrometer:micrometer-registry-prometheus:1.9.5
+
+#### Updated Dependencies ####
+- io.micrometer:micrometer-registry-prometheus:1.9.5 *(from 1.9.0)*
 
 ### interlok-sap ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-service-tester ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-service-tester-json ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-annotations:
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - org.json:json:20220924
 - org.skyscreamer:jsonassert:1.5.1
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- org.json:json:20220924 *(from 20220320)*
+- org.skyscreamer:jsonassert:1.5.1 *(from 1.5.0)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-service-tester-wiremock ###
 
@@ -859,120 +1266,196 @@
 - com.fasterxml.jackson.core:jackson-annotations:
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
-- org.eclipse.jetty:jetty-bom:9.4.48.v20220622
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.13.4.20221013
 - com.github.tomakehurst:wiremock-jre8:2.34.0
+- org.eclipse.jetty:jetty-bom:9.4.48.v20220622
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.13.4.20221013 *(from 2.13.3)*
+- com.github.tomakehurst:wiremock-jre8:2.34.0 *(from 2.33.2)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-service-tester-xml ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-solace ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.solacesystems:sol-common:10.16.0
 - com.solacesystems:sol-jcsmp:10.16.0
 - com.solacesystems:sol-jms:10.16.0
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.solacesystems:sol-common:10.16.0 *(from 10.14.0)*
+- com.solacesystems:sol-jcsmp:10.16.0 *(from 10.14.0)*
+- com.solacesystems:sol-jms:10.16.0 *(from 10.14.0)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-sshtunnel ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.github.mwiede:jsch:0.2.4
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.github.mwiede:jsch:0.2.4 *(from 0.2.1)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-stax ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-stubs ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-swift ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.prowidesoftware:pw-swift-core:SRU2021-9.2.18
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.prowidesoftware:pw-swift-core:SRU2021-9.2.18 *(from SRU2021-9.2.13)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-tibco ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-triggered ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-vcs-git ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.github.mwiede:jsch:0.2.4
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.github.mwiede:jsch:0.2.4 *(from 0.2.1)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-webservice-cxf ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.cxf:cxf-rt-frontend-jaxws:3.5.4
 - org.apache.cxf:cxf-rt-transports-http:3.5.4
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- org.apache.cxf:cxf-rt-frontend-jaxws:3.5.4 *(from 3.5.2)*
+- org.apache.cxf:cxf-rt-transports-http:3.5.4 *(from 3.5.2)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-webspheremq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.ibm.mq:com.ibm.mq.allclient:9.3.0.1
 - org.slf4j:jcl-over-slf4j:2.0.3
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.ibm.mq:com.ibm.mq.allclient:9.3.0.1 *(from 9.2.5.0)*
+- org.slf4j:jcl-over-slf4j:2.0.3 *(from 1.7.36)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-work-unit ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-xa-activemq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-xa-atomikos ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-xa-jms ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-xa-solace ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.solacesystems:sol-common:10.16.0
 - com.solacesystems:sol-jcsmp:10.16.0
 - com.solacesystems:sol-jms:10.16.0
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.solacesystems:sol-common:10.16.0 *(from 10.14.0)*
+- com.solacesystems:sol-jcsmp:10.16.0 *(from 10.14.0)*
+- com.solacesystems:sol-jms:10.16.0 *(from 10.14.0)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-xa-tibco ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
 
 ### interlok-xa-wmq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.ibm.mq:com.ibm.mq.allclient:9.3.0.1
 - org.slf4j:slf4j-api:2.0.3
 
+#### Updated Dependencies ####
+- com.ibm.mq:com.ibm.mq.allclient:9.3.0.1 *(from 9.2.5.0)*
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*
+
 ### interlok-xml-security ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.3
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.3 *(from 1.7.36)*

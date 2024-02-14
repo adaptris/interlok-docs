@@ -1,20 +1,18 @@
-## Version 4.7.0-RELEASE ##
+## Version 4.7.0 ##
 
 ### interlok-activemq ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.0
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.0
+- com.fasterxml.jackson:jackson-bom:2.14.0 *(from 2.13.4.20221013)*
 
 ### interlok-amqp ###
 
 #### New Dependencies ####
-- org.apache.qpid:qpid-java-build:6.0.3
-
-#### Updated Dependencies ####
 - io.netty:netty-buffer:4.1.87.Final
 - io.netty:netty-codec-http:4.1.87.Final
 - io.netty:netty-codec:4.1.87.Final
@@ -24,11 +22,24 @@
 - io.netty:netty-transport-native-kqueue:4.1.87.Final
 - io.netty:netty-transport-native-unix-common:4.1.87.Final
 - io.netty:netty-transport:4.1.87.Final
+- org.apache.qpid:qpid-java-build:6.0.3
 - org.apache.qpid:qpid-jms-client:2.1.0
 
+#### Updated Dependencies ####
+- io.netty:netty-buffer:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-codec-http:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-codec:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-common:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-handler:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-epoll:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-kqueue:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-unix-common:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport:4.1.87.Final *(from 4.1.84.Final)*
+- org.apache.qpid:qpid-jms-client:2.1.0 *(from 1.6.0)*
+
 #### Removed Dependencies ####
-- org.apache.qpid:proton-jms:0.12.2
-- org.apache.qpid:qpid-amqp-1-0-client-jms:0.32
+- ~~org.apache.qpid:proton-jms:0.12.2~~
+- ~~org.apache.qpid:qpid-amqp-1-0-client-jms:0.32~~
 
 ### interlok-apache-geode ###
 
@@ -36,26 +47,36 @@
 - com.fasterxml.jackson.core:jackson-annotations:
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-artemis ###
 
 #### New Dependencies ####
-- io.netty:netty-codec-socks:4.1.87.Final
-- io.netty:netty-handler-proxy:4.1.87.Final
-
-#### Updated Dependencies ####
 - io.netty:netty-buffer:4.1.87.Final
 - io.netty:netty-codec-http:4.1.87.Final
+- io.netty:netty-codec-socks:4.1.87.Final
 - io.netty:netty-codec:4.1.87.Final
 - io.netty:netty-common:4.1.87.Final
+- io.netty:netty-handler-proxy:4.1.87.Final
 - io.netty:netty-handler:4.1.87.Final
 - io.netty:netty-transport-native-epoll:4.1.87.Final
 - io.netty:netty-transport-native-kqueue:4.1.87.Final
 - io.netty:netty-transport-native-unix-common:4.1.87.Final
 - io.netty:netty-transport:4.1.87.Final
+
+#### Updated Dependencies ####
+- io.netty:netty-buffer:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-codec-http:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-codec:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-common:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-handler:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-epoll:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-kqueue:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-unix-common:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport:4.1.87.Final *(from 4.1.84.Final)*
 
 ### interlok-aws-common ###
 
@@ -66,9 +87,10 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-aws-kinesis ###
 
@@ -79,6 +101,10 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
+- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.squareup.wire:wire-compiler:4.4.3
+- com.squareup.wire:wire-schema:4.4.3
+- io.netty:netty-bom:4.1.87.Final
 - io.netty:netty-buffer:
 - io.netty:netty-codec-http:
 - io.netty:netty-codec:
@@ -90,10 +116,10 @@
 - io.netty:netty-transport:
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
-- com.squareup.wire:wire-compiler:4.4.3
-- com.squareup.wire:wire-schema:4.4.3
-- io.netty:netty-bom:4.1.87.Final
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
+- com.squareup.wire:wire-compiler:4.4.3 *(from 4.4.2)*
+- com.squareup.wire:wire-schema:4.4.3 *(from 4.4.2)*
+- io.netty:netty-bom:4.1.87.Final *(from 4.1.84.Final)*
 
 ### interlok-aws-kinesis-sdk ###
 
@@ -104,9 +130,10 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-aws-kms ###
 
@@ -117,9 +144,10 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-aws-s3 ###
 
@@ -130,9 +158,10 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-aws-sns ###
 
@@ -143,9 +172,10 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-aws-sqs ###
 
@@ -154,10 +184,12 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.14.1
 - org.apache.httpcomponents:httpclient:4.5.14
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
+- org.apache.httpcomponents:httpclient:4.5.14 *(from 4.5.13)*
 
 ### interlok-azure-core ###
 
@@ -166,8 +198,6 @@
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-xml:
 - com.fasterxml.jackson.datatype:jackson-datatype-jsr310:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.14.1
 - io.netty:netty-codec-http2:4.1.87.Final
 - io.netty:netty-codec-http:4.1.87.Final
@@ -179,67 +209,108 @@
 - io.netty:netty-transport-native-kqueue:4.1.87.Final
 - io.netty:netty-transport-native-unix-common:4.1.87.Final
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
+- io.netty:netty-codec-http2:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-codec-http:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-codec:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-handler-proxy:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-handler:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-resolver-dns:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-epoll:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-kqueue:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-unix-common:4.1.87.Final *(from 4.1.84.Final)*
+
 ### interlok-azure-cosmosdb ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-cassandra ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.14.1
 - io.netty:netty-codec:4.1.87.Final
 - io.netty:netty-handler:4.1.87.Final
 - io.netty:netty-transport-native-epoll:4.1.87.Final
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
+- io.netty:netty-codec:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-handler:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-epoll:4.1.87.Final *(from 4.1.84.Final)*
+
 ### interlok-client ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.6
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.6 *(from 2.0.3)*
 
 ### interlok-client-jmx ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:2.0.6
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:2.0.6 *(from 2.0.3)*
 
 ### interlok-common ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.thoughtworks.xstream:xstream:1.4.20
 - commons-net:commons-net:3.9.0
 - org.slf4j:jcl-over-slf4j:2.0.6
 - org.slf4j:jul-to-slf4j:2.0.6
 - org.slf4j:slf4j-api:2.0.6
 
+#### Updated Dependencies ####
+- com.thoughtworks.xstream:xstream:1.4.20 *(from 1.4.19)*
+- commons-net:commons-net:3.9.0 *(from 3.8.0)*
+- org.slf4j:jcl-over-slf4j:2.0.6 *(from 2.0.3)*
+- org.slf4j:jul-to-slf4j:2.0.6 *(from 2.0.3)*
+- org.slf4j:slf4j-api:2.0.6 *(from 2.0.3)*
+
 ### interlok-core ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.github.mwiede:jsch:0.2.5
 - com.thoughtworks.xstream:xstream:1.4.20
 - commons-net:commons-net:3.9.0
 - org.codehaus.jettison:jettison:1.5.3
 - org.slf4j:slf4j-api:2.0.6
 
+#### Updated Dependencies ####
+- com.github.mwiede:jsch:0.2.5 *(from 0.2.4)*
+- com.thoughtworks.xstream:xstream:1.4.20 *(from 1.4.19)*
+- commons-net:commons-net:3.9.0 *(from 3.8.0)*
+- org.codehaus.jettison:jettison:1.5.3 *(from 1.2)*
+- org.slf4j:slf4j-api:2.0.6 *(from 2.0.3)*
+
 ### interlok-core-apt ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.thoughtworks.xstream:xstream:1.4.20
+
+#### Updated Dependencies ####
+- com.thoughtworks.xstream:xstream:1.4.20 *(from 1.4.19)*
 
 ### interlok-csv-json ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-elastic-common ###
 
@@ -248,10 +319,12 @@
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-smile:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.14.1
 - org.apache.lucene:lucene-core:9.4.2
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
+- org.apache.lucene:lucene-core:9.4.2 *(from 8.11.1)*
 
 ### interlok-elastic-rest ###
 
@@ -260,9 +333,10 @@
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-smile:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-elastic-sdk ###
 
@@ -271,16 +345,15 @@
 - com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-smile:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-gcloud-pubsub ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.14.1
 - com.google.cloud:google-cloud-pubsub:1.121.1
 - io.netty:netty-codec-http2:4.1.87.Final
@@ -290,14 +363,27 @@
 - io.netty:netty-handler:4.1.87.Final
 - io.netty:netty-transport-native-epoll:4.1.87.Final
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
+- com.google.cloud:google-cloud-pubsub:1.121.1 *(from 1.120.20)*
+- io.netty:netty-codec-http2:4.1.87.Final *(from 4.1.82.Final)*
+- io.netty:netty-codec-http:4.1.87.Final *(from 4.1.82.Final)*
+- io.netty:netty-codec:4.1.87.Final *(from 4.1.82.Final)*
+- io.netty:netty-handler-proxy:4.1.87.Final *(from 4.1.82.Final)*
+- io.netty:netty-handler:4.1.87.Final *(from 4.1.82.Final)*
+- io.netty:netty-transport-native-epoll:4.1.87.Final *(from 4.1.82.Final)*
+
 ### interlok-jmx-activemq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.thoughtworks.xstream:xstream:1.4.20
+
+#### Updated Dependencies ####
+- com.thoughtworks.xstream:xstream:1.4.20 *(from 1.4.19)*
 
 ### interlok-jmx-amqp ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.thoughtworks.xstream:xstream:1.4.20
 - io.netty:netty-buffer:4.1.87.Final
 - io.netty:netty-codec-http:4.1.87.Final
@@ -309,46 +395,71 @@
 - io.netty:netty-transport-native-unix-common:4.1.87.Final
 - io.netty:netty-transport:4.1.87.Final
 
+#### Updated Dependencies ####
+- com.thoughtworks.xstream:xstream:1.4.20 *(from 1.4.19)*
+- io.netty:netty-buffer:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-codec-http:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-codec:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-common:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-handler:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-epoll:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-kqueue:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-unix-common:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport:4.1.87.Final *(from 4.1.84.Final)*
+
 ### interlok-jmx-jms-common ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.thoughtworks.xstream:xstream:1.4.20
+
+#### Updated Dependencies ####
+- com.thoughtworks.xstream:xstream:1.4.20 *(from 1.4.19)*
 
 ### interlok-jmx-jms-stubs ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.14.1
 - com.thoughtworks.xstream:xstream:1.4.20
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
+- com.thoughtworks.xstream:xstream:1.4.20 *(from 1.4.19)*
+
 ### interlok-jmx-solace ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.thoughtworks.xstream:xstream:1.4.20
+
+#### Updated Dependencies ####
+- com.thoughtworks.xstream:xstream:1.4.20 *(from 1.4.19)*
 
 ### interlok-jq ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-jruby ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.jruby:jruby:9.4.0.0
+
+#### Updated Dependencies ####
+- org.jruby:jruby:9.4.0.0 *(from 9.3.8.0)*
 
 ### interlok-jslt ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-json ###
 
@@ -357,9 +468,10 @@
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
 - com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-json-streaming ###
 
@@ -367,78 +479,99 @@
 - com.fasterxml.jackson.core:jackson-annotations:
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-json-web-token ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-kafka ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.14.1
 - io.netty:netty-codec:4.1.87.Final
 - io.netty:netty-handler:4.1.87.Final
 - io.netty:netty-transport-native-epoll:4.1.87.Final
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
+- io.netty:netty-codec:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-handler:4.1.87.Final *(from 4.1.84.Final)*
+- io.netty:netty-transport-native-epoll:4.1.87.Final *(from 4.1.84.Final)*
+
 ### interlok-kie ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.thoughtworks.xstream:xstream:1.4.20
+
+#### Updated Dependencies ####
+- com.thoughtworks.xstream:xstream:1.4.20 *(from 1.4.19)*
 
 ### interlok-mongodb ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-oauth-gcloud ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-core:2.14.1
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-core:2.14.1 *(from 2.13.4)*
 
 ### interlok-oauth-generic ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-oauth-salesforce ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-pdf ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - net.sf.cssbox:pdf2dom:2.0.3
 - org.apache.xmlgraphics:batik-extension:1.16
 - org.apache.xmlgraphics:batik-transcoder:1.16
+
+#### Updated Dependencies ####
+- net.sf.cssbox:pdf2dom:2.0.3 *(from 2.0.1)*
+- org.apache.xmlgraphics:batik-extension:1.16 *(from 1.15)*
+- org.apache.xmlgraphics:batik-transcoder:1.16 *(from 1.15)*
 
 ### interlok-service-tester-json ###
 
 #### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-annotations:
 - com.fasterxml.jackson.core:jackson-databind:
+- com.fasterxml.jackson:jackson-bom:2.14.1
 
 #### Updated Dependencies ####
-- com.fasterxml.jackson:jackson-bom:2.14.1
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
 
 ### interlok-service-tester-wiremock ###
 
@@ -446,19 +579,29 @@
 - com.fasterxml.jackson.core:jackson-annotations:
 - com.fasterxml.jackson.core:jackson-core:
 - com.fasterxml.jackson.core:jackson-databind:
-
-#### Updated Dependencies ####
 - com.fasterxml.jackson:jackson-bom:2.14.1
 - com.github.tomakehurst:wiremock-jre8:2.35.0
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson:jackson-bom:2.14.1 *(from 2.13.4.20221013)*
+- com.github.tomakehurst:wiremock-jre8:2.35.0 *(from 2.34.0)*
+
 ### interlok-stubs ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:jcl-over-slf4j:2.0.6
 - org.slf4j:slf4j-api:2.0.6
 
+#### Updated Dependencies ####
+- org.slf4j:jcl-over-slf4j:2.0.6 *(from 2.0.3)*
+- org.slf4j:slf4j-api:2.0.6 *(from 2.0.3)*
+
 ### interlok-webservice-cxf ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.cxf:cxf-rt-frontend-jaxws:3.5.5
 - org.apache.cxf:cxf-rt-transports-http:3.5.5
+
+#### Updated Dependencies ####
+- org.apache.cxf:cxf-rt-frontend-jaxws:3.5.5 *(from 3.5.4)*
+- org.apache.cxf:cxf-rt-transports-http:3.5.5 *(from 3.5.4)*

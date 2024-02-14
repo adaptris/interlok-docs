@@ -1,26 +1,42 @@
-## Version 3.9.1-RELEASE ##
+## Version 3.9.1 ##
 
 ### interlok-activemq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.3
 - org.springframework:spring-beans:4.3.25.RELEASE
 - org.springframework:spring-context:4.3.25.RELEASE
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.3 *(from 2.9.9)*
+- org.springframework:spring-beans:4.3.25.RELEASE *(from 4.3.24.RELEASE)*
+- org.springframework:spring-context:4.3.25.RELEASE *(from 4.3.24.RELEASE)*
+
 ### interlok-amqp ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.rabbitmq.jms:rabbitmq-jms:1.12.0
 - com.rabbitmq:amqp-client:5.7.3
 - org.apache.qpid:qpid-jms-client:0.44.0
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.rabbitmq.jms:rabbitmq-jms:1.12.0 *(from 1.11.2)*
+- com.rabbitmq:amqp-client:5.7.3 *(from 5.7.1)*
+- org.apache.qpid:qpid-jms-client:0.44.0 *(from 0.43.0)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-aws-common ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.amazonaws:aws-java-sdk-core:1.11.607
 - org.slf4j:jcl-over-slf4j:1.7.27
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- com.amazonaws:aws-java-sdk-core:1.11.607 *(from 1.11.567)*
+- org.slf4j:jcl-over-slf4j:1.7.27 *(from 1.7.26)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-aws-kinesis ###
 
@@ -36,43 +52,71 @@
 
 ### interlok-aws-s3 ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.amazonaws:aws-java-sdk-s3:1.11.607
 - org.slf4j:jcl-over-slf4j:1.7.27
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.amazonaws:aws-java-sdk-s3:1.11.607 *(from 1.11.567)*
+- org.slf4j:jcl-over-slf4j:1.7.27 *(from 1.7.26)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-aws-sns ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.amazonaws:aws-java-sdk-sns:1.11.607
 - org.slf4j:jcl-over-slf4j:1.7.27
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.amazonaws:aws-java-sdk-sns:1.11.607 *(from 1.11.567)*
+- org.slf4j:jcl-over-slf4j:1.7.27 *(from 1.7.26)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-aws-sqs ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.amazonaws:amazon-sqs-java-messaging-lib:1.0.7
 - com.amazonaws:aws-java-sdk-sqs:1.11.607
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.3
 - org.slf4j:jcl-over-slf4j:1.7.27
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.amazonaws:amazon-sqs-java-messaging-lib:1.0.7 *(from 1.0.6)*
+- com.amazonaws:aws-java-sdk-sqs:1.11.607 *(from 1.11.567)*
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.3 *(from 2.9.9)*
+- org.slf4j:jcl-over-slf4j:1.7.27 *(from 1.7.26)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-cassandra ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.datastax.cassandra:cassandra-driver-core:3.7.2
 - com.datastax.cassandra:cassandra-driver-mapping:3.7.2
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.datastax.cassandra:cassandra-driver-core:3.7.2 *(from 3.6.0)*
+- com.datastax.cassandra:cassandra-driver-mapping:3.7.2 *(from 3.6.0)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-client ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-client-jmx ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-cluster-manager ###
 
@@ -83,31 +127,37 @@
 
 #### New Dependencies ####
 - org.apache.commons:commons-lang3:3.9
-
-#### Updated Dependencies ####
 - org.apache.commons:commons-pool2:2.7.0
 - org.slf4j:jcl-over-slf4j:1.7.28
 - org.slf4j:jul-to-slf4j:1.7.28
 - org.slf4j:slf4j-api:1.7.28
 - org.slf4j:slf4j-log4j12:1.7.28
 
+#### Updated Dependencies ####
+- org.apache.commons:commons-pool2:2.7.0 *(from 2.6.2)*
+- org.slf4j:jcl-over-slf4j:1.7.28 *(from 1.7.26)*
+- org.slf4j:jul-to-slf4j:1.7.28 *(from 1.7.26)*
+- org.slf4j:slf4j-api:1.7.28 *(from 1.7.26)*
+- org.slf4j:slf4j-log4j12:1.7.28 *(from 1.7.26)*
+
 #### Removed Dependencies ####
-- commons-lang:commons-lang:2.6
+- ~~commons-lang:commons-lang:2.6~~
 
 ### interlok-config-conditional ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-core ###
 
 #### New Dependencies ####
-- org.apache.commons:commons-text:1.7
-
-#### Updated Dependencies ####
 - io.github.classgraph:classgraph:4.8.43
 - net.sf.saxon:Saxon-HE:9.8.0-15
 - org.apache.commons:commons-pool2:2.7.0
+- org.apache.commons:commons-text:1.7
 - org.apache.logging.log4j:log4j-1.2-api:2.12.1
 - org.apache.logging.log4j:log4j-api:2.12.1
 - org.apache.logging.log4j:log4j-core:2.12.1
@@ -116,24 +166,46 @@
 - org.slf4j:slf4j-api:1.7.28
 - org.slf4j:slf4j-log4j12:1.7.28
 
+#### Updated Dependencies ####
+- io.github.classgraph:classgraph:4.8.43 *(from 4.8.37)*
+- net.sf.saxon:Saxon-HE:9.8.0-15 *(from 9.9.1-3)*
+- org.apache.commons:commons-pool2:2.7.0 *(from 2.6.2)*
+- org.apache.logging.log4j:log4j-1.2-api:2.12.1 *(from 2.11.2)*
+- org.apache.logging.log4j:log4j-api:2.12.1 *(from 2.11.2)*
+- org.apache.logging.log4j:log4j-core:2.12.1 *(from 2.11.2)*
+- org.slf4j:jcl-over-slf4j:1.7.28 *(from 1.7.26)*
+- org.slf4j:jul-to-slf4j:1.7.28 *(from 1.7.26)*
+- org.slf4j:slf4j-api:1.7.28 *(from 1.7.26)*
+- org.slf4j:slf4j-log4j12:1.7.28 *(from 1.7.26)*
+
 #### Removed Dependencies ####
-- commons-lang:commons-lang:2.6
+- ~~commons-lang:commons-lang:2.6~~
 
 ### interlok-csv ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-csv-json ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.3
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.3 *(from 2.9.9)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-drools ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-edi-stream ###
 
@@ -142,8 +214,11 @@
 
 ### interlok-ehcache ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-elastic-common ###
 
@@ -167,121 +242,191 @@
 
 ### interlok-elastic-search ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-es-rest ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - joda-time:joda-time:2.10.3
 - org.json:json:20190722
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- joda-time:joda-time:2.10.3 *(from 2.10.2)*
+- org.json:json:20190722 *(from 20180813)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-es5 ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.3
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.3 *(from 2.9.9)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-excel ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-exec ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-expressions ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-filesystem ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.tika:tika-core:1.22
 - org.json:json:20190722
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- org.apache.tika:tika-core:1.22 *(from 1.21)*
+- org.json:json:20190722 *(from 20180813)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-gcloud-pubsub ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.3
 - com.google.cloud:google-cloud-pubsub:1.86.0
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.3 *(from 2.9.9)*
+- com.google.cloud:google-cloud-pubsub:1.86.0 *(from 1.77.0)*
+
 ### interlok-hpcc ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-jclouds-blobstore ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-jms-sonicmq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.26
 
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.26 *(from 1.7.12)*
+
 #### Removed Dependencies ####
-- com.aurea:sonicmq-mfcontext:8.5.0
-- com.aurea:sonicmq-mgmt-client:8.5.0
-- com.aurea:sonicmq-mgmt-config:8.5.0
-- com.aurea:sonicmq-sonic-mgmt-client:8.5.0
-- junit:junit:4.11
-- log4j:log4j:1.2.17
-- org.apache.velocity:velocity:1.7
-- org.mockito:mockito-all:1.9.5
-- org.slf4j:jcl-over-slf4j:1.7.12
-- org.slf4j:slf4j-log4j12:1.7.12
+- ~~com.aurea:sonicmq-mfcontext:8.5.0~~
+- ~~com.aurea:sonicmq-mgmt-client:8.5.0~~
+- ~~com.aurea:sonicmq-mgmt-config:8.5.0~~
+- ~~com.aurea:sonicmq-sonic-mgmt-client:8.5.0~~
+- ~~junit:junit:4.11~~
+- ~~log4j:log4j:1.2.17~~
+- ~~org.apache.velocity:velocity:1.7~~
+- ~~org.mockito:mockito-all:1.9.5~~
+- ~~org.slf4j:jcl-over-slf4j:1.7.12~~
+- ~~org.slf4j:slf4j-log4j12:1.7.12~~
 
 ### interlok-jmx-jms ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.thoughtworks.xstream:xstream:1.4.11.1
 - org.slf4j:jcl-over-slf4j:1.7.27
 - org.slf4j:slf4j-api:1.7.27
 - org.slf4j:slf4j-log4j12:1.7.27
 
+#### Updated Dependencies ####
+- com.thoughtworks.xstream:xstream:1.4.11.1 *(from 1.4.10)*
+- org.slf4j:jcl-over-slf4j:1.7.27 *(from 1.7.26)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+- org.slf4j:slf4j-log4j12:1.7.27 *(from 1.7.26)*
+
 ### interlok-jq ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.3
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.3 *(from 2.9.9)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-jruby ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-json ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.3
 - com.flipkart.zjsonpatch:zjsonpatch:0.4.9
 - commons-beanutils:commons-beanutils:1.9.4
 - org.json:json:20190722
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.3 *(from 2.9.9)*
+- com.flipkart.zjsonpatch:zjsonpatch:0.4.9 *(from 0.4.8)*
+- commons-beanutils:commons-beanutils:1.9.4 *(from 1.9.3)*
+- org.json:json:20190722 *(from 20180813)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-jsr107-cache ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-kafka ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.3
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.3 *(from 2.9.9)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-kie ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.commons:commons-collections4:4.4
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.apache.commons:commons-collections4:4.4 *(from 4.3)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-kubernetes-metrics ###
 
@@ -301,118 +446,185 @@
 
 ### interlok-legacyhttp ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-logging ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.logging.log4j:log4j-api:2.12.1
 - org.apache.logging.log4j:log4j-core:2.12.1
 
+#### Updated Dependencies ####
+- org.apache.logging.log4j:log4j-api:2.12.1 *(from 2.11.2)*
+- org.apache.logging.log4j:log4j-core:2.12.1 *(from 2.11.2)*
+
 ### interlok-mongodb ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.3
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.3 *(from 2.9.9)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-monitor-agent ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.commons:commons-collections4:4.4
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- org.apache.commons:commons-collections4:4.4 *(from 4.3)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-mqtt ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:jcl-over-slf4j:1.7.27
 - org.slf4j:slf4j-api:1.7.27
 - org.slf4j:slf4j-log4j12:1.7.27
 
+#### Updated Dependencies ####
+- org.slf4j:jcl-over-slf4j:1.7.27 *(from 1.7.26)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+- org.slf4j:slf4j-log4j12:1.7.27 *(from 1.7.26)*
+
 ### interlok-oauth-azure ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-oauth-gcloud ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.google.auth:google-auth-library-oauth2-http:0.16.2
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.google.auth:google-auth-library-oauth2-http:0.16.2 *(from 0.16.1)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-oauth-generic ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.1
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.1 *(from 2.9.9)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-oauth-salesforce ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.1
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.1 *(from 2.9.9)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-okhttp ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-pdf ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.pdfbox:fontbox:2.0.16
 - org.apache.pdfbox:pdfbox-tools:2.0.16
 - org.apache.pdfbox:pdfbox:2.0.16
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- org.apache.pdfbox:fontbox:2.0.16 *(from 2.0.15)*
+- org.apache.pdfbox:pdfbox-tools:2.0.16 *(from 2.0.15)*
+- org.apache.pdfbox:pdfbox:2.0.16 *(from 2.0.15)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-profiler ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-profiler-metric-services ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.codehaus.groovy:groovy-json:2.5.8
 - org.codehaus.groovy:groovy:2.5.8
 
+#### Updated Dependencies ####
+- org.codehaus.groovy:groovy-json:2.5.8 *(from 2.5.7)*
+- org.codehaus.groovy:groovy:2.5.8 *(from 2.5.7)*
+
 ### interlok-service-tester ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.github.tomakehurst:wiremock:2.24.1
 - org.json:json:20190722
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.github.tomakehurst:wiremock:2.24.1 *(from 2.23.2)*
+- org.json:json:20190722 *(from 20180813)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-shell ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.codehaus.groovy:groovy-all:2.5.8
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- org.codehaus.groovy:groovy-all:2.5.8 *(from 2.5.7)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-socket ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-sshtunnel ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-stax ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-stubs ###
 
 #### New Dependencies ####
-- org.apache.commons:commons-text:1.7
-
-#### Updated Dependencies ####
 - io.github.classgraph:classgraph:4.8.43
 - net.sf.saxon:Saxon-HE:9.8.0-15
 - org.apache.commons:commons-pool2:2.7.0
+- org.apache.commons:commons-text:1.7
 - org.apache.logging.log4j:log4j-1.2-api:2.12.1
 - org.apache.logging.log4j:log4j-api:2.12.1
 - org.apache.logging.log4j:log4j-core:2.12.1
@@ -421,29 +633,57 @@
 - org.slf4j:slf4j-api:1.7.28
 - org.slf4j:slf4j-log4j12:1.7.28
 
+#### Updated Dependencies ####
+- io.github.classgraph:classgraph:4.8.43 *(from 4.8.37)*
+- net.sf.saxon:Saxon-HE:9.8.0-15 *(from 9.9.1-3)*
+- org.apache.commons:commons-pool2:2.7.0 *(from 2.6.2)*
+- org.apache.logging.log4j:log4j-1.2-api:2.12.1 *(from 2.11.2)*
+- org.apache.logging.log4j:log4j-api:2.12.1 *(from 2.11.2)*
+- org.apache.logging.log4j:log4j-core:2.12.1 *(from 2.11.2)*
+- org.slf4j:jcl-over-slf4j:1.7.28 *(from 1.7.26)*
+- org.slf4j:jul-to-slf4j:1.7.28 *(from 1.7.26)*
+- org.slf4j:slf4j-api:1.7.28 *(from 1.7.26)*
+- org.slf4j:slf4j-log4j12:1.7.28 *(from 1.7.26)*
+
 #### Removed Dependencies ####
-- commons-lang:commons-lang:2.6
+- ~~commons-lang:commons-lang:2.6~~
 
 ### interlok-vcs-command-line ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-vcs-git ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
 
 ### interlok-vertx ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - com.fasterxml.jackson.core:jackson-databind:2.9.9.3
 - com.hazelcast:hazelcast:3.12.1
 - org.slf4j:slf4j-api:1.7.27
 
+#### Updated Dependencies ####
+- com.fasterxml.jackson.core:jackson-databind:2.9.9.3 *(from 2.9.9)*
+- com.hazelcast:hazelcast:3.12.1 *(from 3.11.1)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*
+
 ### interlok-webservice-cxf ###
 
-#### Updated Dependencies ####
+#### New Dependencies ####
 - org.apache.cxf:cxf-rt-frontend-jaxws:3.3.2
 - org.apache.cxf:cxf-rt-transports-http:3.3.2
 - org.slf4j:slf4j-api:1.7.27
+
+#### Updated Dependencies ####
+- org.apache.cxf:cxf-rt-frontend-jaxws:3.3.2 *(from 3.2.7)*
+- org.apache.cxf:cxf-rt-transports-http:3.3.2 *(from 3.2.7)*
+- org.slf4j:slf4j-api:1.7.27 *(from 1.7.26)*

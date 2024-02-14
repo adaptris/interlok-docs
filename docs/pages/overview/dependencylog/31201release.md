@@ -1,4 +1,4 @@
-## Version 3.12.0.1-RELEASE ##
+## Version 3.12.0.1 ##
 
 ### interlok-profiler ###
 

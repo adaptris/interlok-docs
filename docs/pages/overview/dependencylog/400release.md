@@ -141,14 +141,11 @@
 | javax:javaee-api:8.0.1 | com.thoughtworks.xstream:xstream:1.4.16 *(from 1.4.15)* |  |
 |  | commons-net:commons-net:3.8.0 *(from 3.7.2)* |  |
 |  | org.apache.commons:commons-lang3:3.12.0 *(from 3.11)* |  |
-|  | org.apache.logging.log4j:log4j-1.2-api:2.14.1 *(from 2.21.0)* |  |
-|  | org.apache.logging.log4j:log4j-api:2.14.1 *(from 2.21.0)* |  |
-|  | org.apache.logging.log4j:log4j-core:2.14.1 *(from 2.21.0)* |  |
-|  | org.apache.logging.log4j:log4j-slf4j-impl:2.14.1 *(from 2.21.0)* |  |
-|  | org.eclipse.jetty.aggregate:jetty-all:9.4.39.v20210325 *(from 9.4.53.v20231009)* |  |
-|  | org.slf4j:jcl-over-slf4j:1.7.30 *(from 1.7.36)* |  |
-|  | org.slf4j:jul-to-slf4j:1.7.30 *(from 1.7.36)* |  |
-|  | org.slf4j:slf4j-api:1.7.30 *(from 1.7.36)* |  |
+|  | org.apache.logging.log4j:log4j-1.2-api:2.14.1 *(from 2.14.0)* |  |
+|  | org.apache.logging.log4j:log4j-api:2.14.1 *(from 2.14.0)* |  |
+|  | org.apache.logging.log4j:log4j-core:2.14.1 *(from 2.14.0)* |  |
+|  | org.apache.logging.log4j:log4j-slf4j-impl:2.14.1 *(from 2.14.0)* |  |
+|  | org.eclipse.jetty.aggregate:jetty-all:9.4.39.v20210325 *(from 9.4.36.v20210114)* |  |
 
 ### interlok-core ###
 | New Dependencies | Updated Dependencies | Removed Dependencies |
@@ -159,7 +156,7 @@
 |  | org.apache.activemq:activemq-client:5.16.1 *(from 5.16.0)* |  |
 |  | org.apache.commons:commons-lang3:3.12.0 *(from 3.11)* |  |
 |  | org.apache.derby:derby:10.15.2.0 *(from 10.14.2.0)* |  |
-|  | org.eclipse.jetty.aggregate:jetty-all:9.4.39.v20210325 *(from 9.4.53.v20231009)* |  |
+|  | org.eclipse.jetty.aggregate:jetty-all:9.4.39.v20210325 *(from 9.4.36.v20210114)* |  |
 
 ### interlok-core-apt ###
 | New Dependencies | Updated Dependencies | Removed Dependencies |
@@ -364,8 +361,8 @@
 ### interlok-logging ###
 | New Dependencies | Updated Dependencies | Removed Dependencies |
 | -------- | -------- | -------- |
-|  | org.apache.logging.log4j:log4j-api:2.14.1 *(from 2.21.0)* |  |
-|  | org.apache.logging.log4j:log4j-core:2.14.1 *(from 2.21.0)* |  |
+|  | org.apache.logging.log4j:log4j-api:2.14.1 *(from 2.14.0)* |  |
+|  | org.apache.logging.log4j:log4j-core:2.14.1 *(from 2.14.0)* |  |
 
 ### interlok-mongodb ###
 | New Dependencies | Updated Dependencies | Removed Dependencies |
@@ -404,25 +401,21 @@
 |  | org.apache.pdfbox:pdfbox:2.0.23 *(from 2.0.22)* |  |
 |  | org.apache.xmlgraphics:fop:2.6 *(from 2.5)* |  |
 
-### interlok-profiler ###
-| New Dependencies | Updated Dependencies | Removed Dependencies |
-| -------- | -------- | -------- |
-|  |  | ~~org.apache.commons:commons-math3:3.6.1~~ |
-
 ### interlok-rest-metrics-jvm ###
-| New Dependencies | Updated Dependencies | Removed Dependencies |
-| -------- | -------- | -------- |
-|  | io.micrometer:micrometer-registry-prometheus:1.6.4 *(from 1.6.6)* |  |
+| Initial Dependencies |
+| -------- |
+| io.github.mweirauch:micrometer-jvm-extras:0.2.2 |
+| io.micrometer:micrometer-registry-prometheus:1.6.4 |
 
 ### interlok-rest-metrics-profiler ###
-| New Dependencies | Updated Dependencies | Removed Dependencies |
-| -------- | -------- | -------- |
-|  | io.micrometer:micrometer-registry-prometheus:1.6.4 *(from 1.6.6)* |  |
+| Initial Dependencies |
+| -------- |
+| io.micrometer:micrometer-registry-prometheus:1.6.4 |
 
 ### interlok-rest-provider-prometheus ###
-| New Dependencies | Updated Dependencies | Removed Dependencies |
-| -------- | -------- | -------- |
-|  | io.micrometer:micrometer-registry-prometheus:1.6.4 *(from 1.6.6)* |  |
+| Initial Dependencies |
+| -------- |
+| io.micrometer:micrometer-registry-prometheus:1.6.4 |
 
 ### interlok-sap ###
 | New Dependencies | Updated Dependencies | Removed Dependencies |
@@ -465,7 +458,7 @@
 |  | org.apache.activemq:activemq-client:5.16.1 *(from 5.16.0)* |  |
 |  | org.apache.commons:commons-lang3:3.12.0 *(from 3.11)* |  |
 |  | org.apache.derby:derby:10.15.2.0 *(from 10.14.2.0)* |  |
-|  | org.eclipse.jetty.aggregate:jetty-all:9.4.39.v20210325 *(from 9.4.53.v20231009)* |  |
+|  | org.eclipse.jetty.aggregate:jetty-all:9.4.39.v20210325 *(from 9.4.36.v20210114)* |  |
 
 ### interlok-vcs-git ###
 | New Dependencies | Updated Dependencies | Removed Dependencies |

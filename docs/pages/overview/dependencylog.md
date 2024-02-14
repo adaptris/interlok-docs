@@ -78,7 +78,7 @@
 
 ## Optional Components prior to 3.7.3 ##
 
-- _2018-06-29_ - Prior to the release of 3.8.0, Interlok artifacts were named adp-*. In version 3.8.0, we standardised their naming convention to consistently begin with interlok-*.
+- _2018-06-29_ - Prior to the release of 3.8.0, Interlok artifacts were named adp- and from version 3.8.0, we standardised their naming convention to consistently begin with interlok-
 
 [filename](dependencylog/373release.md ':include')
 

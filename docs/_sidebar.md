@@ -101,6 +101,7 @@
   - [Multi-Payload Messages](/pages/advanced/advanced-multi-payload-messages.md)
   - [Password Handling](/pages/advanced/advanced-password-handling.md)
   - [Profiling](/pages/advanced/advanced-profiling.md)
+    - [Getting started](/pages/advanced/advanced-profiler-getting-started.md)
     - [Profiling with New Relic](/pages/advanced/advanced-new-relic-profiling_v4.md)
 	- [Profiling with Datadog](/pages/advanced/advanced-profiler-datadog.md)
     - [Profiling with Prometheus](/pages/advanced/advanced-profiler-prometheus.md)

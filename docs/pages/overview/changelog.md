@@ -1,5 +1,6 @@
 > **Summary:** This is the change log summarizing the key changes in Interlok for each release.
 
+[filename](changelog/release502.md ':include')
 
 [filename](changelog/release501.md ':include')
 
@@ -8,6 +9,10 @@
 - _2023-11-20_ - There is a [vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2022-46337) in [Apache Derby](https://lists.apache.org/thread/q23kvvtoohgzwybxpwozmvvk17rp0td3). This vulnerability can be ignored as it is only an issue when using 'LDAP-authenticated Derby installations'. You can remove the dependency on Derby by [Switching the Interlok UI Database Provider](https://interlok.adaptris.net/interlok-docs/#/pages/ui/ui-switch-db).
 
 [filename](changelog/release500.md ':include')
+
+[filename](changelog/release494.md ':include')
+
+[filename](changelog/release493.md ':include')
 
 [filename](changelog/release492.md ':include')
 

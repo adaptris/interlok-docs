@@ -1,8 +1,20 @@
 > **Summary:** This is the dependency log summarizing the 3rd party dependency changes in Interlok for each release *(excludes test and optional dependencies)*.
 
+### Information concerning special cases
+
+- Interlok version 5.0.0 follows on from Interlok version 4.9.1 (and not Interlok version 4.9.2+)
+- Interlok version 4.0.0 follows on from Interlok version 3.12.0 (and not Interlok version 3.12.0.*)
+
+
+[filename](dependencylog/502release.md ':include')
+
 [filename](dependencylog/501release.md ':include')
 
 [filename](dependencylog/500release.md ':include')
+
+[filename](dependencylog/494release.md ':include')
+
+[filename](dependencylog/493release.md ':include')
 
 [filename](dependencylog/492release.md ':include')
 

@@ -186,7 +186,6 @@ The full XML that is created will look similar to the below
   <unique-id>ActiveMQQueueTransfer</unique-id>
   <start-up-event-imp>com.adaptris.core.event.StandardAdapterStartUpEvent</start-up-event-imp>
   <heartbeat-event-imp>com.adaptris.core.HeartbeatEvent</heartbeat-event-imp>
-  <log-handler class="null-log-handler"/>
   <shared-components>
     <connections>
       <jms-connection>

@@ -14,7 +14,9 @@ There are currently 2 [AggregatingConsumeService][] implementations : [aggregati
 |[replace-with-first-message-aggregator][]| Replaces the message payload with the _first processed message_.|
 |[xml-document-aggregator][]| Merges each processed message into the original document.|
 |[ignore-original-xml-document-aggregator][]| Merges each processed message into the configured template, ignoring the original document.|
-|[zip-aggregator][]| Adds each processed message into a zip file; the filename associated with each message determined by metadata|
+|[multi-payload-aggregator][]| Combine multiple standard Adaptris messages into a single multi-payload Adaptris message.|
+|[appending-message-aggregator][]| Iterates over each of the messages; and appends their payloads to the original message.|
+|[null-aggregator][]| A special implementation of MessageAggregator that does not aggregate messages. |
 
 ## Example ##
 
@@ -51,11 +53,11 @@ We can use a combination of [aggregating-jms-consume-service][] and [replace-met
        </connection>
        <jms-consumer class="aggregating-queue-consumer">
          <endpoint>$message{SampleQ2}</endpoint>
-         <aggregator class="xml-document-aggregator">
+         <message-aggregator class="xml-document-aggregator">
           <merge-implementation class="xml-insert-node">
            <xpath-to-parent-node>/envelope/aggregated</xpath-to-parent-node>
           </merge-implementation>
-         </aggregator>
+         </message-aggregator>
        </jms-consumer>
       </aggregating-jms-consume-service>
     </services>
@@ -77,20 +79,20 @@ We can use a combination of [aggregating-jms-consume-service][] and [replace-met
     - In a worst case scenario we might wait for 60 seconds for this service to complete; we wait 29 seconds for the first message, and then another 30 seconds before the timeout is exceeded; and continuing.
 - Each message that has the corresponding _JMSCorrelationID_ is inserted as a new node under `/envelope/aggregated`.
 
-[AdaptrisMessage]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/AdaptrisMessage.html
-[Service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/Service.html
-[MessageAggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/aggregator/MessageAggregator.html
-[AggregatingConsumeService]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/aggregator/AggregatingConsumeService.html
-[mime-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/aggregator/MimeAggregator.html
-[ignore-original-mime-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/aggregator/IgnoreOriginalMimeAggregator.html
-[replace-with-first-message-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/aggregator/ReplaceWithFirstMessage.html
-[xml-document-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/aggregator/XmlDocumentAggregator.html
-[ignore-original-xml-document-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/aggregator/IgnoreOriginalXmlDocumentAggregator.html
-[split-join-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/splitter/SplitJoinService.html
-[copy-metadata-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/metadata/CopyMetadataService.html
-[aggregating-jms-consume-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/AggregatingJmsConsumeService.html
-[replace-metadata-value]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/metadata/ReplaceMetadataValue.html
-[aggregating-fs-consume-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/fs/AggregatingFsConsumeService.html
-[ConsumeDestinationGenerator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/aggregator/ConsumeDestinationGenerator.html
-[aggregating-queue-consumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/jms/AggregatingQueueConsumer.html
-[zip-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/aggregator/ZipAggregator.html
+[AdaptrisMessage]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/AdaptrisMessage.html
+[Service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/Service.html
+[MessageAggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/aggregator/MessageAggregator.html
+[AggregatingConsumeService]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/aggregator/AggregatingConsumeService.html
+[mime-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/aggregator/MimeAggregator.html
+[ignore-original-mime-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/aggregator/IgnoreOriginalMimeAggregator.html
+[replace-with-first-message-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/aggregator/ReplaceWithFirstMessage.html
+[xml-document-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/aggregator/XmlDocumentAggregator.html
+[ignore-original-xml-document-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/aggregator/IgnoreOriginalXmlDocumentAggregator.html
+[split-join-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/splitter/SplitJoinService.html
+[copy-metadata-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/metadata/CopyMetadataService.html
+[aggregating-jms-consume-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/jms/AggregatingJmsConsumeService.html
+[replace-metadata-value]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/metadata/ReplaceMetadataValue.html
+[aggregating-fs-consume-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/fs/AggregatingFsConsumeService.html
+[ConsumeDestinationGenerator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/aggregator/ConsumeDestinationGenerator.html
+[aggregating-queue-consumer]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/jms/AggregatingQueueConsumer.html
+[zip-aggregator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/aggregator/ZipAggregator.html

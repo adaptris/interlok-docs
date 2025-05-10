@@ -168,7 +168,7 @@ If the tooltip has `Help not found` it's most likely that the setting does not h
 Optional components javadocs can be opened in two ways:
 
 - **The javadocs are within a folder:** Open your browser at <http://localhost:8080/interlok/javadocs/optional/your-component/index.html> **e.g.** <http://localhost:8080/interlok/javadocs/optional/xml-security/index.html>.
-- **The javadocs are in a jar file:** Open your browser at <http://localhost:8080/interlok/javadocs/your-component.jar/index.html> **e.g.** <http://localhost:8080/interlok/javadocs/optional/adp-swiftmq-3.0.3-RELEASE-javadoc.jar/index.html>.
+- **The javadocs are in a jar file:** Open your browser at <http://localhost:8080/interlok/javadocs/your-component.jar/index.html> **e.g.** <http://localhost:8080/interlok/javadocs/optional/adp-swiftmq-5.0.0-RELEASE-javadoc.jar/index.html>.
 
 If you've added an optional components following the steps explained above you can copy the javadocs jar file into `${adapter.home}/docs/javadocs` to be able to access it via the browser. You will have to restart your adapter to be able to access the javadocs.
 
@@ -402,8 +402,8 @@ In release 3.8.0; we renamed all the artefacts so that they consistently started
 [interlok-hpcc]: https://nexus.adaptris.net/nexus/content/groups/interlok/com/adaptris/interlok-hpcc/
 [interlok-jruby]: https://nexus.adaptris.net/nexus/content/groups/interlok/com/adaptris/interlok-jruby/
 [interlok-gcloud-pubsub]: https://nexus.adaptris.net/nexus/content/groups/interlok/com/adaptris/interlok-gcloud-pubsub/
-[ScriptingService]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.10-SNAPSHOT/com/adaptris/core/services/ScriptingService.html
-[EmbeddedScriptingService]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.10-SNAPSHOT/com/adaptris/core/services/EmbeddedScriptingService.html
+[ScriptingService]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/ScriptingService.html
+[EmbeddedScriptingService]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/EmbeddedScriptingService.html
 [interlok-expressions]: https://nexus.adaptris.net/nexus/content/groups/interlok/com/adaptris/interlok-expressions/
 [interlok-legacyhttp]: https://nexus.adaptris.net/nexus/content/groups/interlok/com/adaptris/interlok-legacyhttp/
 [interlok-activemq]: https://nexus.adaptris.net/nexus/content/groups/interlok/com/adaptris/interlok-activemq/

@@ -5,6 +5,7 @@
 - Interlok version 5.0.0 follows on from Interlok version 4.9.1 (and not Interlok version 4.9.2+)
 - Interlok version 4.0.0 follows on from Interlok version 3.12.0 (and not Interlok version 3.12.0.*)
 
+[filename](dependencylog/503release.md ':include')
 
 [filename](dependencylog/502release.md ':include')
 

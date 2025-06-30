@@ -40,6 +40,9 @@ Our source input document is simply:
 
 There are two main ways to handle the results of your query. Either by using an [XML ResultSetTranslator][] or a [Metadata ResultSetTranslator][]; we have found that these translator types will cover the majority of use cases. Each of the translator types defines common behaviour shared between the concrete sub classes. Naturally, if your use case isn't covered then you can write your own implementation of [ResultSetTranslator][].
 
+Interlok also supports handling resultsets using a JSON implementation provided you have the **interlok-json** optional component and required dependencies.
+[Json All Resultset Output][], [Json First Resultset Line Output][] and[Json First Resultset Output][]
+
 ?> **TIP** If converting to XML, then you should consider setting `strip-illegal-xml-chars=true`; illegal characters are not a problem when writing XML; it will be a problem when you read it in (later on when you need to use XSLT).
 
 ## XmlPayloadTranslator ##
@@ -177,6 +180,56 @@ Would give us:
 - The original message is unchanged.
 - The message now has additional metadata `testtable+name+1=Mitch Chung` and `testtable+name+2=Keis Agrebi`.
 
+## JdbcJsonArrayOutput ##
+
+[Json All Resultset Output][] Outputs all result sets as a JSON Array.
+
+```xml
+<jdbc-data-query-service>
+ <connection class="jdbc-connection">
+  <driver-imp>com.mysql.jdbc.Driver</driver-imp>
+  <connect-url>jdbc:mysql://localhost:3306/mydatabase</connect-url>
+ </connection>
+ <statement>SELECT name from testtable</statement>
+ <result-set-translator class="jdbc-json-all-resultset-output">
+    <column-name-style>NoStyle</column-name-style>
+  </result-set-translator>
+</jdbc-data-query-service>
+```
+
+## JdbcJsonOutputLines ##
+
+[Json First Resultset Line Output][] Outputs the first resultset as JSON line-by-line.
+
+```xml
+<jdbc-data-query-service>
+ <connection class="jdbc-connection">
+  <driver-imp>com.mysql.jdbc.Driver</driver-imp>
+  <connect-url>jdbc:mysql://localhost:3306/mydatabase</connect-url>
+ </connection>
+ <statement>SELECT name from testtable</statement>
+ <result-set-translator class="jdbc-json-first-resultset-output">
+    <column-name-style>NoStyle</column-name-style>
+  </result-set-translator>
+</jdbc-data-query-service>
+```
+
+## JdbcJsonOutput ##
+
+[Json First Resultset Output][] Outputs the first resultset as JSON.
+
+```xml
+<jdbc-data-query-service>
+ <connection class="jdbc-connection">
+  <driver-imp>com.mysql.jdbc.Driver</driver-imp>
+  <connect-url>jdbc:mysql://localhost:3306/mydatabase</connect-url>
+ </connection>
+ <statement>SELECT name from testtable</statement>
+ <result-set-translator class="jdbc-json-first-resultset-output">
+    <column-name-style>NoStyle</column-name-style>
+  </result-set-translator>
+</jdbc-data-query-service>
+```
 
 ## Column Translation ##
 
@@ -188,7 +241,7 @@ The name of each column (if using an [XML ResultSetTranslator][]) will be checke
 
 ### Column Style ###
 
-There are 4 supported styles for column names: [Capitalize][], [UpperCase][], [LowerCase][], [NoStyle][]. The style specified will affect both XML element names and also metadata keys. For metadata keys, the prefix is not affected by the style specified.
+There are 4 supported styles for column names: [Capitalize][], [UpperCase][], [LowerCase][], [NoStyle][]. The style specified will affect XML element names, JSON key names and also metadata keys. For metadata keys, the prefix is not affected by the style specified.
 
 ### Column Translators ###
 
@@ -397,28 +450,31 @@ which results in
 
 - Only 1 row is selected in the result set.
 - We have specified lowercase as the style; so elements from the query are lowercase.
+[Json All Resultset Output][], [Json First Resultset Line Output][] and[Json First Resultset Output][]
 
 
-
-[jdbc-data-query-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/JdbcDataQueryService.html
-[jdbc-xml-payload-translator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/XmlPayloadTranslator.html
-[jdbc-merge-into-xml-payload]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/MergeResultSetIntoXmlPayload.html
-[DocumentMerge]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/util/text/xml/DocumentMerge.html
-[xml-insert-node]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/util/text/xml/InsertNode.html
-[xml-replace-node]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/util/text/xml/ReplaceNode.html
-[xml-replace-original]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/util/text/xml/ReplaceOriginal.html
-[jdbc-first-row-metadata-translator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/FirstRowMetadataTranslator.html
-[jdbc-all-rows-metadata-translator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/AllRowsMetadataTranslator.html
-[metadata-filter-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/metadata/MetadataFilterService.html
-[XML ResultSetTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/XmlPayloadTranslatorImpl.html
-[jdbc-statement-parameter]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/StatementParameter.html
-[Capitalize]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/StyledResultTranslatorImp.ColumnStyle.html#Capitalize
-[UpperCase]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/StyledResultTranslatorImp.ColumnStyle.html#UpperCase
-[LowerCase]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/StyledResultTranslatorImp.ColumnStyle.html#LowerCase
-[NoStyle]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/StyledResultTranslatorImp.ColumnStyle.html#NoStyle
-[list of ColumnTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/ResultSetTranslatorImp.html#setColumnTranslators-java.util.List-
-[ColumnTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/types/ColumnTranslator.html
+[jdbc-data-query-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/JdbcDataQueryService.html
+[Json All Resultset Output]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-json/5.0-RELEASE/com/adaptris/core/json/jdbc/JdbcJsonArrayOutput.html
+[Json First Resultset Line Output]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-json/5.0-RELEASE/com/adaptris/core/json/jdbc/JdbcJsonOutputLines.html
+[Json First Resultset Output]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-json/5.0-RELEASE/com/adaptris/core/json/jdbc/JdbcJsonOutput.html
+[jdbc-xml-payload-translator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/XmlPayloadTranslator.html
+[jdbc-merge-into-xml-payload]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/MergeResultSetIntoXmlPayload.html
+[DocumentMerge]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/util/text/xml/DocumentMerge.html
+[xml-insert-node]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/util/text/xml/InsertNode.html
+[xml-replace-node]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/util/text/xml/ReplaceNode.html
+[xml-replace-original]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/util/text/xml/ReplaceOriginal.html
+[jdbc-first-row-metadata-translator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/FirstRowMetadataTranslator.html
+[jdbc-all-rows-metadata-translator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/AllRowsMetadataTranslator.html
+[metadata-filter-service]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/metadata/MetadataFilterService.html
+[XML ResultSetTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/XmlPayloadTranslatorImpl.html
+[jdbc-statement-parameter]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/StatementParameter.html
+[Capitalize]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/StyledResultTranslatorImp.ColumnStyle.html#Capitalize
+[UpperCase]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/StyledResultTranslatorImp.ColumnStyle.html#UpperCase
+[LowerCase]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/StyledResultTranslatorImp.ColumnStyle.html#LowerCase
+[NoStyle]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/StyledResultTranslatorImp.ColumnStyle.html#NoStyle
+[list of ColumnTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/ResultSetTranslatorImp.html#setColumnTranslators-java.util.List-
+[ColumnTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/types/ColumnTranslator.html
 [String.format]: http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html
 [SimpleDateFormat]: http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
-[Metadata ResultSetTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/MetadataResultSetTranslatorImpl.html
-[ResultSetTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/3.11-SNAPSHOT/com/adaptris/core/services/jdbc/ResultSetTranslator.html
+[Metadata ResultSetTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/MetadataResultSetTranslatorImpl.html
+[ResultSetTranslator]: https://nexus.adaptris.net/nexus/content/sites/javadocs/com/adaptris/interlok-core/5.0-SNAPSHOT/com/adaptris/core/services/jdbc/ResultSetTranslator.html

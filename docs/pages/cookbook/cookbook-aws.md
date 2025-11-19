@@ -1,0 +1,5 @@
+ - [Kinesis](cookbook-aws-kinesis.md): Is often used to extract data from a database to enrich the message. Here we will work through a few examples using the different translators and statements parameters.
+ - [KMS](cookbook-aws-kms.md): Build SQL statements using a simple yet powerful expression language.
+ - [S3](cookbook-aws-s3.md): Sometimes; you'll want to capture data from an in-flight message and write it out to a JDBC compliant database.
+ - [SNS](cookbook-aws-sns.md): Build SQL statements using a simple yet powerful expression language.
+ - [SQS](cookbook-aws-sqs.md): Build SQL statements using a simple yet powerful expression language.

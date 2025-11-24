@@ -75,6 +75,7 @@
     - [MSMQ](/pages/cookbook/cookbook-msmq.md)
     - [Native WebsphereMQ](/pages/cookbook/cookbook-native-wmq.md)
     - [Oracle AQ](/pages/cookbook/cookbook-oracleaq.md)
+    - [Google Cloud Pub/Sub](/pages/cookbook/cookbook-gcloud-pubsub.md)
   - [Splitting Messages](/pages/cookbook/cookbook-splitting-messages.md)
   - [Split and Aggregate](/pages/cookbook/cookbook-split-join.md)
   - [Triggered Channels](/pages/cookbook/cookbook-triggered-channel.md)

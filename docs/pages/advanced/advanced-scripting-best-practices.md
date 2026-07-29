@@ -223,17 +223,17 @@ If embedded scripts cannot be immediately replaced and you are experiencing heap
 Use this checklist when auditing an existing Interlok configuration for embedded scripting usage:
 
 **Do This**
-- [] Audit all workflows for <embedded-scripting-service> elements. Treat each occurrence as a candidate for replacement.
-- [] Identify the logical intent of each script (transformation, hashing, branching, etc.) and map it to the most appropriate native service.
-- [] Validate JSON path expressions carefully when migrating. Use $.length() (with parentheses) for array length on root arrays; $.length will not work in all implementations.
-- [] Profile heap usage before and after migration using a local heap dump or JVM profiler to confirm the object churn has been eliminated.
-- [] Review dependency versions after removing scripting services. Dependencies previously pinned to support script behaviour may now be safely upgraded, resolving outstanding CVEs.
-- [] Run load tests against the migrated configuration before promoting to production to confirm throughput and memory stability improvements.
+- [ ] Audit all workflows for <embedded-scripting-service> elements. Treat each occurrence as a candidate for replacement.
+- [ ] Identify the logical intent of each script (transformation, hashing, branching, etc.) and map it to the most appropriate native service.
+- [ ] Validate JSON path expressions carefully when migrating. Use $.length() (with parentheses) for array length on root arrays; $.length will not work in all implementations.
+- [ ] Profile heap usage before and after migration using a local heap dump or JVM profiler to confirm the object churn has been eliminated.
+- [ ] Review dependency versions after removing scripting services. Dependencies previously pinned to support script behaviour may now be safely upgraded, resolving outstanding CVEs.
+- [ ] Run load tests against the migrated configuration before promoting to production to confirm throughput and memory stability improvements.
 
 **Don't Do This**
-- [] Do not promote configurations containing embedded scripts to production without explicit justification and sign off that no native equivalent exists.
-- [] Do not use -XX:GCTimeLimit or -XX:GCHeapFreeLimit as a substitute for addressing scripting induced memory pressure.
-- [] Do not assume heap growth is a traditional memory leak before ruling out scripting object churn. Profile first.
+- [ ] Do not promote configurations containing embedded scripts to production without explicit justification and sign off that no native equivalent exists.
+- [ ] Do not use -XX:GCTimeLimit or -XX:GCHeapFreeLimit as a substitute for addressing scripting induced memory pressure.
+- [ ] Do not assume heap growth is a traditional memory leak before ruling out scripting object churn. Profile first.
 
 ### Key Takeaways
 1. Embedded scripts are a performance and stability risk in high throughput and long running deployments due to interpreter overhead and object churn.

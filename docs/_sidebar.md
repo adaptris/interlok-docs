@@ -122,6 +122,7 @@
   - [Workflow Interceptors](/pages/advanced/advanced-interceptors.md)
   - [XA Integration](/pages/advanced/advanced-xa-integration.md)
   - [Scripting](/pages/advanced/advanced-scripting.md)
+  - [Scripting Best Practices](/pages/advanced/advanced-scripting-best-practices.md)
   - [Work Unit](/pages/advanced/advanced-work-unit.md)
 - **Service Tester**
   - [Introduction](/pages/service-tester/service-tester-introduction.md)

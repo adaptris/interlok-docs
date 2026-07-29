@@ -6,6 +6,7 @@
  - [Configuration Pre-Processors](/pages/advanced/advanced-configuration-pre-processors.md)
  - [Interlok Clustering Failover](/pages/advanced/advanced-failover.md)
  - [Deploy using Dependency Management](/pages/advanced/advanced-ant-ivy-deploy.md)
+ - [Scripting Best Practices](/pages/advanced/advanced-scripting-best-practices.md)
  - [JMS SSL](/pages/advanced/advanced-jms-ssl.md)
     - [WebsphereMQ SSL](/pages/advanced/advanced-webspheremq-ssl.md)
     - [Solace SSL](/pages/advanced/advanced-solace-ssl.md)

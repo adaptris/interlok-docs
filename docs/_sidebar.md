@@ -100,6 +100,7 @@
     - [Solace SSL](/pages/advanced/advanced-solace-ssl.md)
   - [JMX Runtime Controls](/pages/advanced/advanced-jmx.md)
   - [JMX via JMS](/pages/advanced/advanced-jmx-jms.md)
+  - [Handling Multiple Retry Stores](/pages/advanced/advanced-dual-retry-store.md)
   - [HTTP JMX via Jolokia](/pages/advanced/advanced-jolokia.md)
   - [Measuring Performance](/pages/advanced/advanced-performance.md)
   - [Memory Requirements](/pages/advanced/advanced-memory-requirements.md)

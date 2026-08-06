@@ -100,6 +100,7 @@
     - [Solace SSL](/pages/advanced/advanced-solace-ssl.md)
   - [JMX Runtime Controls](/pages/advanced/advanced-jmx.md)
   - [JMX via JMS](/pages/advanced/advanced-jmx-jms.md)
+  - [Handling Multiple Retry Stores](/pages/advanced/advanced-dual-retry-store.md)
   - [HTTP JMX via Jolokia](/pages/advanced/advanced-jolokia.md)
   - [Measuring Performance](/pages/advanced/advanced-performance.md)
   - [Memory Requirements](/pages/advanced/advanced-memory-requirements.md)
@@ -122,6 +123,7 @@
   - [Workflow Interceptors](/pages/advanced/advanced-interceptors.md)
   - [XA Integration](/pages/advanced/advanced-xa-integration.md)
   - [Scripting](/pages/advanced/advanced-scripting.md)
+  - [Scripting Best Practices](/pages/advanced/advanced-scripting-best-practices.md)
   - [Work Unit](/pages/advanced/advanced-work-unit.md)
 - **Service Tester**
   - [Introduction](/pages/service-tester/service-tester-introduction.md)
